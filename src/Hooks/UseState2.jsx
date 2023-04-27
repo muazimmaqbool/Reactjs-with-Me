@@ -25,6 +25,7 @@ function Car() {
     </>
   );
 }
+
 //we can also use one state and include an objects instead
 function Bike() {
   const [bike, setBike] = useState({

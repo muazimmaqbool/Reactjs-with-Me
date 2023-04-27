@@ -13,7 +13,7 @@ const UseState = () => {
 function Color() {
   const [color, setColor] = useState("red");
   // we can set the initial state to an empty string: useState("") or use an value: useState("red");
-  //color is current state and setColor is function that is used to update the state4
+  //color is current state and setColor is function that is used to update the state
   return (
     <>
       <h1>My favorite color is: {color}!</h1>

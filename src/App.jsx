@@ -14,6 +14,7 @@ import UseState from "./Hooks/UseState";
 import UseState2 from "./Hooks/UseState2";
 import UseState3 from "./Hooks/UseState3";
 import UseEffect from "./Hooks/UseEffect";
+import UseEffect2 from "./Hooks/UseEffect2";
 import Forms2 from "./Components/Forms2";
 import Memo from "./Components/Memo";
 function App() {
@@ -53,16 +54,17 @@ function App() {
       {/* <HomeSASS/>  */}
 
       {/*used to explain hooks */}
-      {/* <Hooks/> */}
+      {/* <Hooks/> */} {/*hooks basic intro here */}
 
       {/* <UseState/> */}
       {/* <UseState2/> */}
       {/* <UseState3/> */}
 
       {/* <UseEffect/> */}
+      <UseEffect2/>
 
       {/*used to explain memo */}
-      <Memo/>
+      {/* <Memo/> */}
     </>
   );
 }
