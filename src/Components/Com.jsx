@@ -10,8 +10,6 @@ const Com = () => {
     </>
   )
 }
-
-//components inside components
 //component 1
 function Car(){
     return(

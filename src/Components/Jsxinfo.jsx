@@ -25,7 +25,7 @@ export default Jsxinfo;
 
 /*
 JSX info:
-    JSX: means javascript XML, its an extention of javascript synta, which is used in react to write html
+    JSX: means javascript XML, its an extention of javascript syntax, which is used in react to write html
     and javascript together. It makes easy to write react code
     >JSX coverts html tags in react elements
     >JSX allows us to write Html in react
@@ -67,5 +67,5 @@ JSX info:
 
 ->Note that in order to embed a JavaScript expression inside JSX, the JavaScript must be wrapped
  with curly braces, {}.
- >JSX is only return inside return
+ >JSX is only written inside return
     */

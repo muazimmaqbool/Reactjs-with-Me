@@ -15,6 +15,9 @@ const Events = () => {
     console.log(e.type);
   };
 
+  const mouse=(e)=>{
+    console.log("Its mouseOver event: ",e.type);
+  }
   return (
     <>
       <button onClick={run}>Click to run!</button>
@@ -27,6 +30,8 @@ const Events = () => {
         Get distance and event type
       </button>
       {/*here event can be named with anything */}
+
+      <h3 onMouseOver={(event)=>mouse(event)}>Use Mouse Over me</h3>
     </>
   );
 };
@@ -43,7 +48,7 @@ export default Events;
     onClick={shoot}  instead of onClick="shoot()".
    Example:   
     React: <button onClick={shoot}>Take the Shot!</button>
-    Html: <button onClick="shoot()">Take the Shot!</button>
+    Html: <button onclick="shoot()">Take the Shot!</button>
 
   > Passing Arguments
     To pass an argument to an event handler, use an arrow function.

@@ -16,7 +16,7 @@ function Car(props) {
       {/* <h3>I am a {props.brand}</h3> */}
       {/*to access object values when object is pass in props*/}
       <h3>
-        I am a {props.brand.name} and i have {props.brand.topSpeed}
+        I am a {props.brand.name} and i have {props.brand.topSpeed} of top speed!
       </h3>
     </>
   );
@@ -36,8 +36,8 @@ function Garage() {
     <>
       <h3>Which car is in my Garage?</h3>
       {/* <Car brand="BMW"/> */}
-      {/* <Car brand={carName}/> */}
-      <Car brand={carInfo} />
+      {/* <Car brand={carName}/> */} {/*passing variable */}
+      <Car brand={carInfo} /> {/*passing object */}
     </>
   );
 }

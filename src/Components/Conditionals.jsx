@@ -6,14 +6,14 @@ const Conditionals = () => {
     <>
       <h2>Conditionals</h2>
       <h3>Using if</h3>
-      <Shoot isGoal={true} />
-      {/*alsop true with {false} */}
+      <Shoot goal={true} />
+      {/*also try with {false} */}
 
       <h3>using &&</h3>
       <Garage cars={cars} />
 
       <h3>using ternary operator</h3>
-      <ShootAgain isGoal={false} />
+      <ShootAgain goal={false} />
     </>
   );
 };
@@ -27,7 +27,7 @@ function Hit() {
 }
 //this function/component will decide which component to run
 function Shoot(props) {
-  const isGoal = props.isGoal;
+  const isGoal = props.goal;
   if (isGoal) {
     return <Hit />;
   }
@@ -51,7 +51,7 @@ function Garage(props) {
 //We will go back to the first example
 //Return the Hit component if isGoal is true, otherwise return the Missed component:
 function ShootAgain(props) {
-  const isGoal = props.isGoal;
+  const isGoal = props.goal;
   return <>{isGoal ? <Hit /> : <Missed />}</>;
 }
 
@@ -66,6 +66,7 @@ export default Conditionals;
 
     //Logical && Operator
      Another way to conditionally render a React component is by using the && operator.
+        { condition && statement to run if condition is true}
 
      //Ternary Operator
         Another way to conditionally render elements is by using a ternary operator.
