@@ -6,15 +6,18 @@ const Home = () => {
         backgroundColor:"black",
         fontSize:"20px",
         width:"fit-Content",
-        margin:"auto"
+        margin:"auto",
+        padding:"10px",
+        borderRadius:"10px"
     }
   return (
     <>
         <h1 style={{
-            color:"blue",
-            backgroundColor:"pink",
+            color:"white",
+            backgroundColor:"teal",
             textAlign:"center",
-            fontSize:"50px"
+            fontSize:"50px",
+            fontFamily:"cursive"
         }}>Using Inline CSS</h1>
         <p style={styleObj}>Using Style Object</p>
         <pre>I'm styled in sperate css file which is 

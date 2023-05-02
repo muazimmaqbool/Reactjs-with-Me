@@ -1,9 +1,15 @@
 // body{
 //     background-color: aquamarine;
 // }
-h2{
-    color: red;
+h2{ 
+    color: teal;
+    font-size: 3rem;
+    width: fit-content;
+    transition: 0.5s ease;
     &:hover{
         color: blue;
+        border: 1px black solid;
+        transform: translateX(350px);
+        border-radius: 10px;
     }
 }
