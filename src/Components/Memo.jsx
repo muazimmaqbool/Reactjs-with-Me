@@ -12,14 +12,14 @@ const Memo = () => {
     <>
       <h1>MEMO</h1>
       {/* <Todo todos={todos} /> */}
-      {/*using memeo */}
+      
       <MemoTodo todos={todos}/>
       <hr />
       <div>
         count: {count}
         <button
           onClick={increment}
-          style={{margin:"5px" }}
+          style={{margin:"10px" }}
         >
           +
         </button>
@@ -46,8 +46,8 @@ function Todo({ todos }) {
 
 /* Solution
 To fix this, we can use memo.
-Use memoto keep the Todos component from needlessly re-rendering.
-Wrap the To; dos component export in memo:*/
+Use memo to keep the Todos component from needlessly re-rendering.
+Wrap the Todos component export in memo:*/
 //like this : export default memo(Todos);
 
 //but here we have make this component in the same file so, to see how it works we create another
@@ -57,11 +57,9 @@ Wrap the To; dos component export in memo:*/
 export default Memo;
 
 /*
--> Using memo will cause React to skip rendering a component if its props have not changed.
-    This can improve performance.
 
-->React Memo is a higher-order component that wraps around a component to memoize the rendered output 
-  and avoid unnecessary renderings. This improves performance because it memoizes the result and skips 
+->React Memo is a higher-order component that wraps around a component to memorize the rendered output 
+  and avoid unnecessary renderings. This improves performance because it memorizes the result and skips 
   rendering to reuse the last rendered result. There are two ways you can wrap your component with 
   React.memo() 
 

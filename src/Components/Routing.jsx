@@ -8,7 +8,7 @@ import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 const Routing = () => {
   return (
     <>
-      <h2>Inside Router</h2>
+      <h1>Inside Router</h1>
       <Router>
         <Header/>
         <Routes>
