@@ -7,9 +7,9 @@ const UseEffect2 = () => {
     console.log("use effect runs")
 
     //return runs only when component is unmounted
-    /*return ()=>{
-        console.log()
-    }*/
+    // return ()=>{
+    //     console.log()
+    // }
   },[]) //it runs also on when value of a changes
          // use effect runs is printed on console everytime we change value of a
          // if [] used then use effect runs is only printed twice
@@ -21,9 +21,29 @@ const UseEffect2 = () => {
         <p>{a}</p>
         <button onClick={() => setA(a - 1)}>Minus</button>
       </div>
+
+      <Counter/>
     </>
   );
 };
+
+//example2
+function Counter(){
+  const[count,setCount]=useState(0);
+  const[cal,setCal]=useState(0);
+
+  useEffect(()=>{
+    setCal(()=>count*2);
+  },[count])
+
+  return(
+    <>
+     <p>Count: {count}</p>
+     <button onClick={()=>setCount((c)=>c+1)}>+</button>
+     <p>Times: {cal}</p>
+    </>
+  )
+}
 
 export default UseEffect2;
 /*

@@ -14,12 +14,21 @@ function Bike() {
     model: "GS-310",
     color: "Light blue",
     modified: "Yes",
+    fuelTank:"Full"
   });
+  
   const updateColor = () => {
     setBike((previousState) => {
       return { ...previousState, color: "Black" };
     });
   };
+  const updateFuelTank=()=>{
+    setBike((previousState2)=>{
+      return {...previousState2, fuelTank:"Half-Full"}
+    })
+  }
+//Note: previousState is just an identifier it can be of any name
+
   return (
     <>
       <h1>My {bike.brand} Bike</h1>
@@ -28,12 +37,14 @@ function Bike() {
         <br />
         Is its modified? {bike.modified}
       </h4>
+      <h4 style={{color:"teal"}}>Fuel Tank Status: {bike.fuelTank}</h4>
       <button
         type="button"
         onClick={updateColor}
       >
         Update Color
       </button>
+      <button onClick={updateFuelTank}>Update Fuel-Tank</button>
     </>
   );
 }
@@ -48,12 +59,12 @@ export default UseState3;
     brand, model, and year from our state.
     We can use the JavaScript spread operator to help us. 
 
-    v=const updateColor = () => {
+    const updateColor = () => {
         setCar(previousState => {
         return { ...previousState, color: "blue" }
         });
     }
-    Because we need the current value of state, we pass a function into our setBike function.
+    Because we need the current value of state, we pass a function into our setCar function.
      This function receives the previous value.
     We then return an object, spreading the previousState and overwriting only the color
 

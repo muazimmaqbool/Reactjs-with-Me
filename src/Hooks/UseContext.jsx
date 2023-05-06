@@ -118,11 +118,6 @@ export default UseContext
         Create Context
         To create context, you must Import createContext and initialize it:
 
-        The Solution
-        The solution is to create context.
-        Create Context
-        To create context, you must Import createContext and initialize it:
-
         import { useState, createContext } from "react";
         import ReactDOM from "react-dom/client";
 

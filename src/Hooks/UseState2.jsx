@@ -10,6 +10,10 @@ const UseState2 = () => {
     </>
   );
 };
+const styleobj={
+  border:"2px solid green",
+  width:"fit-content"
+}
 function Car() {
   const [brand, setBrand] = useState("Ford");
   const [model, setModel] = useState("Mustang");
@@ -19,9 +23,12 @@ function Car() {
   return (
     <>
       <h1>My {brand}</h1>
-      <p>
+      <p style={styleobj}>
         it is a {color} {model} from {year}
       </p>
+
+      {/*updating color : this is optional */}
+      <button onClick={()=>setColor("blue")}>Update Color</button>
     </>
   );
 }
@@ -37,7 +44,7 @@ function Bike() {
   return (
     <>
       <h1>My {bike.brand} Bike</h1>
-      <h4>
+      <h4 style={styleobj}>
         is a {bike.model} and its of {bike.color} color
         <br />
         Is its modified? {bike.modified}

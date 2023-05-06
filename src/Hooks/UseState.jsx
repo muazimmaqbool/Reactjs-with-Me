@@ -6,6 +6,7 @@ const UseState = () => {
     <>
       <h3>useState Hook</h3>
       <Color />
+      <Today/>
     </>
   );
 };
@@ -23,6 +24,33 @@ function Color() {
       </button>
     </>
   );
+}
+
+//example-1
+function Today(){
+  const[day,setDay]=useState("");
+
+  const today = new Date();
+  const dayOfWeek = today.getDay(); //this will give o/p like this 0,1,2,... i.e sunday,monday,...
+  const days=['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  
+  return(
+    <>
+      <h1>Today is: {day}</h1>
+
+      {/* <button type="button" onClick={()=>setDay("Monday")}>Monday</button>
+      <button type="button" onClick={()=>setDay("Tuesday")}>Tuesday</button>
+      <button type="button" onClick={()=>setDay("Wednesday")}>Wednesday</button>
+      <button type="button" onClick={()=>setDay("Thrusday")}>Thrusday</button>
+      <button type="button" onClick={()=>setDay("Friday")}>Friday</button>
+      <button type="button" onClick={()=>setDay("Saturday")}>Saturday</button>
+      <button type="button" onClick={()=>setDay("Sunday")}>Sunday</button> */}
+
+      {/*we can get today in much simple way like this */}
+      <button type="button" onClick={()=>setDay(days[dayOfWeek])}>Getday</button>
+      {/*setDay(days[dayofWeek]): days is an array and daysofWeek contains day number */}
+    </>
+  )
 }
 
 export default UseState;

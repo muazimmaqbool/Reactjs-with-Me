@@ -29,6 +29,7 @@ export default UseEffect
 -> useEffect hook: (also study from notes)
     The useEffect Hook allows you to perform side effects in your components.
     Some examples of side effects are: fetching data, directly updating the DOM, and timers.
+    ->useEffect is basically a function which is run when component loads or when component is updated
     useEffect accepts two arguments. The second argument is optional.
     useEffect(<function>, <dependency>)
 

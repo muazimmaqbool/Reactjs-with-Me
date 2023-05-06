@@ -18,6 +18,8 @@ import UseEffect2 from "./Hooks/UseEffect2";
 import Forms2 from "./Components/Forms2";
 import Memo from "./Components/Memo";
 import UseContext from "./Hooks/UseContext";
+import UseEffect3 from "./Hooks/UseEffect3";
+import UseEffect4Example from "./Hooks/UseEffect4Example";
 
 function App() {
   return (
@@ -56,7 +58,7 @@ function App() {
       {/* <HomeSASS/>  */}
 
       {/*used to explain hooks */}
-      {/* <Hooks/> */} {/*hooks basic intro here */}
+      {/* <Hooks/>*/} {/* hooks basic intro here */}
 
       {/* <UseState/> */}
       {/* <UseState2/> */}
@@ -64,6 +66,8 @@ function App() {
 
       {/* <UseEffect/> */}
       {/* <UseEffect2/> */}
+      <UseEffect3/>
+      {/* <UseEffect4Example/> */}
 
       {/* <UseContext/> */}
 
