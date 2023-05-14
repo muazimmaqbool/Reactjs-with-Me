@@ -46,15 +46,16 @@ function GetWidth(){
     
     useEffect(()=>{
         window.addEventListener('resize',handleWidth)
-    },[]) //this will happen only on onMount i.e on run
-
-    const handleWidth=()=>{
-        setWidth(window.innerWidth)
 
         //cleanup code , this function is going to called whenever this useEffect is removed/cleaned
         return ()=>{
             window.removeEventListener('resize',handleWidth)
         }
+        
+    },[]) //this will happen only on onMount i.e on run
+
+    const handleWidth=()=>{
+        setWidth(window.innerWidth)
     }
     //now the value of width will update dynamically at runtime
     return(
