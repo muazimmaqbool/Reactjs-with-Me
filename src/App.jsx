@@ -22,9 +22,6 @@ import UseEffect3 from "./Hooks/UseEffect3";
 import UseEffect4Example from "./Hooks/UseEffect4Example";
 import FetchAPI from "./API/FetchAPI";
 import FetchAPI2 from "./API/FetchAPI2";
-import Stories from "./API/Simple API Project/Stories";
-import Pagination from "./API/Simple API Project/Pagination";
-import Search from "./API/Simple API Project/Search"
 
 
 function App() {
@@ -83,12 +80,7 @@ function App() {
       {/* <FetchAPI/> */}
       {/* <FetchAPI2/> */}
 
-      {/*these components are of Simple API Project */}
-      {/* <Stories/> */}
-      {/* <Pagination/> */}
-      {/* <Search/> */}
 
-      
     </>
   );
 }
