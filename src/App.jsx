@@ -22,6 +22,8 @@ import UseEffect3 from "./Hooks/UseEffect3";
 import UseEffect4Example from "./Hooks/UseEffect4Example";
 import FetchAPI from "./API/FetchAPI";
 import FetchAPI2 from "./API/FetchAPI2";
+import UseMemo from "./Hooks/UseMemo";
+import UseRef from "./Hooks/UseRef";
 
 
 function App() {
@@ -60,6 +62,13 @@ function App() {
       {/*this component is inside SASS Styling*/}
       {/* <HomeSASS/>  */}
 
+      {/*used to explain memo */}
+      {/* <Memo/> */}
+
+      {/* <FetchAPI/> */}
+      {/* <FetchAPI2/> */}
+
+
       {/*used to explain hooks */}
       {/* <Hooks/>*/} {/* hooks basic intro here */}
 
@@ -72,14 +81,10 @@ function App() {
       {/* <UseEffect3/> */}
       {/* <UseEffect4Example/> */}
 
+      {/* <UseMemo /> */}
+      <UseRef/>
+
       {/* <UseContext/> */}
-
-      {/*used to explain memo */}
-      {/* <Memo/> */}
-
-      {/* <FetchAPI/> */}
-      {/* <FetchAPI2/> */}
-
 
     </>
   );
