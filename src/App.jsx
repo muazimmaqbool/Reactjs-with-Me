@@ -24,6 +24,9 @@ import FetchAPI from "./API/FetchAPI";
 import FetchAPI2 from "./API/FetchAPI2";
 import UseMemo from "./Hooks/UseMemo";
 import UseRef from "./Hooks/UseRef";
+import UseReducer from "./Hooks/UseReducer";
+import UseReducer2 from "./Hooks/UseReducer2";
+import UseCallback from "./Hooks/UseCallback";
 
 
 function App() {
@@ -82,9 +85,14 @@ function App() {
       {/* <UseEffect4Example/> */}
 
       {/* <UseMemo /> */}
-      <UseRef/>
+      {/* <UseRef/> */}
 
       {/* <UseContext/> */}
+
+      {/* <UseReducer/> */}
+      {/* <UseReducer2/> */}
+
+      {/* <UseCallback/> */}
 
     </>
   );
