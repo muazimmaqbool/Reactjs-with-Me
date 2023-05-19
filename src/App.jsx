@@ -1,4 +1,5 @@
 import React from "react";
+import './App.css'
 import Jsxinfo from "./Components/Jsxinfo";
 import Com from "./Components/Com";
 import Props from "./Components/Props";
@@ -27,6 +28,10 @@ import UseRef from "./Hooks/UseRef";
 import UseReducer from "./Hooks/UseReducer";
 import UseReducer2 from "./Hooks/UseReducer2";
 import UseCallback from "./Hooks/UseCallback";
+import Axios from "./API/Axios";
+import AxiosPost from "./API/AxiosPost";
+import AxiosPut from "./API/AxiosPut";
+import AxiosDelete from "./API/AxiosDelete";
 
 
 function App() {
@@ -71,6 +76,10 @@ function App() {
       {/* <FetchAPI/> */}
       {/* <FetchAPI2/> */}
 
+      {/* <Axios /> */}
+      {/* <AxiosPost/> */}
+      {/* <AxiosPut/> */}
+      <AxiosDelete/>
 
       {/*used to explain hooks */}
       {/* <Hooks/>*/} {/* hooks basic intro here */}
@@ -93,6 +102,8 @@ function App() {
       {/* <UseReducer2/> */}
 
       {/* <UseCallback/> */}
+
+      
 
     </>
   );
