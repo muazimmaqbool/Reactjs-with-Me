@@ -32,9 +32,14 @@ import Axios from "./API/Axios";
 import AxiosPost from "./API/AxiosPost";
 import AxiosPut from "./API/AxiosPut";
 import AxiosDelete from "./API/AxiosDelete";
+import HomeRedux from "./REDUX/HomeRedux";
+import { useSelector } from "react-redux";
+import SpreadOperator from "./More Topics/SpreadOperator";
+import Destructuring from "./More Topics/Destructuring";
 
 
 function App() {
+  const c=useSelector(state=>state.custom.c)
   return (
     <>
       <h1>Inside App.jsx</h1>
@@ -47,6 +52,7 @@ function App() {
 
       {/*used to explain props */}
       {/* <Props/>  */}
+
 
       {/*used to explain Events */}
       {/* <Events />    */}
@@ -79,7 +85,7 @@ function App() {
       {/* <Axios /> */}
       {/* <AxiosPost/> */}
       {/* <AxiosPut/> */}
-      <AxiosDelete/>
+      {/* <AxiosDelete/> */}
 
       {/*used to explain hooks */}
       {/* <Hooks/>*/} {/* hooks basic intro here */}
@@ -103,8 +109,15 @@ function App() {
 
       {/* <UseCallback/> */}
 
-      
 
+      {/*these are in REDUX folder */}
+      {/* <h1>inside App.jsx: {c}</h1> */}
+      {/* <HomeRedux/> */}
+      
+      {/*these are in More Topics folder */}
+      {/* <SpreadOperator/> */}
+      <Destructuring/>
+      
     </>
   );
 }

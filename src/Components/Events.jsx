@@ -1,6 +1,6 @@
 import React from "react";
 
-const Events = () => {
+const   Events = () => {
   
   const run = () => {
     alert("running");
