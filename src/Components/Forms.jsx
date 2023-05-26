@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Forms = () => {
   return (
     <>
-      <h2>Inside Forms</h2>
+      <h3>Inside Forms</h3>
       <Myform />
       <MyItem />
     </>

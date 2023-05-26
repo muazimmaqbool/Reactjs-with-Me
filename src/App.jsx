@@ -80,7 +80,7 @@ function App() {
       {/* <Memo/> */}
 
       {/* <FetchAPI/> */}
-      {/* <FetchAPI2/> */}
+      <FetchAPI2/>
 
       {/* <Axios /> */}
       {/* <AxiosPost/> */}
@@ -116,7 +116,7 @@ function App() {
       
       {/*these are in More Topics folder */}
       {/* <SpreadOperator/> */}
-      <Destructuring/>
+      {/* <Destructuring/> */}
       
     </>
   );

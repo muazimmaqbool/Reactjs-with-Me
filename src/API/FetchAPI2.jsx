@@ -5,6 +5,7 @@ const FetchAPI2 = () => {
     <>
       <CatFacts />
       <CatFacts2 />
+      <GetComments/>
     </>
   );
 };
@@ -49,6 +50,37 @@ const CatFacts2 = () => {
     </>
   );
 };
+
+//getting comments
+const GetComments=()=>{
+  const url ='https://jsonplaceholder.typicode.com/comments';
+  const[comment,setComment]=useState([]);
+  const getCom=async()=>{
+    const response=await fetch(url);
+    const result=await response.json();
+    return setComment(result);
+  }
+  useEffect(()=>{
+    getCom();
+  },[])
+
+  return(
+    <>
+     <p>Comments and Email</p>
+     <div>
+      {
+        comment.slice(0,10).map((c)=>{
+          return(
+            <h5 key={c.id}>{c.body.substring(0,25)}<br/> by {c.email}</h5>
+          )
+        })
+      }
+     </div>
+    </>
+  )
+}
+
+
 
 //for more see API's in javascript
 

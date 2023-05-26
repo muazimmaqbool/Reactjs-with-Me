@@ -3,11 +3,12 @@ import MemoTodo from "./MemoTodo";
 
 const Memo = () => {
   const [count, setCount] = useState(0);
-  const [todos, setTodos] = useState(["Todo 1", "Todo 2","Todo 3"]);
+  const [todos, setTodos] = useState(["Todo 1", "Todo 2","Todo 3" ]);
 
   const increment = () => {
     setCount((c) => c + 1);
   };
+
   return (
     <>
       <h1>MEMO</h1>
@@ -29,8 +30,7 @@ const Memo = () => {
 };
 
 //without using memo
-// or const Todo = ({ todos }) => {
-function Todo({ todos }) {
+const Todo=({ todos })=> {
     console.log("child render");
   return (
     <>

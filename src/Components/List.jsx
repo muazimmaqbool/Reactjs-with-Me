@@ -19,7 +19,9 @@ function BasicExample() {
   var numbers = [2, 4, 5, 6, 7, 8, 9];
   return (
     <>
-      <h4>Numbers updated with +2</h4>
+      <h3>Orginal Number:</h3>
+      {numbers.map((n)=>n+" ")}
+      <h3>Numbers updated with +2:</h3>
       {numbers.map((num) => num + 2 + " ")}
     </>
   );
@@ -30,12 +32,13 @@ function Basic_key(props){
   const updateList=list.map((item)=>{
     return(
       <li key={item.toString()}>
-        {item+2}
+        {item+3}
       </li>
     )
   })
   return(
     <>
+    <h3>List with Key Example</h3>
       <ul>{updateList}</ul>
     </>
   )
@@ -54,7 +57,7 @@ function Garage() {
   const cars = ["Ford", "TATA", "BMW", "Audi", "Honda"];
   return (
     <>
-      <h2>Who is in my Garage!</h2>
+      <h3>Who is in my Garage!</h3>
       <ul>
         {cars.map((car) => (
           <Car carname={car} />
@@ -83,11 +86,13 @@ function GarageTwo() {
   ];
   return (
     <>
-      <h2>Who is in my Garage Two!</h2>
+      <h3>Who is in my Garage Two!</h3>
       <ul>
-        {bikes.map((bike) => (
-          <Bike Key={bike.id} bikeName={bike.brand} />
-        ))}
+        {
+          bikes.map((bike)=>(
+            <Bike Key={bike.id} bikeName={bike.brand} />
+          ))
+        }
       </ul>
     </>
   );
