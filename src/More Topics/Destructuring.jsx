@@ -66,7 +66,7 @@ const Example2 = () => {
   }
   // const[add,subtract,multiply,divide]=calculate(4,7)
   //suppose we don't want multiply then
-  const [add, subtract, , divide] = calculate(4, 7); // or const[add,subtract,mdivide]=calculate(4,7)
+  const [add, subtract,, divide] = calculate(4, 7); 
   return (
     <>
       <p>Add: {add}</p>
@@ -209,7 +209,7 @@ export default Destructuring;
 /*
 ->Destructuring:
     Destructuring is a convenient way of creating new variables by extracting some values from
-     data stored in objects or arrays.
+    data stored in objects or arrays.
     To name a few use cases, destructuring can be used to destructure function parameters or this.props 
     in React projects for instance.
 

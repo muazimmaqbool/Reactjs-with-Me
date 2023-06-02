@@ -5,7 +5,7 @@ const Axios = () => {
   return (
     <>
       <h3>Axios Tutorials</h3>
-      {/* <Example1 /> */}
+      {/* <Example1 />  */}
       {/* <Example2 /> */}
       {/* <Example3/> */}
       {/* <Example4 /> */}
@@ -32,9 +32,9 @@ function Example1() {
 }
 
 //In Example 2 we will get data to the screen using loops
-//to display data we first need to store the data, in an state
+//to display data we first need to store the data, we use useState to do that
 function Example2() {
-  const [data, setData] = useState([]); //the data which api is getting is an array thats why we pass intial data as [] in useState
+  const [data, setData] = useState([]); //the data which api is getting is an array thats why we pass initial data as [] in useState
 
   useEffect(() => {
     axios.get("https://jsonplaceholder.typicode.com/posts").then((response) =>
@@ -61,7 +61,7 @@ function Example2() {
           );
         })}
       </div>
-      {/*card,grid class is defined in app.css */}
+      {/*card,grid classes are defined in app.css */}
       {/* getpost is each element of the data array and it has three properties i.e id,titile,body */}
     </>
   );
@@ -78,8 +78,8 @@ const Example3 = () => {
       .then((response) => setData(response.data))
       //.catch((error)=>console.log(error)) //showing error in console
       .catch((error) => {
-        setError(error.message);
-      }); //used to show errors on screen
+        setError(error.message); //used to show errors on screen
+      }); 
   }, []);
 
   return (
@@ -146,7 +146,7 @@ function Example4() {
 }
 
 //Example 5 shows best way to write axios at 16:00
-const APIurl = "https://jsonplaceholder.typicode.com"; //no we will call it in useEffect/getAPi function
+const APIurl = "https://jsonplaceholder.typicode.com"; //now we will call it in useEffect/getAPi function
 const Example5=()=>{
     
     const [data, setData] = useState([]);
@@ -173,7 +173,6 @@ const Example5=()=>{
         {isError != "" && <h2>Error: {isError}</h2>}
         <div className="grid">
           {data.slice(0, 10).map((getpost) => {
-            //here .slice(0,10) will show data of 10 posts only
             const { id, title, body } = getpost;
             return (
               <div className="card" key={id}>

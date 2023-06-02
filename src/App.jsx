@@ -80,7 +80,7 @@ function App() {
       {/* <Memo/> */}
 
       {/* <FetchAPI/> */}
-      <FetchAPI2/>
+      {/* <FetchAPI2/> */}
 
       {/* <Axios /> */}
       {/* <AxiosPost/> */}
@@ -88,7 +88,8 @@ function App() {
       {/* <AxiosDelete/> */}
 
       {/*used to explain hooks */}
-      {/* <Hooks/>*/} {/* hooks basic intro here */}
+      {/* <Hooks/>  */}
+      {/* hooks basic intro here */}
 
       {/* <UseState/> */}
       {/* <UseState2/> */}
@@ -97,7 +98,7 @@ function App() {
       {/* <UseEffect/> */}
       {/* <UseEffect2/> */}
       {/* <UseEffect3/> */}
-      {/* <UseEffect4Example/> */}
+      <UseEffect4Example/>
 
       {/* <UseMemo /> */}
       {/* <UseRef/> */}

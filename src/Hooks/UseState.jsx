@@ -28,9 +28,10 @@ function Color() {
 
 //example-1
 function Today(){
-  const[day,setDay]=useState("");
+  const[day,setDay]=useState(""); //here initial value is empty string
 
   const today = new Date();
+  //console.log(today) //o/p like this: Mon May 29 2023 10:37:48 GMT+0530 (India Standard Time)
   const dayOfWeek = today.getDay(); //this will give o/p like this 0,1,2,... i.e sunday,monday,...
   const days=['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   
@@ -66,7 +67,7 @@ export default UseState;
         useState accepts an initial state and returns two values:
             The current state.
             A function that updates the state.
-            //see in Color component
+            //see in Color component above 
         -Read State
             We can now include our state anywhere in our component.
             Use the state variable in the rendered component.

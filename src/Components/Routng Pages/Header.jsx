@@ -6,13 +6,16 @@ const Header = () => {
       <h1>Header</h1>
       <ul>
         <li>
-          <Link to="/"><h3>default: page-1</h3></Link>
+          <Link to="/"><h3>Home</h3></Link>
         </li>
         <li>
-          <Link to="/page2"><h3>Page-2</h3></Link>
+          <Link to="/about"><h3>About</h3></Link>
         </li>
         <li>
-          <Link to="/page3"><h3>Page-3</h3></Link>
+          <Link to="/contact"><h3>Contact</h3></Link>
+        </li>
+        <li>
+          <Link to="/user/tempId"><h3>User</h3></Link>
         </li>
       </ul>
     </>

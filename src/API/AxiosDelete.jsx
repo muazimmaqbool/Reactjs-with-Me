@@ -4,7 +4,7 @@ import axios from "axios";
 const AxiosDelete = () => {
   const url = "https://jsonplaceholder.typicode.com/posts/2";
   const [status, setStatus] = useState("");
-  const putData = async () => {
+  const delData = async () => {
     try {
       const response = await axios.delete(url);
       setStatus("Deleted successfully!");
@@ -14,7 +14,7 @@ const AxiosDelete = () => {
   };
 
   useEffect(() => {
-    putData();
+    delData();
   }, []);
   return (
     <>

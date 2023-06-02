@@ -23,7 +23,7 @@ const Example1=()=>{
     console.log(restItems);
 
     const fullName=['Muazim','Maqbool'];
-    const data=[1, ...fullName, 'Cse', 'B'];
+    const data=[6655,...fullName, 'Cse', 'B'];
 
     return(
         <>
@@ -41,7 +41,8 @@ const Example2=()=>{
 
     const name={
         firstN:"Muazim",
-        lastN:"Maqbool"
+        lastN:"Maqbool",
+        branch:"computer"
     }
     const details={
         enroll:6655,

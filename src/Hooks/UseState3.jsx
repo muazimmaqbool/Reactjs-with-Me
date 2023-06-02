@@ -23,8 +23,13 @@ function Bike() {
     });
   };
   const updateFuelTank=()=>{
-    setBike((previousState2)=>{
-      return {...previousState2, fuelTank:"Half-Full"}
+    setBike((previousState)=>{
+      return {...previousState, fuelTank:"Half-Full"}
+    })
+  }
+  const updateModified=()=>{
+    setBike((prevState)=>{
+      return {...prevState, modified:"Not Fully"}
     })
   }
 //Note: previousState is just an identifier it can be of any name
@@ -45,6 +50,7 @@ function Bike() {
         Update Color
       </button>
       <button onClick={updateFuelTank}>Update Fuel-Tank</button>
+      <button onClick={updateModified}>Modification Status</button>
     </>
   );
 }

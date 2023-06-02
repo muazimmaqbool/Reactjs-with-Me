@@ -1,11 +1,15 @@
 .grid{
-    max-width: 120rem;
+    max-width: 100rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap:1.5rem;
+    gap:2rem;
 }
 
 .card{
-    padding: 1em;
+    padding: 1rem;
     border: 2px solid gray;
+    box-shadow: -5px -5px 5px black;
+}
+.card:hover{
+    box-shadow: 5px 5px 5px black;
 }

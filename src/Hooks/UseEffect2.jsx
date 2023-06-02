@@ -34,13 +34,13 @@ function Counter(){
 
   useEffect(()=>{
     setCal(()=>count*2);
-  },[count])
+  },[count]) //runs when value of count changes and that changes when we click on + button
 
   return(
     <>
      <p>Count: {count}</p>
      <button onClick={()=>setCount((c)=>c+1)}>+</button>
-     <p>Times: {cal}</p>
+     <p>{count} * 2 = {cal}</p>
     </>
   )
 }

@@ -7,6 +7,7 @@ const UseState2 = () => {
       <h4>What Can State Hold</h4>
       <Car />
       <Bike />
+      <Item/>
     </>
   );
 };
@@ -53,6 +54,21 @@ function Bike() {
   );
 }
 
+const Item=()=>{
+  const[details,setDetails]=useState({
+    name:"Hp-Laptop",
+    intel:"i3",
+    memory:"8GB and 1TB",
+    size:"Large screen"
+  })
+  return(
+    <>
+      <h3>My {details.name} has {details.intel} processor with {details.memory} of memory</h3>
+    </>
+  )
+}
+
+//updating object and arrays is in useState3.jsx
 export default UseState2;
 
 /*
