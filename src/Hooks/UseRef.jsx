@@ -82,10 +82,6 @@ export default UseRef
 ->When to use useRef() instead of useState()
     A rule of thumb is to use useState when you need to re-render the component when the 
     state changes and useRef when you don't need to re-render the component when the state changes.
-    - Here are some examples of when to use useRef instead of useState:
-        When you need to store a value that does not trigger a re-render when it is updated.
-        When you need to store a value that is not used in the render method.
-        When you need to store a value that persists for the lifetime of the component.
 
 ->Accessing DOM Elements: 
         In general, we want to let React handle all DOM manipulation.

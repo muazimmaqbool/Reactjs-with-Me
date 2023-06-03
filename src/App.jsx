@@ -98,7 +98,7 @@ function App() {
       {/* <UseEffect/> */}
       {/* <UseEffect2/> */}
       {/* <UseEffect3/> */}
-      <UseEffect4Example/>
+      {/* <UseEffect4Example/> */}
 
       {/* <UseMemo /> */}
       {/* <UseRef/> */}
@@ -118,6 +118,7 @@ function App() {
       {/*these are in More Topics folder */}
       {/* <SpreadOperator/> */}
       {/* <Destructuring/> */}
+
       
     </>
   );

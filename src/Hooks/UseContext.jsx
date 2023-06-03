@@ -15,7 +15,7 @@ const UseContext = () => {
   )
 }
 
-function Comp2({}){
+function Comp2(){
     return(
         <>
             <h5>component 2</h5>
@@ -23,7 +23,7 @@ function Comp2({}){
         </>
     )
 }
-function Comp3({}){
+function Comp3(){
     return(
         <>
             <h5>component 3</h5>
@@ -31,7 +31,7 @@ function Comp3({}){
         </>
     )
 }
-function Comp4({}){
+function Comp4(){
     return(
         <>
             <h5>component 4</h5>
@@ -39,7 +39,7 @@ function Comp4({}){
         </>
     )
 }
-function Comp5({}){
+function Comp5(){
     const data=useContext(context)
     return(
         <>

@@ -12,13 +12,17 @@ const UseEffect4Example = () => {
 function Example() {
   const [srcType, setSrcType] = useState("posts");
   //printing data to screen
-  const [item,setItems]=useState([]);
+  const [item, setItems] = useState([]);
+
+  function callAPI() {
+    fetch("https://jsonplaceholder.typicode.com/" + srcType)
+      .then((response) => response.json())
+      //.then((result) => console.log(result));
+      .then((result) => setItems(result));
+  }
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/"+srcType)
-      .then((response) => response.json())
-     //.then((result) => console.log(result)); 
-      .then((result)=>setItems(result))
+    callAPI();
   }, [srcType]);
   return (
     <>
@@ -29,9 +33,9 @@ function Example() {
       </div>
       <h1>{srcType}</h1>
 
-      {item.map(i=>{
-        return <pre>{JSON.stringify(i)}</pre>
-      })}
+      {item.map((i) => (
+        <p>{JSON.stringify(i)}</p>
+      ))}
     </>
   );
 }

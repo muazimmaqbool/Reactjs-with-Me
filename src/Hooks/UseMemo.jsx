@@ -3,7 +3,7 @@
     The React useMemo Hook returns a memoized value.
     Think of memoization as caching a value so that it does not need to be recalculated.
 
-    The useMemo Hook only runs when one of its dependencies update.
+    The useMemo Hook only runs when one of its dependencies updated.
     This can improve performance.
 ->What is the benefit of useMemo?
     Fundamentally, useMemo and useCallback are tools built to help us optimize re-renders. 
@@ -35,7 +35,7 @@ const UseMemo = () => {
 const ExampleMemo=()=>{
     const [count, setCount] = useState(0);
     const [todos, setTodos] = useState([]);
-    //const calculaton=expensiveCalculation(count); // using without memo will make it little slow
+    //const calculation=expensiveCalculation(count); // using without memo will make it little slow
     
     //we can use the useMemo Hook to memoize the expensiveCalculation function. This will cause the function to only run when needed.
     //We can wrap the expensive function call with useMemo.
@@ -89,7 +89,8 @@ const MemoExample =()=>{
     //const doubleNumber=slowFunction(number); 
     const doubleNumber=useMemo(()=>{
         return slowFunction(number)
-    },[number]) //slowFunction will run only when number changes and not theme
+    },[number]) 
+    //slowFunction will run only when number changes and not theme
 
     const themStyles={
         backgroundColor:dark ? 'black' : 'white',
@@ -105,7 +106,7 @@ const MemoExample =()=>{
 }
 function slowFunction(num){
     console.log('calling slowFunction');
-    for(let i=0; i <= 100000000000; i++){ //using 100000000 makes this function slow
+    for(let i=0; i <= 1000000000000000; i++){ //using 100000000 makes this function slow
         return num*2
     }
 }
