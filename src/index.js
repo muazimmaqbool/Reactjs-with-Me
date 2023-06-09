@@ -13,7 +13,7 @@ root.render(
   </>
 );
 
-//what is strict mode? h/w
+//what is strict mode? -> means in development and not in deployment , it will render every component twice
 //lazy loading in RR - loads what is necessary/called - in RR6
 // suspense in LL - shows in place in loading
 //tailwindcss - design labirary

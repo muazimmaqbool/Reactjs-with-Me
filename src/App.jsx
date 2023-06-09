@@ -36,6 +36,7 @@ import HomeRedux from "./REDUX/HomeRedux";
 import { useSelector } from "react-redux";
 import SpreadOperator from "./More Topics/SpreadOperator";
 import Destructuring from "./More Topics/Destructuring";
+import LifeCycleMethods from "./LifeCycle Methods/LifeCycleMethods";
 
 
 function App() {
@@ -119,6 +120,9 @@ function App() {
       {/* <SpreadOperator/> */}
       {/* <Destructuring/> */}
 
+
+      {/*React Lifecycle Methods */}
+      {/* <LifeCycleMethods/> */}
       
     </>
   );

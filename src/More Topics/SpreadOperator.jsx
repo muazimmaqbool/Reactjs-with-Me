@@ -14,6 +14,7 @@ const Example1=()=>{
     const num1=[1,2,3,4,5];
     const num2=[6,7,8,9];
     const num=[...num1, ...num2]
+    console.log(num)
 
     //Assign the first and second items  to variables and put the rest in an array:
     const items=['laptop','camera','printer','desktop','charger','phone-stand'];
@@ -48,7 +49,7 @@ const Example2=()=>{
         enroll:6655,
         ...name,
         section:"B",
-        branch:"CSE"
+        branch:"CSE" //branch CSE overrides branch in name
     }
     console.log(details)
     return(

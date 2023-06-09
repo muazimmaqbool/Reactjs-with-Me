@@ -13,3 +13,11 @@
 .card:hover{
     box-shadow: 5px 5px 5px black;
 }
+.one, .two{
+    color: teal;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.two span{
+    color: purple;
+}

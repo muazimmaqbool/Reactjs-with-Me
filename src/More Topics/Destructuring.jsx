@@ -37,7 +37,7 @@ const Example1 = () => {
   console.log(suv); //expedition
 
   //example
-  const [, , website] = ["Oluwatobi", "Sofela", "codesweetly.com"];
+  const [, , website] = ["Muazim Maqbool", "sopore", "muazimmaqbool.com"];
   console.log(website);
 
   //Array Destructuring to Swap Variables’ Values
@@ -66,7 +66,7 @@ const Example2 = () => {
   }
   // const[add,subtract,multiply,divide]=calculate(4,7)
   //suppose we don't want multiply then
-  const [add, subtract,, divide] = calculate(4, 7); 
+  const [add, subtract, , divide] = calculate(4, 7);
   return (
     <>
       <p>Add: {add}</p>
@@ -94,12 +94,7 @@ function ExampleObj() {
     website: "codesweetly.com",
   };
 
-  const {
-    firstName: firstName,
-    lastName: lastName,
-    website: website,
-  } = profile;
-  // or const { firstName, lastName, website} = profile;
+  const { firstName, lastName, website} = profile;
 
   //How to Use Object Destructuring When the Property’s Name Differs from That of the Variable
 
@@ -109,20 +104,20 @@ function ExampleObj() {
     online: "abcdef.com",
   };
 
-  const { firstName: forename, lastName: surname, online: onlineSite } = client;
+  const { firstName:name, lastName: name2, online: site } = client;
 
-  console.log(forename); // ABC
-  console.log(surname); // DEF
-  console.log(onlineSite); // abcdef.com
+  console.log(name); // ABC
+  console.log(name2); // DEF
+  console.log(site); // abcdef.com
   //console.log(online); // "ReferenceError: website is not defined"
 
   return (
     <>
       <h3>Destructuring Objects</h3>
       <div>
-        <p>firstname: {firstName}</p>
-        <p>lastname: {lastName}</p>
-        <p>website: {website}</p>
+        <p>firstname: {name}</p>
+        <p>lastname: {name2}</p>
+        <p>website: {site}</p>
       </div>
     </>
   );
@@ -191,8 +186,8 @@ const ExampleFunc = () => {
       State: "Jammu and Kashmir",
     },
   };
-  const bikeDetails = ({ model, color, owner: { NumPlate } }) =>
-    "This is " + color +"-"+ model + " and its number is " + NumPlate;
+  const bikeDetails = ({ model, color, owner:{NumPlate} }) =>
+    "This is " + color + "-" + model + " and its number is " + NumPlate;
   const bikedata = bikeDetails(bike);
 
   return (
