@@ -5,7 +5,7 @@ import { BrowserRouter as Router,Routes,Route, Link } from 'react-router-dom'
 // import About from './About'
 // import Contact from './Contact'
 //we will see these are come inside bundle.js
-//now we want to put them seperatly i.e known as code splitting, os import them using lazy keyword -{import lazy from react}
+//now we want to put them seperatly i.e known as code splitting, so import them using lazy keyword -{import lazy from react}
 
 const Home=lazy(()=>import("./Home")); //this is known as dynamic import
 const About=lazy(()=>import("./About"));
@@ -17,7 +17,7 @@ const Contact=lazy(()=>import("./Contact"));
 //aase hum lazy keyword ka use karke code splitting karr skhte hain
 
 //at 7:40
-//now important suspence form react and wrap all routes inside suspence
+//now import suspence form react and wrap all routes inside suspence
 //suspence has fallback in which we give component which is shown till component is loaded
 
 const CodeSplitting = () => {
