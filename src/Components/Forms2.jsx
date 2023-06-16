@@ -43,6 +43,13 @@ function Myform() {
           Your Email:
           <input type="email" name="email" value={inputs.email} onChange={handleChange} />
         </label>
+        <br/>
+        <br/>
+        <label>
+          Pincode:
+          <input type="number" name="pincode" value={inputs.pincode} onChange={handleChange}/>
+        </label>
+        <br/>
         <input type="submit" />
       </form>
     </>

@@ -9,7 +9,7 @@ const Axios = () => {
       {/* <Example2 /> */}
       {/* <Example3/> */}
       {/* <Example4 /> */}
-      <Example5/>
+      <Example5 />
     </>
   );
 };
@@ -79,7 +79,7 @@ const Example3 = () => {
       //.catch((error)=>console.log(error)) //showing error in console
       .catch((error) => {
         setError(error.message); //used to show errors on screen
-      }); 
+      });
   }, []);
 
   return (
@@ -116,8 +116,8 @@ function Example4() {
       const response = await axios.get(url);
       setData(response.data);
     } catch (error) {
-        console.log(error)
-        setError(error.message); //we print error message
+      console.log(error);
+      setError(error.message); //we print error message
     }
   };
 
@@ -147,44 +147,43 @@ function Example4() {
 
 //Example 5 shows best way to write axios at 16:00
 const APIurl = "https://jsonplaceholder.typicode.com"; //now we will call it in useEffect/getAPi function
-const Example5=()=>{
-    
-    const [data, setData] = useState([]);
-    const [isError, setError] = useState("");
-  
-    const getAPIdata = async (url) => {
-      try {
-        const response = await axios.get(url);
-        setData(response.data);
-      } catch (error) {
-          console.log(error)
-          setError(error.message); //we print error message
-      }
-    };
-  
-    useEffect(() => {
-      getAPIdata(APIurl+'/posts');
-      //now here we can use different value in place of posts to get the data 
-    }, []);
-  
-    return (
-      <>
-        <h4>Example 5: Best way to write Axios</h4>
-        {isError != "" && <h2>Error: {isError}</h2>}
-        <div className="grid">
-          {data.slice(0, 10).map((getpost) => {
-            const { id, title, body } = getpost;
-            return (
-              <div className="card" key={id}>
-                <h3>{title.slice(0, 15).toUpperCase()}</h3>
-                <p>{body.slice(0, 100)}</p>
-              </div>
-            );
-          })}
-        </div>
-      </>
-    );
-}
+const Example5 = () => {
+  const [data, setData] = useState([]);
+  const [isError, setError] = useState("");
+
+  const getAPIdata = async (url) => {
+    try {
+      const response = await axios.get(url);
+      setData(response.data);
+    } catch (error) {
+      console.log(error);
+      setError(error.message); //we print error message
+    }
+  };
+
+  useEffect(() => {
+    getAPIdata(APIurl + "/posts");
+    //now here we can use different value in place of posts to get the data
+  }, []);
+
+  return (
+    <>
+      <h4>Example 5: Best way to write Axios</h4>
+      {isError != "" && <h2>Error: {isError}</h2>}
+      <div className="grid">
+        {data.slice(0, 10).map((getpost) => {
+          const { id, title, body } = getpost;
+          return (
+            <div className="card" key={id}>
+              <h3>{title.slice(0, 15).toUpperCase()}</h3>
+              <p>{body.slice(0, 100)}</p>
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
+};
 
 export default Axios;
 

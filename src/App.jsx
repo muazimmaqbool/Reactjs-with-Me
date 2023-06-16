@@ -37,6 +37,8 @@ import { useSelector } from "react-redux";
 import SpreadOperator from "./More Topics/SpreadOperator";
 import Destructuring from "./More Topics/Destructuring";
 import LifeCycleMethods from "./LifeCycle Methods/LifeCycleMethods";
+import CodeSplitting from "./Debounce/CodeSplitting";
+import Debounce from "./Debounce/Debounce";
 
 
 function App() {
@@ -123,7 +125,10 @@ function App() {
 
       {/*React Lifecycle Methods */}
       {/* <LifeCycleMethods/> */}
-      
+
+      {/*used to explain debounce,code splitting and other things */}
+      <CodeSplitting/>
+      {/* <Debounce/> */}
     </>
   );
 }

@@ -9,6 +9,7 @@ const List = () => {
       <Basic_key list={list}/>
       <Garage />
       <GarageTwo />  
+      <GarageThree/>
     </>
   );
 };
@@ -22,7 +23,8 @@ function BasicExample() {
       <h3>Orginal Number:</h3>
       {numbers.map((n)=>n+" ")}
       <h3>Numbers updated with +2:</h3>
-      {numbers.map((num) => num + 2 + " ")}
+      {numbers.map((n)=>n+2+" ")}
+      
     </>
   );
 }
@@ -98,7 +100,29 @@ function GarageTwo() {
   );
 }
 
-
+//example
+const Cycles=(props)=>{
+  return(
+    <>
+      <li><h3>Iam {props.cycleName}</h3></li>
+    </>
+  )
+}
+const GarageThree=()=>{
+  const cycles=["SportsCycle","MountainCycle","RegularCycle","FatCycle"]
+  return(
+    <>
+     <h2>Inside Garage Cycle</h2>
+     <ol>
+     {
+      cycles.map((cycle)=>(
+        <Cycles key={cycle.toString()} cycleName={cycle}  />
+      ))
+     }
+     </ol>
+    </>
+  )
+}
 
 export default List;
 
