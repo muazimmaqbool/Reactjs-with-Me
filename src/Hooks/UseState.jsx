@@ -38,15 +38,6 @@ function Today(){
   return(
     <>
       <h1>Today is: {day}</h1>
-
-      {/* <button type="button" onClick={()=>setDay("Monday")}>Monday</button>
-      <button type="button" onClick={()=>setDay("Tuesday")}>Tuesday</button>
-      <button type="button" onClick={()=>setDay("Wednesday")}>Wednesday</button>
-      <button type="button" onClick={()=>setDay("Thrusday")}>Thrusday</button>
-      <button type="button" onClick={()=>setDay("Friday")}>Friday</button>
-      <button type="button" onClick={()=>setDay("Saturday")}>Saturday</button>
-      <button type="button" onClick={()=>setDay("Sunday")}>Sunday</button> */}
-
       {/*we can get today in much simple way like this */}
       <button type="button" onClick={()=>setDay(days[dayOfWeek])}>Getday</button>
       {/*setDay(days[dayofWeek]): days is an array and daysofWeek contains day number */}

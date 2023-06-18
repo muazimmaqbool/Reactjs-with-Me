@@ -8,13 +8,22 @@ const Memo = () => {
   const increment = () => {
     setCount((c) => c + 1);
   };
-
+  const addTodo=()=>{
+    const todoCount=todos.length;
+    const newTodo=`Todo ${todoCount+1}`;
+    setTodos((prevTodo)=>[...prevTodo,newTodo])
+  }
   return (
     <>
       <h1>MEMO</h1>
       {/* <Todo todos={todos} /> */}
       
       <MemoTodo todos={todos}/>
+
+      <button onClick={addTodo} style={{ margin: "10px" }}>
+          Add Todo
+      </button>
+
       <hr />
       <div>
         count: {count}
@@ -31,7 +40,7 @@ const Memo = () => {
 
 //without using memo
 const Todo=({ todos })=> {
-    console.log("child render");
+    console.log("Todo render");
   return (
     <>
       <h3>MY TODOs</h3>
@@ -41,7 +50,7 @@ const Todo=({ todos })=> {
     </>
   );
 }
-//When you click the increment button, the Todos component re-renders.
+//When you click the increment button, the Todos component re-renders. even though the value of todo doesn't change
 //If this component was complex, it could cause performance issues.
 
 /* Solution

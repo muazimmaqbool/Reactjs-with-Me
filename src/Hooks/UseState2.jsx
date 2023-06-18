@@ -34,7 +34,7 @@ function Car() {
   );
 }
 
-//we can also use one state and include an objects instead
+//we can also use one state and include an objects inside
 function Bike() {
   const [bike, setBike] = useState({
     brand: "BMW",

@@ -23,9 +23,11 @@ function Bike() {
     });
   };
   const updateFuelTank=()=>{
-    setBike((previousState)=>{
-      return {...previousState, fuelTank:"Half-Full"}
-    })
+    setTimeout(()=>{
+      setBike((previousState)=>{
+        return {...previousState, fuelTank:"Half-Full"}
+      })
+    },2000)
   }
   const updateModified=()=>{
     setBike((prevState)=>{

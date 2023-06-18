@@ -1,7 +1,7 @@
 import React,{memo} from 'react'
 
 const MemoTodo = ({todos}) => {
-    console.log("child render");
+    console.log("todo render");
     return (
       <>
         <h3>MY TODOs</h3>
