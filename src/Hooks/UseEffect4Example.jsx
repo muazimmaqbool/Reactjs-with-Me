@@ -15,9 +15,8 @@ function Example() {
   const [item, setItems] = useState([]);
 
   function callAPI() {
-    fetch("https://jsonplaceholder.typicode.com/" + srcType)
+    fetch(`https://jsonplaceholder.typicode.com/${srcType}`)
       .then((response) => response.json())
-      //.then((result) => console.log(result));
       .then((result) => setItems(result));
   }
 

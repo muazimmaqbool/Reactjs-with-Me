@@ -12,7 +12,7 @@ const UseEffect2 = () => {
     // }
   },[]) //it runs also on when value of a changes
          // use effect runs is printed on console everytime we change value of a
-         // if [] used then use effect runs is only printed twice
+         // if [] used then use effect runs is only printed one
          // if [] is not used then it runs infinitly
   return (
     <>
@@ -33,6 +33,7 @@ function Counter(){
   const[cal,setCal]=useState(0);
 
   useEffect(()=>{
+    console.log("runs") //prints only when count value changes and when its loaded
     setCal(()=>count*2);
   },[count]) //runs when value of count changes and that changes when we click on + button
 

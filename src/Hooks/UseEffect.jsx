@@ -12,6 +12,7 @@ const UseEffect = () => {
 function Timer(){
   const[count,setCount]=useState(0);
   useEffect(()=>{
+    console.log("useEffect runs")
     setTimeout(()=>{
       setCount(count=>count + 1);
     },1000);

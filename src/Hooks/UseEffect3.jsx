@@ -26,7 +26,7 @@ function AppExample(){
     },[srcType])
     // ,[] runs only once
     // ,[srcType] runs whenever srcType changes
-    // note: inside array[] we put those values, when the change the useEffect hooks runs
+    // note: inside array[] we put those values, when they change the useEffect hooks runs
 
     return(
         <>
@@ -42,7 +42,7 @@ function AppExample(){
 
 //example: modifying the variable based on the width of the window that we have open
 function GetWidth(){
-    const[winWidth,setWidth]=useState(window.innerWidth); //window.width : is used to get width of window
+    const[winWidth,setWidth]=useState(window.innerWidth); //window.innerWidth : is used to get width of window
     
     useEffect(()=>{
         window.addEventListener('resize',handleWidth)
