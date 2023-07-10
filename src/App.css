@@ -13,6 +13,8 @@
 .card:hover{
     box-shadow: 5px 5px 5px black;
 }
+
+
 .one, .two{
     color: teal;
     font-size: 3rem;
@@ -20,4 +22,11 @@
 }
 .two span{
     color: purple;
+}
+
+nav > a{
+    font-size: 2rem;
+    margin-right: 10px;
+    text-decoration: none;
+    border: 2px solid black;
 }

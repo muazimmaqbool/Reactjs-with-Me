@@ -50,6 +50,10 @@ function Myform() {
           <input type="number" name="pincode" value={inputs.pincode} onChange={handleChange}/>
         </label>
         <br/>
+        <label>
+          City:
+          <input type="text" name="city" value={inputs.city} onChange={handleChange}/>
+        </label>
         <input type="submit" />
       </form>
     </>

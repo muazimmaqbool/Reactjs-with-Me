@@ -4,10 +4,12 @@ const MemoTodo = ({todos}) => {
     console.log("todo render");
     return (
       <>
-        <h3>MY TODOs</h3>
-        {todos.map((todo, index) => {
-          return <p key={index}>{todo}</p>;
-        })}
+       <h3>My Todos</h3>
+       {
+        todos.map((todo,index)=>{
+          return <p key={index}>{todo}</p>
+        })
+       }
       </>
     );
 }

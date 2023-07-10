@@ -51,9 +51,7 @@ function Example2() {
           const { id, title, body } = getpost;
           return (
             <div className="card" key={id}>
-              {/* <h3>{title}</h3> */}
               <h3>{title.slice(0, 15).toUpperCase()}</h3>
-              {/* <p>{body}</p> */}
               <p>{body.slice(0, 100)}</p>
 
               {/* .slice(0,10) display characters form 0 to 10 */}

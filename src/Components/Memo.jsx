@@ -8,6 +8,7 @@ const Memo = () => {
   const increment = () => {
     setCount((c) => c + 1);
   };
+
   const addTodo=()=>{
     const todoCount=todos.length;
     const newTodo=`Todo ${todoCount+1}`;
@@ -73,5 +74,9 @@ export default Memo;
   React.memo() 
 
   ->Example above:
-       In this example, the Todos component re-renders even when the todos have not changed.   
+       In this example, the Todos component re-renders even when the todos have not changed. 
+       
+  ->High order component:
+      A higher-order component is a function that takes in a component and returns a new component.
+      const newComponent = higherFunction/component(WrappedComponent);
 */

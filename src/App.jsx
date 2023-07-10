@@ -23,6 +23,7 @@ import UseEffect3 from "./Hooks/UseEffect3";
 import UseEffect4Example from "./Hooks/UseEffect4Example";
 import FetchAPI from "./API/FetchAPI";
 import FetchAPI2 from "./API/FetchAPI2";
+import FetchAPI3 from "./API/FetchAPI3";
 import UseMemo from "./Hooks/UseMemo";
 import UseRef from "./Hooks/UseRef";
 import UseReducer from "./Hooks/UseReducer";
@@ -84,6 +85,7 @@ function App() {
 
       {/* <FetchAPI/> */}
       {/* <FetchAPI2/> */}
+      {/* <FetchAPI3/> */}
 
       {/* <Axios /> */}
       {/* <AxiosPost/> */}
@@ -101,7 +103,7 @@ function App() {
       {/* <UseEffect/> */}
       {/* <UseEffect2/> */}
       {/* <UseEffect3/> */}
-      <UseEffect4Example/>
+      {/* <UseEffect4Example/> */}
 
       {/* <UseMemo /> */}
       {/* <UseRef/> */}

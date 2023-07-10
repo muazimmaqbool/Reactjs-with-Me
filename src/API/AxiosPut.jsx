@@ -6,7 +6,7 @@ const AxiosPut = () => {
   const data = {
     userId:"6631",
     title:"React Hooks?",
-    body:"Hooks are used to add functionality to function component"
+    body:"Hooks are used to add functionality to functional components"
   };
   ;const putData = async () => {
     try {
