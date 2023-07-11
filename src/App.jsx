@@ -130,7 +130,9 @@ function App() {
 
       {/*used to explain debounce,code splitting and other things */}
       {/* <CodeSplitting/> */}
-      {/* <Debounce/> */}
+      <Debounce/>
+
+
     </>
   );
 }
