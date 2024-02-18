@@ -60,8 +60,8 @@ export default Events;
       function Football() {
         const shoot = (a, b) => {
           alert(b.type);
-          //'b' represents the React event that triggered the function,
-          //in this case the 'click' event
+          'b' represents the React event that triggered the function,
+          in this case the 'click' event
           
         }
 

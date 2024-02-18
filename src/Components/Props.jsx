@@ -13,8 +13,8 @@ const Props = () => {
 function Car(props) {
   return (
     <>
-      {/* <h3>I am a {props.brand}</h3> */}
-      {/*to access object values when object is pass in props*/}
+      {/* <h3>I am a {props.brand} Car</h3> */}
+      {/*to access object values when object is passed in props*/}
       <h3>
         I am a {props.brand.name} and i have {props.brand.topSpeed} of top speed!
       </h3>
@@ -27,7 +27,7 @@ const carName = "Ford"; //variable
 const carInfo = {
   name: "BMW",
   model: "Z-10RG",
-  topSpeed: "220KMPH",
+  topSpeed: "220/KMPH",
   mileage: "15KMPH",
   Price: "80L INR",
 };
@@ -37,7 +37,7 @@ function Garage() {
       <h3>Which car is in my Garage?</h3>
       {/* <Car brand="BMW"/> */}
       {/* <Car brand={carName}/> */} {/*passing variable */}
-      <Car brand={carInfo} /> {/*passing object */}
+      <Car brand={carInfo} />  {/*passing object */}
     </>
   );
 }
@@ -45,7 +45,6 @@ function Garage() {
 export default Props;
 
 /* 
-also study from notebook
     >React Props:
         props stands for properties.
         Props are arguments passed into React components.
@@ -61,5 +60,5 @@ also study from notebook
                 }
     >Pass Data
         Props are also use to you pass data from one component to another, as parameters.
-        //see example above
+        see example above
 */

@@ -59,7 +59,7 @@ function App() {
 
 
       {/*used to explain Events */}
-      {/* <Events />    */}
+      <Events />   
 
       {/*used to explain conditionals on components*/}
       {/* <Conditionals/> */}
@@ -130,7 +130,7 @@ function App() {
 
       {/*used to explain debounce,code splitting and other things */}
       {/* <CodeSplitting/> */}
-      <Debounce/>
+      {/* <Debounce/> */}
 
 
     </>

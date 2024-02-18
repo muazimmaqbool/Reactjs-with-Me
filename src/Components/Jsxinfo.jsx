@@ -30,7 +30,7 @@ JSX info:
     >JSX coverts html tags in react elements
     >JSX allows us to write Html in react
     >JSX makes it easier to write and add html in react
-    >JSX is translated into regular J.S at runtim
+    >JSX is translated into regular J.S at runtime
  
  ->Expressions in JSX
     With JSX you can write expressions inside curly braces { }.

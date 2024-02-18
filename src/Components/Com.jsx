@@ -13,9 +13,7 @@ const Com = () => {
 //component 1
 function Car(){
     return(
-        <>
         <h2>I am your Car!</h2>
-        </>
     )
 }
 //component 2
