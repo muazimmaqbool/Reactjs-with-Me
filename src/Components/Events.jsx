@@ -23,7 +23,7 @@ const   Events = () => {
       <button onClick={run}>Click to run!</button>
 
       {/*To pass an argument to an event handler, use an arrow function. */}
-      <button onClick={() => speed("20-KMPH")}>Check Speed ?</button>
+      <button onClick={() => speed("30-KMPH")}>Check Speed ?</button>
 
       {/*passing data and getting event type , here its click */}
       <button onClick={(event) => distance("5-KM", event)}>
