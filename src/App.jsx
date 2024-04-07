@@ -52,14 +52,14 @@ function App() {
       {/* <Jsxinfo/> */}
 
       {/*used to explain components */}
-      {/* <Com/>  */}
+      <Com/> 
 
       {/*used to explain props */}
       {/* <Props/>  */}
 
 
       {/*used to explain Events */}
-      <Events />   
+      {/* <Events />    */}
 
       {/*used to explain conditionals on components*/}
       {/* <Conditionals/> */}

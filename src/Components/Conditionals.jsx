@@ -64,11 +64,11 @@ export default Conditionals;
      We can use the if JavaScript operator to decide which component to render.
      Example: we will create two components and another third component which decides which component to render
 
-    //Logical && Operator
+    Logical && Operator
      Another way to conditionally render a React component is by using the && operator.
         { condition && statement to run if condition is true}
 
-     //Ternary Operator
+     Ternary Operator
         Another way to conditionally render elements is by using a ternary operator.
         condition ? true : false
 
