@@ -46,13 +46,13 @@ function App() {
   const c=useSelector(state=>state.custom.c)
   return (
     <>
-      <h1>Inside App.jsx</h1>
+      {/* <h1>Inside App.jsx</h1> */}
         
       {/*used to explain JSX */}
       {/* <Jsxinfo/> */}
 
       {/*used to explain components */}
-      <Com/> 
+      {/* <Com/>  */}
 
       {/*used to explain props */}
       {/* <Props/>  */}

@@ -1,7 +1,6 @@
 import React from "react";
 
-const   Events = () => {
-  
+const Events = () => {
   const run = () => {
     alert("running");
   };
@@ -15,14 +14,16 @@ const   Events = () => {
     console.log(e.type);
   };
 
-  const mouse=(e)=>{
-    console.log("Its mouseOver event: ",e.type);
-  }
+  const mouse = (e) => {
+    console.log("Its mouseOver event: ", e.type);
+  };
   return (
     <>
       <button onClick={run}>Click to run!</button>
 
-      {/*To pass an argument to an event handler, use an arrow function. */}
+      {/* To pass an argument to an event handler, use an arrow function. */}
+      {/* NOTE: if argument passed without using arrow function like this: onClick={speed("30-KMPH")}, 
+      then it will be called when page loads, i.e before button is clicked */}
       <button onClick={() => speed("30-KMPH")}>Check Speed ?</button>
 
       {/*passing data and getting event type , here its click */}
@@ -31,7 +32,7 @@ const   Events = () => {
       </button>
       {/*here event can be named with anything */}
 
-      <h3 onMouseOver={(event)=>mouse(event)}>Use Mouse Over me</h3>
+      <h3 onMouseOver={(event) => mouse(event)}>Use Mouse Over me</h3>
     </>
   );
 };
