@@ -65,7 +65,7 @@ function App() {
       {/* <Conditionals/> */}
 
       {/*use to explain Map() and key | looping on list */}
-      {/* <List/> */}
+      <List/>
 
       {/*used to explain forms in react */}
       {/* <Forms/> */}

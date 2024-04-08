@@ -130,21 +130,21 @@ export default List;
   -> In React, you will render lists with some type of loop.
   -> The JavaScript map() array method is generally the preferred method.
 
-  //example above
+  example above
 
-  //Note: Keys
+    Note: Keys
     Keys allow React to keep track of elements. This way, if an item is updated or removed, 
     only that item will be re-rendered instead of the entire list.
     Keys need to be unique to each sibling. But they can be duplicated globally.
 
-    //Generally, the key should be a unique ID assigned to each item. As a last resort, you 
+    Generally, the key should be a unique ID assigned to each item. As a last resort, you 
     can use the array index as a key.
-    //A “key” is a special string attribute you need to include when creating lists of elements in React.
-    //Keys are used in React to identify which items in the list are changed, updated, or deleted.
+    A “key” is a special string attribute you need to include when creating lists of elements in React.
+    Keys are used in React to identify which items in the list are changed, updated, or deleted.
 
-    //if we don't pass any key we will get this message in console:
+    if we don't pass any key we will get this message in console:
         Warning: Each child in a list should have a unique "key" prop.
 
-    //extra information from geeksforgeeks : https://www.geeksforgeeks.org/reactjs-lists/
+    extra information from geeksforgeeks : https://www.geeksforgeeks.org/reactjs-lists/
      
     */
