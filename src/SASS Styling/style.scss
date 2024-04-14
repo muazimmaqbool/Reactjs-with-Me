@@ -1,14 +1,31 @@
-
-.h2-style{ 
-    color: teal;
-    font-size: 3rem;
-    width: fit-content;
-    transition: 0.5s ease;
-    &:hover{
-        color: blue;
-        border: 1px black solid;
-        transform: translateX(350px);
-        border-radius: 10px;
-    }
-    
+.h2-style {
+  color: teal;
+  font-size: 3rem;
+  width: fit-content;
+  transition: 0.5s ease;
+  &:hover {
+    color: blue;
+    border: 1px black solid;
+    transform: translateX(350px);
+    border-radius: 10px;
+  }
+}
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+  p {
+    font-size: 1.1rem;
+    color: yellow;
+    font-weight: 700;
+  }
+  transition: 1s ease;
+  &:hover{
+    border-radius: 50%;
+    transform: rotate(360deg);
+  }
 }

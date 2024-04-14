@@ -32,7 +32,7 @@ const Routing = () => {
 export default Routing;
 
 /*
- study it form notebook , pdf, and from w3schools
+ study it form notebook
 
  Important:
   Router: Routing is a prcoess by which user is directed to the different pages
@@ -46,7 +46,7 @@ export default Routing;
       Dynamic routing is the routing that takes place as your app is rendering, not in a configuration
       or convention outside of a running app
 
-      //dynamic routes: 
+      dynamic routes: 
         <Route path="/user/:id" element={<User/>}/>
         <Route path="/user/new" element={<User/>}/>
       Means: /user/:id and /user/new are both same they take to the user component

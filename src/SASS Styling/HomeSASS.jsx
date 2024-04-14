@@ -3,7 +3,10 @@ import '../SASS Styling/style.scss'
 const HomeSASS = () => {
   return (
     <>
-        <h2 className='h2-style'>Style me using sass</h2>
+        <h2 className='h2-style'>Styled me using sass</h2>
+        <div className='box'>
+          <p>Text Inside box</p>
+        </div>
     </>
   )
 }

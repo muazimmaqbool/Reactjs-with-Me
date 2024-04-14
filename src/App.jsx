@@ -69,7 +69,7 @@ function App() {
 
       {/*used to explain forms in react */}
       {/* <Forms/> */}
-      <Forms2/>
+      {/* <Forms2/> */}
 
       {/*used to explain routing: explained in notebook and on pdf*/}
       {/* <Routing/> */}
@@ -78,7 +78,7 @@ function App() {
       {/* <Home/> */}
 
       {/*this component is inside SASS Styling*/}
-      {/* <HomeSASS/>  */}
+      <HomeSASS/> 
 
       {/*used to explain memo */}
       {/* <Memo/> */}
