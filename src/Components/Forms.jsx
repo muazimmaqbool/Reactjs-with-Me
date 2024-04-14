@@ -9,6 +9,7 @@ const Forms = () => {
     </>
   );
 };
+
 //simple form
 function Myform() {
   return (
