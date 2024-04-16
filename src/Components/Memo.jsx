@@ -60,7 +60,7 @@ Use memo to keep the Todos component from needlessly re-rendering.
 Wrap the Todos component export in memo:*/
 //like this : export default memo(Todos);
 
-//but here we have make this component in the same file so, to see how it works we create another
+//but here we have make this component in the different file so, to see how it works we create another
 //component named as TodoMemo.jsx
 //Now the Todos component only re-renders when the todos that are passed to it through props are updated.
 
