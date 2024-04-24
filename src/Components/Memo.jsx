@@ -9,6 +9,7 @@ const Memo = () => {
     setCount((c) => c + 1);
   };
 
+
   const addTodo=()=>{
     const todoCount=todos.length;
     const newTodo=`Todo ${todoCount+1}`;

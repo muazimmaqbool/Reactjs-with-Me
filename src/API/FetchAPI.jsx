@@ -42,8 +42,8 @@ function CatFacts() {
   const url = "https://catfact.ninja/fact";
   const [fact, setFact] = useState([]);
   const getFacts = () => {
-    fetch(url).
-     then((response) =>response.json()
+    fetch(url)
+    .then((response) =>response.json()
      .then((result) => setFact(result))
      .catch((error)=>console.log(error))
     );
