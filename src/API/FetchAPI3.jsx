@@ -1,6 +1,6 @@
 import React, { useEffect, useState, } from 'react'
 
-const FetchAPI3 = () => {
+const   FetchAPI3 = () => {
   return (
     <>
      <RandomImages/>

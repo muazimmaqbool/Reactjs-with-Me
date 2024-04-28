@@ -84,11 +84,11 @@ function App() {
       {/* <Memo/> */}
 
       {/* <FetchAPI/> */}
-      <FetchAPI2/>
+      {/* <FetchAPI2/> */}
       {/* <FetchAPI3/> */}
 
       {/* <Axios /> */}
-      {/* <AxiosPost/> */}
+      <AxiosPost/>
       {/* <AxiosPut/> */}
       {/* <AxiosDelete/> */}
 

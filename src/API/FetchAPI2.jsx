@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+//this is called from APP.jsx
 const FetchAPI2 = () => {
   return (
     <>
@@ -22,9 +23,7 @@ function CatFacts() {
     getFacts();
   }, []);
   return (
-    <>
-      <h1>{fact.fact}</h1>
-    </>
+    <h1>{fact.fact}</h1>
   );
 }
 
@@ -63,12 +62,14 @@ const GetComments=()=>{
   useEffect(()=>{
     getCom();
   },[])
-
+  // console.log(comment)
   return(
     <>
      <p>Comments and Email</p>
      <div>
       {
+        //shows only first 10 comments from 0 index to 10
+        //inside return we have c.body.substring(0,25): it will show only from 25 characters of each comment string rather than showing full long comment
         comment.slice(0,10).map((c)=>{
           return(
             <h5 key={c.id}>{c.body.substring(0,25)}<br/> by {c.email}</h5>

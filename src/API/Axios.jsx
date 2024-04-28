@@ -18,8 +18,7 @@ function Example1() {
   //Axios with promises
   //using useEffect to run it when component loads
   useEffect(() => {
-    axios
-      .get("https://jsonplaceholder.typicode.com/posts")
+    axios.get("https://jsonplaceholder.typicode.com/posts")
       .then((response) => console.log(response)); // or response.data
     //here we don't need to convert it into json format as axios does it by default (it works by default on json format)
   }, []);
@@ -36,11 +35,14 @@ function Example1() {
 function Example2() {
   const [data, setData] = useState([]); //the data which api is getting is an array thats why we pass initial data as [] in useState
 
-  useEffect(() => {
+  const getPost = () => {
     axios.get("https://jsonplaceholder.typicode.com/posts").then((response) =>
       //console.log(response.data)
       setData(response.data)
     );
+  };
+  useEffect(() => {
+    getPost();
   }, []);
 
   return (
@@ -70,7 +72,7 @@ const Example3 = () => {
   const [data, setData] = useState([]);
   const [isError, setError] = useState(""); //used to show error on screen
 
-  useEffect(() => {
+  const getPosts = () => {
     axios
       .get("https://jsonplaceholder.typicode.com/posts")
       .then((response) => setData(response.data))
@@ -78,15 +80,19 @@ const Example3 = () => {
       .catch((error) => {
         setError(error.message); //used to show errors on screen
       });
+  };
+
+  useEffect(() => {
+    getPosts();
   }, []);
 
   return (
     <>
       <h4>Example 3: handling and displaying errors</h4>
       {
-        isError != "" && <h2>Error: {isError}</h2>
+        isError !== "" && <h2>Error: {isError}</h2>
         //means when isError is not empty so when there is an error isError will not be empty then
-        // show error message using h2 tags if there is no error then isError will be empty and this code will not run
+        // show error message using h2 tags if there is error then isError will mot be empty and this code will not run
       }
       <div className="grid">
         {data.map((getpost) => {
@@ -126,7 +132,7 @@ function Example4() {
   return (
     <>
       <h4>Example 4: Axios with async-await</h4>
-      {isError != "" && <h2>Error: {isError}</h2>}
+      {isError !== "" && <h2>Error: {isError}</h2>}
       <div className="grid">
         {data.slice(0, 10).map((getpost) => {
           //here .slice(0,10) will show data of 10 posts only
@@ -167,7 +173,7 @@ const Example5 = () => {
   return (
     <>
       <h4>Example 5: Best way to write Axios</h4>
-      {isError != "" && <h2>Error: {isError}</h2>}
+      {isError !== "" && <h2>Error: {isError}</h2>}
       <div className="grid">
         {data.slice(0, 10).map((getpost) => {
           const { id, title, body } = getpost;
@@ -187,5 +193,14 @@ export default Axios;
 
 /*
 ->Study from Notes:
+
+Basic intro here: Axios is a  lightweight package and is used to make Http requests in any js library (like react, angular or vue.js)
+->Axios is the easy to use version of fetch (its upgraded version of fetch)
+
+Main differences between Axios and Fetch
+ -> Axios converts data to json format directly while fetch doesn't convert directly we have to tell it
+ see more on notes
+
+ to install Axios run this command: npm install axios
  
 */
