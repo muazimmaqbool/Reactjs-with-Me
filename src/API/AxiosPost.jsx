@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+
+//first checkout previous code
 const AxiosPost = () => {
   const url = "https://jsonplaceholder.typicode.com/todos";
   const data = {
@@ -14,16 +16,14 @@ const AxiosPost = () => {
   }
   const postData = async () => {
    try{
-    const response = await axios.post(url,data);
-    console.log(response.data);
+    const response=await axios.post(url,data);
+    console.log("Post response",response.data)
    }catch(error){
     console.log("error",error)
    }
   };
 
-  useEffect(() => {
-    postData();
-  },[]);
+
   return (
     <>
       <h3>Axios Post</h3>
