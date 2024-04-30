@@ -88,7 +88,7 @@ function App() {
       {/* <FetchAPI3/> */}
 
       {/* <Axios /> */}
-      <AxiosPost/>
+      {/* <AxiosPost/> */}
       {/* <AxiosPut/> */}
       {/* <AxiosDelete/> */}
 

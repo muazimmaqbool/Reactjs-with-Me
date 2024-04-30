@@ -8,7 +8,7 @@ const AxiosPut = () => {
     title:"React Hooks?",
     body:"Hooks are used to add functionality to functional components"
   };
-  ;const putData = async () => {
+  const putData = async () => {
     try {
       const response = await axios.put(url, data);
       console.log(response.data);
@@ -17,12 +17,10 @@ const AxiosPut = () => {
     }
   };
 
-  useEffect(() => {
-    putData();
-  }, []);
   return (
     <>
       <h3>Axios Put</h3>
+      <button onClick={putData}>Do Put Request</button>
     </>
   );
 };
