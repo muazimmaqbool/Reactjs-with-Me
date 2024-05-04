@@ -21,7 +21,7 @@ function AppExample(){
 
         //cleanup code
         return ()=>{
-            console.log('return from resource change')
+            console.log('returned    from resource change')
         }
     },[srcType])
     // ,[] runs only once

@@ -57,13 +57,14 @@ function Bike() {
 const Item=()=>{
   const[details,setDetails]=useState({
     name:"Hp-Laptop",
-    intel:"i3",
+    procerror:"i3",
     memory:"8GB and 1TB",
     size:"Large screen"
   })
   return(
     <>
-      <h3>My {details.name} has {details.intel} processor with {details.memory} of memory</h3>
+      <h3>My {details.name} has {details.procerror} processor with {details.memory} of memory</h3>
+      <button onClick={()=>setDetails()}>Update processor</button>
     </>
   )
 }
@@ -82,7 +83,7 @@ export default UseState2;
     const [year, setYear] = useState("1964");
     const [color, setColor] = useState("red");
 
-  //Or, we can just use one state and include an object instead!
+  Or, we can just use one state and include an object instead!
 
   function Car() {
   const [car, setCar] = useState({
@@ -91,6 +92,6 @@ export default UseState2;
     year: "1964",
     color: "red"
   });
-  //Since we are now tracking a single object, we need to reference that object and then the property 
-   //of that object when rendering the component. (Ex: car.brand)
+  Since we are now tracking a single object, we need to reference that object and then the property 
+   of that object when rendering the component. (Ex: car.brand)
 */

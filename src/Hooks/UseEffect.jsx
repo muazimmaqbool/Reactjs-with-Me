@@ -45,12 +45,12 @@ export default UseEffect
       Example
       1. No dependency passed:
         useEffect(() => {
-          //Runs on every render
+          Runs on every render
         });
 
       Example
       2. An empty array:
         useEffect(() => {
-          //Runs only on the first render
+          Runs only on the first render
         }, []);
 */

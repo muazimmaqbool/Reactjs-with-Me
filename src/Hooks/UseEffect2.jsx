@@ -49,5 +49,5 @@ function Counter(){
 export default UseEffect2;
 /*
  -> in useEffect when we give it dependency [] it means run only once
-  and [a,b] : runs whenever value of a and b changes
+  and [a,b] : runs whenever value of a or b changes
  */

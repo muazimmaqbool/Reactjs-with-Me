@@ -94,7 +94,7 @@ function App() {
 
       {/*used to explain hooks */}
        {/* hooks basic intro here */}
-      <Hooks/> 
+      {/* <Hooks/>  */}
      
 
       {/* <UseState/> */}
