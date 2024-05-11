@@ -4,8 +4,12 @@ const UseRef = () => {
   return (
     <>
       <Example1/>
-      <Example2/> {/*Accessing DOM Elements */}
-      <Example3/> {/*Tracking State Changes: track of previous state values */}
+
+      {/*Accessing DOM Elements */}
+      <Example2/> 
+
+      {/*Tracking State Changes: track of previous state values */}
+      <Example3/> 
     </>
   )
 }
@@ -89,6 +93,6 @@ export default UseRef
         In React, we can add a ref attribute to an element to access it directly in the DOM
         code in : example2
 
-Note: always do your management like updating value/setting value to variable usng ref do it using useState/props
+Note: always do your management like updating value/setting value to variable using ref do it using useState/props
 
 */

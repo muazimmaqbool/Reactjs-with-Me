@@ -1,17 +1,18 @@
 import React, { useState,createContext,useContext } from 'react'
 
+//context can be any name
 const context=createContext();
 const UseContext = () => {
     const[item,setItem]=useState("Laptop");
   return (
-    <>
+    
         <context.Provider value={item}>
             <h3>useContext Hook</h3>
             <h4>Item is: {item}</h4>
             <button onClick={()=>setItem("CPU")}>Change item</button>
             <Comp2/>
         </context.Provider>
-    </>
+
   )
 }
 
@@ -24,9 +25,12 @@ function Comp2(){
     )
 }
 function Comp3(){
+    //also works here,                    //this line is edited recentlu on 11-05-2024
+    const product=useContext(context)
     return(
         <>
             <h5>component 3</h5>
+            {/* <h5>product: {product}</h5> */}
             <Comp4/>
         </>
     )
@@ -133,7 +137,7 @@ export default UseContext
         return (
             <UserContext.Provider value={user}>
                 <h1>{`Hello ${user}!`}</h1>
-                <Component2 user={user} />
+                <Component2 />
             </UserContext.Provider>
         );
         }

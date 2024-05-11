@@ -107,11 +107,11 @@ function App() {
       {/* <UseEffect4Example/> */}
 
       {/* <UseMemo /> */}
-      <UseRef/>
+      {/* <UseRef/> */}
 
       {/* <UseContext/> */}
 
-      {/* <UseReducer/> */}
+      <UseReducer/>
       {/* <UseReducer2/> */}
 
       {/* <UseCallback/> */}
