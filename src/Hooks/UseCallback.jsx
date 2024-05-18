@@ -3,9 +3,9 @@ import USEcallbackCOMP from "../Hooks/USEcallbackCOMP";
 
 const UseCallback = () => {
   return (
-    <>
+  
       <Example1 />
-    </>
+    
   );
 };
 
@@ -33,7 +33,7 @@ const Example1 = () => {
   };
 
   return (
-    <>
+  
       <div style={theme}>
         <input
           type="number"
@@ -46,7 +46,7 @@ const Example1 = () => {
         <USEcallbackCOMP getItems={getItems} />{" "}
         {/*another component named as USEcallbackCOMP.jsx */}
       </div>
-    </>
+    
   );
 };
 

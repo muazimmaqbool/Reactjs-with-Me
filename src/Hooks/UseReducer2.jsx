@@ -6,7 +6,7 @@ const UseReducer2 = () => {
   )
 }
 function reducer(state,action){
-    if(action.type=='increment-task'){
+    if(action.type==='increment-task'){
         return{
             task:state.task+1
         }

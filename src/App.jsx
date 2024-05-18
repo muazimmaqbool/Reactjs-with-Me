@@ -111,15 +111,15 @@ function App() {
 
       {/* <UseContext/> */}
 
-      <UseReducer/>
+      {/* <UseReducer/> */}
       {/* <UseReducer2/> */}
 
       {/* <UseCallback/> */}
 
 
       {/*these are in REDUX folder */}
-      {/* <h1>inside App.jsx: {c}</h1> */}
-      {/* <HomeRedux/> */}
+      <h1>inside App.jsx: {c}</h1>
+      <HomeRedux/>
       
       {/*these are in More Topics folder */}
       {/* <SpreadOperator/> */}

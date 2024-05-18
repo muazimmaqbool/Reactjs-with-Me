@@ -1,0 +1,31 @@
+What is Redux ?
+ -> Redux is an open source javascript library for managing and centeralizing applications state.
+ 
+ example say we have a variable c=20 in app.js and we are passing it to home.js and then from home.js to post.js
+ suppose if we had this variable c=20 in post.js we can send it to home.js or app.js and post is and inner component and we can't send data
+ from inner to outer component in react , we can send data from outer to inner component in react thats the default flow of react
+
+Now Redux comes in
+ Now if you store this c=20 somewhere else say store.js and now this c is available for all 3 components
+
+Important Concepts of redux: 
+  1) Store: a place where all variables and data is stored
+  2) Reducer: this is used to change/update the state i.e c=20 thats c's state is c=20 and with the help of reducer we can change the state of c
+  3) State: its the condition of the variable i.e c=20 is state of c
+  4) Action: Action is like a trigger, suppose Reducer is an gun then action is a trigger i.e Reducer is called by Action
+
+->Redux toolkit: standard way to write the redux logic
+
+-> Installation: npm i @reduxjs/toolkit react-redux
+
+Setup:
+first make store.js file or store.jsx
+
+then make changes in index.js file like this: 
+ import these: 
+            import { Provider } from "react-redux";
+            import store from "./REDUX/store";
+then in return do this:
+            <Provider store={store}>
+              <App />
+            </Provider>
