@@ -13,9 +13,9 @@ const Mounting = () => {
 class Example extends React.Component {
   componentDidMount() {
     //called after component is loaded/mounted/rendered in DOM
-    //console.log("Mount")
+    console.log("Mount")
     setTimeout(() => {
-      console.log("Fetched..."); //showing this after component/date is loaded
+      console.log("Fetched..."); //showing this after component/data is loaded
     }, 2000);
   }
 

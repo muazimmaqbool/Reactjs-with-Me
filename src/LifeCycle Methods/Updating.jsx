@@ -33,18 +33,19 @@ class Example extends React.Component {
   }
 
   componentDidMount() {
-    console.log("Fetched...");
+    console.log("Mounted...");
   }
 
 /*
-  //if it returns false then no re-render will be done 
-  //count value will not change neither componentDidUpdate() will be called 
-  //NOTE: when we click on the button the Count will update but not on UI , try console.log inside increment and decrement
-  shouldComponentUpdate(){
-    return false; //if its false no change can be made to component
-    //its default value is true
-  }
+  if shouldComponentUpdate returns false then no re-render is done 
+  count value will not change neither componentDidUpdate() will be called 
+  NOTE: when we click on the button the Count will update but not on UI , try console.log inside increment and decrement 
 */
+shouldComponentUpdate(){
+  return true; //if its false no change can be made to component i.e Add and Minus buttons won't work to make them work do: return false
+ // its default value is true
+}
+
   //will be called whenever count value is updated
   componentDidUpdate() {
     console.log("Updated Count");
@@ -83,7 +84,7 @@ export default Updating;
          shouldComponentUpdate() {
                 return false/true; //default is true so use it only when you want false
             }
-        //ager shouldComponentUpdate() false huva tou componentDidUpdate() will never be called
+        ager shouldComponentUpdate() false huva tou componentDidUpdate() will never be called
         
 
 */
