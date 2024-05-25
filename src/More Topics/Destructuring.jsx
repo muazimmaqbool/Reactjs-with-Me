@@ -3,10 +3,10 @@ import React from "react";
 const Destructuring = () => {
   return (
     <>
-      <Example1 />
-      <Example2 />
+      {/* <Example1 /> */}
+       {/* <Example2 /> */}
 
-      <ExampleObj />
+      {/* <ExampleObj /> */}
 
       <ExampleFunc />
     </>
@@ -48,9 +48,9 @@ const Example1 = () => {
   console.log(s1, " & ", s2);
 
   return (
-    <>
+    
       <h4>Array Destructuring</h4>
-    </>
+    
   );
 };
 

@@ -118,8 +118,8 @@ function App() {
 
 
       {/*these are in REDUX folder */}
-      <h1>inside App.jsx: {c}</h1>
-      <HomeRedux/>
+      {/* <h1>inside App.jsx: {c}</h1> */}
+      {/* <HomeRedux/> */}
       
       {/*these are in More Topics folder */}
       {/* <SpreadOperator/> */}
@@ -127,7 +127,7 @@ function App() {
 
 
       {/*React Lifecycle Methods */}
-      {/* <LifeCycleMethods/> */}
+      <LifeCycleMethods/>
 
       {/*used to explain debounce,code splitting and other things */}
       {/* <CodeSplitting/> */}

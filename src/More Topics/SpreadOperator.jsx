@@ -43,12 +43,11 @@ const Example2=()=>{
     const name={
         firstN:"Muazim",
         lastN:"Maqbool",
-        branch:"computer"
+        branch:"computer",
     }
     const details={
         enroll:6655,
         ...name,
-        section:"B",
         branch:"CSE" //branch CSE overrides branch in name
     }
     console.log(details)
