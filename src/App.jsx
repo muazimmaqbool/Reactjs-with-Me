@@ -127,10 +127,10 @@ function App() {
 
 
       {/*React Lifecycle Methods */}
-      <LifeCycleMethods/>
+      {/* <LifeCycleMethods/> */}
 
       {/*used to explain debounce,code splitting and other things */}
-      {/* <CodeSplitting/> */}
+      <CodeSplitting/>
       {/* <Debounce/> */}
 
 

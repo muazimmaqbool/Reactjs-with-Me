@@ -38,6 +38,12 @@ const CodeSplitting = () => {
 
 export default CodeSplitting
 /*
+->
+Code splitting is a technique where we split our code into various bundles which can then be loaded on demand or in parallel. 
+This can significantly reduce the load time of our application and has other benefits too. Create react app does it automatically.
+ Dynamic import syntax is supported.
+
+
 what is debounce,code splitting,etc already in notes and debounce already seen in javascript
 visit: https://www.youtube.com/watch?v=B36pSPMSzZI
 */
