@@ -1,5 +1,5 @@
-import React,{lazy,Suspense} from 'react'
-import { BrowserRouter as Router,Routes,Route, Link } from 'react-router-dom'
+import React, { lazy, Suspense } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 // import Home from './Home'
 // import About from './About'
@@ -7,10 +7,10 @@ import { BrowserRouter as Router,Routes,Route, Link } from 'react-router-dom'
 //we will see these all are come inside bundle.js
 //now we want to put them seperatly i.e known as code splitting, so import them using lazy keyword -{import lazy from react}
 
-const Home=lazy(()=>import("./Home")); //this is known as dynamic import
-const About=lazy(()=>import("./About"));
-const Contact=lazy(()=>import("./Contact"));
-//this is known as dynamic import, this way it maintains good performance 
+const Home = lazy(() => import("./Home")); //this is known as dynamic import
+const About = lazy(() => import("./About"));
+const Contact = lazy(() => import("./Contact"));
+//this is known as dynamic import, this way it maintains good performance
 //->this way react application is to hold off loading some parts of a web page until a user needs them
 
 //ab hum jis page pei honge ausi ka data ayaa ga seperate file mei bundle.js ke neeche
@@ -22,21 +22,24 @@ const Contact=lazy(()=>import("./Contact"));
 
 const CodeSplitting = () => {
   return (
-    <>
-     <Router>
+    <Router>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
+      </nav>
       <Suspense fallback={<div>Loading...</div>}>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/contact' element={<Contact/>}/>
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </Suspense>
-     </Router>
-    </>
-  )
-}
+    </Router>
+  );
+};
 
-export default CodeSplitting
+export default CodeSplitting;
 /*
 ->
 Code splitting is a technique where we split our code into various bundles which can then be loaded on demand or in parallel. 

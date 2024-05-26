@@ -40,10 +40,13 @@ import Destructuring from "./More Topics/Destructuring";
 import LifeCycleMethods from "./LifeCycle Methods/LifeCycleMethods";
 import CodeSplitting from "./Debounce/CodeSplitting";
 import Debounce from "./Debounce/Debounce";
+import ToggleSwitch from "./REDUX/ExampleTwo/ToggleSwitch";
 
 
 function App() {
+  //useSelector is used to access value from the state
   const c=useSelector(state=>state.custom.c)
+  const {switchValue}=useSelector(state=>state.switchExample)
   return (
     <>
       {/* <h1>Inside App.jsx</h1> */}
@@ -118,8 +121,11 @@ function App() {
 
 
       {/*these are in REDUX folder */}
-      {/* <h1>inside App.jsx: {c}</h1> */}
+      {/* <h1>inside App.jsx, c= {c}</h1> */}
       {/* <HomeRedux/> */}
+      {/*another basic redux example */}
+      <h2>Value of Switch in App.jsx={switchValue?"ON":"OFF"}</h2>
+      <ToggleSwitch/>
       
       {/*these are in More Topics folder */}
       {/* <SpreadOperator/> */}
@@ -130,7 +136,7 @@ function App() {
       {/* <LifeCycleMethods/> */}
 
       {/*used to explain debounce,code splitting and other things */}
-      <CodeSplitting/>
+      {/* <CodeSplitting/> */}
       {/* <Debounce/> */}
 
 

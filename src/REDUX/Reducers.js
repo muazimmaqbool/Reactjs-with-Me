@@ -7,7 +7,7 @@ const initialState = {
 export const customReducer = createReducer(initialState, {
   //here we can write multiple reducers , this will be called when action is dispatched/called
   increment: (state) => {
-    // here action is optional
+    // here action is optional, used when receiving parameteres see incrementByValue and decrementByValue
     state.c = state.c + 1; // or state.c += 1;
   },
   //action is used to receive parameters here
@@ -24,4 +24,3 @@ export const customReducer = createReducer(initialState, {
   }
 });
 
-//export default Reducers

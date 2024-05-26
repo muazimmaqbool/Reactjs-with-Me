@@ -1,10 +1,11 @@
 import React from "react";
 import { useDispatch ,useSelector} from "react-redux";
-//useDispatch is used to trigger/call our action
+//useDispatch is used to dispatch/trigger/call our action
 //useSelector is used to access value from the state
 
 const HomeRedux = () => {
-    //const value=20;
+    //const value=20; this is added to store.js (watch at 13:11) video link: https://www.youtube.com/watch?v=pBgQhZcQxMw&t=343s
+    
     const {c}=useSelector(state=>state.custom) // we can access this value in any component lets access this value in app.jsx
     // or  const c=useSelector(state=>state.custom.c)
 
@@ -37,7 +38,7 @@ const HomeRedux = () => {
 
   return (
     <>
-      <h3>Inside HomeRedux.jsx: {c}</h3>
+      <h3>Inside HomeRedux.jsx, c= {c}</h3>
       <button onClick={addBtn}>Increment</button>
       <button onClick={incByValue}>increment by 10</button>
       <button onClick={subBtn}>Decrement</button>
