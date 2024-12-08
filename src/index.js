@@ -16,3 +16,11 @@ root.render(
 
 //what is strict mode? ->
   //Means in development and not in deployment , it will render every component twice
+  /*
+    <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>
+  
+  */
