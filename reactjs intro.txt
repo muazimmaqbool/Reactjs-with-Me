@@ -1,7 +1,6 @@
                                                       Introduction reactJs
 
 	What is react?
-
        -> React is an javascript library, its not an framework
        -> The main purpose of react is to build UI as fast as possible.
        -> Used to make single page applications: SPA (Single-page application) is a web app implementation that loads only a 
