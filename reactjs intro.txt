@@ -32,5 +32,7 @@
 	React prerequisites.
 		->html,css,javascript.
 		->ES6 understanding will make you comfortable with reactjs.
+
+	-> To Create your react app : npx create-react-app app name
 	
     	
