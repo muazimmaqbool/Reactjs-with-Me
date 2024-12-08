@@ -4,35 +4,33 @@
 
        -> React is an javascript library, its not an framework
        -> The main purpose of react is to build UI as fast as possible.
-       -> Used to make single page application ( An SPA (Single-page application) is a web app implementation that loads only a single web document, and then updates the body content of that single document via JavaScript APIs such as XMLHttpRequest and Fetch when different content is to be shown )
+       -> Used to make single page applications: SPA (Single-page application) is a web app implementation that loads only a 
+	   	  single web document, and then updates the body content of that single document via JavaScript APIs such as XMLHttpRequest
+		  and Fetch when different content is to be shown
           {single page website are fast}
           {Angular and vue can also make single page application but react is very fast}
 
 	Why React is fast ?
-
 	->React is fast because react uses "virtual DOM"
-	: suppose you have list of 3 items, if you want to add 4th item in it or change item in list. Now if you do it using
+	  suppose you have list of 3 items, if you want to add 4th item in it or change item in the list. Now if you do it using
 	  angular or jquery, your whole UI will get impacted and everything will reload and it will take time (this is done using real dom)
-	  * But if you do it using react(react uses virtual dom) , only that item will get impacted which you want to update/add
+	  ->But if you do it using react(react uses virtual dom), only that item will get impacted which you want to update/add
 	    i.e website will be fast.
  
 	Why to use react ?
-	
-	->Maintained by Facebook so it will be long term player in the market.
-	->High demand due to fast speed.
-	->Large community for your support.(via github,stackoverflow,etc).
-	->Can do Mobile App Development using React-Native.
+		->Maintained by Facebook/Meta, so it will be a long term player in the market.
+		->High demand due to fast speed.
+		->Large community for your support. (via github,stackoverflow,etc).
+		->Can do Mobile App Development also using React-Native.
 
 	History and its Versions.
-
-	->Maintained by facebook.
-	->First release on 29 May 2013.
-	->The current version is 18.2.0
-	->Apps using React:
-		- NetFlix , Whatsapp web , Instagran , Airbnb , etc
-	
+		->Maintained by facebook.
+		->First release on 29 May 2013 (First public release in july 2013).
+		->React was first used in 2011 in facebooks newsfeed feature.
+		->Apps using React: NetFlix , Whatsapp web , Instagran , Airbnb , etc
+		
 	React prerequisites.
-	->html,css,javascript.
-	->ES6 understanding will make you comfortable with reactjs.
+		->html,css,javascript.
+		->ES6 understanding will make you comfortable with reactjs.
 	
     	

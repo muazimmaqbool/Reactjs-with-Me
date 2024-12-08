@@ -49,7 +49,7 @@ function App() {
   const {switchValue}=useSelector(state=>state.switchExample)
   return (
     <>
-      {/* <h1>Inside App.jsx</h1> */}
+      <h1>Inside App.jsx</h1>
         
       {/*used to explain JSX */}
       {/* <Jsxinfo/> */}
@@ -124,8 +124,8 @@ function App() {
       {/* <h1>inside App.jsx, c= {c}</h1> */}
       {/* <HomeRedux/> */}
       {/*another basic redux example */}
-      <h2>Value of Switch in App.jsx={switchValue?"ON":"OFF"}</h2>
-      <ToggleSwitch/>
+      {/* <h2>Value of Switch in App.jsx={switchValue?"ON":"OFF"}</h2> */}
+      {/* <ToggleSwitch/> */}
       
       {/*these are in More Topics folder */}
       {/* <SpreadOperator/> */}
@@ -138,7 +138,6 @@ function App() {
       {/*used to explain debounce,code splitting and other things */}
       {/* <CodeSplitting/> */}
       {/* <Debounce/> */}
-
 
     </>
   );
