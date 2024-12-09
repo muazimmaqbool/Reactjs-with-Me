@@ -25,8 +25,8 @@ export default Jsxinfo;
 
 /*
 JSX info:
-    JSX: means javascript XML, its an extention of javascript syntax, which is used in react to write html
-    and javascript together. It makes easy to write react code
+    JSX: means javascript XML, its an extention of javascript syntax, which is used in react to write html and javascript together. 
+    >It makes easy to write react code
     >JSX coverts html tags in react elements
     >JSX allows us to write Html in react
     >JSX makes it easier to write and add html in react
@@ -41,8 +41,8 @@ JSX info:
  -> Important:
     >JSX will throw an error if the HTML is not correct, or if the HTML misses a parent element.
     >Elements Must be Closed
-    JSX follows XML rules, and therefore HTML elements must be properly closed.
-    :Close empty elements with />
+    >JSX follows XML rules, and therefore HTML elements must be properly closed.
+       -> Close empty elements with />
     JSX will throw an error if the HTML is not properly closed.
 
 ->Attribute class = className:
