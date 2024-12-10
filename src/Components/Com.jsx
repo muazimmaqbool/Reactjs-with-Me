@@ -1,6 +1,6 @@
 import React from 'react'
 
-//also study from notebook
+//Read Documentation below
 const Com = () => {
   return (
     <>
