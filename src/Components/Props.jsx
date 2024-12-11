@@ -10,12 +10,12 @@ const Props = () => {
   );
 };
 
-//passing data using props
+//passing data using props from Garage component
 function Car(props) {
   return (
     <>
       {/* <h3>I am a {props.brand} Car</h3> */}
-      {/*to access object values when object is passed in props*/}
+      {/* accessing object values when object is passed in props*/}
       <h3>
         I am a {props.brand.name} and i have {props.brand.topSpeed} of top speed!
       </h3>
@@ -37,8 +37,12 @@ function Garage() {
     <>
       <h3>Which car is in my Garage?</h3>
       {/* <Car brand="BMW"/> */}
-      {/* <Car brand={carName}/> */} {/*passing variable */}
-      <Car brand={carInfo} />  {/*passing object */}
+
+      {/* passing variable: */}
+      {/* <Car brand={carName}/>*/}
+
+      {/* passing object: */}
+      <Car brand={carInfo} />
     </>
   );
 }
