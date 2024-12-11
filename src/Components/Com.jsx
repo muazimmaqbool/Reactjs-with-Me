@@ -1,32 +1,35 @@
-import React from 'react'
+import React from "react";
 
 //Read Documentation below
 const Com = () => {
   return (
     <>
-    <h3>Inside component</h3>
-    {/*using another component inside Com component */}
-    <Garage/>
+      <h3>Inside component</h3>
+      {/*using another component inside 'Com' component */}
+      <Garage />
     </>
-  )
-}
+  );
+};
 //component 1
-function Car(){
-    return(
-        <h2>I am your Car!</h2>
-    )
+function Car() {
+  return <h2>I am your Car <CarName/>!</h2>;
 }
 //component 2
-function Garage(){
-    return(
-        <>
-            <h2>Who is in my Garage?</h2>
-            <Car/> 
-            {/*accessing Car component from Garage component */}
-        </>
-    )
+function Garage() {
+  return (
+    <>
+      <h2>Who is in my Garage?</h2>
+      <Car />
+      {/*accessing Car component from Garage component */}
+    </>
+  );
 }
-export default Com
+export default Com;
+
+//component 3
+function CarName(){
+    return <>BMW M5</>
+}
 
 /*
 React Components:
@@ -49,12 +52,12 @@ React Components:
                     return <h2>Hi, I am a Car!</h2>;
                 }
             }
-            {if you want to take a look at class components visit this link: https://www.w3schools.com/REACT/react_class.asp}
+            {if you want to take a look on class components visit this link: https://www.w3schools.com/REACT/react_class.asp}
     
     >Function Component
         Here is the same example as above, but created using a Function component instead.
         A Function component also returns HTML, and behaves much the same way as a Class component, 
-        but Function components can be written using much less code, are easier to understand,
+        but Function components can be written using much less code, and are easier to understand,
         and will be preferred to use.
 
         Example:
@@ -62,6 +65,9 @@ React Components:
             function Car() {
                 return <h2>Hi, I am a Car!</h2>;
             }
-
+            or
+            const Car=()=>{
+                return <h2>Hi, I am a Car!</h2>;
+            }
 
 */
