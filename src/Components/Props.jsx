@@ -1,5 +1,6 @@
 import React from "react";
 
+//Read documentation below
 const Props = () => {
   return (
     <>
@@ -59,6 +60,6 @@ export default Props;
                     return <h2>I am a { props.brand }!</h2>;
                 }
     >Pass Data
-        Props are also use to you pass data from one component to another, as parameters.
+        Props are also used to you pass data from one component to another, as parameters.
         see example above
 */
