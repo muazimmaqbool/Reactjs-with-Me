@@ -16,7 +16,10 @@ const Events = () => {
   };
 
   const mouse = (e) => {
-    console.log("Its mouseOver event: ", e.type);
+    console.log("the event is:", e.type);
+  };
+  const mouseOut = (e) => {
+    console.log("the event is:", e.type);
   };
   return (
     <>
@@ -34,6 +37,13 @@ const Events = () => {
       {/*here event can be named with anything */}
 
       <h3 onMouseOver={(event) => mouse(event)}>Use Mouse Over me</h3>
+
+      <div
+        style={{ width: "100px", height: "100px", backgroundColor: "teal" }}
+        onMouseOut={(e) => mouseOut(e)}
+      >
+        Remove Mouse From Me
+      </div>
     </>
   );
 };
