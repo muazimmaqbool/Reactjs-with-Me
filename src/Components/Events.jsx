@@ -1,5 +1,6 @@
 import React from "react";
 
+//Read documentation below
 const Events = () => {
   const run = () => {
     alert("running");
@@ -43,27 +44,26 @@ export default Events;
   React has the same events as HTML: click, change, mouseover etc.
 
   Adding Events :
-    React events are written in camelCase syntax:
-    onClick instead of onclick.
-    React event handlers are written inside curly braces:
-    onClick={shoot}  instead of onClick="shoot()".
-   Example:   
-    React: <button onClick={shoot}>Take the Shot!</button>
-    Html: <button onclick="shoot()">Take the Shot!</button>
+    ->React events are written in camelCase 
+      syntax: onClick instead of onclick.
+    ->React event handlers are written inside curly braces:
+      onClick={shoot}  instead of onClick="shoot()".
+    ->Example:   
+      React: <button onClick={shoot}>Take the Shot!</button>
+      Html: <button onclick="shoot()">Take the Shot!</button>
 
-  > Passing Arguments
-    To pass an argument to an event handler, use an arrow function.
-      <button onClick={() => shoot("Goal!")}>Take the shot!</button>
+    ->Passing Arguments:
+      To pass an argument to an event handler, use an arrow function.
+        <button onClick={() => shoot("Goal!")}>Take the shot!</button>
 
-  > React Event Object
+    ->React Event Object
       Event handlers have access to the React event that triggered the function.
-      In our example the event is the "click" event.
-      function Football() {
+       In our example the event is the "click" event.
+       function Football() {
         const shoot = (a, b) => {
           alert(b.type);
           'b' represents the React event that triggered the function,
           in this case the 'click' event
-          
         }
 
         return (

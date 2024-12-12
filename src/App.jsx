@@ -58,11 +58,11 @@ function App() {
       {/* <Com/>  */}
 
       {/*used to explain props */}
-      <Props/> 
+      {/* <Props/>  */}
 
 
       {/*used to explain Events */}
-      {/* <Events />    */}
+      <Events />   
 
       {/*used to explain conditionals on components*/}
       {/* <Conditionals/> */}
