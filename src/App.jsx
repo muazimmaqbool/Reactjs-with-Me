@@ -62,10 +62,10 @@ function App() {
 
 
       {/*used to explain Events */}
-      <Events />   
+      {/* <Events />    */}
 
       {/*used to explain conditionals on components*/}
-      {/* <Conditionals/> */}
+      <Conditionals/>
 
       {/*use to explain Map() and key | looping on list */}
       {/* <List/> */}
