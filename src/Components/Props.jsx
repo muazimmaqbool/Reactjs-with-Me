@@ -50,7 +50,7 @@ function Garage() {
 export default Props;
 
 /* 
-    >React Props:
+    ->React Props:
         props stands for properties.
         Props are arguments passed into React components.
         props are read only (we can't change or modify props as they are imutable)
@@ -58,12 +58,12 @@ export default Props;
         They are like function arguments in js and attributes in html
         The props can have any name
 
-    >To send props into a component, use the same syntax as HTML attributes: <Car brand="Ford" />;
+    ->To send props into a component, use the same syntax as HTML attributes: <Car brand="Ford" />;
         The component receives the argument as a props object:
                 function Car(props) {
                     return <h2>I am a { props.brand }!</h2>;
                 }
-    >Pass Data
+    ->Pass Data
         Props are also used to you pass data from one component to another, as parameters.
         see example above
 */
