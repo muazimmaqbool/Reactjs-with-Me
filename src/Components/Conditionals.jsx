@@ -2,7 +2,7 @@ import React from "react";
 
 //Read Documentation below
 const Conditionals = () => {
-  const cars = ["BMW", "Honda", "Hyundia", "Ford"]; // try with empty array of cars , const cars = [];
+  const cars = ["BMW", "Honda", "Hyundia", "Ford"]; // try with empty array of cars: const cars = [];
   return (
     <>
       <h2>Conditionals</h2>
@@ -26,7 +26,7 @@ function Missed() {
 function Hit() {
   return <h3>Hit</h3>;
 }
-//this function/component will decide which component to run
+//this function/component will decide which component to render/run
 function Shoot(props) {
   const isGoal = props.goal;
   if (isGoal) {
