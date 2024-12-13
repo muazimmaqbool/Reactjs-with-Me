@@ -1,5 +1,6 @@
 import React from "react";
 
+//Read Documentation Below
 const List = () => {
   const list=[1,2,3,4,5]
   return (
@@ -103,9 +104,9 @@ function GarageTwo() {
 //example
 const Cycles=(props)=>{
   return(
-    <>
-      <li><h3>Iam {props.cycleName}</h3></li>
-    </>
+    
+      <li><h3>I'am {props.cycleName}</h3></li>
+    
   )
 }
 const GarageThree=()=>{
@@ -130,7 +131,7 @@ export default List;
   -> In React, you will render lists with some type of loop.
   -> The JavaScript map() array method is generally the preferred method.
 
-  example above
+  examples above
 
     Note: Keys
     Keys allow React to keep track of elements. This way, if an item is updated or removed, 
