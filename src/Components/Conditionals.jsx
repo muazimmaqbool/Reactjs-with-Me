@@ -1,5 +1,6 @@
 import React from "react";
 
+//Read Documentation below
 const Conditionals = () => {
   const cars = ["BMW", "Honda", "Hyundia", "Ford"]; // try with empty array of cars , const cars = [];
   return (
@@ -60,17 +61,17 @@ export default Conditionals;
 /*
     In React, you can conditionally render components.
     There are several ways to do this.
-    if Statement:
-     We can use the if JavaScript operator to decide which component to render.
-     Example: we will create two components and another third component which decides which component to render
+    ->if Statement:
+      We can use the if JavaScript operator to decide which component to render.
+       Example: we will create two components and another third component which decides which component to render
 
-    Logical && Operator
-     Another way to conditionally render a React component is by using the && operator.
-        { condition && statement to run if condition is true}
+    ->Logical && Operator
+      Another way to conditionally render a React component is by using the && operator.
+       {condition && statement to run if condition is true}
 
-     Ternary Operator
-        Another way to conditionally render elements is by using a ternary operator.
-        condition ? true : false
+    ->Ternary Operator
+      Another way to conditionally render elements is by using a ternary operator.
+       {condition ? true : false}
 
 
         visit this page: https://www.w3schools.com/REACT/react_conditional_rendering.asp
