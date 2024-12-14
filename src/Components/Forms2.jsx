@@ -27,6 +27,8 @@ function Myform() {
   :{ ...values } creates a copy of the current state using the spread operator to avoid mutating the original state.
    [name]: value dynamically updates the property in the copied object. 
    The square brackets ([]) are used for computed property names so that name is evaluated as a variable.
+
+   ->This results in updating the state with the new value for the field while keeping the other fields unchanged.
   */
 
   const handleSubmit = (event) => {
