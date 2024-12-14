@@ -8,18 +8,18 @@ import User from "./Routng Pages/User";
 
 import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 
+//Read Documentation Below:
 const Routing = () => {
   return (
     <>
       <h1>Inside Router</h1>
       <Router>
         <Header/>
-
         <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/about" element={<About/>}/>
             <Route path="/contact" element={<Contact/>}/>
-            <Route path="/user/:id" element={<User/>}/> {/*see it in comment below */}
+            <Route path="/user/:id" element={<User/>}/> {/*see it in comments below */}
             <Route path="*" element={<h3>Error! Page Not Found</h3>}/> 
         </Routes>
 
@@ -41,7 +41,6 @@ export default Routing;
   Routes: used to define and render components based on the specified path. It will accept components
           and render to define what should be rendered
 
-  important: at 14:15
   Dynamic Routing:
       Dynamic routing is the routing that takes place as your app is rendering, not in a configuration
       or convention outside of a running app

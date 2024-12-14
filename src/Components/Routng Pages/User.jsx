@@ -8,7 +8,7 @@ const User = () => {
   //navigation('/about'); //works when you double click on user on screen
 
   console.log(params.id); //o/p tempId, we can pass any id,
-  //change its id at here http://localhost:3000/user/muazim now it will show muazim , watch at 20:00
+  //change its id at here http://localhost:3000/user/muazim now it will show muazim ,
   return (
     <>
     <div>User</div>

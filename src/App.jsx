@@ -72,10 +72,10 @@ function App() {
 
       {/*used to explain forms in react */}
       {/* <Forms/> */}
-      <Forms2/>
+      {/* <Forms2/> */}
 
       {/*used to explain routing: explained in notebook and on pdf*/}
-      {/* <Routing/> */}
+      <Routing/>
 
       {/*this component is inside Css Styling*/}
       {/* <Home/> */}
