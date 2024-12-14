@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 
+//first check code of Forms.jsx component
 const Forms2 = () => {
   return (
     <>
-      <h3>Form with multiple input fields</h3>
+      <h3>Form with multiple input fields:</h3>
       <Myform />
     </>
   );
@@ -14,10 +15,19 @@ function Myform() {
   const [inputs, setInputs] = useState({});
 
   const handleChange = (event) => {
+    //event.target.name retrieves the name attribute of the input element that triggered the event. This helps identify which field was updated
     const name = event.target.name;
+    //event.target.value retrieves the current value of the input element.
     const value = event.target.value;
     setInputs((values) => ({ ...values, [name]: value }));
   };
+
+  /*
+  ->setInputs((values) => ({ ...values, [name]: value }));
+  :{ ...values } creates a copy of the current state using the spread operator to avoid mutating the original state.
+   [name]: value dynamically updates the property in the copied object. 
+   The square brackets ([]) are used for computed property names so that name is evaluated as a variable.
+  */
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -25,7 +35,7 @@ function Myform() {
   };
   return (
     <>
-      <h5>Please Enter below details</h5>
+      <h5>Please enter below details</h5>
       <form onSubmit={handleSubmit}>
         <label>
           Your Name:
@@ -50,10 +60,13 @@ function Myform() {
           <input type="number" name="pincode" value={inputs.pincode} onChange={handleChange}/>
         </label>
         <br/>
+        <br/>
         <label>
           City:
           <input type="text" name="city" value={inputs.city} onChange={handleChange}/>
         </label>
+        <br/>
+        <br/>
         <input type="submit" />
       </form>
     </>
