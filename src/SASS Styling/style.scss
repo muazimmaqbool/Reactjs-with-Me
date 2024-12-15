@@ -29,3 +29,14 @@
     transform: rotate(360deg);
   }
 }
+.sassLink{
+  font-size: 1.5rem;
+  color:green;
+  font-weight: 700;
+  transition: 1s ease;
+  &:hover{
+    color: blue;
+    text-decoration: none;
+  }
+  
+}
