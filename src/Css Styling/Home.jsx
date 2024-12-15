@@ -10,6 +10,13 @@ const Home = () => {
         padding:"10px",
         borderRadius:"10px"
     }
+    const styleObj2={
+        backgroundColor:"teal",
+        color:"white",
+        width:"fit-Content",
+        padding:"15px",
+        margin:"auto",
+    }
   return (
     <>
         <h1 style={{
@@ -23,6 +30,7 @@ const Home = () => {
         <pre>I'm styled in sperate css file which is 
             imported here
         </pre>
+        <h3 style={styleObj2}>Next Topic Is SASS</h3>
     </>
   )
 }
