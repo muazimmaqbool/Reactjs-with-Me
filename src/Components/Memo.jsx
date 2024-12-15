@@ -1,6 +1,7 @@
 import React, { useState} from "react";
 import MemoTodo from "./MemoTodo";
 
+//Read Documentation Below:
 const Memo = () => {
   const [count, setCount] = useState(0);
   const [todos, setTodos] = useState(["Todo 1", "Todo 2","Todo 3" ]);
