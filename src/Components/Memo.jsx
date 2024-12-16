@@ -56,7 +56,7 @@ const Todo=({ todos })=> {
 //When you click the increment button, the Todos component re-renders. even though the value of todo doesn't change
 //If this component was complex, it could cause performance issues.
 
-/* Solution
+/* Solution:
 To fix this, we can use memo.
 Use memo to keep the Todos component from needlessly re-rendering.
 Wrap the Todos component export in memo:*/
