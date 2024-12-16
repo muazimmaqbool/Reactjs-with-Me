@@ -71,9 +71,9 @@ export default Memo;
 /*
 
 ->React Memo is a higher-order component that wraps around a component to memorize the rendered output 
-  and avoid unnecessary renderings. This improves performance because it memorizes the result and skips 
-  rendering to reuse the last rendered result. There are two ways you can wrap your component with 
-  React.memo() 
+  and avoid unnecessary renderings.
+  ->This improves performance because it memorizes the result and skips rendering to reuse the last rendered result.
+  ->There are two ways you can wrap your component with React.memo() : shown above via example
 
   ->Example above:
        In this example, the Todos component re-renders even when the todos have not changed. 
