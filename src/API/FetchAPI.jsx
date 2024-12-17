@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const FetchAPI = () => {
   return (
     <>
-      <h2>fetch API</h2>
+      <h2>Simple Fetch API Example</h2>
       <GetUsers />
       <CatFacts />
     </>
@@ -17,7 +17,8 @@ function GetUsers() {
   const fetchUsersData = () => {
     fetch(url)
       .then((response) => response.json())
-      .then((result) => setUsers(result)); //console.log(result)
+      .then((result) => setUsers(result))
+      .catch((error)=>console.log("error occurred:",error))
   };
 
   //used to executed fetchUserData
