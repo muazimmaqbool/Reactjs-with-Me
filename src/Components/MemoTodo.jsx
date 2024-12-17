@@ -1,5 +1,6 @@
 import React,{memo} from 'react'
 
+//called from Memo.jsx
 const MemoTodo = ({todos}) => {
     console.log("todo render");
     return (
