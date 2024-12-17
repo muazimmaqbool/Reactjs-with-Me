@@ -19,7 +19,6 @@ function CatFacts() {
     return setFact(result);
   };
   useEffect(() => {
-    console.log("running");
     getFacts();
   }, []);
   return (
