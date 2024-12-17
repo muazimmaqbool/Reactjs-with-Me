@@ -66,4 +66,5 @@ export default FetchAPI;
 Study fetch() API method in javascript and from notes of javascript
  fetch() in react works in  similar manner like in javascript 
  but here in react instead of fetch() axios is used because its much easy to use
+ ->although fetch also works fine
  */

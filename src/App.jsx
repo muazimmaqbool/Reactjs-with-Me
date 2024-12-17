@@ -86,7 +86,7 @@ function App() {
       {/*used to explain memo */}
       {/* <Memo/> */}
 
-      {/* <FetchAPI/> */}
+      <FetchAPI/>
       {/* <FetchAPI2/> */}
       {/* <FetchAPI3/> */}
 
