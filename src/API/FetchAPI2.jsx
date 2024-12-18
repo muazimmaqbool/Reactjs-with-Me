@@ -36,14 +36,14 @@ const CatFacts2 = () => {
         const result = await response.json();
         return setCatFact(result);
       } catch (error) {
-        console.error(error);
+        console.error("error:",error);
       }
     }, 3000);
-  });
+  },);
 
   return (
     <>
-      <h4>New Fact about cats appear after every 3 seconds</h4>
+      <p>New Fact about cats appear after every 3 seconds</p>
       <h3>{catFact.fact}</h3>
     </>
   );
@@ -52,11 +52,11 @@ const CatFacts2 = () => {
 //getting comments
 const GetComments=()=>{
   const url ='https://jsonplaceholder.typicode.com/comments';
-  const[comment,setComment]=useState([]);
+  const[comments,setComments]=useState([]);
   const getCom=async()=>{
     const response=await fetch(url);
     const result=await response.json();
-    return setComment(result);
+    return setComments(result);
   }
   useEffect(()=>{
     getCom();
@@ -67,9 +67,10 @@ const GetComments=()=>{
      <p>Comments and Email</p>
      <div>
       {
-        //shows only first 10 comments from 0 index to 10
-        //inside return we have c.body.substring(0,25): it will show only from 25 characters of each comment string rather than showing full long comment
-        comment.slice(0,10).map((c)=>{
+        //shows only first 10 comments from index 0 to 10 using slice(0,10)
+        //inside return we have c.body.substring(0,25):
+        //it will show only from 25 characters of each comment string rather than showing full long comment
+        comments.slice(0,10).map((c)=>{
           return(
             <h5 key={c.id}>{c.body.substring(0,25)}<br/> by {c.email}</h5>
           )
