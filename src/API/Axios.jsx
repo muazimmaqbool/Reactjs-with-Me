@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+//Read Documentation Below
 const Axios = () => {
   return (
     <>
       <h3>Axios Tutorials</h3>
-      {/* <Example1 />  */}
+      <Example1 /> 
       {/* <Example2 /> */}
       {/* <Example3/> */}
       {/* <Example4 /> */}
-      <Example5 />
+      {/* <Example5 /> */}
     </>
   );
 };
@@ -19,7 +20,7 @@ function Example1() {
   //using useEffect to run it when component loads
   useEffect(() => {
     axios.get("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => console.log(response)); // or response.data
+      .then((response) => console.log(response.data)); // or response.data
     //here we don't need to convert it into json format as axios does it by default (it works by default on json format)
   }, []);
 
@@ -194,11 +195,11 @@ export default Axios;
 /*
 ->Study from Notes:
 
-Basic intro here: Axios is a  lightweight package and is used to make Http requests in any js library (like react, angular or vue.js)
+Basic intro here: Axios is a lightweight package and is used to make Http requests in any js library (like react, angular or vue.js)
 ->Axios is the easy to use version of fetch (its upgraded version of fetch)
 
 Main differences between Axios and Fetch
- -> Axios converts data to json format directly while fetch doesn't convert directly we have to tell it
+ ->Axios converts data to json format directly while fetch doesn't convert directly we have to tell it
  see more on notes
 
  to install Axios run this command: npm install axios
