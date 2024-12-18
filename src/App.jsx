@@ -88,8 +88,8 @@ function App() {
 
       {/* used to explain API calls using fetch and axios */}
       {/* <FetchAPI/> */}
-      <FetchAPI2/>
-      {/* <FetchAPI3/> */}
+      {/* <FetchAPI2/> */}
+      <FetchAPI3/>
 
       {/* <Axios /> */}
       {/* <AxiosPost/> */}
