@@ -7,10 +7,10 @@ const Axios = () => {
     <>
       <h3>Axios Tutorials</h3>
       {/* <Example1 /> */}
-      <Example2 />
+      {/* <Example2 /> */}
       {/* <Example3/> */}
       {/* <Example4 /> */}
-      {/* <Example5 /> */}
+      <Example5 />
     </>
   );
 };
@@ -61,8 +61,7 @@ function Example2() {
           );
         })}
       </div>
-      {/*card,grid classes are defined in app.css */}
-      {/* getpost is each element of the data array and it has three properties i.e id,titile,body */}
+      {/* getpost contains each element of the data array and it has three properties i.e id,titile,body */}
     </>
   );
 }
