@@ -9,6 +9,7 @@
     padding: 1rem;
     border: 2px solid gray;
     box-shadow: -5px -5px 5px black;
+    transition: 0.5s ease;
 }
 .card:hover{
     box-shadow: 5px 5px 5px black;
