@@ -6,8 +6,8 @@ const Axios = () => {
   return (
     <>
       <h3>Axios Tutorials</h3>
-      <Example1 /> 
-      {/* <Example2 /> */}
+      {/* <Example1 /> */}
+      <Example2 />
       {/* <Example3/> */}
       {/* <Example4 /> */}
       {/* <Example5 /> */}
@@ -19,22 +19,19 @@ function Example1() {
   //Axios with promises
   //using useEffect to run it when component loads
   useEffect(() => {
-    axios.get("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => console.log(response.data)); // or response.data
+    axios
+      .get("https://jsonplaceholder.typicode.com/posts")
+      .then((response) => console.log(response.data)); // or response
     //here we don't need to convert it into json format as axios does it by default (it works by default on json format)
   }, []);
 
-  return (
-    <>
-      <h4>Example 1</h4>
-    </>
-  );
+  return <h4>Example 1</h4>;
 }
 
-//In Example 2 we will get data to the screen using loops
+//In Example 2 we will display data on the screen using loops
 //to display data we first need to store the data, we use useState to do that
 function Example2() {
-  const [data, setData] = useState([]); //the data which api is getting is an array thats why we pass initial data as [] in useState
+  const [data, setData] = useState([]); //the data which api is getting is an array that's why we pass initial data as [] in useState
 
   const getPost = () => {
     axios.get("https://jsonplaceholder.typicode.com/posts").then((response) =>
@@ -48,16 +45,18 @@ function Example2() {
 
   return (
     <>
-      <h4>Example 2: displaying data using loops</h4>
+      <h4>Example 2: displaying data using map()</h4>
       <div className="grid">
         {data.map((getpost) => {
           const { id, title, body } = getpost;
           return (
             <div className="card" key={id}>
+              {/* style classes are in App.css file */}
+              {/* displaying only first 15 letters of title the empty spaces will also be considered*/}
               <h3>{title.slice(0, 15).toUpperCase()}</h3>
               <p>{body.slice(0, 100)}</p>
 
-              {/* .slice(0,10) display characters form 0 to 10 */}
+              {/* .slice(0,100) display characters form 0 to 100 */}
             </div>
           );
         })}
