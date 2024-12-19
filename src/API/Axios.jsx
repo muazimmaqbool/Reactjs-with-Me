@@ -193,12 +193,11 @@ const Example5 = () => {
 export default Axios;
 
 /*
-->Study from Notes:
 
-Basic intro here: Axios is a lightweight package and is used to make Http requests in any js library (like react, angular or vue.js)
-->Axios is the easy to use version of fetch (its upgraded version of fetch)
+Basic intro: Axios is a lightweight package and is used to make Http requests in any js library (like react, angular or vue.js)
+->Axios is the easy to use version of fetch (its an upgraded version of fetch)
 
-Main differences between Axios and Fetch
+Main difference between Axios and Fetch:
  ->Axios converts data to json format directly while fetch doesn't convert directly we have to tell it
  see more on notes
 
