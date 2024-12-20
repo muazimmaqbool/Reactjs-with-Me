@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+//First Check previous code useState.jsx
 const UseState2 = () => {
   return (
     <>
@@ -34,7 +35,7 @@ function Car() {
   );
 }
 
-//we can also use one state and include an objects inside
+//we can also use one state and include an object inside it
 function Bike() {
   const [bike, setBike] = useState({
     brand: "BMW",
@@ -48,7 +49,7 @@ function Bike() {
       <h4 style={styleobj}>
         is a {bike.model} and its of {bike.color} color
         <br />
-        Is its modified? {bike.modified}
+        Is it modified? {bike.modified}
       </h4>
     </>
   );
@@ -64,7 +65,9 @@ const Item=()=>{
   return(
     <>
       <h3>My {details.name} has {details.procerror} processor with {details.memory} of memory</h3>
-      <button onClick={()=>setDetails()}>Update processor</button>
+      <button onClick={()=>setDetails((prev)=>{
+        return{...prev,procerror:"i5"}
+      })}>Update processor</button>
     </>
   )
 }
