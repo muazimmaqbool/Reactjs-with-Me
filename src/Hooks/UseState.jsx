@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react"; //importing useState hook
 
+//Read Documentation Below:
 const UseState = () => {
   return (
     <>
@@ -30,9 +31,9 @@ function Color() {
 function Today(){
   const[day,setDay]=useState(""); //here initial value is empty string
 
-  const today = new Date();
-  //console.log(today) //o/p like this: Mon May 29 2023 10:37:48 GMT+0530 (India Standard Time)
-  const dayOfWeek = today.getDay(); //this will give o/p like this 0,1,2,... i.e sunday,monday,...
+  const currentDate = new Date();
+  //console.log(currentDate) //o/p like this: Mon May 29 2023 10:37:48 GMT+0530 (India Standard Time)
+  const dayOfWeek = currentDate.getDay(); //this will give o/p like this 0,1,2,... i.e sunday,monday,...
   const days=['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   
   return(
@@ -49,7 +50,7 @@ export default UseState;
 
 /*learn about useState hook from notebook and from w3schools
 
--> useState: it allows us to track state in a function component
+-> useState hook: it allows us to track state in a function component
     {state: state generally refers to data or properties that need to be tracked in an application}
 
 ->Important:
@@ -71,5 +72,5 @@ export default UseState;
                 onClick={() => setColor("blue")}
             >Blue</button>
 
-    Now on next code: UseState2
+    Now check next code: UseState2
 */

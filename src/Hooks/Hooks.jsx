@@ -26,10 +26,10 @@ export default Hooks;
     
 Note: Hooks will not work in React class components.
 
-->Important Concept:
+->Important Concept.
   ->Data Binding In React:
     Data Binding is the process of connecting the view element or user interface, with the data which populates it.
-    
+
     In ReactJS, components are rendered to the user interface and the component’s logic contains the data to be displayed in the view(UI).
     The connection between the data to be displayed in the view and the component’s logic is called data binding in ReactJS.
 
