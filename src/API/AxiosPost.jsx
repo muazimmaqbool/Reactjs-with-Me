@@ -26,7 +26,7 @@ const AxiosPost = () => {
 
   return (
     <>
-      <h3>Axios Post</h3>
+      <h3>Axios Post Request</h3>
       <button onClick={updateTask}>Updated Task</button>
     </>
   );
