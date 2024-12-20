@@ -18,7 +18,7 @@ const AxiosDelete = () => {
   }, []);
   return (
     <>
-      <h3>Axios Delete</h3>
+      <h3>Axios Delete Request</h3>
       <p>{status}</p>
     </>
   );
