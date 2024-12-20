@@ -19,7 +19,7 @@ const AxiosPut = () => {
 
   return (
     <>
-      <h3>Axios Put</h3>
+      <h3>Axios Put Request</h3>
       <button onClick={putData}>Do Put Request</button>
     </>
   );
