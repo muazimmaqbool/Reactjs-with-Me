@@ -31,9 +31,8 @@ function Example() {
         <button onClick={() => setSrcType("comments")}>comments</button>
       </div>
       <h1>{srcType}</h1>
-
-      {item.map((i) => (
-        <p>{JSON.stringify(i)}</p>
+      {item.map((i,index) => (
+        <p key={index}>{JSON.stringify(i)}</p>
       ))}
     </>
   );
