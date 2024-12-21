@@ -105,8 +105,8 @@ function App() {
       {/* <UseState3/> */}
 
       {/* <UseEffect/> */}
-      <UseEffect2/>
-      {/* <UseEffect3/> */}
+      {/* <UseEffect2/> */}
+      <UseEffect3/>
       {/* <UseEffect4Example/> */}
 
       {/* <UseMemo /> */}
