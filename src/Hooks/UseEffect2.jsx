@@ -10,7 +10,7 @@ const UseEffect2 = () => {
     // return ()=>{
     //     console.log()
     // }
-  },[]) //it runs also on when value of a changes
+  },[])
          // use effect runs is printed on console everytime we change value of a
          // if [] used then use effect runs is only printed one
          // if [] is not used then it runs infinitly
