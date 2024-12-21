@@ -1,4 +1,6 @@
 /*
+Intro of useMemo Hook in react:
+
 -> React useMemo Hook
     The React useMemo Hook returns a memoized value.
     Think of memoization as caching a value so that it does not need to be recalculated.
