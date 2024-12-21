@@ -1,31 +1,27 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 
 //Read Documentation Below:
 const UseEffect = () => {
   return (
     <>
-     <h3>useEffect Hook</h3>
-     <Timer/>
+      <h3>useEffect Hook</h3>
+      <Timer />
     </>
-  )
+  );
+};
+
+function Timer() {
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    console.log("useEffect runs");
+    setTimeout(() => {
+      setCount((count) => count + 1);
+    }, 1000);
+  }, []);
+  return <h1>I have rendered {count} times!</h1>;
 }
 
-function Timer(){
-  const[count,setCount]=useState(0);
-  useEffect(()=>{
-    console.log("useEffect runs")
-    setTimeout(()=>{
-      setCount(count=>count + 1);
-    },1000);
-  },[]); 
-  return(
-    <>
-      <h1>I have rendered {count} times!</h1>
-    </>
-  )
-}
-
-export default UseEffect
+export default UseEffect;
 
 /*
 -> useEffect hook: (also study from notes)
