@@ -1,12 +1,13 @@
 import React, { useEffect, useState,useRef } from 'react'
 
+//Read Documentation Below
 const UseRef = () => {
   return (
     <>
-      <Example1/>
+      {/* <Example1/> */}
 
       {/*Accessing DOM Elements */}
-      <Example2/> 
+      {/* <Example2/>  */}
 
       {/*Tracking State Changes: track of previous state values */}
       <Example3/> 
@@ -22,11 +23,12 @@ const Example1=()=>{
     To avoid this, we can use the useRef Hook.
     */
     const renderCount=useRef(0);
+    console.log("renderCount:",renderCount) // o/p: {current: 0}
     useEffect(()=>{
         renderCount.current=renderCount.current+1
         //so when i change the value in input, it will never cause our component to re-render because it's completely
         //seperate from our component render cycle
-    })
+    },)
     return(
         <>
         <input type="text" value={name} onChange={(e)=>setName(e.target.value)} />
@@ -42,6 +44,7 @@ const Example1=()=>{
 //In React, we can add a ref attribute to an element to access it directly in the DOM.
 function Example2(){
     const inputElement=useRef();
+    
     const getFocus=()=>{
         inputElement.current.focus();
     }
@@ -59,7 +62,9 @@ function Example3(){
     const previousItem=useRef()
 
     useEffect(()=>{
+        console.log("called")
         previousItem.current=item
+        //console.log("previous item:",previousItem)
     },[item])
     return(
         <>
@@ -75,7 +80,7 @@ export default UseRef
 /*
 ->React useRef Hook:
     Used when you don't want to re-render the component when state changes
-    It can be used to access a DOM element directly.
+    It can be used to access a DOM elements directly.
     Refs doesn't cause your component to re-update when it gets changed
 
 ->useRef() only returns one item. It returns an Object called current.
@@ -94,5 +99,7 @@ export default UseRef
         code in : example2
 
 Note: always do your management like updating value/setting value to variable using ref do it using useState/props
+
+To Understand it clearly with real example checkout this article: https://muazim.substack.com/p/understanding-useref-in-react
 
 */
