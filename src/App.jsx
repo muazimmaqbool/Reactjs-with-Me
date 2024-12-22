@@ -112,9 +112,9 @@ function App() {
       {/* <UseMemo /> */}
       {/* <UseRef/> */}
 
-      <UseContext/>
+      {/* <UseContext/> */}
 
-      {/* <UseReducer/> */}
+      <UseReducer/>
       {/* <UseReducer2/> */}
 
       {/* <UseCallback/> */}
