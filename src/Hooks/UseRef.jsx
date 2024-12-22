@@ -98,8 +98,19 @@ export default UseRef
         In React, we can add a ref attribute to an element to access it directly in the DOM
         code in : example2
 
+->Basically we use useRef hook to store those things which are related to the render for things which are related to the render use
+    useState hook.
+    ->const refName=useRef(initial value)
+     -> refName is the refrence object and this refrence object have current property
+     ->you can read and also change this current property
+     ->and by changing this current property nothing will re-render 
+     ->main job of refrence is to give refrence to DOM example <input ref={refName}/> now you will have directly access to the real DOM
+        now with refName.current can be used to update.change the input element in DOM like scroll, focus etc
+        exmaple: refName.current.focus(), refName.current.scroll()
+
 Note: always do your management like updating value/setting value to variable using ref do it using useState/props
 
 To Understand it clearly with real example checkout this article: https://muazim.substack.com/p/understanding-useref-in-react
+
 
 */
