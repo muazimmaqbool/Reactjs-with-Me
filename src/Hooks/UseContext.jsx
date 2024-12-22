@@ -27,12 +27,12 @@ function Comp2(){
     )
 }
 function Comp3(){
-    //also works here,                    //this line is edited recentlu on 11-05-2024
+    //also works here,                 
     const product=useContext(context)
     return(
         <>
             <h5>component 3</h5>
-            {/* <h5>product: {product}</h5> */}
+            <h5>product: {product}</h5>
             <Comp4/>
         </>
     )
