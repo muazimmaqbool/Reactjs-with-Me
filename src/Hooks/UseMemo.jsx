@@ -33,14 +33,15 @@ const UseMemo = () => {
   )
 }
 
+//Example One
 const ExampleMemo=()=>{
     const [count, setCount] = useState(0);
     const [todos, setTodos] = useState([]);
     //const calculation=expensiveCalculation(count); // using without memo will make it little slow
     
     //we can use the useMemo Hook to memoize the expensiveCalculation function. This will cause the function to only run when needed.
-    //We can wrap the expensive function call with useMemo.
-    const calculation=useMemo(()=>expensiveCalculation(count),[count]);
+    //We can wrap the expensive function call with useMemo:
+     const calculation=useMemo(()=>expensiveCalculation(count),[count]);
     //useMemo also accepts second parameter its dependencies and this means it will only run when the
     //dependencie changes so here expensiceCalculation function will only run/render when count changes and 
     //not when todo's change, without using useMemo it would have run on both
@@ -81,33 +82,36 @@ const expensiveCalculation=(num)=>{
 };
 
 //Note: use useMemo only when you actually need the performance benefits and when you are calling
-//      a slow function
+//a slow function or fetching some data using API
 
-//example two
+//Example Two
 const MemoExample =()=>{
     const[number,setNumber]=useState(0);
     const[dark,setDark]=useState(false);
-    // const doubleNumber=slowFunction(number); 
+    //const doubleNumber=slowFunction(number); 
     const doubleNumber=useMemo(()=>{
         return slowFunction(number)
     },[number]) 
     //slowFunction will run only when number changes and not theme
 
-    const themStyles={
+    //Note: if we don't call slowFunction via useMemo then it will also run when theme is changed
+
+    const themeStyles={
         backgroundColor:dark ? 'black' : 'white',
         color:dark ? 'white' : 'black'
     }
     return(
         <>
-        <input type="number" value={number} onChange={e=>setNumber(parseInt(e.target.value))} />
+        {/* parseInt converts/parses a string to integer */}
+        <input type="number" value={number} onChange={(e)=>setNumber(parseInt(e.target.value))} />
         <button onClick={()=> setDark(prevDark => !prevDark)}>Change Theme</button>
-        <div style={themStyles}>{doubleNumber}</div>
+        <div style={themeStyles}>Double of input number is: {doubleNumber}</div>
         </>
     )
 }
 function slowFunction(num){
     console.log('calling slowFunction');
-    for(let i=0; i <= 1000000000000000; i++){ //using 100000000 makes this function slow
+    for(let i=0; i <= 1000000000000000000000000000000; i++){ //using 100000000 makes this function slow
         return num*2
     }
 }
