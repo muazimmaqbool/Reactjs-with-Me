@@ -82,9 +82,9 @@ export default UseReducer
   The useReducer Hook returns the current state and a dispatch method.
 
   ->Difference between useState and useReducer:
-      useState vs. useReducer. useState is a basic Hook for managing simple state transformation, 
-      useReducer is an additional Hook for managing more complex state logic. 
-      However, it's worth nothing that useState uses useReducer internally, implying that you could
-      use useReducer for everything you can do with useState
+      ->useState is a basic Hook for managing simple state transformation, 
+      ->useReducer is an additional Hook for managing more complex state logic. 
+      ->However, it's worth nothing that useState uses useReducer internally, that means that you could
+                 use useReducer for everything you can do with useState
 
  */
