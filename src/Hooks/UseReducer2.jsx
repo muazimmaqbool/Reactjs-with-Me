@@ -24,7 +24,7 @@ const Example1 = () => {
   }
   return (
     <>
-      <button onClick={addTask}>ADD TASK</button>
+      <button onClick={addTask}>ADD New TASK</button>
       <p>Pending Tasks:{state.task}</p>
       <button
         onClick={() => {
