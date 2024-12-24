@@ -43,7 +43,20 @@ const Example1 = () => {
 };
 
 //example two of useReducer
-function manageItems(state, action) {}
+function manageItems(state, action) {
+    switch (action.type) {
+        case "add-item":
+            return { items: state.items + 1 };
+            break;
+        case "remove-item":
+            return { items: state.items - 1 };
+            break;
+        default:
+            return {item:10}
+            break;
+
+    }
+}
 const Example2 = () => {
   const [state, dispatch] = useReducer(manageItems, { items: 10 });
   return (
@@ -58,7 +71,7 @@ const Example2 = () => {
       >
         Add Item
       </button>
-      <p>Total Item:</p>
+      <p>Total Item: {state.items}</p>
       <button
         onClick={() => {
           dispatch({ type: "remove-item" });
