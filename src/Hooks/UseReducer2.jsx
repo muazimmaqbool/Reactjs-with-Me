@@ -2,7 +2,12 @@ import React, { useState, useReducer } from "react";
 
 //First check previous code i.e UseReducer.jsx
 const UseReducer2 = () => {
-  return <Example1 />;
+  return (
+    <>
+      <Example1 />
+      <Example2 />
+    </>
+  );
 };
 function reducer(state, action) {
   if (action.type === "increment-task") {
@@ -32,6 +37,34 @@ const Example1 = () => {
         }}
       >
         Remove TASK
+      </button>
+    </>
+  );
+};
+
+//example two of useReducer
+function manageItems(state, action) {}
+const Example2 = () => {
+  const [state, dispatch] = useReducer(manageItems, { items: 10 });
+  return (
+    <>
+      <br />
+      <br />
+      <br />
+      <button
+        onClick={() => {
+          dispatch({ type: "add-item" });
+        }}
+      >
+        Add Item
+      </button>
+      <p>Total Item:</p>
+      <button
+        onClick={() => {
+          dispatch({ type: "remove-item" });
+        }}
+      >
+        Remove Item
       </button>
     </>
   );
