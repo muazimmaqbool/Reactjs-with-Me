@@ -114,8 +114,8 @@ function App() {
 
       {/* <UseContext/> */}
 
-      <UseReducer/>
-      {/* <UseReducer2/> */}
+      {/* <UseReducer/> */}
+      <UseReducer2/>
 
       {/* <UseCallback/> */}
 

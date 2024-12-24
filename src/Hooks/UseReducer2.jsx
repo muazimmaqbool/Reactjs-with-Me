@@ -1,5 +1,6 @@
 import React, { useState,useReducer } from 'react'
 
+//First check previous code i.e UseReducer.jsx
 const UseReducer2 = () => {
   return (
     <Example1/>
