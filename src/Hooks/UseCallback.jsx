@@ -20,7 +20,13 @@ const Example1 = () => {
   //so it will only render when number changes
   //earlier it was also rendering when we change theme now after using useCallback it only renders when changing number
 
-  //try this function without useCallback
+  //try this function without useCallback:
+                                            /*
+                                            const getItems = () => {
+                                              console.log("function renders")
+                                              return [number, number + 1, number + 2];
+                                            }
+                                            */
 
   //big difference between useMemo and useCallback is that , useMemo takes a function and its going to
   //return you the return value of that function,
@@ -42,7 +48,7 @@ const Example1 = () => {
       <button onClick={() => setDark((prevDark) => !prevDark)}>
         Change Theme
       </button>
-      <USEcallbackCOMP getItems={getItems} />{" "}
+      <USEcallbackCOMP getItems={getItems} />
       {/*another component named as USEcallbackCOMP.jsx */}
     </div>
   );
