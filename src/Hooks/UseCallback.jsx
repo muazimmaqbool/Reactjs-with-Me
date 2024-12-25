@@ -21,13 +21,12 @@ const Example1 = () => {
   //earlier it was also rendering when we change theme now after using useCallback it only renders when changing number
 
   //try this function without useCallback:
-                                            /*
+                                          /*
                                             const getItems = () => {
                                               console.log("function renders")
                                               return [number, number + 1, number + 2];
                                             }
                                             */
-
   //big difference between useMemo and useCallback is that , useMemo takes a function and its going to
   //return you the return value of that function,
   //useCallback also takes a function  and it returns that function which it takes
