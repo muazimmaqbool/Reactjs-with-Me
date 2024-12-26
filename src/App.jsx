@@ -128,7 +128,7 @@ function App() {
       {/* <ToggleSwitch/> */}
       
       {/*these are in More Topics folder */}
-      {/* <SpreadOperator/> */}
+       <SpreadOperator/> 
       {/* <Destructuring/> */}
 
 

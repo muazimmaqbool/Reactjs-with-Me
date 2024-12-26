@@ -1,5 +1,6 @@
 import React from 'react'
 
+//Read documentation below:
 const SpreadOperator = () => {
   return (
     <>
@@ -63,7 +64,7 @@ export default SpreadOperator
 /*
 -> Spread Operator/ React Bonus
     ->The JavaScript spread operator (...) allows us to quickly copy all or part of an existing 
-        array or object into another array or object.
+      array or object into another array or object.
     ->The spread operator is commonly used to make deep copies of JS objects
 
     Example
