@@ -12,16 +12,16 @@ const SpreadOperator = () => {
 
 //basic example of spread operator
 const Example1=()=>{
-    const num1=[1,2,3,4,5];
-    const num2=[6,7,8,9];
+    const num1=[1,2,3,4];
+    const num2=[5,6,7,8,9];
     const num=[...num1, ...num2]
-    console.log(num)
+    console.log("num:",num)
 
     //Assign the first and second items  to variables and put the rest in an array:
     const items=['laptop','camera','printer','desktop','charger','phone-stand'];
     const[item1,item2,...restItems]=items;
-    console.log(item1);
-    console.log(item2);
+    console.log("item1",item1);
+    console.log("item2",item2);
     console.log(restItems);
 
     const fullName=['Muazim','Maqbool'];
