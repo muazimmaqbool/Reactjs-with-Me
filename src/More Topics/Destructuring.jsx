@@ -50,7 +50,7 @@ const Example1 = () => {
 
   return (
     
-      <h4>Array Destructuring</h4>
+      <h4>Destructuring On Array</h4>
     
   );
 };
