@@ -128,8 +128,8 @@ function App() {
       {/* <ToggleSwitch/> */}
       
       {/*these are in More Topics folder */}
-       <SpreadOperator/> 
-      {/* <Destructuring/> */}
+       {/* <SpreadOperator/>  */}
+      <Destructuring/>
 
 
       {/*React Lifecycle Methods */}

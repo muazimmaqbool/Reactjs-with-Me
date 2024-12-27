@@ -1,14 +1,15 @@
 import React from "react";
 
+//Read Documentation Below:
 const Destructuring = () => {
   return (
     <>
-      {/* <Example1 /> */}
+      <Example1 />
        {/* <Example2 /> */}
 
       {/* <ExampleObj /> */}
 
-      <ExampleFunc />
+      {/* <ExampleFunc /> */}
     </>
   );
 };
@@ -203,10 +204,8 @@ export default Destructuring;
 
 /*
 ->Destructuring:
-    Destructuring is a convenient way of creating new variables by extracting some values from
-    data stored in objects or arrays.
-    To name a few use cases, destructuring can be used to destructure function parameters or this.props 
-    in React projects for instance.
+    Destructuring is a way of creating new variables by extracting some values from data stored in objects or arrays.
+    To name a few use cases, destructuring can be used to destructure function parameters or values from props
 
     ->Destructuring is exactly the same. We may have an array or object that we are working with,
             but we only need some of the items contained in these.
