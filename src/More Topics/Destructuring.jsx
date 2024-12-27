@@ -6,9 +6,7 @@ const Destructuring = () => {
     <>
       <Example1 />
        {/* <Example2 /> */}
-
       {/* <ExampleObj /> */}
-
       {/* <ExampleFunc /> */}
     </>
   );
