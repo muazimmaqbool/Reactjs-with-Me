@@ -1,17 +1,18 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-// import Home from './Home'
-// import About from './About'
-// import Contact from './Contact'
+//import Home from './Home'
+//import About from './About'
+//import Contact from './Contact'
 //we will see these all are come inside bundle.js
 //now we want to put them seperatly i.e known as code splitting, so import them using lazy keyword -{import lazy from react}
 
-const Home = lazy(() => import("./Home")); //this is known as dynamic import
+//this is known as dynamic import
+const Home = lazy(() => import("./Home"));
 const About = lazy(() => import("./About"));
 const Contact = lazy(() => import("./Contact"));
 //this is known as dynamic import, this way it maintains good performance
-//->this way react application is to hold off loading some parts of a web page until a user needs them
+//->this is the way react application is to hold off loading some parts of a web page until a user needs them
 
 //ab hum jis page pei honge ausi ka data ayaa ga seperate file mei bundle.js ke neeche
 //aase hum lazy keyword ka use karke code splitting karr skhte hain
@@ -20,6 +21,7 @@ const Contact = lazy(() => import("./Contact"));
 //now import suspence form react and wrap all routes inside suspence
 //suspence has fallback in which we give component which is shown till component is loaded
 
+//Read Documentation Below:
 const CodeSplitting = () => {
   return (
     <Router>
@@ -41,10 +43,10 @@ const CodeSplitting = () => {
 
 export default CodeSplitting;
 /*
-->
-Code splitting is a technique where we split our code into various bundles which can then be loaded on demand or in parallel. 
-This can significantly reduce the load time of our application and has other benefits too. Create react app does it automatically.
- Dynamic import syntax is supported.
+->Code Splitting:
+     Code splitting is a technique where we split our code into various bundles which can then be loaded on demand or in parallel. 
+     This can significantly reduce the load time of our application and has other benefits too. Create react app does it automatically.
+     Dynamic import syntax is supported.
 
 
 what is debounce,code splitting,etc already in notes and debounce already seen in javascript

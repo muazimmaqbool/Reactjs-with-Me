@@ -129,14 +129,14 @@ function App() {
       
       {/*these are in More Topics folder */}
        {/* <SpreadOperator/>  */}
-      <Destructuring/>
+      {/* <Destructuring/> */}
 
 
       {/*React Lifecycle Methods */}
       {/* <LifeCycleMethods/> */}
 
       {/*used to explain debounce,code splitting and other things */}
-      {/* <CodeSplitting/> */}
+      <CodeSplitting/>
       {/* <Debounce/> */}
 
     </>
