@@ -6,8 +6,8 @@ const Destructuring = () => {
     <>
       {/* <Example1 /> */}
        {/* <Example2 /> */}
-      <ExampleObj />
-      {/* <ExampleFunc /> */}
+      {/* <ExampleObj /> */}
+      <ExampleFunc />
     </>
   );
 };
@@ -130,7 +130,7 @@ const ExampleFunc = () => {
     processor: "intel i7",
     type: "Laptop",
   };
-  console.log(getProductDetails(product));
+  console.log("product details:",getProductDetails(product));
 
   //Without destructuring
   /*function getProductDetails(product){
@@ -139,14 +139,13 @@ const ExampleFunc = () => {
     return type+" - "+id;
   }*/
 
-  //Usin Destructuring
+  //Using Destructuring
   function getProductDetails({ type, id, brand }) {
-    return type + " - " + id + " - " + brand;
+    return type + "-" + id + "-" + brand;
   }
   //Destructuring on arrow function
-  const getProduct = ({ id, brand, processor, type }) =>
-    id + "-" + brand + "-" + processor + "-" + type;
-  console.log(getProduct(product));
+  const getProduct = ({ id, brand, processor, type }) =>id + "-" + brand + "-" + processor + "-" + type;
+  console.log("product info:",getProduct(product));
 
   //example2
   const vehicleOne = {
@@ -185,13 +184,13 @@ const ExampleFunc = () => {
       State: "Jammu and Kashmir",
     },
   };
-  const bikeDetails = ({ model, color, owner:{NumPlate} }) =>
-    "This is " + color + "-" + model + " and its number is " + NumPlate;
+  const bikeDetails = ({ model, color, owner:{NumPlate,address} }) =>
+    "This is " + color + "-" + model + " and its number is " + NumPlate+" from "+ address;
   const bikedata = bikeDetails(bike);
 
   return (
     <>
-      <h3>function destructuring</h3>
+      <h3>Destructuring On Functions</h3>
       <p>{getDetails}</p>
       <p>{bikedata}</p>
     </>
