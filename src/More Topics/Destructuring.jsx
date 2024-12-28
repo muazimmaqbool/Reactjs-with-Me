@@ -76,7 +76,7 @@ const Example2 = () => {
   );
 };
 
-// Destructuring Objects
+// Destructuring On Objects
 function ExampleObj() {
   const obj = { a: 1, b: 2 };
   const { a, b } = obj;
@@ -108,11 +108,11 @@ function ExampleObj() {
   console.log(name); // ABC
   console.log(name2); // DEF
   console.log(site); // abcdef.com
-  //console.log(online); // "ReferenceError: website is not defined"
+  //console.log(online); // "ReferenceError: online is not defined"
 
   return (
     <>
-      <h3>Destructuring Objects</h3>
+      <h3>Destructuring On Objects</h3>
       <div>
         <p>firstname: {name}</p>
         <p>lastname: {name2}</p>
