@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-//at 9:00
+
+// visit : https://github.com/muazimmaqbool/Javascript-from-scratch/blob/master/59%20debounce%20and%20throttle%20example.html
 const Debounce = () => {
   const [nameVal, setNameVal] = useState("");
   //console.log(nameVal);
@@ -33,7 +34,8 @@ const Debounce = () => {
   //if any change is made then reset delay/time then again wait for some time then run if no change is made
   // this is debouncing already seen in javascript
   //we will be using setTime(putting getUserData() function inside setTimeout) to do this
-  //watch at 13:30
+
+  //Note: Here useEffect will be rendered on every entered aplhabet in the input field
 
   return (
     <>
@@ -50,5 +52,4 @@ const Debounce = () => {
 export default Debounce;
 /*
  -> Debouncing already studied in javascript , here just implementing it uisng react
- visit : https://github.com/muazimmaqbool/Javascript-from-scratch/blob/master/59%20debounce%20and%20throttle%20example.html
  */
