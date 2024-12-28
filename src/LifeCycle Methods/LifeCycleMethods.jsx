@@ -5,13 +5,13 @@ import Unmounting from './Unmounting'
 import UnMountingExample from './UnMountingExample'
 
 //This is intro about lifecycle methods
-
+//Read Documentation Below
 const LifeCycleMethods = () => {
   return (
     <>
       <h2>LifeCylce Methods in React</h2>
        {/*contains componentDidMount()*/}
-       {/* <Mounting/> */}
+       <Mounting/>
        
        {/*for shouldComponentUpdate() and componentDidUpdate() */}
        {/* <Updating/>  */}
@@ -19,7 +19,7 @@ const LifeCycleMethods = () => {
         {/*for componentWillUnmount() */}
         {/* <Unmounting/> */}
         {/*used to explain componentWillUnmount() */}
-        <UnMountingExample/>
+        {/* <UnMountingExample/> */}
 
     </>
   )
@@ -30,10 +30,10 @@ export default LifeCycleMethods
 /*
  ->NOTE: They are used with class based components and on functional components we use hooks
 
-  visit: https://www.w3schools.com/react/react_lifecycle.asp
+    visit: https://www.w3schools.com/react/react_lifecycle.asp
 
- -> Each component in React has a lifecycle which you can monitor and manipulate during its 
-       three main phases. The three phases are: Mounting, Updating, and Unmounting.
+ -> Each component in React has a lifecycle which you can monitor and manipulate during its three main phases. 
+       The three phases are: Mounting, Updating, and Unmounting.
 
        Important LifeCycle Methods are:
             componentDidMount(), shouldComponentUpdate(), ComponentDidUpdate(), ComponentWillUnmount()
