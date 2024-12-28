@@ -17,7 +17,6 @@ const Contact = lazy(() => import("./Contact"));
 //ab hum jis page pei honge ausi ka data ayaa ga seperate file mei bundle.js ke neeche
 //aase hum lazy keyword ka use karke code splitting karr skhte hain
 
-//at 7:40
 //now import suspence form react and wrap all routes inside suspence
 //suspence has fallback in which we give component which is shown till component is loaded
 
