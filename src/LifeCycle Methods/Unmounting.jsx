@@ -1,5 +1,6 @@
 import React from "react";
 
+//Read Documentation Below:
 const Unmounting = () => {
   return (
     <div>
@@ -54,7 +55,7 @@ export default Unmounting;
 
 /*
 ->Unmounting
-    The next phase in the lifecycle is when a component is removed from the DOM, or unmounting as 
+    The next phase in the lifecycle is when a component is removed from the DOM, or unmounted as 
     React likes to call it.
     React has only one built-in method that gets called when a component is unmounted:
         -> componentWillUnmount() : called when the component is about to be removed from the DOM.

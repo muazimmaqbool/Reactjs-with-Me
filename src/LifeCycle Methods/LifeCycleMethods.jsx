@@ -14,12 +14,12 @@ const LifeCycleMethods = () => {
        {/* <Mounting/> */}
        
        {/*for shouldComponentUpdate() and componentDidUpdate() */}
-       <Updating/> 
+       {/* <Updating/>  */}
 
         {/*for componentWillUnmount() */}
         {/* <Unmounting/> */}
         {/*used to explain componentWillUnmount() */}
-        {/* <UnMountingExample/> */}
+        <UnMountingExample/>
 
     </>
   )
