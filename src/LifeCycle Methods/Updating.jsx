@@ -24,7 +24,7 @@ class Example extends React.Component {
     this.setState({
       count: this.state.count + 1,
     });
-    //console.log(this.state.count); // used to explain shouldComponentUpdate
+    //console.log(this.state.count); // used to explain shouldComponentUpdate returning false
   }
   decrement() {
     this.setState({
@@ -43,13 +43,13 @@ class Example extends React.Component {
   NOTE: when we click on the button the Count will update but not on UI , try console.log inside increment and decrement 
 */
   shouldComponentUpdate() {
-    return true; //if its false no change can be made to component i.e Add and Minus buttons won't work to make them work do: return false
+    return true; //if its false, then no change can be made to component i.e Add and Minus buttons won't work.
     // its default value is true
   }
 
   //will be called whenever count value is updated
   componentDidUpdate() {
-    console.log("Updated Count");
+    console.log("Updated Count Value");
   }
   render() {
     return (
