@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from "react";
 
 //in functional component
 /*const CompOne = () => {
@@ -18,25 +18,23 @@ import React, { useEffect } from 'react'
 
 //now in class based component
 
-class CompOne extends React.Component{
-  constructor(props){
-    super(props)
+class CompOne extends React.Component {
+  constructor(props) {
+    super(props);
   }
 
-  componentDidMount(){ //its like useEffect
+  componentDidMount() {
+    //its like useEffect
     console.log("Comp One Mounted");
   }
 
-  componentWillUnmount(){ //its like return of useEffect
-    console.log("Comp One Unmounted")
+  componentWillUnmount() {
+    //its like return of useEffect
+    console.log("Comp One Unmounted");
   }
-  
-  render(){
-    return (
-      <>
-       <p className='one'>Comp One</p>
-      </>
-    )
+
+  render() {
+    return <p className="one">Comp One</p>;
   }
 }
-export default CompOne
+export default CompOne;
