@@ -29,7 +29,7 @@ export default Mounting;
 
 /*
  ->Mounting: Mounting means putting elements into the DOM.
-    React has four built-in methods that gets called, in this order, when mounting a component:
+    React has four built-in methods that gets called, in this order, when mounting a class component:
         constructor() : called before anything else, when the component is initiated
         getDerivedStateFromProps() : called right before rendering the element(s) in the DOM.
         render() 
