@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 //import Home from './Home'
 //import About from './About'
 //import Contact from './Contact'
-//we will see these all are come inside bundle.js
+//we will see these all are coming inside bundle.js
 //now we want to put them seperatly i.e known as code splitting, so import them using lazy keyword -{import lazy from react}
 
 //this is known as dynamic import

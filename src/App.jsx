@@ -109,7 +109,7 @@ function App() {
       {/* <UseEffect3/> */}
       {/* <UseEffect4Example/> */}
 
-      <UseMemo />
+      {/* <UseMemo /> */}
       {/* <UseRef/> */}
 
       {/* <UseContext/> */}
@@ -136,7 +136,7 @@ function App() {
       {/* <LifeCycleMethods/> */}
 
       {/*used to explain debounce,code splitting and other things */}
-      {/* <CodeSplitting/> */}
+      <CodeSplitting/>
       {/* <Debounce/> */}
 
     </>
