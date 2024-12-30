@@ -14,7 +14,7 @@ const UseMemo = () => {
 const ExampleMemo=()=>{
     const [count, setCount] = useState(0);
     const [todos, setTodos] = useState([]);
-    //const calculation=expensiveCalculation(count); // using without memo will make it little slow
+   // const calculation=expensiveCalculation(count); // using without memo will make it little slow
     
     //we can use the useMemo Hook to memoize the expensiveCalculation function. This will cause the function to only run when needed.
     //We can wrap the expensive function call with useMemo:
