@@ -99,7 +99,7 @@ Intro of useMemo Hook in react:
 
 -> React useMemo Hook
     The React useMemo Hook returns a memoized value.
-    Think of memoization as caching a value so that it does not need to be recalculated.
+    Think of memoization as caching a value so that it does not need to be re-calculated.
 
     The useMemo Hook only runs when one of its dependencies updated.
     This can improve performance.
