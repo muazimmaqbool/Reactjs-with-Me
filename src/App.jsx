@@ -71,7 +71,7 @@ function App() {
       {/* <List/> */}
 
       {/*used to explain forms in react */}
-      {/* <Forms/> */}
+      <Forms/>
       {/* <Forms2/> */}
 
       {/*used to explain routing: explained in notebook and on pdf*/}
@@ -136,7 +136,7 @@ function App() {
       {/* <LifeCycleMethods/> */}
 
       {/*used to explain debounce,code splitting and other things */}
-      <CodeSplitting/>
+      {/* <CodeSplitting/> */}
       {/* <Debounce/> */}
 
     </>

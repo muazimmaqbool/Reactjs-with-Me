@@ -54,9 +54,9 @@ export default Forms;
       Just like in HTML, React uses forms to allow users to interact with the web page.
     ->Adding Forms in React : You add a form with React like any other element: example above
     -> In the above Myform example:
-                This will work as normal, the form will submit and the page will refresh.
-                But this is generally not what we want to happen in React.
-                We want to prevent this default behavior and let React control the form.
+        This will work as normal, the form will submit and the page will refresh.
+        But this is generally not what we want to happen in React.
+        We want to prevent this default behavior and let React control the form.
     
     
     Handling Forms:
