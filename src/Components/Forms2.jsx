@@ -15,7 +15,8 @@ function Myform() {
   const [inputs, setInputs] = useState({});
 
   const handleChange = (event) => {
-    //event.target.name retrieves the name attribute of the input element that triggered the event. This helps identify which field was updated
+    /*event.target.name retrieves the name attribute of the input element that triggered the event.
+     This helps to identify which field was updated*/
     const name = event.target.name;
     //event.target.value retrieves the current value of the input element.
     const value = event.target.value;
