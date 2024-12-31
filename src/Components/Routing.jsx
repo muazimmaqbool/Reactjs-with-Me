@@ -32,8 +32,6 @@ const Routing = () => {
 export default Routing;
 
 /*
- study it form notebook
-
  Important:
   Router: Routing is a prcoess by which user is directed to the different pages
           ->Reactjs Router is mainly used for developing single page web application
