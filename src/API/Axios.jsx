@@ -31,7 +31,8 @@ function Example1() {
 //In Example 2 we will display data on the screen using loops
 //to display data we first need to store the data, we use useState to do that
 function Example2() {
-  const [data, setData] = useState([]); //the data which api is getting is an array that's why we pass initial data as [] in useState
+  const [data, setData] = useState([]); 
+  //the data which api is getting is an array that's why we pass initial data as [] in useState
 
   const getPost = () => {
     axios.get("https://jsonplaceholder.typicode.com/posts").then((response) =>
@@ -148,7 +149,7 @@ function Example4() {
   );
 }
 
-//Example 5 shows best way to write axios at 16:00
+//Example 5 shows best way to write axios
 const APIurl = "https://jsonplaceholder.typicode.com"; //now we will call it in useEffect/getAPi function
 const Example5 = () => {
   const [data, setData] = useState([]);
