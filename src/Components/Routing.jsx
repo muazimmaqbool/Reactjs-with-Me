@@ -36,8 +36,8 @@ export default Routing;
   Router: Routing is a prcoess by which user is directed to the different pages
           ->Reactjs Router is mainly used for developing single page web application
           ->React Router is used to define multiple routes in the application
-  Routes: used to define and render components based on the specified path. It will accept components
-          and render to define what should be rendered
+  Routes: used to define and render components based on the specified path. 
+          ->It will accept components and render to define what should be rendered
 
   Dynamic Routing:
       Dynamic routing is the routing that takes place as your app is rendering, not in a configuration
@@ -52,12 +52,12 @@ export default Routing;
           aur yaha ek time pei ek hee component render hoga
 
           using it <Link to="/user/tempId"><h3>User</h3></Link>
-          tempId will read any id when calling it like /:id, /new watch at 18:20
+          tempId will read any id when calling it like /:id, /new 
 
-      ->Using "id" is usefull when we work on the backend / when we request on the backend/are request API etc
-      to access this id we use params watch at 20:00
+      ->Using "id" is usefull when we work on the backend / when we request on the backend/request API etc
+             to access this id we use params
 
-      -> at 21:20 
+      ->useNavigate():
            we use "useNavigate" to go to a particular location like this
            const navigation=useNavigate() 
            navigation("about") // goes to about page

@@ -5,7 +5,7 @@ const User = () => {
   const params=useParams(); //used to get id
 
   const navigation=useNavigate(); //used to go to a prticular page
-  //navigation('/about'); //works when you double click on user on screen
+  //navigation('/about'); //works when the user double clicks on the screen
 
   console.log(params.id); //o/p tempId, we can pass any id,
   //change its id at here http://localhost:3000/user/muazim now it will show muazim ,
