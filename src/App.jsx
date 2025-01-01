@@ -91,7 +91,7 @@ function App() {
       {/* <FetchAPI2/> */}
       {/* <FetchAPI3/> */}
 
-      {/* <Axios /> */}
+      <Axios />
       {/* <AxiosPost/> */}
       {/* <AxiosPut/> */}
        {/* <AxiosDelete/>  */}
