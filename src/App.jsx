@@ -93,8 +93,8 @@ function App() {
 
       {/* <Axios /> */}
       {/* <AxiosPost/>  */}
-      <AxiosPut/>
-       {/* <AxiosDelete/>  */}
+      {/* <AxiosPut/> */}
+       <AxiosDelete/> 
 
       {/*used to explain hooks */}
       {/* hooks basic intro here and also data binding */}
