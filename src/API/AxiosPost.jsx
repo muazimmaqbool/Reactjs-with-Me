@@ -17,7 +17,7 @@ const AxiosPost = () => {
   const postData = async () => {
    try{
     const response=await axios.post(url,data);
-    console.log("Post response",response.data)
+    console.log("Post request response",response.data)
    }catch(error){
     console.log("error",error)
    }
