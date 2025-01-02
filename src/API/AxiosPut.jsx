@@ -6,12 +6,12 @@ const AxiosPut = () => {
   const data = {
     userId:"6631",
     title:"React Hooks?",
-    body:"Hooks are used to add functionality to functional components"
+    body:"React Hooks are used to add functionality to functional components"
   };
   const putData = async () => {
     try {
       const response = await axios.put(url, data);
-      console.log(response.data);
+      console.log("put request response:",response.data);
     } catch (error) {
       console.log("error", error);
     }
