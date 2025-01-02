@@ -4,7 +4,7 @@ import axios from "axios";
 const AxiosPut = () => {
   const url = "https://jsonplaceholder.typicode.com/posts/100";
   const data = {
-    userId:"6631",
+    userId:"6655",
     title:"React Hooks?",
     body:"React Hooks are used to add functionality to functional components"
   };
