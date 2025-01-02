@@ -7,7 +7,7 @@ const AxiosPost = () => {
   const url = "https://jsonplaceholder.typicode.com/todos";
   const data = {
     userId: "6655",
-    title: "Solve DSA Problem using Java",
+    title: "Solve DSA Problem",
     completed: false,
   };
   function updateTask(){
