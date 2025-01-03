@@ -34,8 +34,9 @@ export default Routing;
 /*
  Important:
   Router: Routing is a prcoess by which user is directed to the different pages
-          ->Reactjs Router is mainly used for developing single page web application
+          ->React Router is mainly used for developing single page web application
           ->React Router is used to define multiple routes in the application
+          
   Routes: used to define and render components based on the specified path. 
           ->It will accept components and render to define what should be rendered
 
