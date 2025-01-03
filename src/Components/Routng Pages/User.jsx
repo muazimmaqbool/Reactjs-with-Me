@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams , useNavigate} from 'react-router-dom'
 
+//called from Routing.jsx
 const User = () => {
   const params=useParams(); //used to get id
 
