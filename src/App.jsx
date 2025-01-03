@@ -75,7 +75,7 @@ function App() {
       {/* <Forms2/> */}
 
       {/*used to explain routing: explained in notebook and on pdf*/}
-       <Routing/> 
+       {/* <Routing/>  */}
 
       {/*this component is inside Css Styling*/}
       {/* <Home/> */}
@@ -109,7 +109,7 @@ function App() {
       {/* <UseEffect3/> */}
       {/* <UseEffect4Example/> */}
 
-      {/* <UseMemo /> */}
+      <UseMemo />
       {/* <UseRef/> */}
 
       {/* <UseContext/> */}

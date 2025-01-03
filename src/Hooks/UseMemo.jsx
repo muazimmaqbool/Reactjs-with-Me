@@ -100,13 +100,14 @@ Intro of useMemo Hook in react:
 -> React useMemo Hook
     The React useMemo Hook returns a memoized value.
     Think of memoization as caching a value so that it does not need to be re-calculated.
-
-    The useMemo Hook only runs when one of its dependencies updated.
+    The useMemo Hook only runs when one of its dependencies are updated.
     This can improve performance.
+
 ->What is the benefit of using useMemo Hook?
     Fundamentally, useMemo and useCallback are tools built to help us optimize re-renders. 
     They do this in two ways: Reducing the amount of work that needs to be done in a given render.
     Reducing the number of times that a component needs to re-render.
+    
 ->Performance
     The useMemo Hook can be used to keep expensive, resource intensive functions from needlessly running.
     In this example, we have an expensive function that runs on every render.
