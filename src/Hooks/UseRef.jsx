@@ -7,10 +7,10 @@ const UseRef = () => {
       {/* <Example1/> */}
 
       {/*Accessing DOM Elements */}
-      {/* <Example2/>  */}
+      <Example2/> 
 
       {/*Tracking State Changes: track of previous state values */}
-      <Example3/> 
+      {/* <Example3/>  */}
     </>
   )
 }
@@ -40,7 +40,7 @@ const Example1=()=>{
     )
 }
 
-//Accessing DOM Elements example: Use useRef to focus the input:
+//Accessing DOM Elements: using useRef to focus the input:
 //In React, we can add a ref attribute to an element to access it directly in the DOM.
 function Example2(){
     const inputElement=useRef();
@@ -48,13 +48,23 @@ function Example2(){
     const getFocus=()=>{
         inputElement.current.focus();
     }
+
+    const pTag=useRef();
+    const updateColor=()=>{
+        pTag.current.style.color="teal";
+    }
     return(
         <>
             <input type="text" ref={inputElement} />
             <button onClick={getFocus}>Focus</button>
+
+            {/* changing color of p tag */}
+            <p ref={pTag}>Hey change my color</p>
+            <button onClick={updateColor}>Change Color</button>
         </>
     )
 }
+
 //example 3
 //Tracking State Changes: track of previous state values
 function Example3(){
@@ -83,7 +93,8 @@ export default UseRef
     It can be used to access a DOM elements directly.
     Refs doesn't cause your component to re-update when it gets changed
 
-->useRef() only returns one item. It returns an Object called current.
+->useRef() only returns one item. 
+            It returns an Object called current.
             When we initialize useRef we set the initial value: useRef(0);
     ->It's like doing this: const count = {current: 0}. We can access the count by using count.current.
     
@@ -98,17 +109,17 @@ export default UseRef
         In React, we can add a ref attribute to an element to access it directly in the DOM
         code in : example2
 
-->Basically we use useRef hook to store those things which are related to the render for things which are related to the render use
-    useState hook.
+->Basically we use useRef hook to store those things which are not related to the render and for things which are related to the
+      render use useState hook.
     ->const refName=useRef(initial value)
-     -> refName is the refrence object and this refrence object have current property
+     -> refName is the refrence object and this refrence object have current property i.e refName.current
      ->you can read and also change this current property
      ->and by changing this current property nothing will re-render 
-     ->main job of refrence is to give refrence to DOM example <input ref={refName}/> now you will have directly access to the real DOM
-        now with refName.current can be used to update.change the input element in DOM like scroll, focus etc
-        exmaple: refName.current.focus(), refName.current.scroll()
+     ->main job of reference is to give reference to DOM example <input ref={refName}/> now you will have directly access to the real DOM
+        now with refName.current can be used to update/change the input element in DOM like scroll, focus etc
+        exmaple: refName.current.focus(), refName.current.scroll(),etc...
 
-Note: always do your management like updating value/setting value to variable using ref do it using useState/props
+Note: always do your management like updating value/setting value to variable using useState/props
 
 To Understand it clearly with real example checkout this article: https://muazim.substack.com/p/understanding-useref-in-react
 

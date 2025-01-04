@@ -109,8 +109,8 @@ function App() {
       {/* <UseEffect3/> */}
       {/* <UseEffect4Example/> */}
 
-      <UseMemo />
-      {/* <UseRef/> */}
+      {/* <UseMemo /> */}
+      <UseRef/>
 
       {/* <UseContext/> */}
 
