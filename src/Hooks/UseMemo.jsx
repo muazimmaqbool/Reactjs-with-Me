@@ -105,17 +105,20 @@ Intro of useMemo Hook in react:
 
 ->What is the benefit of using useMemo Hook?
     Fundamentally, useMemo and useCallback are tools built to help us optimize re-renders. 
-    They do this in two ways: Reducing the amount of work that needs to be done in a given render.
-    Reducing the number of times that a component needs to re-render.
+    They do this in two ways: 
+        Reducing the amount of work that needs to be done in a given render.
+        Reducing the number of times that a component needs to re-render.
     
 ->Performance
     The useMemo Hook can be used to keep expensive, resource intensive functions from needlessly running.
     In this example, we have an expensive function that runs on every render.
     When changing the count or adding a todo, you will notice a delay in execution.
     and to overcome this we use useMemo hook:
-    ->To fix this performance issue, we can use the useMemo Hook to memoize the expensiveCalculation function. This will cause the function to only run when needed.
+    ->To fix this performance issue, we can use the useMemo Hook to memoize the expensiveCalculation function. 
+        This will cause the function to only run when needed.
         We can wrap the expensive function call with useMemo.
-        The useMemoHook accepts a second parameter to declare dependencies. The expensive function will only run when its dependencies have changed.
+        The useMemoHook accepts a second parameter to declare dependencies. 
+        The expensive function will only run when its dependencies have changed.
         In the following example, the expensive function will only run when count is changed and not when todo's are added.
 
 */
