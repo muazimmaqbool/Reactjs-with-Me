@@ -2,8 +2,7 @@ import React, { useState,createContext,useContext } from 'react'
 
 //Read Documentation Below:
 
-//context can be any name
-const context=createContext();
+const context=createContext(); //context can be any name
 const UseContext = () => {
     const[item,setItem]=useState("Laptop");
   return (
