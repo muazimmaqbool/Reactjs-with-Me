@@ -58,17 +58,17 @@ function Comp5(){
 export default UseContext
 
 /*
-->React Context
+->React Context:
     React Context is a way to manage state globally.
-    It can be used together with the useState Hook to share state between deeply nested 
-    components more easily than with useState alone.
+    It can be used together with the useState Hook to share state/data between deeply nested 
+        components more easily than with useState alone.
 
-    ->The Problem
+    ->The Problem:
         State should be held by the highest parent component in the stack that requires access to the state.
         To illustrate, we have many nested components. 
         The component at the top and bottom of the stack needs access to the state.
         To do this without Context, we will need to pass the state as "props" through each nested
-        component. This is called "prop drilling".
+                  component. This is called "prop drilling".
 
         example:
         import React, { useState } from 'react'
@@ -122,7 +122,7 @@ export default UseContext
     ->The Solution
         The solution is to create context.
         Create Context
-        To create context, you must Import createContext and initialize it:
+             To create context, you must Import createContext and initialize it:
 
         import { useState, createContext } from "react";
         import ReactDOM from "react-dom/client";
