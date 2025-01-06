@@ -18,7 +18,7 @@ const Example1 = () => {
   //number this function is being re-created over and over and over again, even if the actual number inside it didn't change
   //and this is where we use useCallback: useCallback is going to make this callback function only update when it needs to
   //so it will only render when number changes
-  //earlier it was also rendering when we change theme now after using useCallback it only renders when changing number
+  //earlier it was also rendering when we change theme now after using useCallback it only renders when number is changed
 
   //try this function without useCallback:
                                           /*
@@ -29,9 +29,9 @@ const Example1 = () => {
                                             */
   //big difference between useMemo and useCallback is that , useMemo takes a function and its going to
   //return you the return value of that function,
-  //useCallback also takes a function  and it returns that function which it takes
+  //useCallback also takes a function  and it returns that function which it takes as argument
   //if we use useMemo above it will set array to getItems
-  //while as useCallback sets entire function to the getItems  not just return items of the function
+  //while as useCallback sets entire function to the getItems not just return items of the function
   const theme = {
     backgroundColor: dark ? "black" : "white",
     color: dark ? "white" : "black",
