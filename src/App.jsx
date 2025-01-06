@@ -112,12 +112,12 @@ function App() {
       {/* <UseMemo /> */}
       {/* <UseRef/> */}
 
-      <UseContext/>
+      {/* <UseContext/> */}
 
       {/* <UseReducer/> */}
       {/* <UseReducer2/> */}
 
-      {/* <UseCallback/> */}
+      <UseCallback/>
 
 
       {/*these are in REDUX folder */}
