@@ -117,7 +117,7 @@ function App() {
       {/* <UseReducer/> */}
       {/* <UseReducer2/> */}
 
-      <UseCallback/>
+      {/* <UseCallback/> */}
 
 
       {/*these are in REDUX folder */}
@@ -133,7 +133,7 @@ function App() {
 
 
       {/*React Lifecycle Methods */}
-      {/* <LifeCycleMethods/> */}
+      <LifeCycleMethods/>
 
       {/*used to explain debounce,code splitting and other things */}
       {/* <CodeSplitting/> */}

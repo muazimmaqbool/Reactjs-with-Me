@@ -33,7 +33,7 @@ export default LifeCycleMethods
     visit: https://www.w3schools.com/react/react_lifecycle.asp
 
  -> Each component in React has a lifecycle which you can monitor and manipulate during its three main phases. 
-       The three phases are: Mounting, Updating, and Unmounting.
+       The three phases are: Mounting, Updating and Unmounting.
 
        Important LifeCycle Methods are:
             componentDidMount(), shouldComponentUpdate(), ComponentDidUpdate(), ComponentWillUnmount()
