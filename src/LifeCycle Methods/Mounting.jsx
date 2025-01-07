@@ -14,10 +14,10 @@ const Mounting = () => {
 class Example extends React.Component {
   componentDidMount() {
     //called after component is loaded/mounted/rendered in DOM
-    console.log("Mount")
+    console.log("Mounted")
     setTimeout(() => {
-      console.log("Fetched..."); //showing this after component/data is loaded
-    }, 2000);
+      console.log("Fetched..."); //showing this log after component/data is loaded
+    }, 3000);
   }
 
   render() {
@@ -39,6 +39,6 @@ export default Mounting;
     ->componentDidMount():
         The componentDidMount() method is called after the component is rendered.
         inside componentDidMount() we can put things which we want to show after out component 
-        is loaded/rendered here its like useEffect() its loaded automatically
+        is loaded/rendered here its like useEffect() and its loaded automatically
 
  */
