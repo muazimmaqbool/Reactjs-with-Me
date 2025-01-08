@@ -11,13 +11,13 @@ const LifeCycleMethods = () => {
     <>
       <h2>LifeCylce Methods in React</h2>
        {/*contains componentDidMount()*/}
-       {/* <Mounting/> */}
+       <Mounting/>
        
        {/*for shouldComponentUpdate() and componentDidUpdate() */}
-       <Updating/> 
+       {/* <Updating/>  */}
 
         {/*for componentWillUnmount() */}
-        <Unmounting/>
+        {/* <Unmounting/> */}
         {/*used to explain componentWillUnmount() */}
         {/* <UnMountingExample/> */}
 

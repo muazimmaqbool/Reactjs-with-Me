@@ -31,5 +31,5 @@ class Example extends React.Component {
 export default UnMountingExample;
 
 /*
-i have created two components CompOne and CompTwo to use them here
+  i have created two components CompOne and CompTwo to use them here
 */
