@@ -41,6 +41,7 @@ import LifeCycleMethods from "./LifeCycle Methods/LifeCycleMethods";
 import CodeSplitting from "./Debounce/CodeSplitting";
 import Debounce from "./Debounce/Debounce";
 import ToggleSwitch from "./REDUX/ExampleTwo/ToggleSwitch";
+import LifeCycleMethodsFunctionalComponents from "./Components/LifeCycleMethodsFunctionalComponents";
 
 
 function App() {
@@ -134,6 +135,8 @@ function App() {
 
       {/*React Lifecycle Methods */}
       {/* <LifeCycleMethods/> */}
+      {/*Life cycle methods for functional components */}
+      <LifeCycleMethodsFunctionalComponents/>
 
       {/*used to explain debounce,code splitting and other things */}
       {/* <CodeSplitting/> */}
