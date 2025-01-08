@@ -55,8 +55,7 @@ export default Unmounting;
 
 /*
 ->Unmounting
-    The next phase in the lifecycle is when a component is removed from the DOM, or unmounted as 
-    React likes to call it.
+    The next phase in the lifecycle is when a component is removed from the DOM, or unmounted as react likes to call it.
     React has only one built-in method that gets called when a component is unmounted:
         -> componentWillUnmount() : called when the component is about to be removed from the DOM.
     ->To understand it with better example we will use react router dom
