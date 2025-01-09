@@ -136,7 +136,7 @@ function App() {
       {/*React Lifecycle Methods */}
       {/* <LifeCycleMethods/> */}
       {/*Life cycle methods for functional components */}
-      <LifeCycleMethodsFunctionalComponents/>
+      {/* <LifeCycleMethodsFunctionalComponents/> */}
 
       {/*used to explain debounce,code splitting and other things */}
       {/* <CodeSplitting/> */}
