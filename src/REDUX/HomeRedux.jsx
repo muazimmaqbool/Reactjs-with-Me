@@ -4,8 +4,8 @@ import { useDispatch ,useSelector} from "react-redux";
 //useSelector is used to access value from the state
 
 const HomeRedux = () => {
-    //const value=20; this is added to store.js (watch at 13:11) video link: https://www.youtube.com/watch?v=pBgQhZcQxMw&t=343s
     
+    //this c is inside Reducer.js
     const {c}=useSelector(state=>state.custom) // we can access this value in any component lets access this value in app.jsx
     // or  const c=useSelector(state=>state.custom.c)
 
