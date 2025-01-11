@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch ,useSelector} from "react-redux";
-//useDispatch is used to dispatch/trigger/call our action
+//useDispatch is used to dispatch/trigger/call the action
 //useSelector is used to access value from the state
 
 const HomeRedux = () => {
@@ -50,8 +50,9 @@ const HomeRedux = () => {
 export default HomeRedux;
 
 /*
--> See Notes for Redux and Reduxtoolkit and video
+-> See Notes for Redux and Redux-toolkit and video
 
-    -> const value=20; //need to store this value in store so that it can accessible for that make seperate file store.jsx or .js
+    -> const value=20; //need to store this value in store somewhere so that it can be accessible throughout the project
+       for that make seperate file store.jsx or store.js and will save this value there
 
 */
