@@ -69,10 +69,10 @@ function App() {
       {/* <Conditionals/> */}
 
       {/*use to explain Map() and key | looping on list */}
-      <List/>
+      {/* <List/> */}
 
       {/*used to explain forms in react */}
-      {/* <Forms/> */}
+      <Forms/>
       {/* <Forms2/> */}
 
       {/*used to explain routing: explained in notebook and on pdf*/}
