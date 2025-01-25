@@ -16,6 +16,10 @@ const Jsxinfo = () => {
       <h3>text: {text}</h3>
       <h3>ternary expressions inside jsx:</h3>
       <h3>using ternary o/p : {x < 15 ? "less then 15" : "greater then 15"}</h3>
+      <h3>
+        if else-if else:{" "}
+        {x < 15 ? "less than 15" : x < 20 ? "less than 20" : "greater then 20"}
+      </h3>
     </>
   );
 };

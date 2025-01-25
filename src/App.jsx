@@ -53,7 +53,7 @@ function App() {
       {/* <h1>Inside App.jsx</h1> */}
         
       {/*used to explain JSX */}
-      {/* <Jsxinfo/> */}
+      <Jsxinfo/>
 
       {/*used to explain components */}
       {/* <Com/>  */}
