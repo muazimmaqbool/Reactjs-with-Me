@@ -34,8 +34,8 @@ const Events = () => {
       <button onClick={(event) => distance("5-KM", event)}>
         Get distance and event type
       </button>
-      {/*here event can be named with anything */}
 
+      {/*here event can be named with anything */}
       <h3 onMouseOver={(event) => mouse(event)}>Use Mouse Over me</h3>
 
       <div
@@ -52,6 +52,8 @@ export default Events;
 /*
   Just like HTML DOM events, React can perform actions based on user events.
   React has the same events as HTML: click, change, mouseover etc.
+
+  {Note: something the browser does, or something a user does}
 
   Adding Events :
     ->React events are written in camelCase 
