@@ -34,9 +34,9 @@ function CarName(){
 /*
 React Components:
     Components are independent and reusable bits of code. They serve the same purpose as JavaScript 
-    functions, but work in isolation and return HTML.
+    functions, but work in isolation/seperately and return HTML.
     Components are like functions that return HTML elements.
-    >Components come in two types, Class components and Function components, we will concentrate on Function components.
+    >Components come in two types, Class components and Function components, we will mostly focus on Function components.
 
     >The component's name MUST start with an upper case letter.
 
