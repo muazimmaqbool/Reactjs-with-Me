@@ -2,15 +2,15 @@ import React from "react";
 
 //Read Documentation Below
 const List = () => {
-  const list=[1,2,3,4,5]
+  const list = [1, 2, 3, 4, 5];
   return (
     <>
       <h3>Inside List</h3>
       <BasicExample />
-      <Basic_key list={list}/>
+      <Basic_key list={list} />
       <Garage />
-      <GarageTwo />  
-      <GarageThree/>
+      <GarageTwo />
+      <GarageThree />
     </>
   );
 };
@@ -22,31 +22,26 @@ function BasicExample() {
   return (
     <>
       <h3>Orginal Number:</h3>
-      {numbers.map((n)=>n+" ")}
+      {numbers.map((n) => n + " ")}
       <h3>Numbers updated with +2:</h3>
-      {numbers.map((n)=>n+2+" ")}
-      
+      {numbers.map((n) => n + 2 + " ")}
     </>
   );
 }
+
 //basicexample with key
-function Basic_key(props){
-  const list=props.list;
-  const updateList=list.map((item)=>{
-    return(
-      <li key={item.toString()}>
-        {item+3}
-      </li>
-    )
-  })
-  return(
+function Basic_key(props) {
+  const list = props.list;
+  const updateList = list.map((item) => {
+    return <li key={item.toString()}>{item + 3}</li>;
+  });
+  return (
     <>
-    <h3>List with Key Example</h3>
+      <h3>List with Key Example</h3>
       <ul>{updateList}</ul>
     </>
-  )
+  );
 }
-
 
 function Car(props) {
   return (
@@ -55,6 +50,7 @@ function Car(props) {
     </li>
   );
 }
+
 //Let's render all of the cars from our garage:
 function Garage() {
   const cars = ["Ford", "TATA", "BMW", "Audi", "Honda"];
@@ -71,7 +67,6 @@ function Garage() {
 }
 
 //with keys (good to use keys)
-
 function Bike(props) {
   return (
     <li>
@@ -91,39 +86,35 @@ function GarageTwo() {
     <>
       <h3>Who is in my Garage Two!</h3>
       <ul>
-        {
-          bikes.map((bike)=>(
-            <Bike Key={bike.id} bikeName={bike.brand} />
-          ))
-        }
+        {bikes.map((bike) => (
+          <Bike Key={bike.id} bikeName={bike.brand} />
+        ))}
       </ul>
     </>
   );
 }
 
 //example
-const Cycles=(props)=>{
-  return(
-    
-      <li><h3>I'am {props.cycleName}</h3></li>
-    
-  )
-}
-const GarageThree=()=>{
-  const cycles=["SportsCycle","MountainCycle","RegularCycle","FatCycle"]
-  return(
+const Cycles = (props) => {
+  return (
+    <li>
+      <h3>I'am {props.cycleName}</h3>
+    </li>
+  );
+};
+const GarageThree = () => {
+  const cycles = ["SportsCycle", "MountainCycle", "RegularCycle", "FatCycle"];
+  return (
     <>
-     <h2>Inside Garage Cycle</h2>
-     <ol>
-     {
-      cycles.map((cycle)=>(
-        <Cycles key={cycle.toString()} cycleName={cycle}  />
-      ))
-     }
-     </ol>
+      <h2>Inside Garage Cycle</h2>
+      <ol>
+        {cycles.map((cycle) => (
+          <Cycles key={cycle.toString()} cycleName={cycle} />
+        ))}
+      </ol>
     </>
-  )
-}
+  );
+};
 
 export default List;
 
@@ -131,16 +122,16 @@ export default List;
   -> In React, you will render lists with some type of loop.
   -> The JavaScript map() array method is generally the preferred method.
 
-  examples above
+  Examples Are Above
 
-    Note: Keys
+  Note: Keys:
     Keys allow React to keep track of elements. This way, if an item is updated or removed, 
     only that item will be re-rendered instead of the entire list.
     Keys need to be unique to each sibling. But they can be duplicated globally.
     Keys are used in React to identify which items in the list are changed, updated, or deleted.
 
-    if we don't pass any key we will get this message in console:
-        Warning: Each child in a list should have a unique "key" prop.
+    if we don't pass any key we will get a warning message in console:
+      Warning: Each child in a list should have a unique "key" prop.
 
     extra information from geeksforgeeks : https://www.geeksforgeeks.org/reactjs-lists/
      
