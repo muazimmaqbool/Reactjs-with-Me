@@ -48,7 +48,7 @@ function Garage(props) {
 }
 //Note: If cars.length > 0 is equates to true, the expression after && will render.
 
-//  3 -> Ternary Operator: Another way to conditionally render elements/component is by using a ternary operator.
+// 3 -> Ternary Operator: Another way to conditionally render elements/component is by using a ternary operator.
 //We will go back to the first example
 //Return the Hit component if isGoal is true, otherwise return the Missed component:
 function ShootAgain(props) {
@@ -74,6 +74,6 @@ export default Conditionals;
        {condition ? true : false}
 
 
-        visit this page: https://www.w3schools.com/REACT/react_conditional_rendering.asp
+      visit this page: https://www.w3schools.com/REACT/react_conditional_rendering.asp
 
      */
