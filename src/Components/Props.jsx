@@ -23,6 +23,7 @@ function Car(props) {
   );
 }
 const carName = "Ford"; //variable
+
 //If you have a variable or object to send, and not a string as in the example above, you just put the
 //variable/object name inside curly brackets:
 const carInfo = {
