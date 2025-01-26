@@ -16,7 +16,7 @@ function Myform() {
 
   const handleChange = (event) => {
     /*event.target.name retrieves the name attribute of the input element that triggered the event.
-     This helps to identify which field was updated*/
+       This helps to identify which field was updated*/
     const name = event.target.name;
     //event.target.value retrieves the current value of the input element.
     const value = event.target.value;
@@ -25,11 +25,11 @@ function Myform() {
 
   /*
   ->setInputs((values) => ({ ...values, [name]: value }));
-  -> { ...values } creates a copy of the current state using the spread operator to avoid mutating the original state.
-  -> [name]: value dynamically updates the property in the copied object. 
-        The square brackets ([]) are used for computed property names so that name is evaluated as a variable.
+    -> { ...values } creates a copy of the current state using the spread operator to avoid mutating the original state.
+    -> [name]: value dynamically updates the property in the copied object. 
+               The square brackets ([]) are used for computed property names so that name is evaluated as a variable.
 
-   ->This results in updating the state with the new value for the field while keeping the other fields unchanged.
+    ->This results in updating the state with the new value for the field while keeping the other fields unchanged.
   */
 
   const handleSubmit = (event) => {
@@ -80,10 +80,10 @@ export default Forms2;
 
 /*
 -> Form with multiple input fields:
-    You can control the values of more than one input field by adding a name attribute to each element.
-    We will initialize our state with an empty object.
-    To access the fields in the event handler use the event.target.name and event.target.value syntax.
-    To update the state, use square brackets [bracket notation] around the property name.
+      You can control the values of more than one input field by adding a name attribute to each element.
+      We will initialize our state with an empty object.
+      To access the fields in the event handler use the event.target.name and event.target.value syntax.
+      To update the state, use square brackets [bracket notation] around the property name.
 
-    visit: https://www.w3schools.com/REACT/react_forms.asp
- */
+      visit: https://www.w3schools.com/REACT/react_forms.asp
+  */
