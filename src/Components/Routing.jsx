@@ -42,7 +42,7 @@ export default Routing;
 
   Dynamic Routing:
       Dynamic routing is the routing that takes place as your app is rendering, not in a configuration
-      or convention outside of a running app
+      or convention outside of a running app or during runtime
 
       dynamic routes: 
         <Route path="/user/:id" element={<User/>}/>
@@ -56,7 +56,7 @@ export default Routing;
           tempId will read any id when calling it like /:id, /new 
 
       ->Using "id" is usefull when we work on the backend / when we request on the backend/request API etc
-             to access this id we use params
+        ->To access this id we use params
 
       ->useNavigate():
            we use "useNavigate" to go to a particular location like this
