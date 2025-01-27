@@ -19,6 +19,9 @@ const Header = () => {
         <li>
           <Link to="/user/tempId"><h3>User</h3></Link>
         </li>
+        <li>
+          <Link to="/section/6655"><h3>Check Section</h3></Link>
+        </li>
       </ul>
     </>
   );
