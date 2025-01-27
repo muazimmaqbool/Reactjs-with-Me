@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+//called from Routing.jsx
 const Header = () => {
   return (
     <>
