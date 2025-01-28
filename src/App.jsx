@@ -82,10 +82,10 @@ function App() {
       {/* <Home/> */}
 
       {/*this component is inside SASS Styling*/}
-      <HomeSASS/> 
+      {/* <HomeSASS/>  */}
 
       {/*used to explain memo */}
-      {/* <Memo/> */}
+      <Memo/>
 
       {/* used to explain API calls using fetch and axios */}
       {/* <FetchAPI/> */}
