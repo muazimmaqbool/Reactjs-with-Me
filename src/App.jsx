@@ -79,10 +79,10 @@ function App() {
        {/* <Routing/>  */}
 
       {/*this component is inside Css Styling*/}
-      <Home/>
+      {/* <Home/> */}
 
       {/*this component is inside SASS Styling*/}
-      {/* <HomeSASS/>  */}
+      <HomeSASS/> 
 
       {/*used to explain memo */}
       {/* <Memo/> */}
