@@ -25,6 +25,7 @@ const Memo = () => {
 
       {/* using memo */}
       <MemoTodo todos={todos}/>
+      <TodoMemoHere todos={todos}/>
 
       <button onClick={addTodo} style={{ margin: "10px" }}>
           Add Todo
@@ -67,6 +68,19 @@ const Todo=({ todos })=> {
 //but here we have make this component in the different file so, to see how it works we create another
 //component named as MemoTodo.jsx
 //Now the Todos component only re-renders when the todos that are passed to it through props are updated.
+
+//or use this
+const TodoMemoHere = React.memo(({ todos }) => {
+  console.log("Rendering TodoMemoHere...");
+  return (
+    <>
+      <h3>My Todos</h3>
+      {todos.map((todo, index) => {
+        return <p key={index}>{todo}</p>;
+      })}
+    </>
+  );
+});
 
 export default Memo;
 
