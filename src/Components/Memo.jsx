@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import MemoTodo from "./MemoTodo";
 
 //Read Documentation Below:
@@ -80,7 +80,7 @@ const Todo = ({ todos }) => {
 //Now the Todos component only re-renders when the todos that are passed to it through props are updated.
 
 //or use this
-const AddTask = React.memo(({ myTasks }) => {
+const AddTask = memo(({ myTasks }) => {
   console.log("Rendering AddTask...");
   return (
     <>
