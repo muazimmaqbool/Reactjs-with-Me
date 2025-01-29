@@ -21,10 +21,10 @@ const Memo = () => {
       <h1>MEMO</h1>
       
       {/* without using memo */}
-      <Todo todos={todos} /> 
+      {/* <Todo todos={todos} />  */}
 
       {/* using memo */}
-      {/* <MemoTodo todos={todos}/> */}
+      <MemoTodo todos={todos}/>
 
       <button onClick={addTodo} style={{ margin: "10px" }}>
           Add Todo
@@ -46,7 +46,7 @@ const Todo=({ todos })=> {
   console.log("Todo render");
   return (
     <>
-      <h3>MY TODOs</h3>
+      <h3>My Todos</h3>
       {todos.map((todo, index) => {
         return <p key={index}>{todo}</p>;
       })}
