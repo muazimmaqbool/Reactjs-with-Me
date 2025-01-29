@@ -19,9 +19,12 @@ const Memo = () => {
   return (
     <>
       <h1>MEMO</h1>
-      {/* <Todo todos={todos} /> */}
       
-      <MemoTodo todos={todos}/>
+      {/* without using memo */}
+      <Todo todos={todos} /> 
+
+      {/* using memo */}
+      {/* <MemoTodo todos={todos}/> */}
 
       <button onClick={addTodo} style={{ margin: "10px" }}>
           Add Todo
@@ -30,10 +33,7 @@ const Memo = () => {
       <hr />
       <div>
         count: {count}
-        <button
-          onClick={increment}
-          style={{margin:"10px" }}
-        >
+        <button onClick={increment} style={{margin:"10px" }}>
           +
         </button>
       </div>
@@ -43,7 +43,7 @@ const Memo = () => {
 
 //without using memo
 const Todo=({ todos })=> {
-    console.log("Todo render");
+  console.log("Todo render");
   return (
     <>
       <h3>MY TODOs</h3>
@@ -57,10 +57,12 @@ const Todo=({ todos })=> {
 //If this component was complex, it could cause performance issues.
 
 /* Solution:
-To fix this, we can use memo.
-Use memo to keep the Todos component from needlessly re-rendering.
-Wrap the Todos component export in memo:*/
-//like this : export default memo(Todos);
+  To fix this, we can use memo.
+  Use memo to keep the Todos component from needlessly re-rendering.
+  Wrap the Todos component export in memo:
+  like this : export default memo(Todos);
+*/
+
 
 //but here we have make this component in the different file so, to see how it works we create another
 //component named as MemoTodo.jsx
