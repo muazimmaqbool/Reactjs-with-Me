@@ -1,40 +1,51 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import MemoTodo from "./MemoTodo";
 
 //Read Documentation Below:
 const Memo = () => {
   const [count, setCount] = useState(0);
-  const [todos, setTodos] = useState(["Todo 1", "Todo 2" ]);
+  const [todos, setTodos] = useState(["Todo 1", "Todo 2"]);
+  const [myTasks, setmyTasks] = useState([]);
 
   const increment = () => {
     setCount((c) => c + 1);
   };
 
+  const addTodo = () => {
+    const todoCount = todos.length;
+    const newTodo = `Todo ${todoCount + 1}`;
+    setTodos((prevTodo) => [...prevTodo, newTodo]);
+  };
 
-  const addTodo=()=>{
-    const todoCount=todos.length;
-    const newTodo=`Todo ${todoCount+1}`;
-    setTodos((prevTodo)=>[...prevTodo,newTodo])
+  const addTask=()=>{
+    const taskCount=myTasks.length;
+    const newTask=`Task ${taskCount+1}`;
+    setmyTasks((prev)=>[...prev,newTask])
   }
   return (
     <>
       <h1>MEMO</h1>
-      
+
       {/* without using memo */}
       {/* <Todo todos={todos} />  */}
 
       {/* using memo */}
-      <MemoTodo todos={todos}/>
-      <TodoMemoHere todos={todos}/>
+      <MemoTodo todos={todos} />
+      <AddTask myTasks={myTasks} />
+
+      <hr />
 
       <button onClick={addTodo} style={{ margin: "10px" }}>
-          Add Todo
+        Add Todo
       </button>
 
+      <button onClick={addTask} style={{ margin: "10px" }}>
+        Add Task
+      </button>
       <hr />
       <div>
         count: {count}
-        <button onClick={increment} style={{margin:"10px" }}>
+        <button onClick={increment} style={{ margin: "10px" }}>
           +
         </button>
       </div>
@@ -43,7 +54,7 @@ const Memo = () => {
 };
 
 //without using memo
-const Todo=({ todos })=> {
+const Todo = ({ todos }) => {
   console.log("Todo render");
   return (
     <>
@@ -53,7 +64,7 @@ const Todo=({ todos })=> {
       })}
     </>
   );
-}
+};
 //When you click the increment button, the Todos component re-renders. even though the value of todo doesn't change
 //If this component was complex, it could cause performance issues.
 
@@ -64,20 +75,23 @@ const Todo=({ todos })=> {
   like this : export default memo(Todos);
 */
 
-
 //but here we have make this component in the different file so, to see how it works we create another
 //component named as MemoTodo.jsx
 //Now the Todos component only re-renders when the todos that are passed to it through props are updated.
 
 //or use this
-const TodoMemoHere = React.memo(({ todos }) => {
-  console.log("Rendering TodoMemoHere...");
+const AddTask = React.memo(({ myTasks }) => {
+  console.log("Rendering AddTask...");
   return (
     <>
-      <h3>My Todos</h3>
-      {todos.map((todo, index) => {
-        return <p key={index}>{todo}</p>;
-      })}
+      <h3>My Tasks</h3>
+      {myTasks && myTasks?.length > 0 ? (
+        myTasks.map((task, index) => {
+          return <p key={index}>{task}</p>;
+        })
+      ) : (
+        <p>No Tasks</p>
+      )}
     </>
   );
 });
