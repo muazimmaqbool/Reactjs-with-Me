@@ -4,7 +4,7 @@ const FetchAPI3 = () => {
   return <RandomImages />;
 };
 
-//displaying random images
+//Displaying random images
 const url = "https://jsonplaceholder.typicode.com/photos";
 const RandomImages = () => {
   const [image, setImage] = useState([]);
@@ -24,7 +24,7 @@ const RandomImages = () => {
   return (
     <>
       <h4>Random Images:</h4>
-      {/* will show only 10 images */}
+      {/* Will show only 10 images */}
       {image.slice(0, 10).map((item) => {
         return (
           <div key={item.id}>
