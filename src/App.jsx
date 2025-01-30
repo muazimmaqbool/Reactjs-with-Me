@@ -85,10 +85,10 @@ function App() {
       {/* <HomeSASS/>  */}
 
       {/*used to explain memo */}
-      <Memo/>
+      {/* <Memo/> */}
 
       {/* used to explain API calls using fetch and axios */}
-      {/* <FetchAPI/> */}
+      <FetchAPI/>
       {/* <FetchAPI2/> */}
       {/* <FetchAPI3/> */}
 

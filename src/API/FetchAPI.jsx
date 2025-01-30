@@ -9,11 +9,13 @@ const FetchAPI = () => {
     </>
   );
 };
+
+//Example 1:
 const url = "https://jsonplaceholder.typicode.com/users";
 function GetUsers() {
   const [users, setUsers] = useState([]);
 
-  //fuction to get data
+  //fuction to get data from API
   const fetchUsersData = () => {
     fetch(url)
       .then((response) => response.json())
@@ -38,6 +40,7 @@ function GetUsers() {
   );
 }
 
+//Example 2:
 //it displays random cat facts
 function CatFacts() {
   const url = "https://catfact.ninja/fact";
@@ -64,7 +67,7 @@ function CatFacts() {
 export default FetchAPI;
 
 /*
-Study fetch() API method in javascript and from notes of javascript
+ Study fetch() API method in javascript and from notes of javascript
  fetch() in react works in  similar manner like in javascript 
  but here in react instead of fetch() axios is used because its much easy to use
  ->although fetch also works fine
