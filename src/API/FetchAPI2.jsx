@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 //this is called from APP.jsx
+
+//using async-await: its good way to use async-await on fetch
 const FetchAPI2 = () => {
   return (
     <>
@@ -10,6 +12,8 @@ const FetchAPI2 = () => {
     </>
   );
 };
+
+//Example 1:
 const url = "https://catfact.ninja/fact";
 function CatFacts() {
   const [fact, setFact] = useState([]);
@@ -26,6 +30,7 @@ function CatFacts() {
   );
 }
 
+//Example 2:
 //this function shows different cat facts after some time
 const CatFacts2 = () => {
   const [catFact, setCatFact] = useState([]);
@@ -49,6 +54,7 @@ const CatFacts2 = () => {
   );
 };
 
+//Example 3:
 //getting comments
 const GetComments=()=>{
   const url ='https://jsonplaceholder.typicode.com/comments';
@@ -87,4 +93,3 @@ const GetComments=()=>{
 
 export default FetchAPI2;
 
-//using async-await its good way to use async-await on fetch
