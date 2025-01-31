@@ -1,7 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-//Read Documentation Below
+/*
+Basic intro: Axios is a lightweight package and it's used to make Http requests in any js library (like react, angular or vue.js)
+->Axios is easy to use version of fetch (its an upgraded version of fetch)
+
+Main difference between Axios and Fetch:
+ ->Axios converts data to json format directly while fetch doesn't convert directly we have to tell it
+ see more on notes
+
+ ->To install Axios run this command: npm install axios
+ 
+*/
 const Axios = () => {
   return (
     <>
@@ -191,15 +201,4 @@ const Example5 = () => {
 
 export default Axios;
 
-/*
 
-Basic intro: Axios is a lightweight package and it's used to make Http requests in any js library (like react, angular or vue.js)
-->Axios is easy to use version of fetch (its an upgraded version of fetch)
-
-Main difference between Axios and Fetch:
- ->Axios converts data to json format directly while fetch doesn't convert directly we have to tell it
- see more on notes
-
- to install Axios run this command: npm install axios
- 
-*/

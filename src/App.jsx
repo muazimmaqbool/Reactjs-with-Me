@@ -90,9 +90,9 @@ function App() {
       {/* used to explain API calls using fetch and axios */}
       {/* <FetchAPI/> */}
       {/* <FetchAPI2/> */}
-      <FetchAPI3/>
+      {/* <FetchAPI3/> */}
 
-      {/* <Axios /> */}
+      <Axios />
       {/* <AxiosPost/>  */}
       {/* <AxiosPut/> */}
        {/* <AxiosDelete/>  */}
