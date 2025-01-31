@@ -42,7 +42,7 @@ function Example1() {
 //to display data we first need to store the data, we use useState to do that
 function Example2() {
   const [data, setData] = useState([]); 
-  //the data which api is getting is an array that's why we pass initial data as [] in useState
+  //the data which api is getting is an array that's why we pass initial data as empty array [] in useState
 
   const getPost = () => {
     axios.get("https://jsonplaceholder.typicode.com/posts").then((response) =>
@@ -77,7 +77,7 @@ function Example2() {
   );
 }
 
-//handling errors in Example3
+//Handling errors
 const Example3 = () => {
   const [data, setData] = useState([]);
   const [isError, setError] = useState(""); //used to show error on screen
@@ -102,7 +102,7 @@ const Example3 = () => {
       {
         isError !== "" && <h2>Error: {isError}</h2>
         //means when isError is not empty so when there is an error isError will not be empty then
-        // show error message using h2 tags if there is error then isError will mot be empty and this code will not run
+        //show error message using h2 tags if there is error then isError will mot be empty and this code will not run
       }
       <div className="grid">
         {data.map((getpost) => {
