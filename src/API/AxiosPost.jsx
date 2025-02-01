@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 
-//first checkout previous code
+//First check previous codes on axios
 const AxiosPost = () => {
   const url = "https://jsonplaceholder.typicode.com/todos";
   const data = {
