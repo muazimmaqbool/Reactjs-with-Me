@@ -1,6 +1,7 @@
 import React,{useEffect} from "react";
 import axios from "axios";
 
+//First check previous codes on axios
 const AxiosPut = () => {
   const url = "https://jsonplaceholder.typicode.com/posts/100";
   const data = {

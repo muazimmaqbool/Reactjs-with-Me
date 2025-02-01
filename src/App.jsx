@@ -94,7 +94,7 @@ function App() {
 
       {/* <Axios /> */}
       {/* <AxiosPost/>  */}
-      {/* <AxiosPut/> */}
+      <AxiosPut/>
        {/* <AxiosDelete/>  */}
 
       {/*used to explain hooks */}
