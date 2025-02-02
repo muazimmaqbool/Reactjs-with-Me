@@ -6,9 +6,12 @@ const UseState3 = () => {
     <>
       <h3>Updating Objects and Arrays in State</h3>
       <Bike />
+      <MyCars />
     </>
   );
 };
+
+//updatin object
 function Bike() {
   const [bike, setBike] = useState({
     brand: "BMW",
@@ -30,22 +33,21 @@ function Bike() {
       });
     }, 2000);
   };
-  const updateModified = () =>{
-    setBike((prevState)=>{
-      return {...prevState , modified:"Not Fully!"}
+  const updateModified = () => {
+    setBike((prevState) => {
+      return { ...prevState, modified: "Not Fully!" };
     });
   };
 
-  const updateBikeModel = ()=>{
-    console.log("Updating Model...")
-    setTimeout(()=>{
-      setBike((prevState)=>{
-          return {...prevState, model:"GS-1250"}
-      })
-      console.log("Bike Model Updated")
-    },3000)
-  }
-
+  const updateBikeModel = () => {
+    console.log("Updating Model...");
+    setTimeout(() => {
+      setBike((prevState) => {
+        return { ...prevState, model: "GS-1250" };
+      });
+      console.log("Bike Model Updated");
+    }, 3000);
+  };
 
   //Note: previousState is just an identifier it can be of any name
 
@@ -67,6 +69,28 @@ function Bike() {
   );
 }
 
+//updating array
+function MyCars() {
+  const [cars, setcars] = useState(["BMW", "Audi", "Mercedes", "Toyota"]);
+  const [newCarName, setnewCarName] = useState();
+  const updateCarsList = (newCar) => {
+    setcars((prev) => [...prev, newCar]);
+    setnewCarName("")
+  };
+  return (
+    <>
+      <h1>Cars in my garage:</h1>
+      {cars && cars.map((car, index) => <p key={index}>{car}</p>)}
+
+      <label>
+        Add New Car:
+        <input type="text" value={newCarName} onChange={(e) => setnewCarName(e.target.value)} />
+      </label>
+      <button onClick={() => updateCarsList(newCarName)}>Add New Car</button>
+    </>
+  );
+}
+
 export default UseState3;
 
 /*
@@ -83,7 +107,7 @@ export default UseState3;
         });
     }
     Because we need the current value of state, we pass a function into our setCar function.
-     This function receives the previous value.
+    This function receives the previous value.
     We then return an object, spreading the previousState and overwriting only the color
 
 */

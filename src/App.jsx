@@ -102,8 +102,8 @@ function App() {
       {/* <Hooks/>  */}
     
       {/* <UseState/> */}
-      <UseState2/>
-      {/* <UseState3/> */}
+      {/* <UseState2/> */}
+      <UseState3/>
 
       {/* <UseEffect/> */}
       {/* <UseEffect2/> */}
