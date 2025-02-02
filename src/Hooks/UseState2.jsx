@@ -4,18 +4,18 @@ import React, { useState } from "react";
 const UseState2 = () => {
   return (
     <>
-      <h3>More on useState</h3>
+      <h3>More on useState hook</h3>
       <h4>What Can State Hold</h4>
       <Car />
       <Bike />
-      <Item/>
+      <Item />
     </>
   );
 };
-const styleobj={
-  border:"2px solid green",
-  width:"fit-content"
-}
+const styleobj = {
+  border: "2px solid green",
+  width: "fit-content",
+};
 function Car() {
   const [brand, setBrand] = useState("Ford");
   const [model, setModel] = useState("Mustang");
@@ -30,7 +30,7 @@ function Car() {
       </p>
 
       {/*updating color : this is optional */}
-      <button onClick={()=>setColor("blue")}>Update Color</button>
+      <button onClick={() => setColor("blue")}>Update Color</button>
     </>
   );
 }
@@ -55,22 +55,37 @@ function Bike() {
   );
 }
 
-const Item=()=>{
-  const[details,setDetails]=useState({
-    name:"Hp-Laptop",
-    procerror:"i3",
-    memory:"8GB and 1TB",
-    size:"Large screen"
-  })
-  return(
+//updating object value inside useState hook
+const Item = () => {
+  const [details, setDetails] = useState({
+    name: "Hp-Laptop",
+    procerror: "i3",
+    memory: "8GB and 1TB",
+    size: "Large screen",
+  });
+  return (
     <>
-      <h3>My {details.name} has {details.procerror} processor with {details.memory} of memory</h3>
+      <h3>
+        My {details.name} has {details.procerror} processor with{" "}
+        {details.memory} of memory
+      </h3>
+      <button
+        onClick={() =>
+          setDetails((prev) => {
+            return { ...prev, procerror: "i5" };
+          })
+        }
+      >
+        Update processor
+      </button>
       <button onClick={()=>setDetails((prev)=>{
-        return{...prev,procerror:"i5"}
-      })}>Update processor</button>
+        return {...prev,memory:"16GB and 512GB SSD"}
+      })}>
+        Update memory
+      </button>
     </>
-  )
-}
+  );
+};
 
 //updating object and arrays is in useState3.jsx
 export default UseState2;
