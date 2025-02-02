@@ -41,7 +41,9 @@ function Today(){
       <h1>Today is: {day}</h1>
       {/*we can get today in much simple way like this */}
       <button type="button" onClick={()=>setDay(days[dayOfWeek])}>Getday</button>
-      {/*setDay(days[dayofWeek]): days is an array and daysofWeek contains day number */}
+      {/*setDay(days[dayofWeek]): days is an array and daysofWeek contains day number 
+      Like this: day[0] i.e Sunday
+      */}
     </>
   )
 }
@@ -50,7 +52,7 @@ export default UseState;
 
 /*learn about useState hook from notebook and from w3schools
 
--> useState hook: it allows us to track state in a function component
+->useState hook: it allows us to track state in a function component
     {state: state generally refers to data or properties that need to be tracked in an application}
 
 ->Important:
