@@ -27,7 +27,7 @@ const UseEffect2 = () => {
   );
 };
 
-//example2
+//Example 2
 function Counter(){
   const[count,setCount]=useState(0);
   const[cal,setCal]=useState(0);
@@ -48,6 +48,6 @@ function Counter(){
 
 export default UseEffect2;
 /*
- -> in useEffect when we give it dependency [] it means run only once
-  and [a,b] : runs whenever value of a or b changes
+ -> In useEffect when we give it dependency [] it means run only once
+    and [a,b] : runs whenever value of a or b changes
  */
