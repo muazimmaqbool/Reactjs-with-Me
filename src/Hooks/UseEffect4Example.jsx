@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const UseEffect4Example = () => {
-  return (
-    <>
-      <Example />
-    </>
-  );
+  return <Example />;
 };
 
 //using API
@@ -31,7 +27,7 @@ function Example() {
         <button onClick={() => setSrcType("comments")}>comments</button>
       </div>
       <h1>{srcType}</h1>
-      {item.map((i,index) => (
+      {item.map((i, index) => (
         <p key={index}>{JSON.stringify(i)}</p>
       ))}
     </>
