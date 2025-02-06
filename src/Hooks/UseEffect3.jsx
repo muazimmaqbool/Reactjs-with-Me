@@ -40,7 +40,7 @@ function AppExample() {
   );
 }
 
-//example: modifying the variable based on the width of the window that we have open
+//Example: modifying the variable based on the width of the window that we have open
 function GetWidth() {
   const [winWidth, setWidth] = useState(window.innerWidth); //window.innerWidth : is used to get width of window
 
