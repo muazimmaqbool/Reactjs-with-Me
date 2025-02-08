@@ -7,10 +7,10 @@ const UseRef = () => {
       {/* <Example1/> */}
 
       {/*Accessing DOM Elements */}
-      <Example2/> 
+      {/* <Example2/>  */}
 
       {/*Tracking State Changes: track of previous state values */}
-      {/* <Example3/>  */}
+      <Example3/> 
     </>
   )
 }
@@ -61,6 +61,7 @@ function Example2(){
             {/* changing color of p tag */}
             <p ref={pTag}>Hey change my color</p>
             <button onClick={updateColor}>Change Color</button>
+            <button onClick={()=>pTag.current.style.fontSize="2rem"}>Change Size</button>
         </>
     )
 }
