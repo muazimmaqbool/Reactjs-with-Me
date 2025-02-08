@@ -4,13 +4,13 @@ import React, { useEffect, useState,useRef } from 'react'
 const UseRef = () => {
   return (
     <>
-      {/* <Example1/> */}
+      <Example1/>
 
       {/*Accessing DOM Elements */}
       {/* <Example2/>  */}
 
       {/*Tracking State Changes: track of previous state values */}
-      <Example3/> 
+      {/* <Example3/>  */}
     </>
   )
 }
@@ -91,7 +91,7 @@ export default UseRef
 ->React useRef Hook:
     Used when you don't want to re-render the component when state changes
     It can be used to access a DOM elements directly.
-    Refs doesn't cause your component to re-update when it gets changed
+    Refs doesn't cause your component to re-update/re-render when it gets changed
 
 ->useRef() only returns one item. 
             It returns an Object called current.
@@ -107,12 +107,12 @@ export default UseRef
         In general, we want to let React handle all DOM manipulation.
         But there are some instances where useRef can be used without causing issues.
         In React, we can add a ref attribute to an element to access it directly in the DOM
-        code in : example2
+        code in : Example 2
 
 ->Basically we use useRef hook to store those things which are not related to the render and for things which are related to the
-      render use useState hook.
+    render use useState hook.
     ->const refName=useRef(initial value)
-     -> refName is the refrence object and this refrence object have current property i.e refName.current
+     ->refName is the refrence object and this refrence object have current property i.e refName.current
      ->you can read and also change this current property
      ->and by changing this current property nothing will re-render 
      ->main job of reference is to give reference to DOM example <input ref={refName}/> now you will have directly access to the real DOM
