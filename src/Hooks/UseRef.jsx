@@ -4,10 +4,10 @@ import React, { useEffect, useState,useRef } from 'react'
 const UseRef = () => {
   return (
     <>
-      <Example1/>
+      {/* <Example1/> */}
 
       {/*Accessing DOM Elements */}
-      {/* <Example2/>  */}
+      <Example2/> 
 
       {/*Tracking State Changes: track of previous state values */}
       {/* <Example3/>  */}
