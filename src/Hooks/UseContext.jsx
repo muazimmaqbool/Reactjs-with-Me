@@ -1,19 +1,16 @@
 import React, { useState,createContext,useContext } from 'react'
 
 //Read Documentation Below:
-
 const context=createContext(); //context can be any name
 const UseContext = () => {
     const[item,setItem]=useState("Laptop");
   return (
-    
         <context.Provider value={item}>
             <h3>useContext Hook</h3>
             <h4>Item is: {item}</h4>
             <button onClick={()=>setItem("CPU")}>Change item</button>
             <Comp2/>
-        </context.Provider>
-
+      </context.Provider>
   )
 }
 
