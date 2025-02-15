@@ -60,7 +60,7 @@ export default UseContext
 ->React Context:
     React Context is a way to manage state globally.
     It can be used together with the useState Hook to share state/data between deeply nested 
-        components more easily than with useState alone.
+    components more easily than with useState alone.
 
     ->The Problem:
         State should be held by the highest parent component in the stack that requires access to the state.
@@ -162,65 +162,7 @@ export default UseContext
             </>
         );
         }
-        Full Example
-        Example:
-        Here is the full example using React Context:
-        import { useState, createContext, useContext } from "react";
-        import ReactDOM from "react-dom/client";
-
-        const UserContext = createContext();
-
-        function Component1() {
-        const [user, setUser] = useState("Jesse Hall");
-
-        return (
-            <UserContext.Provider value={user}>
-                <h1>{`Hello ${user}!`}</h1>
-                <Component2 />  
-            </UserContext.Provider>
-        );
-        }
-
-        function Component2() {
-        return (
-            <>
-                <h1>Component 2</h1>
-                <Component3 />
-            </>
-        );
-        }
-
-        function Component3() {
-        return (
-            <>
-                <h1>Component 3</h1>
-                <Component4 />
-            </>
-        );
-        }
-
-        function Component4() {
-        return (
-            <>
-                <h1>Component 4</h1>
-                <Component5 />
-            </>
-        );
-        }
-
-        function Component5() {
-        const user = useContext(UserContext);
-
-        return (
-            <>
-                <h1>Component 5</h1>
-                <h2>{`Hello ${user} again!`}</h2>
-            </>
-        );
-        }
-
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<Component1 />);
+        Full Example Above:
 
 
     visit: https://www.w3schools.com/REACT/react_usecontext.asp
