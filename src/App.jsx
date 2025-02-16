@@ -113,7 +113,7 @@ function App() {
       {/* <UseMemo /> */}
       {/* <UseRef/> */}
 
-      <UseContext/>
+      {/* <UseContext/> */}
 
       {/* <UseReducer/>  */}
       {/* <UseReducer2/> */}
@@ -139,7 +139,7 @@ function App() {
       {/* <LifeCycleMethodsFunctionalComponents/> */}
 
       {/*used to explain debounce,code splitting and other things */}
-      {/* <CodeSplitting/> */}
+      <CodeSplitting/>
       {/* <Debounce/> */}
 
     </>
