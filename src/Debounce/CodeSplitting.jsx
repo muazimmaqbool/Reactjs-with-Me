@@ -14,8 +14,8 @@ const Contact = lazy(() => import("./Contact"));
 //this is known as dynamic import, this way it maintains good performance
 //->this is the way react application is to hold off loading some parts of a web page until a user needs them
 
-//ab hum jis page pei honge ausi ka data ayaa ga seperate file mei bundle.js ke neeche
-//aase hum lazy keyword ka use karke code splitting karr skhte hain
+/*ab hum jis page pei honge ausi ka data ayaa ga seperate file mei bundle.js ke neeche
+aase hum lazy keyword ka use karke code splitting karr skhte hain*/
 
 //now import suspence form react and wrap all routes inside suspence
 //suspence has fallback in which we give component which is shown till component is loaded
