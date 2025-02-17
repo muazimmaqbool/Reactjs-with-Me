@@ -139,8 +139,8 @@ function App() {
       {/* <LifeCycleMethodsFunctionalComponents/> */}
 
       {/*used to explain debounce,code splitting and other things */}
-      <CodeSplitting/>
-      {/* <Debounce/> */}
+      {/* <CodeSplitting/> */}
+      <Debounce/>
 
     </>
   );

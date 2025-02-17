@@ -26,15 +26,15 @@ const Debounce = () => {
     };
     //basically before calling useEffect again function inside return will run i.e cleanup useEffect will run
   }, [nameVal]);
-  //here the moment we type something in the input field useEffect gets called and function is called
-  //so when i type M function runs and it prints random email then when i type U it runs again and so on..
-  //so its running/called on every alphabet entered in the input field
+  /*here the moment we type something in the input field useEffect gets called and function is called
+  so when i type M function runs and it prints random email then when i type U it runs again and so on..
+  so its running/called on every alphabet entered in the input field
 
-  //but we want it to run after a certain delay until no change is made during that delay
-  //if any change is made then reset delay/time then again wait for some time then run if no change is made
-  // this is debouncing already seen in javascript
-  //we will be using setTime(putting getUserData() function inside setTimeout) to do this
-
+  but we want it to run after a certain delay until no change is made during that delay
+  if any change is made then reset delay/time then again wait for some time then run if no change is made function gets called
+  this is debouncing already seen in javascript
+  we will be using setTime(putting getUserData() function inside setTimeout) to do this
+  */
   //Note: Here useEffect will be rendered on every entered aplhabet in the input field
 
   return (
