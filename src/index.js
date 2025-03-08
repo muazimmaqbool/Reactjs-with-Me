@@ -3,15 +3,18 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { Provider } from "react-redux";
 import store from "./REDUX/store";
+import { QueryClient,QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient=new QueryClient(); //creating a queryClient instance
 
 //we are accessing the element(inside public > index.html) which has "root" id, then we are using render method on it
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <>
+  <QueryClientProvider client={queryClient}>
     <Provider store={store}>
       <App />
     </Provider>
-  </>
+  </QueryClientProvider>
 );
 
 //what is strict mode? ->
