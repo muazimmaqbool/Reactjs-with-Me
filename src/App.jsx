@@ -43,6 +43,7 @@ import Debounce from "./Debounce/Debounce";
 import ToggleSwitch from "./REDUX/ExampleTwo/ToggleSwitch";
 import LifeCycleMethodsFunctionalComponents from "./Components/LifeCycleMethodsFunctionalComponents";
 import A_ReactQuery_Info from "./Tanstack React Query/A_ReactQuery_Info";
+import B_ReactQuery_Ex1 from "./Tanstack React Query/B_ReactQuery_Ex1";
 
 
 function App() {
@@ -144,7 +145,8 @@ function App() {
       {/* <Debounce/> */}
 
       {/* Tanstack React Query */}
-      <A_ReactQuery_Info/>
+      {/* <A_ReactQuery_Info/> */}
+      <B_ReactQuery_Ex1/>
 
     </>
   );
