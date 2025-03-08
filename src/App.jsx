@@ -42,6 +42,7 @@ import CodeSplitting from "./Debounce/CodeSplitting";
 import Debounce from "./Debounce/Debounce";
 import ToggleSwitch from "./REDUX/ExampleTwo/ToggleSwitch";
 import LifeCycleMethodsFunctionalComponents from "./Components/LifeCycleMethodsFunctionalComponents";
+import A_ReactQuery_Info from "./Tanstack React Query/A_ReactQuery_Info";
 
 
 function App() {
@@ -141,6 +142,9 @@ function App() {
       {/*used to explain debounce,code splitting and other things */}
       {/* <CodeSplitting/> */}
       {/* <Debounce/> */}
+
+      {/* Tanstack React Query */}
+      <A_ReactQuery_Info/>
 
     </>
   );
