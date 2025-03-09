@@ -44,6 +44,7 @@ import ToggleSwitch from "./REDUX/ExampleTwo/ToggleSwitch";
 import LifeCycleMethodsFunctionalComponents from "./Components/LifeCycleMethodsFunctionalComponents";
 import A_ReactQuery_Info from "./Tanstack React Query/A_ReactQuery_Info";
 import B_ReactQuery_Ex1 from "./Tanstack React Query/B_ReactQuery_Ex1";
+import C_ReactQuery_Ex2 from "./Tanstack React Query/C_ReactQuery_Ex2";
 
 
 function App() {
@@ -146,7 +147,8 @@ function App() {
 
       {/* Tanstack React Query */}
       {/* <A_ReactQuery_Info/> */}
-      <B_ReactQuery_Ex1/>
+      {/* <B_ReactQuery_Ex1/> */}
+      <C_ReactQuery_Ex2/>
 
     </>
   );
