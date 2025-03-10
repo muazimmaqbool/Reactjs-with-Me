@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './App.css'
 import Jsxinfo from "./Components/Jsxinfo";
 import Com from "./Components/Com";
@@ -45,12 +45,15 @@ import LifeCycleMethodsFunctionalComponents from "./Components/LifeCycleMethodsF
 import A_ReactQuery_Info from "./Tanstack React Query/A_ReactQuery_Info";
 import B_ReactQuery_Ex1 from "./Tanstack React Query/B_ReactQuery_Ex1";
 import C_ReactQuery_Ex2 from "./Tanstack React Query/C_ReactQuery_Ex2";
+import D_Caching from "./Tanstack React Query/D_Caching";
 
 
 function App() {
   //useSelector is used to access value from the state
   const c=useSelector(state=>state.custom.c)
   const {switchValue}=useSelector(state=>state.switchExample)
+
+  const [toggle, settoggle] = useState(true);
   return (
     <>
       {/* <h1>Inside App.jsx</h1> */}
@@ -148,7 +151,9 @@ function App() {
       {/* Tanstack React Query */}
       {/* <A_ReactQuery_Info/> */}
       {/* <B_ReactQuery_Ex1/> */}
-      <C_ReactQuery_Ex2/>
+      {/* <C_ReactQuery_Ex2/> */}  {/* Example of fetching data when button is clicked */}
+      <button onClick={()=>settoggle((prev)=>!prev)}>Toggle Caching</button>
+      {toggle && <D_Caching/>}
 
     </>
   );
