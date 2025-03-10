@@ -8,7 +8,7 @@ import React from "react";
 */
 
 const fetchUsers = async () => {
-  console.log("Fetching users...")
+  console.log("Fetching users...");
   const response = await fetch("https://jsonplaceholder.typicode.com/users");
   if (!response.ok) {
     throw new Error("failed to fetch users");
@@ -17,10 +17,14 @@ const fetchUsers = async () => {
   }
 };
 const D_Caching = () => {
-  const { data:users, isLoading, error } = useQuery({
+  const {
+    data: users,
+    isLoading,
+    error,
+  } = useQuery({
     queryKey: ["users"], //used for re-fetching, caching, and sharing data between components.
     queryFn: fetchUsers, //function typically used to call an API.
-    staleTime:Infinity
+    //staleTime: Infinity, //learn about it from below comments
   });
   /*
   react query uses caching via the queryKey, basically it uses this queryKey to create the cache for queryKey which the cache
@@ -52,11 +56,12 @@ const D_Caching = () => {
                                                                       staleTime:Infinity
                                                                     });
         Now if you remount the component you won't see "fetching users..." in the console
+    ->if you add: cacheTime:0 , the react query will never cache your data, checkout more from docs
   */
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error:{error.message}</p>;
- // console.log("data fetched:", users);
+  // console.log("data fetched:", users);
   return (
     <div>
       <h2>Caching In React Query</h2>
