@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQuery,useQueryClient } from "@tanstack/react-query";
 import React from "react";
 
 const fetchUsers = async () => {
@@ -13,6 +13,7 @@ const fetchUsers = async () => {
 
 //Note:first see previous code D_Caching.jsx (important)
 const E_Caching_2 = () => {
+    const queryClient = useQueryClient();
   const { data, isLoading, error } = useQuery({
     queryKey: ["users"], //used for re-fetching, caching, and sharing data between components.
     queryFn: fetchUsers, //function typically used to call an API.
@@ -26,14 +27,30 @@ const E_Caching_2 = () => {
     //Default: 5 minutes (300,000ms)
     //cacheTime: 10 * 60 * 1000 // 10 minutes: React Query keeps it in memory for 10 minutes before garbage collecting.
 
+    //3-> Refetching & Updating Cache (React Query automatically refetches in these cases:)
+    //A: On Window Focus (Default - When you return to a tab, it refetches data) (important)
+    //refetchOnWindowFocus: false, //default is true (no when you change the tab/window it won't fetch again)
+
+    //B:On Interval (refetchInterval)
+    //refetchInterval: 10000 // 10 seconds (fetches data in every 10 seconds)
   });
+   //C:Manually Triggering Refetch (refetch() forces a fresh API request)
+    /*const { refetch } = useQuery({ queryKey: ["todos"], queryFn: fetchTodos });
+     <button onClick={() => refetch()}>Refetch</button>;*/
+
+     //4-> Query Invalidation (Force Cache Update)
+     //If data changes, you can invalidate the cache to force a refetch
+     const updateUsers = async () => {
+        //await addNewTodo(); // Assume this updates the backend
+        queryClient.invalidateQueries(["users"]); // Refetch users
+    };
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error:{error.message}</p>;
   // console.log("data fetched:", users);
   return (
     <div>
-      <h2>Caching In React Query</h2>
+      <h2>Caching In React Query More</h2>
       <h4>Users Fetched:</h4>
       <ul>
         {data.map((user) => (
@@ -42,6 +59,7 @@ const E_Caching_2 = () => {
           </li>
         ))}
       </ul>
+      <button onClick={updateUsers}>Invalidate Cache</button>
     </div>
   );
 };
