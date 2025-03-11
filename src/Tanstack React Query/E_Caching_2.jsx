@@ -22,6 +22,10 @@ const E_Caching_2 = () => {
     //staleTime: 5000, // Data stays fresh for 5 seconds, after 5 seconds if component remounts data is fetched in background
     //staleTime: 5 * 60 * 1000 // 5 minutes : now, within 5 minutes, React Query won't refetch if the same query is used.
 
+    //2->  2. cacheTime (Keep Data in Memory - Controls how long inactive data stays in the cache before being removed.)
+    //Default: 5 minutes (300,000ms)
+    //cacheTime: 10 * 60 * 1000 // 10 minutes: React Query keeps it in memory for 10 minutes before garbage collecting.
+
   });
 
   if (isLoading) return <p>Loading...</p>;
