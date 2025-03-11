@@ -1,6 +1,17 @@
 import { useQuery,useQueryClient } from "@tanstack/react-query";
 import React from "react";
 
+/*
+->Cache Lifetime & Stale Time (important)
+    React Query caches data but follows a lifecycle:
+    Phase	                               Behavior
+    Fresh	                 Data is served instantly from the cache. No API request.
+    Stale (default)	         Data is shown from cache, but a background refetch happens.
+    Inactive	             Data is removed from memory after some time (garbage collected).
+    Expired	                 Data is fully deleted from the cache.
+
+*/
+
 const fetchUsers = async () => {
   console.log("Fetching users...");
   const response = await fetch("https://jsonplaceholder.typicode.com/users");
