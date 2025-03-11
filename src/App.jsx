@@ -155,7 +155,7 @@ function App() {
       {/* <C_ReactQuery_Ex2/> */}  {/* Example of fetching data when button is clicked */}
 
       {/* caching in react query */}
-      <button onClick={()=>settoggle((prev)=>!prev)}>Toggle Caching</button>
+      {/* <button onClick={()=>settoggle((prev)=>!prev)}>Toggle Caching</button> */}
       {/* {toggle && <D_Caching/>} */}
       {/* {toggle && <E_Caching_2/>} */}
 
