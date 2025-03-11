@@ -2,6 +2,18 @@ import { useQuery,useQueryClient } from "@tanstack/react-query";
 import React from "react";
 
 /*
+(important)
+->What Happens When You Fetch Data?
+    When you call useQuery(), React Query:
+    1- Checks the Cache:
+        If the data is already in cache and fresh, it returns cached data (avoiding an API call).
+        If the data is stale or not in cache, it fetches from the API.
+
+    2- Stores the Data in the Cache
+        The response is saved in memory using a unique queryKey.
+        Next time the same queryKey is requested, React Query returns cached data instantly.
+
+
 ->Cache Lifetime & Stale Time (important)
     React Query caches data but follows a lifecycle:
     Phase	                               Behavior
