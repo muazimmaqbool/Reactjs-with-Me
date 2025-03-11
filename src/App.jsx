@@ -47,6 +47,7 @@ import B_ReactQuery_Ex1 from "./Tanstack React Query/B_ReactQuery_Ex1";
 import C_ReactQuery_Ex2 from "./Tanstack React Query/C_ReactQuery_Ex2";
 import D_Caching from "./Tanstack React Query/D_Caching";
 import E_Caching_2 from "./Tanstack React Query/E_Caching_2";
+import F_MultipleQueries from "./Tanstack React Query/F_MultipleQueries";
 
 
 function App() {
@@ -162,7 +163,7 @@ function App() {
       {/* used to explain that:it will not refetch the data if you use React Query properly in another file
       make sure staleTime is infinity in both files */}
       {/* {toggle ? <D_Caching/> : <E_Caching_2/>} */}
-
+      <F_MultipleQueries/>
     </>
   );
 }
