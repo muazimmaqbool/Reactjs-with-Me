@@ -46,6 +46,7 @@ import A_ReactQuery_Info from "./Tanstack React Query/A_ReactQuery_Info";
 import B_ReactQuery_Ex1 from "./Tanstack React Query/B_ReactQuery_Ex1";
 import C_ReactQuery_Ex2 from "./Tanstack React Query/C_ReactQuery_Ex2";
 import D_Caching from "./Tanstack React Query/D_Caching";
+import E_Caching_2 from "./Tanstack React Query/E_Caching_2";
 
 
 function App() {
@@ -152,8 +153,11 @@ function App() {
       {/* <A_ReactQuery_Info/> */}
       {/* <B_ReactQuery_Ex1/> */}
       {/* <C_ReactQuery_Ex2/> */}  {/* Example of fetching data when button is clicked */}
+
+      {/* caching in react query */}
       <button onClick={()=>settoggle((prev)=>!prev)}>Toggle Caching</button>
-      {toggle && <D_Caching/>}
+      {/* {toggle && <D_Caching/>} */}
+      {toggle && <E_Caching_2/>}
 
     </>
   );
