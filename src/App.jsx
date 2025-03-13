@@ -165,7 +165,7 @@ function App() {
       make sure staleTime is infinity in both files */}
       {/* {toggle ? <D_Caching/> : <E_Caching_2/>} */}
       {/* <F_MultipleQueries/> */}
-      <G_Pass_ID/>
+      {/* <G_Pass_ID/> */}
     </>
   );
 }
