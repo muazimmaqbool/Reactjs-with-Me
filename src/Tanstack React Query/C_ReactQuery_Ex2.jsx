@@ -1,15 +1,6 @@
 import React, { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
-
-const fetchTodos=async()=>{
-    //console.log("API Called...")
-    const response=await fetch("https://jsonplaceholder.typicode.com/todos")
-    if(!response.ok){
-        throw new Error("failed to fetch todos list");
-    }else{
-        return response.json()
-    }
-}
+import { fetchTodos } from './a_apiCalls';
 
 //Here we will fetch data when the button is clicked
 const C_ReactQuery_Ex2 = () => {

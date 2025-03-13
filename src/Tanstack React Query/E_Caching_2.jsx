@@ -1,6 +1,6 @@
 import { useQuery,useQueryClient } from "@tanstack/react-query";
 import React from "react";
-
+import { fetchUsers } from './a_apiCalls';
 /*
 (important)
 ->What Happens When You Fetch Data?
@@ -23,16 +23,6 @@ import React from "react";
     Expired	                 Data is fully deleted from the cache.
 
 */
-
-const fetchUsers = async () => {
-  console.log("Fetching users...");
-  const response = await fetch("https://jsonplaceholder.typicode.com/users");
-  if (!response.ok) {
-    throw new Error("failed to fetch users");
-  } else {
-    return response.json();
-  }
-};
 
 //Note:first see previous code D_Caching.jsx (important)
 const E_Caching_2 = () => {

@@ -1,21 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
-
+import { fetchUsers } from './a_apiCalls';
 //Explaing caching in Tanstack React Query
 
 /*
 ->TanStack React Query automatically caches API responses to improve performance and reduce unnecessary network requests
 */
 
-const fetchUsers = async () => {
-  console.log("Fetching users...");
-  const response = await fetch("https://jsonplaceholder.typicode.com/users");
-  if (!response.ok) {
-    throw new Error("failed to fetch users");
-  } else {
-    return response.json();
-  }
-};
 const D_Caching = () => {
   const {
     data: users,

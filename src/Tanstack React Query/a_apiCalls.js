@@ -18,3 +18,13 @@ export const fetchUsersID=async(id)=>{
         return response.json()
     }
 }
+
+export const fetchTodos=async()=>{
+    console.log("Fetching Todos...")
+    const response=await fetch("https://jsonplaceholder.typicode.com/todos")
+    if(!response.ok){
+        throw new Error("failed to fetch Todos")
+    }else{
+        return response.json()
+    }
+}

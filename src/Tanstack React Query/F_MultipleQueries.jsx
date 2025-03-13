@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import React from 'react'
+import {fetchUsers,fetchTodos} from "./a_apiCalls"
 /*
 ->You can have multiple queryKeys in React Query. Each unique queryKey represents a separate piece of cached data.
 
@@ -8,24 +9,6 @@ import React from 'react'
     Different keys prevent data from overlapping.
     If the same queryKey is used in multiple places, React Query shares the cached data.
 */
-const fetchUsers=async()=>{
-    console.log("Fetching users...")
-    const response=await fetch("https://jsonplaceholder.typicode.com/users")
-    if(!response.ok){
-        throw new Error("failed to fetch users")
-    }else{
-        return response.json()
-    }
-}
-const fetchTodos=async()=>{
-    console.log("Fetching Todos...")
-    const response=await fetch("https://jsonplaceholder.typicode.com/todos")
-    if(!response.ok){
-        throw new Error("failed to fetch Todos")
-    }else{
-        return response.json()
-    }
-}
 
 const F_MultipleQueries = () => {
     const{data:users,isLoading:loadingUsers}=useQuery({
