@@ -49,6 +49,7 @@ import D_Caching from "./Tanstack React Query/D_Caching";
 import E_Caching_2 from "./Tanstack React Query/E_Caching_2";
 import F_MultipleQueries from "./Tanstack React Query/F_MultipleQueries";
 import G_Pass_ID from "./Tanstack React Query/G_Pass_ID";
+import H_Mutations from "./Tanstack React Query/H_Mutations";
 
 
 function App() {
@@ -166,6 +167,7 @@ function App() {
       {/* {toggle ? <D_Caching/> : <E_Caching_2/>} */}
       {/* <F_MultipleQueries/> */}
       {/* <G_Pass_ID/> */}
+      <H_Mutations/>
     </>
   );
 }
