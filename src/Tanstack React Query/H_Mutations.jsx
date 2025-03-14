@@ -1,6 +1,11 @@
 import React from "react";
 
-//Read Documentation Below
+/*
+->Mutations with useMutation (POST, PUT, DELETE requests)
+  Mutations are used to modify data on the server (e.g., creating, updating, or deleting resources).
+
+->Post Request:
+*/
 const H_Mutations = () => {
   return (
     <div>
