@@ -5,7 +5,8 @@ import { fetchTodos } from './a_apiCalls';
 //Here we will fetch data when the button is clicked
 const C_ReactQuery_Ex2 = () => {
     const [isClicked, setisClicked] = useState(false);
-    const {data:todos,isLoading,error,refetch}=useQuery({
+    //useQuery returns bunch of things, checkout here: https://tanstack.com/query/latest/docs/framework/react/reference/useQuery#usequery
+    const {data:todos,isLoading,error,refetch,isError,status}=useQuery({
         queryKey:["todos"],
         queryFn:fetchTodos,
         enabled:isClicked, //prevents automatic fetching
@@ -15,6 +16,10 @@ const C_ReactQuery_Ex2 = () => {
         setisClicked(true);
         refetch() //allows you to manually trigger a re-fetch of the data
     }
+    console.log("data:",todos)
+    console.log("isLoading:",isLoading)
+    console.log("isError:",isError)
+    console.log("status:",status)
     /*
     ->refetch():
         -It re-runs the query function (queryFn) to fetch the latest data from the server.
