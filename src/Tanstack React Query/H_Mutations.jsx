@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useMutation,useQueryClient } from "@tanstack/react-query";
-import { createUser } from "./a_apiCalls";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { createUser, fetchUsers } from "./a_apiCalls";
 
 /*
 ->Mutations with useMutation (POST, PUT, DELETE requests)
@@ -12,30 +12,57 @@ import { createUser } from "./a_apiCalls";
 */
 const H_Mutations = () => {
   const [name, setname] = useState("");
-  const queryClient=useQueryClient()
+  const queryClient = useQueryClient();
 
-  const mutation=useMutation({
-    mutationFn:createUser,
-    onSuccess:(val)=>{
-     // queryClient.invalidateQueries(["users"]);
-     console.log("New user added successfully:",val)
-    }
-  })
+  const { data } = useQuery({
+    queryKey: ["users"],
+    queryFn: fetchUsers,
+  });
 
-  const handleAddUser=(e)=>{
-    e.preventDefault()
-    mutation.mutate({name})
-    setname("")
-  }
+  const [newUser, setnewUser] = useState();
+  const mutation = useMutation({
+    mutationFn: createUser,
+    onSuccess: (val) => {
+      queryClient.invalidateQueries(["users"]);
+      console.log("New user added successfully:", val);
+      setnewUser(val);
+    },
+  });
+
+  const handleAddUser = (e) => {
+    e.preventDefault();
+    mutation.mutate({ name });
+    setname("");
+  };
   return (
     <div>
       <h2>Mutation in React Query</h2>
       <h3>Mutations with useMutation (POST, PUT, DELETE requests)</h3>
       <h4>POST Rquest:</h4>
       <form onSubmit={handleAddUser}>
-        <input type="text" placeholder="Enter Users Name" value={name} onChange={(e)=>setname(e.target.value)}/>
+        <input
+          type="text"
+          placeholder="Enter Users Name"
+          value={name}
+          onChange={(e) => setname(e.target.value)}
+        />
         <button type="submit">Add User</button>
       </form>
+
+      <h4>Users Fetched:</h4>
+      <ul>
+        {data &&
+          data.map((user) => (
+            <li key={user.id}>
+              #{user.id} : {user.name}
+            </li>
+          ))}
+        {newUser && (
+          <li>
+            #{newUser.id} : {newUser.name}
+          </li>
+        )}
+      </ul>
       {mutation.isLoading && <p>Adding user...</p>}
       {mutation.isError && <p>Error: {mutation.error.message}</p>}
       {mutation.isSuccess && <p>User added successfully!</p>}

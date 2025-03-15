@@ -10,7 +10,7 @@ export const fetchUsers=async()=>{
 
 export const fetchUsersID=async(id)=>{
     if (!id) return null; // Prevents unnecessary requests
-    console.log("Fetching users...")
+    console.log("Fetching users by Id...")
     const response=await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
     if(!response.ok){
         throw new Error("failed to fetch users")
