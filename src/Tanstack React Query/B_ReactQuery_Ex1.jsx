@@ -16,6 +16,7 @@ const fetchUsers=async()=>{
 }
 const B_ReactQuery_Ex1 = () => {
     //we can change the name of data like this: data:users, also for others as well: isLoading:loading
+    //Note: queryKey is the unique key that you provide to each and every query so we can identify it uniquely
     const {data,isLoading,error}=useQuery({
         queryKey:["users"], //used for re-fetching, caching, and sharing data between components.
         queryFn:fetchUsers,//function typically used to call an API.
