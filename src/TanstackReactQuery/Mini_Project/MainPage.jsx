@@ -1,5 +1,6 @@
 import React from 'react'
 import PostList from './Component/PostList'
+import styles from "./mainPageStyle.module.css"
 
 /*
 ->We are going to need some APIs for this project for that we will download a package called "json server" (npm i json-server)
