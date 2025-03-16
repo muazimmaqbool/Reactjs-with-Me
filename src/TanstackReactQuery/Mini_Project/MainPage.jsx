@@ -13,6 +13,8 @@ import React from 'react'
                                                             http://localhost:3000/tags
                                         - hold and click on these links they will open in browser
 
+  - and this json server not only the GET request it also provides us the POST, PUT , PATCH AND DELETE REQUESTS AS WELL
+
 */
 const MainPage = () => {
   return (
