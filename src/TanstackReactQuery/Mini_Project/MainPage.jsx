@@ -1,4 +1,5 @@
 import React from 'react'
+import PostList from './Component/PostList'
 
 /*
 ->We are going to need some APIs for this project for that we will download a package called "json server" (npm i json-server)
@@ -15,10 +16,14 @@ import React from 'react'
 
   - and this json server not only the GET request it also provides us the POST, PUT , PATCH AND DELETE REQUESTS AS WELL
 
+->Now post List component is added which will contain posts
 */
 const MainPage = () => {
   return (
-    <div>MainPage</div>
+    <div>
+      <h3>Mini Project Using React Query</h3>
+      <PostList/>
+    </div>
   )
 }
 
