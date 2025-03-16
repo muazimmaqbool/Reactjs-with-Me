@@ -42,14 +42,15 @@ import CodeSplitting from "./Debounce/CodeSplitting";
 import Debounce from "./Debounce/Debounce";
 import ToggleSwitch from "./REDUX/ExampleTwo/ToggleSwitch";
 import LifeCycleMethodsFunctionalComponents from "./Components/LifeCycleMethodsFunctionalComponents";
-import A_ReactQuery_Info from "./Tanstack React Query/A_ReactQuery_Info";
-import B_ReactQuery_Ex1 from "./Tanstack React Query/B_ReactQuery_Ex1";
-import C_ReactQuery_Ex2 from "./Tanstack React Query/C_ReactQuery_Ex2";
-import D_Caching from "./Tanstack React Query/D_Caching";
-import E_Caching_2 from "./Tanstack React Query/E_Caching_2";
-import F_MultipleQueries from "./Tanstack React Query/F_MultipleQueries";
-import G_Pass_ID from "./Tanstack React Query/G_Pass_ID";
-import H_Mutations from "./Tanstack React Query/H_Mutations";
+import A_ReactQuery_Info from "./TanstackReactQuery/A_ReactQuery_Info";
+import B_ReactQuery_Ex1 from "./TanstackReactQuery/B_ReactQuery_Ex1";
+import C_ReactQuery_Ex2 from "./TanstackReactQuery/C_ReactQuery_Ex2";
+import D_Caching from "./TanstackReactQuery/D_Caching";
+import E_Caching_2 from "./TanstackReactQuery/E_Caching_2";
+import F_MultipleQueries from "./TanstackReactQuery/F_MultipleQueries";
+import G_Pass_ID from "./TanstackReactQuery/G_Pass_ID";
+import H_Mutations from "./TanstackReactQuery/H_Mutations";
+import MainPage from "./TanstackReactQuery/Mini_Project/MainPage";
 
 
 function App() {
@@ -168,6 +169,9 @@ function App() {
       {/* <F_MultipleQueries/> */}
       {/* <G_Pass_ID/> */}
       {/* <H_Mutations/> */}
+
+      {/*Mini project using tanstack react query */}
+      <MainPage/>
     </>
   );
 }

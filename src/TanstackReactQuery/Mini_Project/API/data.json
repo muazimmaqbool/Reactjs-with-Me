@@ -1,0 +1,165 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "title": "His mother had always taught him",
+        "tags": ["history", "crime"]
+      },
+      {
+        "id": 2,
+        "title": "He was an expert but not in a discipline",
+        "tags": ["french", "fiction", "english"]
+      },
+      {
+        "id": 3,
+        "title": "Dave watched as the forest burned up on the hill.",
+        "tags": ["magical", "history", "french"]
+      },
+      {
+        "id": 4,
+        "title": "All he wanted was a candy bar.",
+        "tags": ["mystery", "english"]
+      },
+      {
+        "id": 5,
+        "title": "Hopes and dreams were dashed that day.",
+        "tags": ["crime", "mystery", "love"]
+      },
+      {
+        "id": 6,
+        "title": "Dave wasn't exactly sure how he had ended up",
+        "tags": ["english", "classic"]
+      },
+      {
+        "id": 7,
+        "title": "This is important to remember.",
+        "tags": ["magical", "crime"]
+      },
+      {
+        "id": 8,
+        "title": "One can cook on and with an open fire.",
+        "tags": ["english"]
+      },
+      {
+        "id": 9,
+        "title": "There are different types of secrets.",
+        "tags": ["history", "magical"]
+      },
+      {
+        "id": 10,
+        "title": "They rushed out the door.",
+        "tags": ["fiction", "magical", "history"]
+      },
+      {
+        "id": 11,
+        "title": "It wasn't quite yet time to panic.",
+        "tags": ["mystery", "history"]
+      },
+      {
+        "id": 12,
+        "title": "She was aware that things could go wrong.",
+        "tags": ["love", "english"]
+      },
+      {
+        "id": 13,
+        "title": "She wanted rainbow hair.",
+        "tags": ["mystery", "classic", "french"]
+      },
+      {
+        "id": 14,
+        "title": "The paper was blank.",
+        "tags": ["mystery", "english", "love"]
+      },
+      {
+        "id": 15,
+        "title": "The trees, therefore, must be such old",
+        "tags": ["fiction", "history", "crime"]
+      },
+      {
+        "id": 16,
+        "title": "There was only one way to do things in the Statton house.",
+        "tags": ["magical", "french"]
+      },
+      {
+        "id": 17,
+        "title": "She was in a hurry.",
+        "tags": ["french", "magical", "english"]
+      },
+      {
+        "id": 18,
+        "title": "She had a terrible habit o comparing her life to others",
+        "tags": ["history", "french", "love"]
+      },
+      {
+        "id": 19,
+        "title": "The rain and wind abruptly stopped.",
+        "tags": ["fiction", "crime", "magical"]
+      },
+      {
+        "id": 20,
+        "title": "He couldn't remember exactly where he had read it",
+        "tags": ["french", "classic"]
+      },
+      {
+        "id": 21,
+        "title": "He wandered down the stairs and into the basement",
+        "tags": ["french"]
+      },
+      {
+        "id": 22,
+        "title": "She has seen this scene before.",
+        "tags": ["classic", "love", "history"]
+      },
+      {
+        "id": 23,
+        "title": "It's an unfortunate reality that we don't teach people how to make money",
+        "tags": ["crime", "english"]
+      },
+      {
+        "id": 24,
+        "title": "The robot clicked disapprovingly.",
+        "tags": ["crime", "love"]
+      },
+      {
+        "id": 25,
+        "title": "It went through such rapid contortions",
+        "tags": ["fiction", "history", "french"]
+      },
+      {
+        "id": 26,
+        "title": "She patiently waited for his number to be called.",
+        "tags": ["french", "mystery", "crime"]
+      },
+      {
+        "id": 27,
+        "title": "Ten more steps.",
+        "tags": ["mystery", "classic", "love"]
+      },
+      {
+        "id": 28,
+        "title": "He had three simple rules by which he lived.",
+        "tags": ["crime", "love"]
+      },
+      {
+        "id": 29,
+        "title": "The chair sat in the corner where it had been",
+        "tags": ["mystery"]
+      },
+      {
+        "id": 30,
+        "title": "Things aren't going well at all",
+        "tags": ["love", "fiction"]
+      }
+    ],
+    "tags": [
+      "classic",
+      "crime",
+      "english",
+      "fiction",
+      "french",
+      "history",
+      "love",
+      "magical",
+      "mystery"
+    ]
+  }
