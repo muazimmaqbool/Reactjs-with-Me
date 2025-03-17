@@ -1,4 +1,4 @@
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import React from "react";
 import { addPost, fetchPosts, fetchTags } from "../API/api";
 import styles from "../projectStyles.module.css";
@@ -23,6 +23,7 @@ const PostList = () => {
 
   //adding a new post by making a POST request
   //mutate function which it returns is important, we will be calling to make the POST request
+  const queryClient=useQueryClient()
   const {
     mutate,
     isError: isPostError,
@@ -31,6 +32,14 @@ const PostList = () => {
     reset,
   } = useMutation({
     mutationFn: addPost,
+    onMutate:()=>{
+      return {id:1}
+    },
+    onSuccess:(data,variables,context)=>{
+      queryClient.invalidateQueries({
+        queryKey:["posts"]
+      })
+    }
   });
   const hanldeSubmit=(e)=>{
     e.preventDefault()
