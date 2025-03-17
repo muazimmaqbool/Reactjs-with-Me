@@ -1,6 +1,6 @@
 import React from 'react'
 import PostList from './Component/PostList'
-import styles from "./mainPageStyle.module.css"
+import styles from "./projectStyles.module.css"
 
 /*
 ->We are going to need some APIs for this project for that we will download a package called "json server" (npm i json-server)
@@ -22,7 +22,7 @@ import styles from "./mainPageStyle.module.css"
 const MainPage = () => {
   return (
     <div>
-      <h3>Mini Project Using React Query</h3>
+      <h2 className={styles.title}>My Posts</h2>
       <PostList/>
     </div>
   )
