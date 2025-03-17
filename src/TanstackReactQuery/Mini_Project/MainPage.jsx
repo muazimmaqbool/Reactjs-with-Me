@@ -22,20 +22,22 @@ import styles from "./projectStyles.module.css"
 ->Note: we are also using react query dev tools:
     - make sure you have installed this package:npm i @tanstack/react-query-devtools
     -now add in this in file where you are wrapping your app like here in index.js
-    import { QueryClient,QueryClientProvider } from "@tanstack/react-query";
-    import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+      import { QueryClient,QueryClientProvider } from "@tanstack/react-query";
+      import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
-    const queryClient=new QueryClient(); //creating a queryClient instance
+      const queryClient=new QueryClient(); //creating a queryClient instance
 
-    const root = ReactDOM.createRoot(document.getElementById("root"));
-    root.render(
-      <QueryClientProvider client={queryClient}>
-        <Provider store={store}>
-          <App />
-          <ReactQueryDevtools initialIsOpen={false}/>
-        </Provider>
-      </QueryClientProvider>
-    );
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(
+        <QueryClientProvider client={queryClient}>
+          <Provider store={store}>
+            <App />
+            <ReactQueryDevtools initialIsOpen={false}/>
+          </Provider>
+        </QueryClientProvider>
+      );
+    - Now you will see small tanstack icon in the bottom so click on that
+      you will see the dev tools of react query. now you can click on the query and see its data and much more
 */
 const MainPage = () => {
   return (
