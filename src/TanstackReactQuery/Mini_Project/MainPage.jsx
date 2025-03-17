@@ -18,6 +18,24 @@ import styles from "./projectStyles.module.css"
   - and this json server not only the GET request it also provides us the POST, PUT , PATCH AND DELETE REQUESTS AS WELL
 
 ->Now post List component is added which will contain posts
+
+->Note: we are also using react query dev tools:
+    - make sure you have installed this package:npm i @tanstack/react-query-devtools
+    -now add in this in file where you are wrapping your app like here in index.js
+    import { QueryClient,QueryClientProvider } from "@tanstack/react-query";
+    import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
+    const queryClient=new QueryClient(); //creating a queryClient instance
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(
+      <QueryClientProvider client={queryClient}>
+        <Provider store={store}>
+          <App />
+          <ReactQueryDevtools initialIsOpen={false}/>
+        </Provider>
+      </QueryClientProvider>
+    );
 */
 const MainPage = () => {
   return (
