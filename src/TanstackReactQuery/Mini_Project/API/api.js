@@ -18,7 +18,7 @@ const fetchTags = async () => {
 };
 
 const addPost = async (post) => {
-  const response = await fetch("http://localhost:3000/posts", {
+  const response = await fetch("http://localhost:3000/pots", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
