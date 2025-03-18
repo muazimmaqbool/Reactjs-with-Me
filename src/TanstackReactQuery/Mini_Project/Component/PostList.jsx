@@ -37,7 +37,9 @@ const PostList = () => {
     },
     onSuccess:(data,variables,context)=>{
       queryClient.invalidateQueries({
-        queryKey:["posts"]
+        queryKey:["posts"],
+        exact:true, //so that it can only invalidate the above query which contains "posts"
+        predicate:(query)=>query.queryKey[0]==="posts" && query.queryKey[1].page>=2,//so here you can say which query to be invalided, so here "posts" and all the pages more than 2 will be invalidated
       })
     }
   });
@@ -45,10 +47,15 @@ const PostList = () => {
  here: onMutate runs before this actual mutation happens i.e before the function call
        onSuccess runs after the mutation happens i.e after function call runs successfully
       
-       -> inside onMutate we are returning id:1 , this will go directly inside context of onSuccess
        ->inside onSuccess: data : data which has been returned
                            variables: data/variables that we provided to the mutate(parameters provided to the function call)
-  
+          -> inside onMutate we are returning id:1 , this will go directly inside context of onSuccess
+
+
+  ->queryClient.invalidateQueries({
+        queryKey:["posts"]
+      }) : will invalidate the query key we provided basically it will refetch the data for this query key
+       Note: exact and predicate are optional although they can be useful in some cases
  */
 
 
