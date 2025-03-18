@@ -41,6 +41,18 @@ const PostList = () => {
       })
     }
   });
+ /*
+ here: onMutate runs before this actual mutation happens i.e before the function call
+       onSuccess runs after the mutation happens i.e after function call runs successfully
+      
+       -> inside onMutate we are returning id:1 , this will go directly inside context of onSuccess
+       ->inside onSuccess: data : data which has been returned
+                           variables: data/variables that we provided to the mutate(parameters provided to the function call)
+  
+ */
+
+
+
   const hanldeSubmit=(e)=>{
     e.preventDefault()
     //console.log("e.target:",e.target)
