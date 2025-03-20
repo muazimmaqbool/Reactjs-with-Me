@@ -154,8 +154,8 @@ function App() {
       {/* <Debounce/> */}
 
       {/* Tanstack React Query */}
-      <A_ReactQuery_Info/>
-      {/* <B_ReactQuery_Ex1/> */}
+      {/* <A_ReactQuery_Info/> */}
+      <B_ReactQuery_Ex1/>
       {/* <C_ReactQuery_Ex2/> */}
 
       {/* caching in react query */}
