@@ -12,7 +12,7 @@ export default A_ReactQuery_Info
 
 /*
 ->Introduction to TanStack React Query:
-  TanStack React Query is a powerful data-fetching library that helps manage server-state in React applications. 
+  TanStack React Query is a powerful data-fetching library that helps manage server-state in React applications.
   It simplifies data fetching, caching, synchronization, and background updates, reducing the need for manual state management.
 
   Note: Server state refers to the data fetched from an API or a backend server. 
@@ -20,6 +20,7 @@ export default A_ReactQuery_Info
 
 ->Why Use React Query?
   -Automatic Caching: Stores fetched data in cache, reducing redundant API calls.
+                      (By default, React Query caches the results of all queries for 5 minutes)
   -Background Refetching: Keeps data fresh by refetching it automatically when needed.
   -Automatic Refetch on Focus: Refetches data when the user returns to the app.
   -Error Handling: Provides built-in mechanisms to handle API request errors.

@@ -154,7 +154,7 @@ function App() {
       {/* <Debounce/> */}
 
       {/* Tanstack React Query */}
-      {/* <A_ReactQuery_Info/> */}
+      <A_ReactQuery_Info/>
       {/* <B_ReactQuery_Ex1/> */}
       {/* <C_ReactQuery_Ex2/> */}
 
@@ -171,7 +171,7 @@ function App() {
       {/* <H_Mutations/> */}
 
       {/*Mini project using tanstack react query */}
-      <MainPage/>
+      {/* <MainPage/> */}
     </>
   );
 }
