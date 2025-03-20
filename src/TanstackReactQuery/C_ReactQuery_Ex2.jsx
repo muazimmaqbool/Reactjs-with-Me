@@ -20,11 +20,12 @@ const C_ReactQuery_Ex2 = () => {
     console.log("isLoading:",isLoading)
     console.log("isError:",isError)
     console.log("status:",status)
+    //make some changes in API calls url like /todos to /todoos , then see the console
     /*
     ->refetch():
         -It re-runs the query function (queryFn) to fetch the latest data from the server.
         -It does not depend on component re-renders or cache expiration.
-        -It is useful when you want to fetch data on demand, such as when a button is clicked.
+        -It is usefull when you want to fetch data on demand, such as when a button is clicked.
     */
   return (
     <div>
