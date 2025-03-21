@@ -27,22 +27,18 @@ import { fetchUsers } from './a_apiCalls';
 //Note:first see previous code D_Caching.jsx (important)
 const E_Caching_2 = () => {
     const queryClient = useQueryClient();
-  const { data, isLoading, error } = useQuery({
+  const { data, isLoading, error,refetch, } = useQuery({
     queryKey: ["users"], //used for re-fetching, caching, and sharing data between components.
     queryFn: fetchUsers, //function typically used to call an API.
-
+    
     //1-> staleTime (Avoid Unnecessary Refetching - Controls how long data is considered "fresh" before React Query refetches it.)
-    //staleTime: Infinity, //React query will never refetch the data
+    staleTime: Infinity, //React query will never refetch the data
     //staleTime: 5000, // Data stays fresh for 5 seconds, after 5 seconds if component remounts data is fetched in background
     //staleTime: 5 * 60 * 1000 // 5 minutes : now, within 5 minutes, React Query won't refetch if the same query is used.
 
-    //2->  2. cacheTime (Keep Data in Memory - Controls how long inactive data stays in the cache before being removed.)
-    //Default: 5 minutes (300,000ms)
-    //cacheTime: 10 * 60 * 1000 // 10 minutes: React Query keeps it in memory for 10 minutes before garbage collecting.
-
-    //3-> Refetching & Updating Cache (React Query automatically refetches in these cases:)
+    //2-> Refetching & Updating Cache (React Query automatically refetches in these cases:)
     //A: On Window Focus (Default - When you return to a tab, it refetches data) (important)
-    //refetchOnWindowFocus: false, //default is true (no when you change the tab/window it won't fetch again)
+    refetchOnWindowFocus: false, //default is true (no when you change the tab/window it won't fetch again)
 
     //B:On Interval (refetchInterval)
     //refetchInterval: 10000 // 10 seconds (fetches data in every 10 seconds)
@@ -72,6 +68,7 @@ const E_Caching_2 = () => {
           </li>
         ))}
       </ul>
+      <button onClick={() => refetch()}>Refetch</button>
       <button onClick={updateUsers}>Invalidate Cache</button>
     </div>
   );
