@@ -5,6 +5,8 @@ import { fetchUsers } from './a_apiCalls';
 
 /*
 ->TanStack React Query automatically caches API responses to improve performance and reduce unnecessary network requests
+
+Note: Caching is the process of storing copies of files in a cache, or temporary storage location, so that they can be accessed more quickly
 */
 
 const D_Caching = () => {
@@ -18,8 +20,8 @@ const D_Caching = () => {
     //staleTime: Infinity, //learn about it from below comments
   });
   /*
-  react query uses caching via the queryKey, basically it uses this queryKey to create the cache for queryKey which the cache
-  is basically the result of the API call, and then its going to show the cache instead of fetching from backend over and over again.
+  ->React query uses caching via the queryKey, basically it uses this queryKey to create the cache for queryKey which the cache
+    is basically the result of the API call, and then its going to show the cache instead of fetching from backend over and over again.
   */
 
   /*
