@@ -28,19 +28,19 @@ const D_Caching = () => {
   Here to see caching behavior, i have added in Button in App.jsx which is going to toggle this component basically unmount and remount
   this component. which is going to recreate every single query
   What's going to happen:
-  ->When you mount the component the loading is happening and data is fetched and if you refresh the component the loading is going to
+  ->When you mount the component the loading is happening and data is fetched and if you refresh the component/page the loading is going to
     happen again.
-  ->Now if you click on the toggle button the component is unmounted and if click again the component is mounted but no loading
+  ->Now if you click on the toggle button the component is unmounted and if click again the component is mounted but this time no loading
     it will show data directly without loading but the API call will be made (see console)
-    Basically react query by default will cache you data for this request and it's going to know to cache the data via the
+    Basically react query by default will cache your data for this request and it's going to know to cache the data via the
     queryKey "users" here, and then its going to show you its cached data if it has it. So when you load component first time
     its shows loading it fetches data and caches it and when you unmount the component and mounted it again and this time it shows you
     cached data, but react query will make the request even though its showing you the cached data, it will make a request in the
     backgound and then update your data without being visually obvious and you can see this when you mount this component you
     can see "fetching users..." in console
-    ->and this behavior react query does by default it will you show you the cached data if it has it and then its goint to make a
-      API request in backgound and then update your data
-      ->And you remove this behavior by passing this to useQuery : staleTime:Infinity, this will tell react query that it should never
+    ->and this behavior react query does by default it will you show you the cached data if it has it and then its going to make a
+      API request in backgound and then updates your data
+      ->And you can remove this behavior by passing this to useQuery : staleTime:Infinity, this will tell react query that it should never
          consider its data stale, which means the data is still valid and if you do it react query is not going to refetch the data even
          in the background
          after doing this: const { data:users, isLoading, error } = useQuery({
@@ -49,7 +49,8 @@ const D_Caching = () => {
                                                                       staleTime:Infinity
                                                                     });
         Now if you remount the component you won't see "fetching users..." in the console
-    ->if you add: cacheTime:0 , the react query will never cache your data, checkout more from docs
+
+        ?check more from docs: https://tanstack.com/query/latest/docs/framework/react/reference/useQuery#usequery
   */
 
   if (isLoading) return <p>Loading...</p>;
