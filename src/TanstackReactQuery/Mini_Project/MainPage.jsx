@@ -4,10 +4,10 @@ import styles from "./projectStyles.module.css"
 
 /*
 ->We are going to need some APIs for this project for that we will download a package called "json server" (npm i json-server)
-  -So this package helps us create some mock APIs from the json data
+  -Basically this package helps us create some mock APIs from the json data
   -So inside API folder we will create data.json file for json data and api.js file which will contain methods for performing operations
-    on this json data
-  - now run this command: npx json-server (location of json file)
+    on this json data inside data.json file
+  -Now run this command: npx json-server (location of json file)
                  here: npx json-server src\TanstackReactQuery\Mini_Project\API\data.json
                  (Note if any error occur remove the tags array from data.json and when it runs past it back)
                  - it will create two endpoints like this:  Endpoints:
@@ -15,13 +15,13 @@ import styles from "./projectStyles.module.css"
                                                             http://localhost:3000/tags
                                         - hold and click on these links they will open in browser
 
-  - and this json server not only the GET request it also provides us the POST, PUT , PATCH AND DELETE REQUESTS AS WELL
+  -And this json server not only supports the GET request it also provides us the POST, PUT, PATCH and DELETE requests as well.
 
 ->Now post List component is added which will contain posts
 
 ->Note: we are also using react query dev tools:
-    - make sure you have installed this package:npm i @tanstack/react-query-devtools
-    -now add in this in file where you are wrapping your app like here in index.js
+    -make sure you have installed this package:npm i @tanstack/react-query-devtools
+    -now inside the file where you are wrapping your app like here in index.js
       import { QueryClient,QueryClientProvider } from "@tanstack/react-query";
       import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
@@ -36,7 +36,7 @@ import styles from "./projectStyles.module.css"
           </Provider>
         </QueryClientProvider>
       );
-    - Now you will see small tanstack icon in the bottom so click on that
+    - Now you will see small tanstack icon in the bottom in the browser click on that
       you will see the dev tools of react query. now you can click on the query and see its data and much more
 */
 const MainPage = () => {

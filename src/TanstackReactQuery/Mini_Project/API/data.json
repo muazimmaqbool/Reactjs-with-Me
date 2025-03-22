@@ -250,46 +250,9 @@
         "love",
         "fiction"
       ]
-    },
-    {
-      "id": 31,
-      "title": "fsdfsdf",
-      "tags": [
-        "crime"
-      ]
-    },
-    {
-      "id": 32,
-      "title": "Javascript is dangerious",
-      "tags": [
-        "crime",
-        "mystery"
-      ]
-    },
-    {
-      "id": 33,
-      "title": "dsfdsfds",
-      "tags": []
-    },
-    {
-      "id": 34,
-      "title": "sadasd",
-      "tags": [
-        "english"
-      ]
-    },
-    {
-      "id": 35,
-      "title": "swdfsd",
-      "tags": []
-    },
-    {
-      "id": 36,
-      "title": "asdsa",
-      "tags": [
-        "crime"
-      ]
     }
+
+
   ],
   "tags": [
     "classic",
@@ -300,6 +263,7 @@
     "history",
     "love",
     "magical",
-    "mystery"
+    "mystery",
+    "coding"
   ]
 }
