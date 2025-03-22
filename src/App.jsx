@@ -167,8 +167,8 @@ function App() {
       make sure staleTime is infinity in both files */}
       {/* {toggle ? <D_Caching/> : <E_Caching_2/>} */}
       
-      <F_MultipleQueries/>
-      {/* <G_Pass_ID/> */}
+      {/* <F_MultipleQueries/> */}
+      <G_Pass_ID/>
       {/* <H_Mutations/> */}
 
       {/*Mini project using tanstack react query */}
