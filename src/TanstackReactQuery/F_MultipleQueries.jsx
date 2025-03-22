@@ -2,7 +2,8 @@ import { useQuery } from '@tanstack/react-query'
 import React from 'react'
 import {fetchUsers,fetchTodos} from "./a_apiCalls"
 /*
-->You can have multiple queryKeys in React Query. Each unique queryKey represents a separate piece of cached data.
+->You can have multiple queryKeys in React Query inside a single component. 
+  Each unique queryKey represents a separate piece of cached data.
 
 ->How Multiple queryKeys Work:
     Each queryKey stores its own cached data separately.
