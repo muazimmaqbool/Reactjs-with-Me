@@ -168,8 +168,8 @@ function App() {
       {/* {toggle ? <D_Caching/> : <E_Caching_2/>} */}
       
       {/* <F_MultipleQueries/> */}
-      <G_Pass_ID/>
-      {/* <H_Mutations/> */}
+      {/* <G_Pass_ID/> */}
+      <H_Mutations/>
 
       {/*Mini project using tanstack react query */}
       {/* <MainPage/> */}

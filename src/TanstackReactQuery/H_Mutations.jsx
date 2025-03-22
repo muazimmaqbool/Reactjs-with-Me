@@ -5,7 +5,7 @@ import { createUser, fetchUsers } from "./a_apiCalls";
 /*
 ->Mutations with useMutation (POST, PUT, DELETE requests)
   Mutations are used to modify data on the server (e.g., creating, updating, or deleting resources).
-  Need to import this two modules: useMutation and useQueryClient
+  Need to import these two modules: useMutation and useQueryClient
 
 ->Post Request:
   In this example we will create a post request to /user endpoint (see in a_apiCall.js file)
@@ -19,13 +19,13 @@ const H_Mutations = () => {
     queryFn: fetchUsers,
   });
 
-  const [newUser, setnewUser] = useState();
+  const [newUser, setnewUser] = useState();//used to save api response
   const mutation = useMutation({
     mutationFn: createUser,
-    onSuccess: (val) => {
+    onSuccess: (res) => {
       queryClient.invalidateQueries(["users"]);
-      console.log("New user added successfully:", val);
-      setnewUser(val);
+      console.log("New user added successfully:", res);
+      setnewUser(res);
     },
   });
 
