@@ -43,7 +43,7 @@ const PostList = () => {
       
        ->inside onSuccess: data : data which has been returned after API call
                            variables: data/variables that we provided to the mutate(parameters provided to the function call)
-        -> inside onMutate we are returning id:1 , this will go directly inside context of onSuccess
+       ->inside onMutate we are returning id:1 , this will go directly inside context of onSuccess
 
 
   ->queryClient.invalidateQueries({
