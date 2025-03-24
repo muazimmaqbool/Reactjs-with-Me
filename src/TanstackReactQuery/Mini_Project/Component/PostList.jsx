@@ -54,7 +54,7 @@ const PostList = () => {
        predicate is not that much frequently used
 
        ->onError: this takes an function and runs if the error happens
-       ->onSettled: it runs now matter what
+       ->onSettled: it runs now matter what is result of API call
  */
 
   const hanldeSubmit = (e) => {
