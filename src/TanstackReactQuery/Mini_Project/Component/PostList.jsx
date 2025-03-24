@@ -17,7 +17,7 @@ const PostList = () => {
   });
 
   //adding a new post by making a POST request
-  //mutate function which it returns is important, we will be calling to make the POST request
+  //mutate function which it returns is important, we will be calling it to make the POST request
   const queryClient = useQueryClient();
   const {mutate, isError: isPostError, isPending, error: postError,reset} = useMutation({
     mutationFn: addPost,
@@ -28,7 +28,7 @@ const PostList = () => {
       queryClient.invalidateQueries({
         queryKey: ["posts"],
         exact: true, //so that it can only invalidate the above query which contains "posts"
-        // predicate:(query)=>query.queryKey[0]==="posts" && query.queryKey[1].page>=2,
+        //predicate:(query)=>query.queryKey[0]==="posts" && query.queryKey[1].page>=2,
         //so here you can say which query to be invalided, so here "posts" and all the pages more than 2 will be invalidated
       });
     },
@@ -41,9 +41,9 @@ const PostList = () => {
  here: onMutate runs before this actual mutation happens i.e before the function call
        onSuccess runs after the mutation happens i.e after function call runs successfully
       
-       ->inside onSuccess: data : data which has been returned
+       ->inside onSuccess: data : data which has been returned after API call
                            variables: data/variables that we provided to the mutate(parameters provided to the function call)
-          -> inside onMutate we are returning id:1 , this will go directly inside context of onSuccess
+        -> inside onMutate we are returning id:1 , this will go directly inside context of onSuccess
 
 
   ->queryClient.invalidateQueries({
@@ -93,6 +93,7 @@ const PostList = () => {
         </div>
         <button type="submit">POST</button>
       </form>
+
       {isLoading && <p>Loading...</p>}
       {isError && <p>{error?.message}</p>}
 
