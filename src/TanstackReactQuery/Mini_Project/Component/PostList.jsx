@@ -49,6 +49,7 @@ const PostList = () => {
   ->queryClient.invalidateQueries({
         queryKey:["posts"]
       }) : will invalidate the query key we provided basically it will refetch the data for this query key
+       
        Note: exact and predicate are optional although they can be useful in some cases
        predicate is not that much frequently used
 
