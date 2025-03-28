@@ -5,7 +5,12 @@ import styles from "../projectStyles.module.css";
 
 //called from MainPage.jsx
 const PostList = () => {
-  const {data: postData,isLoading,isError,error} = useQuery({
+  const {
+    data: postData,
+    isLoading,
+    isError,
+    error,
+  } = useQuery({
     queryKey: ["posts"],
     queryFn: fetchPosts,
   });
@@ -19,7 +24,13 @@ const PostList = () => {
   //adding a new post by making a POST request
   //mutate function which it returns is important, we will be calling it to make the POST request
   const queryClient = useQueryClient();
-  const {mutate, isError: isPostError, isPending, error: postError,reset} = useMutation({
+  const {
+    mutate,
+    isError: isPostError,
+    isPending,
+    error: postError,
+    reset,
+  } = useMutation({
     mutationFn: addPost,
     onMutate: () => {
       return { id: 1 };
@@ -37,7 +48,7 @@ const PostList = () => {
     },
     onSettled: (data, error, variables, context) => {},
   });
-/*
+  /*
   here: onMutate runs before this actual mutation happens i.e before the function call
        onSuccess runs after the mutation happens i.e after function call runs successfully
       
@@ -69,7 +80,7 @@ const PostList = () => {
     //console.log("title:",title)
     //console.log("tags:",tags)
     mutate({ id: postData.length + 1, title, tags });
-    e.target.reset(); //to reset the form
+    e.target.reset(); //it resets the form
   };
   return (
     <div className={styles.container}>
@@ -99,8 +110,9 @@ const PostList = () => {
       {isError && <p>{error?.message}</p>}
 
       {isPending && <p>Posting...</p>}
-      {isPostError && <p onClick={()=>reset()}>Unable to Post</p>}
-      {postData && postData.length > 0 &&
+      {isPostError && <p onClick={() => reset()}>Unable to Post</p>}
+      {postData &&
+        postData.length > 0 &&
         postData.map((post) => {
           return (
             <div className={styles.post} key={post.id}>
