@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PostList from './Component/PostList'
 import styles from "./projectStyles.module.css"
 
@@ -40,10 +40,12 @@ import styles from "./projectStyles.module.css"
       you will see the dev tools of react query. now you can click on the query and see its data and much more
 */
 const MainPage = () => {
+  const [isShowPost, setisShowPost] = useState(false);
   return (
     <div>
       <h2 className={styles.title}>My Posts</h2>
-      <PostList/>
+      <button className={styles.btn} onClick={()=>setisShowPost(!isShowPost)}>{isShowPost?"Hide Posts":"Show Posts"}</button>
+      {isShowPost && <PostList/>}
     </div>
   )
 }

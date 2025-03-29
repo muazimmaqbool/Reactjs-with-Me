@@ -1,5 +1,6 @@
 //logic for working with data.json data
 const fetchPosts = async (page) => {
+  console.log("fetching posts...")
   //here post?_sort==-id basically sorts it from reverse order so when we add a new post it shows on top
   const response = await fetch(`http://localhost:3000/posts?_sort=-id&`);
 
