@@ -13,13 +13,17 @@ const PostList = () => {
   } = useQuery({
     queryKey: ["posts"],
     queryFn: fetchPosts,
-    
+    staleTime:1000*60, //will fetch every 1 minute, when page is loaded again after 1 minute
   });
+
+  //see more options from docs and from files of TanstackReactQuery folder
 
   //getting tags
   const { data: tagsData } = useQuery({
     queryKey: ["tags"],
     queryFn: fetchTags,
+    staleTime: Infinity, //it will not refetch the data again and again
+    //gcTime:0, //will never cache the data, even tough staleTime is infinity
   });
 
   //adding a new post by making a POST request
