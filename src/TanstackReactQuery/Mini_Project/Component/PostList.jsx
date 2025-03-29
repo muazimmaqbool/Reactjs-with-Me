@@ -18,7 +18,8 @@ const PostList = () => {
     //Now it will cache the data with respect to the page number, so each page will have separate query
     queryKey: ["posts", page], //or queryKey:["posts",{page}]
     queryFn: () => fetchPostsByPage(page),
-    staleTime: 1000 * 60, //will fetch every 1 minute, when page is loaded again after 1 minute
+    //staleTime: 1000 * 60, //will fetch every 1 minute, when page is loaded again after 1 minute
+    staleTime:1000*60*5 //5 minutes
   });
   //when fetching posts via pagination, the postData contains many things
   //console.log("postData:", postData);
