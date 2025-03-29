@@ -15,10 +15,9 @@ const fetchPosts = async (page) => {
 const fetchPostsByPage = async (page) => {
   console.log("fetching posts by page:", page);
   //here post?_sort==-id basically sorts it from reverse order so when we add a new post it shows on top
-  //here per page 5 items are shown, json server will now handle this and show only 5 posts per page
   const response = await fetch(
     `http://localhost:3000/posts?_sort=-id&${
-      page ? `_page=${page}&per_page=5` : ""
+      page ? `_page=${page}&_per_page=5` : ""
     }`
   );
 

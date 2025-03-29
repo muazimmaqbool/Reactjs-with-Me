@@ -104,7 +104,7 @@ const PostList = () => {
     mutate({ id: postData.length + 1, title, tags });
       {/* use postData.length when not using pagination
       use postData?.data.length when using pagination */}
-      
+
     e.target.reset(); //it resets the mutation
   };
   return (
@@ -150,7 +150,7 @@ const PostList = () => {
       use postData?.data.map(..) when using pagination */}
       {postData &&
         postData.length > 0 &&
-        postData?.data.map((post) => {
+        postData?.data?.map((post) => {
           return (
             <div className={styles.post} key={post.id}>
               <div>{post.title}</div>
