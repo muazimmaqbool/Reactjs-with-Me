@@ -37,7 +37,8 @@ const PostList = () => {
     },
     onSuccess: (data, variables, context) => {
       queryClient.invalidateQueries({
-        queryKey: ["posts"],
+        queryKey: ["posts"], //it will refetch the data for this query key
+        //or queryKey:["posts",{page:1}], //it will invalidate only the page 1 of posts query key
         exact: true, //so that it can only invalidate the above query which contains "posts"
         //predicate:(query)=>query.queryKey[0]==="posts" && query.queryKey[1].page>=2,
         //so here you can say which query to be invalided, so here "posts" and all the pages more than 2 will be invalidated
@@ -46,7 +47,10 @@ const PostList = () => {
     onError: (error, variables, context) => {
       console.log("onError:", error);
     },
-    onSettled: (data, error, variables, context) => {},
+    onSettled: (data, error, variables, context) => {
+      console.log("data:", data); //data it returns
+      console.log("variables:", variables); //data we provide
+    },
   });
   /*
   here: onMutate runs before this actual mutation happens i.e before the function call
@@ -56,6 +60,7 @@ const PostList = () => {
                            variables: data/variables that we provided to the mutate(parameters provided to the function call)
        ->inside onMutate we are returning id:1 , this will go directly inside context of onSuccess
 
+       Note: Mostly only onSuccess and onError is used
 
   ->queryClient.invalidateQueries({
         queryKey:["posts"]
@@ -66,6 +71,7 @@ const PostList = () => {
 
        ->onError: this takes an function and runs if the error happens
        ->onSettled: it runs now matter what is result of API call
+
  */
 
   const hanldeSubmit = (e) => {

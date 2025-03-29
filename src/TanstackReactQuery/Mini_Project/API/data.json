@@ -133,6 +133,22 @@
         "performance",
         "frontend"
       ]
+    },
+    {
+      "id": 16,
+      "title": "Debouncing in javascript with ease",
+      "tags": [
+        "javascript",
+        "frontend"
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Code splitting",
+      "tags": [
+        "react",
+        "frontend"
+      ]
     }
   ],
   "tags": [
@@ -145,17 +161,8 @@
     "python",
     "sql",
     "database",
-    "graphql",
     "fullstack",
-    "mern",
     "nextjs",
-    "git",
-    "versioncontrol",
-    "debugging",
-    "clean code",
-    "bestpractices",
-    "development",
-    "architecture",
-    "scalability"
+    "git"
   ]
 }
