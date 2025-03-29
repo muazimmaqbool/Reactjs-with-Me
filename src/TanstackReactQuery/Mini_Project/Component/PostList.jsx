@@ -146,10 +146,10 @@ const PostList = () => {
       </div>
 
 
-      {/* use postData.map(..) when not using pagination
-      use postData?.data.map(..) when using pagination */}
+      {/* use postData.map(..) when not using pagination and postData.length
+      use postData?.data.map(..) when using pagination and postData.data.length */}
       {postData &&
-        postData.length > 0 &&
+        postData?.data?.length > 0 &&
         postData?.data?.map((post) => {
           return (
             <div className={styles.post} key={post.id}>
