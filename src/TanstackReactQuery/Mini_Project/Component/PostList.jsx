@@ -1,18 +1,22 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import React from "react";
-import { addPost, fetchPosts, fetchTags } from "../API/api";
+import React, { useState } from "react";
+import { addPost, fetchPosts, fetchPostsByPage, fetchTags } from "../API/api";
 import styles from "../projectStyles.module.css";
 
 //called from MainPage.jsx
 const PostList = () => {
+  const [page, setpage] = useState(1);
   const {
     data: postData,
     isLoading,
     isError,
     error,
   } = useQuery({
-    queryKey: ["posts"],
-    queryFn: fetchPosts,
+    //queryKey: ["posts"],
+    //queryFn: fetchPosts,
+    //pagination:
+    queryKey: ["posts",{page}], //or queryKey:["posts",page] 
+    queryFn: ()=>fetchPostsByPage(page),
     staleTime:1000*60, //will fetch every 1 minute, when page is loaded again after 1 minute
   });
 
@@ -98,6 +102,9 @@ const PostList = () => {
 
     //we give it title and tags because inside data.json posts contain id, title and tags
     mutate({ id: postData.length + 1, title, tags });
+      {/* use postData.length when not using pagination
+      use postData?.data.length when using pagination */}
+      
     e.target.reset(); //it resets the mutation
   };
   return (
@@ -130,9 +137,20 @@ const PostList = () => {
 
       {isPending && <p>Posting...</p>}
       {isPostError && <p onClick={() => reset()}>Unable to Post</p>}
+
+      {/* paging from 32:10 */}
+      <div className={styles.pages}>
+        <button>Previous Page</button>
+        <span>{page}</span>
+        <button>Next Page</button>
+      </div>
+
+
+      {/* use postData.map(..) when not using pagination
+      use postData?.data.map(..) when using pagination */}
       {postData &&
         postData.length > 0 &&
-        postData.map((post) => {
+        postData?.data.map((post) => {
           return (
             <div className={styles.post} key={post.id}>
               <div>{post.title}</div>
