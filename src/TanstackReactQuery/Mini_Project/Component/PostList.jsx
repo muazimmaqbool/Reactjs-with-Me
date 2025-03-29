@@ -13,6 +13,7 @@ const PostList = () => {
   } = useQuery({
     queryKey: ["posts"],
     queryFn: fetchPosts,
+    
   });
 
   //getting tags

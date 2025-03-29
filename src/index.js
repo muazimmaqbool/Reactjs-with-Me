@@ -6,7 +6,14 @@ import store from "./REDUX/store";
 import { QueryClient,QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
-const queryClient=new QueryClient(); //creating a queryClient instance
+const queryClient=new QueryClient({
+  //will be applied to all the queries in the app, we can apply them separately also to each query
+  // defaultOptions:{
+  //   queries:{
+  //     staleTime:1000*60
+  //   }
+  // }
+}); //creating a queryClient instance
 
 //we are accessing the element(inside public > index.html) which has "root" id, then we are using render method on it
 const root = ReactDOM.createRoot(document.getElementById("root"));

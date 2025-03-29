@@ -13,6 +13,7 @@ const fetchPosts = async (page) => {
 };
 
 const fetchTags = async () => {
+  console.log("fetching tags...")
   const response = await fetch("http://localhost:3000/tags");
   const tagsData = await response.json();
   return tagsData;
