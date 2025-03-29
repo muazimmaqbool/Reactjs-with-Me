@@ -15,10 +15,22 @@ const PostList = () => {
     //queryKey: ["posts"],
     //queryFn: fetchPosts,
     //pagination:
-    queryKey: ["posts",{page}], //or queryKey:["posts",page] 
-    queryFn: ()=>fetchPostsByPage(page),
-    staleTime:1000*60, //will fetch every 1 minute, when page is loaded again after 1 minute
+    //Now it will cache the data with respect to the page number, so each page will have separate query
+    queryKey: ["posts", page], //or queryKey:["posts",{page}]
+    queryFn: () => fetchPostsByPage(page),
+    staleTime: 1000 * 60, //will fetch every 1 minute, when page is loaded again after 1 minute
   });
+  //when fetching posts via pagination, the postData contains many things
+  //console.log("postData:", postData);
+  /*
+  o/p: data: (5) [{…}, {…}, {…}, {…}, {…}]
+      first: 1
+      items: 17
+      last: 4
+      next: 2, //means there is 2 page and if it's null then no next page
+      pages: 4
+      prev: null, //means no previous page, if prev:1 //then there is a previous page
+  */
 
   //see more options from docs and from files of TanstackReactQuery folder
 
@@ -57,7 +69,7 @@ const PostList = () => {
       console.log("onError:", error);
     },
     onSettled: (data, error, variables, context) => {
-     // console.log("data:", data); //data it returns
+      // console.log("data:", data); //data it returns
       //console.log("variables:", variables); //data we provide
     },
   });
@@ -87,7 +99,7 @@ const PostList = () => {
     e.preventDefault();
     //console.log("e.target:",e.target)
     const formData = new FormData(e.target);
-    const title = formData.get("title");//here "title" is name of input field
+    const title = formData.get("title"); //here "title" is name of input field
     /*
     Array.from : creates an array from an iterable object i.e it will create an array from fromData objects
                  here formData.keys() will contain basically checkboxes
@@ -102,8 +114,10 @@ const PostList = () => {
 
     //we give it title and tags because inside data.json posts contain id, title and tags
     mutate({ id: postData.length + 1, title, tags });
-      {/* use postData.length when not using pagination
-      use postData?.data.length when using pagination */}
+    {
+      /* use postData.length when not using pagination
+      use postData?.data.length when using pagination */
+    }
 
     e.target.reset(); //it resets the mutation
   };
@@ -140,11 +154,21 @@ const PostList = () => {
 
       {/* paging from 32:10 */}
       <div className={styles.pages}>
-        <button>Previous Page</button>
+        {/*including 0 in Math.max to make sure it will not go beyond 0 */}
+        <button
+          onClick={() => setpage((prevPage) => Math.max(prevPage - 1, 0))}
+          disabled={postData?.prev===null}
+        >
+          Previous Page
+        </button>
         <span>{page}</span>
-        <button>Next Page</button>
+        <button
+          onClick={() => setpage((prevPage) => prevPage+1)}
+          disabled={postData?.next===null}
+        >
+          Next Page
+        </button>
       </div>
-
 
       {/* use postData.map(..) when not using pagination and postData.length
       use postData?.data.map(..) when using pagination and postData.data.length */}
