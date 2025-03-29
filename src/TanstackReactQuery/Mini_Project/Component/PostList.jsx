@@ -72,10 +72,16 @@ const PostList = () => {
     e.preventDefault();
     //console.log("e.target:",e.target)
     const formData = new FormData(e.target);
-    const title = formData.get("title");
+    const title = formData.get("title");//here "title" is name of input field
+    /*
+    Array.from : creates an array from an iterable object i.e it will create an array from fromData objects
+                 here formData.keys() will contain basically checkboxes
+    -Basically checkbox has two properties on and off, on means its checked
+    */
     const tags = Array.from(formData.keys()).filter(
       (key) => formData.get(key) === "on"
     );
+    // console.log("tags: " + tags)
     if (!title || !tags) return;
     //console.log("title:",title)
     //console.log("tags:",tags)
@@ -98,7 +104,7 @@ const PostList = () => {
               return (
                 <div key={tag}>
                   <input name={tag} id={tag} type="checkbox" />
-                  {/* htmlFor={tag} means this label is linked to the element with id tag i.e here its input */}
+                  {/* htmlFor={tag} means this label is linked to the element with id tag i.e here its input with type checkbox */}
                   <label htmlFor={tag}>{tag}</label>
                 </div>
               );
