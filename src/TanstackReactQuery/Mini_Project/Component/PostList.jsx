@@ -29,7 +29,7 @@ const PostList = () => {
     isError: isPostError,
     isPending,
     error: postError,
-    reset,
+    reset, //used to clean the mutation internal state (i.e., it resets the mutation to its initial state)/like clearing error etc.
   } = useMutation({
     mutationFn: addPost,
     onMutate: () => {
@@ -48,8 +48,8 @@ const PostList = () => {
       console.log("onError:", error);
     },
     onSettled: (data, error, variables, context) => {
-      console.log("data:", data); //data it returns
-      console.log("variables:", variables); //data we provide
+     // console.log("data:", data); //data it returns
+      //console.log("variables:", variables); //data we provide
     },
   });
   /*
@@ -93,7 +93,7 @@ const PostList = () => {
 
     //we give it title and tags because inside data.json posts contain id, title and tags
     mutate({ id: postData.length + 1, title, tags });
-    e.target.reset(); //it resets the form
+    e.target.reset(); //it resets the mutation
   };
   return (
     <div className={styles.container}>
