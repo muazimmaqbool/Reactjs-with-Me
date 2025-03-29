@@ -81,10 +81,11 @@ const PostList = () => {
     const tags = Array.from(formData.keys()).filter(
       (key) => formData.get(key) === "on"
     );
-    // console.log("tags: " + tags)
     if (!title || !tags) return;
     //console.log("title:",title)
     //console.log("tags:",tags)
+
+    //we give it title and tags because inside data.json posts contain id, title and tags
     mutate({ id: postData.length + 1, title, tags });
     e.target.reset(); //it resets the form
   };
