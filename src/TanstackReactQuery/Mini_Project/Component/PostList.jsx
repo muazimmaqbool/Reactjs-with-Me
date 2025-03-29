@@ -98,6 +98,7 @@ const PostList = () => {
               return (
                 <div key={tag}>
                   <input name={tag} id={tag} type="checkbox" />
+                  {/* htmlFor={tag} means this label is linked to the element with id tag i.e here its input */}
                   <label htmlFor={tag}>{tag}</label>
                 </div>
               );
