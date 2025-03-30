@@ -52,6 +52,7 @@ import G_Pass_ID from "./TanstackReactQuery/G_Pass_ID";
 import H_Mutations from "./TanstackReactQuery/H_Mutations";
 import MainPage from "./TanstackReactQuery/Mini_Project/MainPage";
 import I_useQueriesHook from "./TanstackReactQuery/I_useQueriesHook";
+import J_useQueriesEx2 from "./TanstackReactQuery/J_useQueriesEx2";
 
 
 function App() {
@@ -175,7 +176,8 @@ function App() {
       {/*Mini project using tanstack react query */}
       {/* <MainPage/> */}
 
-      <I_useQueriesHook/>
+      {/* <I_useQueriesHook/> */}
+      <J_useQueriesEx2/>
     </>
   );
 }
