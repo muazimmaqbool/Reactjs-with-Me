@@ -9,7 +9,7 @@ const J_useQueriesEx2 = () => {
       { queryKey: ["todos"], queryFn: fetchTodos, staleTime: Infinity },
     ],
   });
-  const { usersQuery, todosQuery } = result;
+  const [ usersQuery, todosQuery ] = result;
   if (usersQuery?.isLoading || todosQuery?.isLoading) return <p>Loading...</p>;
   if (usersQuery?.isError) return <p>Error: {usersQuery.error.message}</p>;
   return (
