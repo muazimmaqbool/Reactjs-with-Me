@@ -177,7 +177,7 @@ function App() {
       {/* <MainPage/> */}
 
       {/* <I_useQueriesHook/> */}
-      <J_useQueriesEx2/>
+      {/* <J_useQueriesEx2/> */}
     </>
   );
 }
