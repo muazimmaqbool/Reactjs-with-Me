@@ -2,6 +2,7 @@ import { useQueries } from "@tanstack/react-query";
 import React from "react";
 import { fetchTodos, fetchUsers } from "./a_apiCalls";
 
+//docs: https://tanstack.com/query/latest/docs/framework/react/reference/useQueries#usequeries
 const J_useQueriesEx2 = () => {
   const result = useQueries({
     queries: [
