@@ -53,6 +53,7 @@ import H_Mutations from "./TanstackReactQuery/H_Mutations";
 import MainPage from "./TanstackReactQuery/Mini_Project/MainPage";
 import I_useQueriesHook from "./TanstackReactQuery/I_useQueriesHook";
 import J_useQueriesEx2 from "./TanstackReactQuery/J_useQueriesEx2";
+import K_useInfiniteQuery from "./TanstackReactQuery/K_useInfiniteQuery";
 
 
 function App() {
@@ -178,6 +179,7 @@ function App() {
 
       {/* <I_useQueriesHook/> */}
       {/* <J_useQueriesEx2/> */}
+      <K_useInfiniteQuery/>
     </>
   );
 }
