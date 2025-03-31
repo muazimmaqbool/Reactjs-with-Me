@@ -15,6 +15,9 @@ const fetchPosts = async ({ page = 1 }) => {
   return res.json();
 };
 const K_useInfiniteQuery = () => {
+   //fetchNextPage(): fetches the data of next page
+   //hasNextPage: disables the button when no more data is available
+
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
     useInfiniteQuery({
       queryKey: ["posts"],
