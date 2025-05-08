@@ -67,7 +67,7 @@ function App() {
       {/* <h1>Inside App.jsx</h1> */}
         
       {/*used to explain JSX */}
-      {/* <Jsxinfo/> */}
+      <Jsxinfo/>
 
       {/*used to explain components */}
       {/* <Com/>  */}
@@ -179,7 +179,7 @@ function App() {
 
       {/* <I_useQueriesHook/> */}
       {/* <J_useQueriesEx2/> */}
-      <K_useInfiniteQuery/>
+      {/* <K_useInfiniteQuery/> */}
     </>
   );
 }

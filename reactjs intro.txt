@@ -1,4 +1,4 @@
-                                                      Introduction reactJs
+                                                      Introduction to React.js
 
 	What is react?
        -> React is an javascript library, its not an framework
@@ -6,8 +6,8 @@
        -> Used to make single page applications: SPA (Single-page application) is a web app implementation that loads only a 
 	   	  single web document, and then updates the body content of that single document via JavaScript APIs such as XMLHttpRequest
 		  and Fetch when different content is to be shown
-          {single page website are fast}
-          {Angular and vue can also make single page application but react is very fast}
+          - single page website are fast
+          - Angular and vue can also make single page application but react is very fast
 
 	Why React is fast ?
 	->React is fast because react uses "virtual DOM"
