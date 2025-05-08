@@ -32,36 +32,36 @@ function CarName(){
 }
 
 /*
-React Components:
-    Components are independent and reusable bits of code. They serve the same purpose as JavaScript 
-    functions, but work in isolation/seperately and return HTML.
-    Components are like functions that return HTML elements.
+->React Components:
+    >Components are independent and reusable bits of code. They serve the same purpose as JavaScript 
+     functions, but work in isolation/seperately and return HTML.
+    >Components are like functions that return HTML elements.
     >Components come in two types, Class components and Function components, we will mostly focus on Function components.
 
     >The component's name MUST start with an upper case letter.
 
-    >Class Component (extra)
+    >Class Component (extra):
         A class component must include the extends React.Component statement. This statement creates 
         an inheritance to React.Component, and gives your component access to React.Component's functions.
         The component also requires a render() method, this method returns HTML.
         Example:
         
-        Create a Class component called Car
+        Create a Class component called Car:
             class Car extends React.Component {
                 render() {
                     return <h2>Hi, I am a Car!</h2>;
                 }
             }
-            {if you want to take a look on class components visit this link: https://www.w3schools.com/REACT/react_class.asp}
+            - if you want to take a look on class components visit this link: https://www.w3schools.com/REACT/react_class.asp}
     
-    >Function Component
+    >Function Component:
         Here is the same example as above, but created using a Function component instead.
         A Function component also returns HTML, and behaves much the same way as a Class component, 
         but Function components can be written using much less code, and are easier to understand,
         and will be preferred to use.
 
         Example:
-        Create a Function component called Car
+        Create a Function component called Car:
             function Car() {
                 return <h2>Hi, I am a Car!</h2>;
             }
