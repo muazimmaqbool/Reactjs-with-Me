@@ -32,6 +32,11 @@
 		->html,css,javascript.
 		->ES6 understanding will make you comfortable with reactjs.
 
-	-> To Create your react app : npx create-react-app app name
+	-> To Create your react app : npx create-react-app app name (not working now)
+	Note: npx create-react-app is officially deprecated as of 2024. 
+	      The React team now recommends using frameworks like Vite or Next.js for new React projects due to
+		  better performance, faster development experience, and modern tooling.
+
+    ->Create app uisng vite: npm create vite@latest my-app -- --template react
 	
     	
