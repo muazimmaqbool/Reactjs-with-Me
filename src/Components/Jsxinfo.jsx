@@ -35,7 +35,7 @@ export default Jsxinfo;
     >JSX makes it easier to write and add html in react
     >JSX is translated into regular J.S at runtime
  
-  ->Expressions in JSX
+  ->Expressions in JSX:
     With JSX you can write expressions inside curly braces { }.
     The expression can be a React variable, or property, or any other valid JavaScript expression.
     JSX will execute the expression and return the result:
@@ -55,7 +55,7 @@ export default Jsxinfo;
     attributes into class attributes.
         Example: <h1 className="myclass">Hello World</h1>;
 
-  ->Conditions - if statements
+  ->Conditions - if statements:
     React supports if statements, but not inside JSX.
     To be able to use conditional statements in JSX, you should put the if statements outside
     of the JSX, or you could use a ternary expression instead:
