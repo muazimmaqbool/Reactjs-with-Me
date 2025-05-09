@@ -12,7 +12,7 @@ const Events = () => {
 
   const distance = (d, e) => {
     console.log("distance :", d);
-    console.log(e.type);
+    console.log("the event type is:",e.type);
   };
 
   const mouse = (e) => {
@@ -31,7 +31,7 @@ const Events = () => {
       <button onClick={() => speed("30-KMPH")}>Check Speed ?</button>
 
       {/*passing data and getting event type , here its click */}
-      <button onClick={(event) => distance("5-KM", event)}>
+      <button onClick={(event) => distance("10-KM", event)}>
         Get distance and event type
       </button>
 
