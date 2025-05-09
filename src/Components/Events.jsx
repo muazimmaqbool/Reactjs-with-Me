@@ -53,7 +53,7 @@ export default Events;
   Just like HTML DOM events, React can perform actions based on user events.
   React has the same events as HTML: click, change, mouseover etc.
 
-  {Note: something the browser does, or something a user does}
+  {Note: Event is something that browser does, or something a user does}
 
   Adding Events :
     ->React events are written in camelCase 
