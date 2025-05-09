@@ -52,9 +52,9 @@ export default Props;
 
 /* 
     ->React Props:
-        props stands for properties.
+        Props stands for properties.
         Props are arguments passed into React components.
-        props are read only (we can't change or modify props as they are imutable)
+        Props are read only (we can't change or modify props as they are imutable)
         Data can be passed from one component to another using props
         They are like function arguments in js and attributes in html
         The props can have any name

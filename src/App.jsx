@@ -70,10 +70,10 @@ function App() {
       {/* <Jsxinfo/> */}
 
       {/*used to explain components */}
-      <Com/> 
+      {/* <Com/>  */}
 
       {/*used to explain props */}
-      {/* <Props/>  */}
+      <Props/> 
 
 
       {/*used to explain Events */}
