@@ -53,7 +53,7 @@ export default Forms;
     React Forms:
       Just like in HTML, React uses forms to allow users to interact with the web page.
 
-    -> Adding Forms in React : You add a form with React like any other element: example above
+    -> Adding Forms in React : You can add a form with React like any other element: example above
     -> In the above Myform example:
         This will work as normal, the form will submit and the page will refresh.
         But this is generally not what we want to happen in React.
