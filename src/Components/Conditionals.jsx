@@ -70,7 +70,7 @@ export default Conditionals;
        {condition && statement to run if condition is true}
 
     ->Ternary Operator
-      Another way to conditionally render elements is by using a ternary operator.
+      Another way to conditionally render elements/components is by using a ternary operator.
        {condition ? true : false}
 
 
