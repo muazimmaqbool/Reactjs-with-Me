@@ -125,10 +125,10 @@ export default List;
   Examples Are Above
 
   Note: Keys:
-    Keys allow React to keep track of elements. This way, if an item is updated or removed, 
-    only that item will be re-rendered instead of the entire list.
-    Keys need to be unique to each sibling. But they can be duplicated globally.
-    Keys are used in React to identify which items in the list are changed, updated, or deleted.
+    ->Keys allow React to keep track of elements. This way, if an item is updated or removed, 
+      only that item will be re-rendered instead of the entire list.
+    ->Keys need to be unique to each sibling. But they can be duplicated globally.
+    ->Keys are used in React to identify which items in the list are changed, updated, or deleted.
 
     if we don't pass any key we will get a warning message in console:
       Warning: Each child in a list should have a unique "key" prop.
