@@ -86,8 +86,8 @@ function App() {
       {/* <List/> */}
 
       {/*used to explain forms in react */}
-      <Forms/>
-      {/* <Forms2/> */}
+      {/* <Forms/> */}
+      <Forms2/>
 
       {/*used to explain routing: explained in notebook and on pdf*/}
        {/* <Routing/>  */}

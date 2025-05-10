@@ -15,8 +15,8 @@ function Myform() {
   const [inputs, setInputs] = useState({});
 
   const handleChange = (event) => {
-    /*event.target.name retrieves the name attribute of the input element that triggered the event.
-       This helps to identify which field was updated*/
+    /*event.target.name retrieves the name attribute of the input element that triggered the event,
+      this helps to identify which field was updated*/
     const name = event.target.name;
     //event.target.value retrieves the current value of the input element.
     const value = event.target.value;
@@ -28,7 +28,6 @@ function Myform() {
     -> { ...values } creates a copy of the current state using the spread operator to avoid mutating the original state.
     -> [name]: value dynamically updates the property in the copied object. 
                The square brackets ([]) are used for computed property names so that name is evaluated as a variable.
-
     ->This results in updating the state with the new value for the field while keeping the other fields unchanged.
   */
 
