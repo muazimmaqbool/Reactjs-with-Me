@@ -36,8 +36,8 @@ export default Routing;
 /*
  Important:
   Router: Routing is a prcoess by which user is directed to the different pages
-          ->React Router is mainly used for developing single page web application
-          ->React Router is used to define multiple routes in the application
+          React Router is mainly used for developing single page web application
+          React Router is used to define multiple routes in the application
           
   Routes: used to define and render components based on the specified path. 
           ->It will accept components and render to define what should be rendered
@@ -58,7 +58,7 @@ export default Routing;
           tempId will read any id when calling it like /:id, /new 
 
       ->Using "id" is usefull when we work on the backend / when we request on the backend/request API etc
-        ->To access this id we use params
+      ->To access this id we use params
 
       ->useNavigate():
            we use "useNavigate" to go to a particular location like this
