@@ -20,7 +20,7 @@ const Routing = () => {
             <Route path="/" element={<Home/>}/>
             <Route path="/about" element={<About/>}/>
             <Route path="/contact" element={<Contact/>}/>
-            <Route path="/user/:id" element={<User/>}/> {/*see it in comments below */}
+            <Route path="/user/:name" element={<User/>}/> {/*see it in comments below */}
             <Route path="/section/:enroll" element={<Section/>}/>
             <Route path="*" element={<h3>Error! Page Not Found</h3>}/> 
         </Routes>
