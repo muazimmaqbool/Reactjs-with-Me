@@ -107,7 +107,7 @@ export default Memo;
   ->There are two ways you can wrap your component with React.memo() : shown above via example
 
   ->Example above:
-       In this example, the Todos component re-renders even when the todos have not changed and to fix this we use useMemo. 
+       In this example, the Todos component re-renders even when the todos have not changed and to fix this we use Memo. 
        
   ->High order component:
       A higher-order component is a function that takes in a component and returns a new component with added functionality..
