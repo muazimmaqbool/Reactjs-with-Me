@@ -59,7 +59,7 @@ function CatFacts() {
   return (
     <>
       <h3>{fact.fact}</h3>
-      <p>fact length is: {fact.length}</p>
+      <p>Fact length is: {fact.length}</p>
     </>
   );
 }
