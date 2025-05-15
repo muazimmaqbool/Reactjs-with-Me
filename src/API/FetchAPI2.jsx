@@ -75,7 +75,7 @@ const GetComments=()=>{
       {
         //shows only first 10 comments from index 0 to 10 using slice(0,10)
         //inside return we have c.body.substring(0,25):
-        //it will show only from 25 characters of each comment string rather than showing full long comment
+        //it will show only 25 characters of each comment string rather than showing full long comment
         comments.slice(0,10).map((c)=>{
           return(
             <h5 key={c.id}>{c.body.substring(0,25)}<br/> by {c.email}</h5>

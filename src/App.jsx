@@ -102,8 +102,8 @@ function App() {
       {/* <Memo/> */}
 
       {/* used to explain API calls using fetch and axios */}
-      <FetchAPI/>
-      {/* <FetchAPI2/> */}
+      {/* <FetchAPI/> */}
+      <FetchAPI2/>
       {/* <FetchAPI3/> */}
 
       {/* <Axios /> */}
