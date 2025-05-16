@@ -42,11 +42,11 @@ function Example1() {
 //to display data we first need to store the data, we use useState to do that
 function Example2() {
   const [data, setData] = useState([]); 
-  //the data which api is getting is an array that's why we pass initial data as empty array [] in useState
+  //the data which api is getting is an array that's why we pass initial data as empty array [] to useState
 
   const getPost = () => {
     axios.get("https://jsonplaceholder.typicode.com/posts").then((response) =>
-      //console.log(response.data)
+      //console.log(response)
       setData(response.data)
     );
   };
@@ -57,16 +57,15 @@ function Example2() {
   return (
     <>
       <h4>Example 2: displaying data using map()</h4>
+      {/* style classes are in App.css file */}
       <div className="grid">
         {data.map((getpost) => {
           const { id, title, body } = getpost;
           return (
             <div className="card" key={id}>
-              {/* style classes are in App.css file */}
-              {/* displaying only first 15 letters of title the empty spaces will also be considered*/}
+              {/* displaying only first 15 letters of title. the empty spaces will also be considered*/}
               <h3>{title.slice(0, 15).toUpperCase()}</h3>
               <p>{body.slice(0, 100)}</p>
-
               {/* .slice(0,100) display characters form 0 to 100 */}
             </div>
           );
