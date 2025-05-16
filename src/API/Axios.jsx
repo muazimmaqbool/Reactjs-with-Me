@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 /*
-Basic intro: Axios is a lightweight package and it's used to make Http requests in any js library (like react, angular or vue.js)
+Basic intro: Axios is a lightweight package and it's used to make Http/API requests in any js library (like react, angular or vue.js)
 ->Axios is easy to use version of fetch (its an upgraded version of fetch)
 
 Main difference between Axios and Fetch:
@@ -16,8 +16,8 @@ const Axios = () => {
   return (
     <>
       <h3>Axios Tutorials</h3>
-      <Example1 />
-      {/* <Example2 /> */}
+      {/* <Example1 /> */}
+      <Example2 />
       {/* <Example3/> */}
       {/* <Example4 /> */}
       {/* <Example5 /> */}
