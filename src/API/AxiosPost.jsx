@@ -17,7 +17,7 @@ const AxiosPost = () => {
   const postData = async () => {
    try{
     const response=await axios.post(url,data);
-    console.log("Post request response",response.data)
+    console.log("Post request response:",response.data)
    }catch(error){
     console.log("error",error)
    }
@@ -26,7 +26,7 @@ const AxiosPost = () => {
 
   return (
     <>
-      <h3>Axios Post Request</h3>
+      <h3>Axios Post Request:</h3>
       <button onClick={updateTask}>Updated Task</button>
     </>
   );
