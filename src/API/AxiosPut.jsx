@@ -6,7 +6,7 @@ const AxiosPut = () => {
   const url = "https://jsonplaceholder.typicode.com/posts/100";
   const data = {
     userId:"6655",
-    title:"React Hooks?",
+    title:"What are React Hooks?",
     body:"React Hooks are used to add functionality to functional components"
   };
   const putData = async () => {
@@ -20,7 +20,7 @@ const AxiosPut = () => {
 
   return (
     <>
-      <h3>Axios Put Request</h3>
+      <h3>Axios Put Request:</h3>
       <button onClick={putData}>Do Put Request</button>
     </>
   );

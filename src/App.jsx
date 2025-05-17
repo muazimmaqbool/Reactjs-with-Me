@@ -107,8 +107,8 @@ function App() {
       {/* <FetchAPI3/> */}
 
       {/* <Axios /> */}
-      <AxiosPost/> 
-      {/* <AxiosPut/> */}
+      {/* <AxiosPost/>  */}
+      <AxiosPut/>
        {/* <AxiosDelete/>  */}
 
       {/*used to explain hooks */}
