@@ -8,20 +8,18 @@ const AxiosDelete = () => {
   const deleteData = async () => {
     try {
       const response = await axios.delete(url);
-      console.log("delete response:",response)
+      console.log("delete request response:",response)
       setStatus("Deleted successfully!");
     } catch (error) {
       console.log("error:", error.message);
     }
   };
 
-  useEffect(() => {
-    deleteData();
-  }, []);
   return (
     <>
-      <h3>Axios Delete Request</h3>
+      <h3>Axios Delete Request:</h3>
       <p>{status}</p>
+      <button onClick={deleteData}>Delete Post</button>
     </>
   );
 };
