@@ -33,6 +33,7 @@ Note: Hooks will not work in React class components.
     In ReactJS, components are rendered to the user interface and the component’s logic contains the data to be displayed in the view(UI).
     The connection between the data to be displayed in the view and the component’s logic is called data binding in ReactJS.
 
+    IMPORTANT:
     ->One-way Data Binding: ReactJS uses one-way data binding. In one-way data binding one of the 
       following conditions can be followed:
         Component to View: Any change in components data would get reflected in the view.

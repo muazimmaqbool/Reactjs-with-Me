@@ -109,11 +109,11 @@ function App() {
       {/* <Axios /> */}
       {/* <AxiosPost/>  */}
       {/* <AxiosPut/> */}
-       <AxiosDelete/> 
+       {/* <AxiosDelete/>  */}
 
       {/*used to explain hooks */}
       {/* hooks basic intro here and also data binding */}
-      {/* <Hooks/>  */}
+      <Hooks/> 
     
       {/* <UseState/> */}
       {/* <UseState2/> */}
