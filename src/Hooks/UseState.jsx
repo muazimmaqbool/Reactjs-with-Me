@@ -39,8 +39,8 @@ function Today(){
   return(
     <>
       <h1>Today is: {day}</h1>
-      {/*we can get today in much simple way like this */}
-      <button type="button" onClick={()=>setDay(days[dayOfWeek])}>Getday</button>
+      {/*we can get current day in much simple way like this */}
+      <button type="button" onClick={()=>setDay(days[dayOfWeek])}>Get Current Day</button>
       {/*setDay(days[dayofWeek]): days is an array and daysofWeek contains day number 
       Like this: day[0] i.e Sunday
       */}
