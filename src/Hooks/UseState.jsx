@@ -53,7 +53,7 @@ export default UseState;
 /*learn about useState hook from notebook and from w3schools
 
 ->useState hook: it allows us to track state in a function component
-    {state: state generally refers to data or properties that need to be tracked in an application}
+    {state: state generally refers to data or properties that needs to be tracked in an application}
 
 ->Important:
     -Initialize useState
@@ -67,8 +67,8 @@ export default UseState;
             Use the state variable in the rendered component.
         -Update State
             To update our state, we use our state updater function.
-            We should never directly update state. Ex: color = "red" is not allowed.
-            do this to update state eg:
+            We should never directly update state. Ex: color = "red"; it's not allowed.
+            Do this to update state eg:
             <button
                 type="button"
                 onClick={() => setColor("blue")}
