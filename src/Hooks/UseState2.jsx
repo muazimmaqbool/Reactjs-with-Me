@@ -4,8 +4,7 @@ import React, { useState } from "react";
 const UseState2 = () => {
   return (
     <>
-      <h3>More on useState hook</h3>
-      <h4>What Can State Hold</h4>
+      <h3>More on useState hook:</h3>
       <Car />
       <Bike />
       <Item />
@@ -28,8 +27,6 @@ function Car() {
       <p style={styleobj}>
         it is a {color} {model} from {year}
       </p>
-
-      {/*updating color : this is optional */}
       <button onClick={() => setColor("blue")}>Update Color</button>
     </>
   );
@@ -63,6 +60,11 @@ const Item = () => {
     memory: "8GB and 1TB",
     size: "Large screen",
   });
+  const updateMemory = () => {
+    setDetails((prev) => {
+      return { ...prev, memory: "16GB and 512GB SSD" };
+    });
+  };
   return (
     <>
       <h3>
@@ -78,11 +80,7 @@ const Item = () => {
       >
         Update processor
       </button>
-      <button onClick={()=>setDetails((prev)=>{
-        return {...prev,memory:"16GB and 512GB SSD"}
-      })}>
-        Update memory
-      </button>
+      <button onClick={updateMemory}>Update memory</button>
     </>
   );
 };
