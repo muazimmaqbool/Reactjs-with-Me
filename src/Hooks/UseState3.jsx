@@ -13,6 +13,7 @@ const UseState3 = () => {
 
 //updatin object
 function Bike() {
+  const [updating, setupdating] = useState(false);
   const [bike, setBike] = useState({
     brand: "BMW",
     model: "GS-310",
@@ -41,10 +42,12 @@ function Bike() {
 
   const updateBikeModel = () => {
     console.log("Updating Model...");
+    setupdating(true);
     setTimeout(() => {
       setBike((prevState) => {
         return { ...prevState, model: "GS-1250" };
       });
+      setupdating(false);
       console.log("Bike Model Updated");
     }, 3000);
   };
@@ -60,7 +63,7 @@ function Bike() {
         Is its modified? {bike.modified}
       </h4>
       <h4 style={{ color: "teal" }}>Fuel Tank Status: {bike.fuelTank}</h4>
-
+      {updating && <p>Updating...</p>}
       <button onClick={updateColor}>Update Color</button>
       <button onClick={updateFuelTank}>Update Fuel-Tank</button>
       <button onClick={updateModified}>Modification Status</button>
