@@ -13,11 +13,11 @@ const UseEffect = () => {
 function Timer() {
   const [count, setCount] = useState(0);
   useEffect(() => {
-    console.log("useEffect runs");
+    console.log("useEffect runs..");
     setTimeout(() => {
       setCount((count) => count + 1);
     }, 1000);
-  }, []);
+  }, []); //with empty dependency array, it will run only once when the component mounts
   return <h1>I have rendered {count} times!</h1>;
 }
 
