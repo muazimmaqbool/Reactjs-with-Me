@@ -18,6 +18,9 @@ function Example() {
 
   useEffect(() => {
     callAPI();
+    return ()=>{
+      console.log("API call is done!");
+    }
   }, [srcType]);
   return (
     <>
