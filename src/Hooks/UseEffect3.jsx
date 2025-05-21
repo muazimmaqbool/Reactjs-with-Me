@@ -12,10 +12,10 @@ const UseEffect3 = () => {
 //useEffect is basically used perform some side effect operations whenever something happens
 function AppExample() {
   const [srcType, setSrcType] = useState("posts");
-  //useEffect takes an function now whatever we write inside this arrow function is going to be
-  //executed every single time our application/component renders
-  //it also takes second parameter as array (whatever you pass into this array is going to be values that
-  // whenever they change your hook is going to run)
+  /*useEffect takes an function now whatever we write inside this arrow function is going to be
+  executed every single time our application/component renders
+  it also takes second parameter as array (whatever you pass into this array is going to be values that
+  whenever they change your hook is going to run */
   useEffect(() => {
     console.log("resource changed");
 
