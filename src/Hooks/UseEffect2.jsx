@@ -7,9 +7,9 @@ const UseEffect2 = () => {
     console.log("use effect runs")
 
     //return runs only when component is unmounted
-    // return ()=>{
-    //     console.log()
-    // }
+    return ()=>{
+        console.log("component is unmounted")
+    }
   },[])
          // use effect runs is printed on console everytime we change value of a
          // if [] used then use effect runs is only printed one
@@ -33,7 +33,7 @@ function Counter(){
   const[cal,setCal]=useState(0);
 
   useEffect(()=>{
-    console.log("runs") //prints only when count value changes and when its loaded
+    console.log("count updated") //prints only when count value changes and when its loaded
     setCal(()=>count*2);
   },[count]) //runs when value of count changes and that changes when we click on + button
 
