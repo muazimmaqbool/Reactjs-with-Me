@@ -112,4 +112,29 @@ export default Memo;
   ->High order component:
       A higher-order component is a function that takes in a component and returns a new component with added functionality..
       const newComponent = higherFunction/component(WrappedComponent);
+
+  ->useMemo hook vs memo ?
+    -Both useMemo and memo are used for performance optimization, but they serve different purposes and are used in different scenarios.
+    -useMemo:
+      Purpose: Caches the result of a computation between renders.
+      Use useMemo to: 1) Avoid expensive calculations on every render.
+                      2) Memoize a derived value (like a filtered or sorted array).
+
+      Syntax: const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+
+    -memo:
+      Purpose: Wraps a React component to prevent unnecessary re-renders when props haven’t changed.
+      Use useMemo to: Prevent re-rendering of child components if their props are the same
+       Think of it as: "Only re-render this component if its props change
+      Syntax:
+          const MyComponent = React.memo((props) => {
+            return <div>{props.name}</div>;
+          });
+
+    ->Summary:
+      Feature        	          useMemo	                                   React.memo
+      Type	                     Hook       	                     Higher-order component (HOC)
+      What it memoizes  	  Computation result	                        Component rendering
+      Prevents	        Re-calculating values unnecessarily	       Re-rendering component unnecessarily
+      Use inside	            Components	                              Outside component definition
 */

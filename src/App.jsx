@@ -99,7 +99,7 @@ function App() {
       {/* <HomeSASS/>  */}
 
       {/*used to explain memo */}
-      {/* <Memo/> */}
+      <Memo/>
 
       {/* used to explain API calls using fetch and axios */}
       {/* <FetchAPI/> */}
@@ -122,7 +122,7 @@ function App() {
       {/* <UseEffect/> */}
       {/* <UseEffect2/> */}
       {/* <UseEffect3/> */}
-      <UseEffect4Example/>
+      {/* <UseEffect4Example/> */}
 
       {/* <UseMemo /> */}
       {/* <UseRef/> */}
