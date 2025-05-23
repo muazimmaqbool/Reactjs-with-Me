@@ -4,8 +4,8 @@ import React, { useMemo, useState } from 'react'
 const UseMemo = () => {
   return (
     <>
-     <ExampleOne/>
-     {/* <ExampleTwo/> */}
+     {/* <ExampleOne/> */}
+     <ExampleTwo/>
     </>
   )
 }
@@ -18,7 +18,7 @@ const ExampleOne=()=>{
     
     //we can use the useMemo Hook to memoize the expensiveCalculation function. This will cause the function to only run when needed.
     //We can wrap the expensive function call with useMemo:
-     const calculation=useMemo(()=>expensiveCalculation(count),[count]);
+    const calculation=useMemo(()=>expensiveCalculation(count),[count]);
     //useMemo also accepts second parameter i.e its dependencies and this means it will only run when the
     //dependencie changes so here expensiceCalculation function will only run/render when count changes and 
     //not when todo's change, without using useMemo it would have run on both
@@ -69,7 +69,7 @@ const ExampleTwo =()=>{
     const doubleNumber=useMemo(()=>{
         return slowFunction(number);
     },[number])
-    //slowFunction will run only when number changes and not theme
+    //slowFunction will run only when number changes and not when theme changes
 
     //Note: if we don't call slowFunction via useMemo then it will also run when theme is changed
 
@@ -97,7 +97,7 @@ export default UseMemo
 /*
 Intro of useMemo Hook in react:
 
--> React useMemo Hook
+-> React useMemo Hook:
     The React useMemo Hook returns a memoized value.
     Think of memoization as caching a value so that it does not need to be re-calculated.
     The useMemo Hook only runs when one of its dependencies are updated.
@@ -109,7 +109,7 @@ Intro of useMemo Hook in react:
       Reducing the amount of work that needs to be done in a given render.
       Reducing the number of times that a component needs to re-render.
     
-->Performance
+->Performance:
     The useMemo Hook can be used to keep expensive, resource intensive functions from needlessly running.
     In this example, we have an expensive function that runs on every render.
     When changing the count or adding a todo, you will notice a delay in execution.
