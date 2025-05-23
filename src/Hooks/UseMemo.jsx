@@ -4,8 +4,8 @@ import React, { useMemo, useState } from 'react'
 const UseMemo = () => {
   return (
     <>
-     {/* <ExampleOne/> */}
-     <ExampleTwo/>
+     <ExampleOne/>
+     {/* <ExampleTwo/> */}
     </>
   )
 }
