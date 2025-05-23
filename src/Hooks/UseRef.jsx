@@ -4,10 +4,10 @@ import React, { useEffect, useState,useRef } from 'react'
 const UseRef = () => {
   return (
     <>
-      <Example1/>
+      {/* <Example1/> */}
 
       {/*Accessing DOM Elements */}
-      {/* <Example2/>  */}
+      <Example2/> 
 
       {/*Tracking State Changes: track of previous state values */}
       {/* <Example3/>  */}
@@ -27,7 +27,7 @@ const Example1=()=>{
     useEffect(()=>{
         renderCount.current=renderCount.current+1
         //so when i change the value in input, it will never cause our component to re-render because it's completely
-        //seperate from our component render cycle
+        //seperate from our components render cycle
     },)
     return(
         <>
@@ -50,18 +50,25 @@ function Example2(){
     }
 
     const pTag=useRef();
+    console.log("pTag:",pTag) 
     const updateColor=()=>{
         pTag.current.style.color="teal";
+    }
+    
+    const resetP=()=>{
+        pTag.current.style.color="black";
+        pTag.current.style.fontSize="1rem"
     }
     return(
         <>
             <input type="text" ref={inputElement} />
-            <button onClick={getFocus}>Focus</button>
+            <button onClick={getFocus}>Focus Input</button>
 
             {/* changing color of p tag */}
             <p ref={pTag}>Hey change my color</p>
             <button onClick={updateColor}>Change Color</button>
             <button onClick={()=>pTag.current.style.fontSize="2rem"}>Change Size</button>
+            <button onClick={resetP}>Reset P Tag</button>
         </>
     )
 }
@@ -100,15 +107,15 @@ export default UseRef
     ->It's like doing this: const count = {current: 0}. We can access the count by using count.current.
     
 
-->When to use useRef() instead of useState()
+->When to use useRef() instead of useState():
     A rule of thumb is to use useState when you need to re-render the component when the 
     state changes and useRef when you don't need to re-render the component when the state changes.
 
-->Accessing DOM Elements: 
-        In general, we want to let React handle all DOM manipulation.
-        But there are some instances where useRef can be used without causing issues.
-        In React, we can add a ref attribute to an element to access it directly in the DOM
-        code in : Example 2
+->Accessing DOM Elements (important): 
+    In general, we want to let React handle all DOM manipulation.
+    But there are some instances where useRef can be used without causing issues.
+    In React, we can add a ref attribute to an element to access it directly in the DOM
+    code in : Example 2
 
 ->Basically we use useRef hook to store those things which are not related to the render and for things which are related to the
     render use useState hook.
@@ -117,7 +124,7 @@ export default UseRef
      ->you can read and also change this current property
      ->and by changing this current property nothing will re-render 
      ->main job of reference is to give reference to DOM example <input ref={refName}/> now you will have directly access to the real DOM
-        now with refName.current can be used to update/change the input element in DOM like scroll, focus etc
+        now with refName.current you can update/change the input element in DOM like scroll, focus etc
         exmaple: refName.current.focus(), refName.current.scroll(),etc...
 
 Note: always do your management like updating value/setting value to variable using useState/props
