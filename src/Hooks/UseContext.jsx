@@ -1,57 +1,57 @@
-import React, { useState,createContext,useContext } from 'react'
+import React, { useState, createContext, useContext } from "react";
 
 //Read Documentation Below:
-const context=createContext(); //context can be any name
+const context = createContext(); //context can be any name
 const UseContext = () => {
-    const[item,setItem]=useState("Laptop");
+  const [item, setItem] = useState("Laptop");
   return (
-        <context.Provider value={item}>
-            <h3>useContext Hook</h3>
-            <h4>Item is: {item}</h4>
-            <button onClick={()=>setItem("CPU")}>Change item</button>
-            <Comp2/>
-      </context.Provider>
-  )
+    <context.Provider value={item}>
+      <h3>useContext Hook</h3>
+      <h4>Item is: {item}</h4>
+      <button onClick={() => setItem("CPU")}>Change item</button>
+      <Comp2 />
+    </context.Provider>
+  );
+};
+
+function Comp2() {
+  return (
+    <>
+      <h5>component 2</h5>
+      <Comp3 />
+    </>
+  );
+}
+function Comp3() {
+  //also works here,
+  const product = useContext(context);
+  return (
+    <>
+      <h5>component 3</h5>
+      <h5>product: {product}</h5>
+      <Comp4 />
+    </>
+  );
+}
+function Comp4() {
+  return (
+    <>
+      <h5>component 4</h5>
+      <Comp5 />
+    </>
+  );
+}
+function Comp5() {
+  const data = useContext(context);
+  return (
+    <>
+      <h5>component 5</h5>
+      <h4>Diplay {data} again</h4>
+    </>
+  );
 }
 
-function Comp2(){
-    return(
-        <>
-            <h5>component 2</h5>
-            <Comp3/>
-        </>
-    )
-}
-function Comp3(){
-    //also works here,                 
-    const product=useContext(context)
-    return(
-        <>
-            <h5>component 3</h5>
-            <h5>product: {product}</h5>
-            <Comp4/>
-        </>
-    )
-}
-function Comp4(){
-    return(
-        <>
-            <h5>component 4</h5>
-            <Comp5/>
-        </>
-    )
-}
-function Comp5(){
-    const data=useContext(context)
-    return(
-        <>
-            <h5>component 5</h5>
-            <h4>Diplay {data} again</h4>
-        </>
-    )
-}
-
-export default UseContext
+export default UseContext;
 
 /*
 ->React Context:

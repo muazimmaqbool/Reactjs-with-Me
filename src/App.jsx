@@ -125,9 +125,9 @@ function App() {
       {/* <UseEffect4Example/> */}
 
       {/* <UseMemo /> */}
-      <UseRef/>
+      {/* <UseRef/> */}
 
-      {/* <UseContext/> */}
+      <UseContext/>
 
       {/* <UseReducer/>  */}
       {/* <UseReducer2/> */}
