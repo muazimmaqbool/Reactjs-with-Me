@@ -127,7 +127,7 @@ function App() {
       {/* <UseMemo /> */}
       {/* <UseRef/> */}
 
-      <UseContext/>
+      {/* <UseContext/> */}
 
       {/* <UseReducer/>  */}
       {/* <UseReducer2/> */}
@@ -136,8 +136,8 @@ function App() {
 
 
       {/*these are in REDUX folder */}
-      {/* <h1>inside App.jsx, c= {c}</h1> */}
-      {/* <HomeRedux/> */}
+      <h1>inside App.jsx, c= {c}</h1>
+      <HomeRedux/>
       {/*another basic redux example */}
       {/* <h2>Value of Switch in App.jsx={switchValue?"ON":"OFF"}</h2> */}
       {/* <ToggleSwitch/> */}
