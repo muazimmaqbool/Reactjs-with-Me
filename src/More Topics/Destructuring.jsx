@@ -4,10 +4,10 @@ import React from "react";
 const Destructuring = () => {
   return (
     <>
-      {/* <Example1 /> */}
+      <Example1 />
        {/* <Example2 /> */}
       {/* <ExampleObj /> */}
-      <ExampleFunc />
+      {/* <ExampleFunc /> */}
     </>
   );
 };
@@ -37,7 +37,7 @@ const Example1 = () => {
 
   //example
   const [, , website] = ["Muazim Maqbool", "sopore", "muazimmaqbool.com"];
-  console.log(website);
+  console.log("website:",website);
 
   //Array Destructuring to Swap Variables’ Values
   let s1 = "apple";
@@ -47,9 +47,7 @@ const Example1 = () => {
   console.log(s1, " & ", s2);
 
   return (
-    
       <h4>Destructuring On Array</h4>
-    
   );
 };
 
@@ -205,7 +203,7 @@ export default Destructuring;
     To name a few use cases, destructuring can be used to destructure function parameters or values from props
 
     ->Destructuring is exactly the same. We may have an array or object that we are working with,
-            but we only need some of the items contained in these.
+      but we only need some of the items contained in these.
     ->Destructuring makes it easy to extract only what is needed.
 
     ->When destructuring arrays, the order that variables are declared is important.
