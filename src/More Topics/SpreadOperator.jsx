@@ -10,7 +10,7 @@ const SpreadOperator = () => {
   );
 };
 
-//basic example of spread operator
+//Basic example of spread operator:
 const Example1 = () => {
   const num1 = [1, 2, 3, 4];
   const num2 = [5, 6, 7, 8, 9];
@@ -29,7 +29,7 @@ const Example1 = () => {
   const [item1, item2, ...restItems] = items;
   console.log("item1", item1);
   console.log("item2", item2);
-  console.log(restItems);
+  console.log("rest items",restItems);
 
   const fullName = ["Muazim", "Maqbool"];
   const data = [6655, ...fullName, "Cse", "B"];
@@ -42,7 +42,7 @@ const Example1 = () => {
   );
 };
 
-//example-2 explains how we use spread operator on objects
+//Example-2 explains how we use spread operator on objects:
 const Example2 = () => {
   //We can use the spread operator with objects too:
   // Example
@@ -68,8 +68,6 @@ export default SpreadOperator;
 -> Spread Operator/ React Bonus
     ->The JavaScript spread operator (...) allows us to quickly copy all or part of an existing 
       array or object into another array or object.
-    ->The spread operator is commonly used to make deep copies of JS objects
-
     Example
         const numbersOne = [1, 2, 3];
         const numbersTwo = [4, 5, 6];
