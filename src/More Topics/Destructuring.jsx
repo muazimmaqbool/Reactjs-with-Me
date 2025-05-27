@@ -4,10 +4,10 @@ import React from "react";
 const Destructuring = () => {
   return (
     <>
-      {/* <Example1 /> */}
+      <Example1 />
        {/* <Example2 /> */}
       {/* <ExampleObj /> */}
-      <ExampleFunc />
+      {/* <ExampleFunc /> */}
     </>
   );
 };
