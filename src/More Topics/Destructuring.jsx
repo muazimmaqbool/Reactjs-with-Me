@@ -4,15 +4,15 @@ import React from "react";
 const Destructuring = () => {
   return (
     <>
-      <Example1 />
+      {/* <Example1 /> */}
        {/* <Example2 /> */}
       {/* <ExampleObj /> */}
-      {/* <ExampleFunc /> */}
+      <ExampleFunc />
     </>
   );
 };
 
-/*Destructing Arrays */
+//Destructing Arrays:
 const Example1 = () => {
   const myArray = ["a", "b", "c"];
 
@@ -74,7 +74,7 @@ const Example2 = () => {
   );
 };
 
-// Destructuring On Objects
+// Destructuring On Objects:
 function ExampleObj() {
   const obj = { a: 1, b: 2 };
   const { a, b } = obj;
@@ -120,7 +120,7 @@ function ExampleObj() {
   );
 }
 
-//Destructuring on functions
+//Destructuring on functions:
 const ExampleFunc = () => {
   const product = {
     id: 235,
