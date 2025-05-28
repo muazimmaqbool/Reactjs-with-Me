@@ -136,15 +136,15 @@ function App() {
 
 
       {/*these are in REDUX folder */}
-      {/* <h1>inside App.jsx, c= {c}</h1> */}
-      {/* <HomeRedux/> */}
+      <h1>inside App.jsx, c= {c}</h1>
+      <HomeRedux/>
       {/*another basic redux example */}
       {/* <h2>Value of Switch in App.jsx={switchValue?"ON":"OFF"}</h2> */}
       {/* <ToggleSwitch/> */}
       
       {/*these are in More Topics folder */}
        {/* <SpreadOperator/>  */}
-      <Destructuring/>
+      {/* <Destructuring/> */}
 
 
       {/*React Lifecycle Methods */}
@@ -156,7 +156,8 @@ function App() {
       {/* <CodeSplitting/> */}
       {/* <Debounce/> */}
 
-      {/* Tanstack React Query */}
+      {/* ----------------------------------- Tanstack React Query ----------------------------------------- */}
+
       {/* <A_ReactQuery_Info/> */}
       {/* <B_ReactQuery_Ex1/> */}
       {/* <C_ReactQuery_Ex2/> */}

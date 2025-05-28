@@ -1,12 +1,12 @@
 What is Redux ?
  -> Redux is an open source javascript library for managing and centeralizing applications state.
  
- example say we have a variable c=20 in app.js and we are passing it to home.js and then from home.js to post.js
+ Example say we have a variable c=20 in app.js and we are passing it to home.js and then from home.js to post.js
  suppose if we had this variable c=20 in post.js we can send it to home.js or app.js and post is and inner component and we can't send data
  from inner to outer component in react , we can send data from outer to inner component in react thats the default flow of react
 
 Now Redux comes in
- Now if you store this c=20 somewhere else say store.js and now this c is available for all 3 components
+Now if you store this c=20 somewhere else say store.js and now this c is available for all 3 components
 
 Important Concepts of redux: 
   1) Store: a place where all variables and data is stored
