@@ -32,7 +32,7 @@ const Debounce = () => {
   so its running/called on every alphabet entered in the input field but we want it to run after a certain delay 
   until no change is made during that delay if any change is made then reset delay/time then again wait for 
   some time then run if no change is made function gets called this is debouncing already seen in javascript
-  we will be using setTime(putting getUserData() function inside setTimeout) to do this
+  we will be using setTime(putting getUserData() function inside setTimeout) to do this`
 */
 //Note: Here useEffect will be rendered on every entered aplhabet in the input field
   return (

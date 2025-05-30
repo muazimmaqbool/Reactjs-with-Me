@@ -54,6 +54,7 @@ import MainPage from "./TanstackReactQuery/Mini_Project/MainPage";
 import I_useQueriesHook from "./TanstackReactQuery/I_useQueriesHook";
 import J_useQueriesEx2 from "./TanstackReactQuery/J_useQueriesEx2";
 import K_useInfiniteQuery from "./TanstackReactQuery/K_useInfiniteQuery";
+import DebounceExampleTwo from "./Debounce/DebounceExampleTwo";
 
 
 function App() {
@@ -154,7 +155,8 @@ function App() {
 
       {/*used to explain debounce,code splitting and other things */}
       {/* <CodeSplitting/> */}
-      <Debounce/>
+      {/* <Debounce/> */}
+      <DebounceExampleTwo/>
 
       {/* ----------------------------------- Tanstack React Query ----------------------------------------- */}
 
