@@ -65,7 +65,7 @@ function App() {
   const [toggle, settoggle] = useState(true);
   return (
     <>
-      {/* <h1>Inside App.jsx</h1> */}
+      <h1>Inside App.jsx</h1>
         
       {/*used to explain JSX */}
       {/* <Jsxinfo/> */}
@@ -133,7 +133,7 @@ function App() {
       {/* <UseReducer/>  */}
       {/* <UseReducer2/> */}
 
-      <UseCallback/>
+      {/* <UseCallback/> */}
 
 
       {/*these are in REDUX folder */}
