@@ -133,7 +133,7 @@ function App() {
       {/* <UseReducer/>  */}
       {/* <UseReducer2/> */}
 
-      {/* <UseCallback/> */}
+      <UseCallback/>
 
 
       {/*these are in REDUX folder */}
@@ -156,7 +156,7 @@ function App() {
       {/*used to explain debounce,code splitting and other things */}
       {/* <CodeSplitting/> */}
       {/* <Debounce/> */}
-      <DebounceExampleTwo/>
+      {/* <DebounceExampleTwo/> */}
 
       {/* ----------------------------------- Tanstack React Query ----------------------------------------- */}
 
