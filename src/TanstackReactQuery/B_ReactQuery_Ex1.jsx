@@ -4,9 +4,9 @@ import { useQuery } from '@tanstack/react-query'
 //Checkout previous component first
 //Example One Tanstack React Query
 
-//api call
+//Api call
 const fetchUsers=async()=>{
-    //console.log("Fetching users...")
+    console.log("Fetching users...")
     const response=await fetch("https://jsonplaceholder.typicode.com/users")
     if(!response.ok){
         throw new Error("failed to fetch users")
@@ -17,7 +17,7 @@ const fetchUsers=async()=>{
 
 //Documentation of useQuery: https://tanstack.com/query/latest/docs/framework/react/reference/useQuery#usequery
 const B_ReactQuery_Ex1 = () => {
-    //we can change the name of data like this: data:users, also for others as well: isLoading:loading
+    //we can change the name of data like this: data:users, also for others as well, like: isLoading:loading
     //Note: queryKey is the unique key that you provide to each and every query so that we can identify it uniquely
     const {data,isLoading,error}=useQuery({
         queryKey:["users"], //used for re-fetching, caching, and sharing data between components.
@@ -25,7 +25,7 @@ const B_ReactQuery_Ex1 = () => {
     })
     if(isLoading) return <p>Loading...</p>;
     if(error) return <p>Error:{error.message}</p>
-    console.log("data fetched:",data)
+    //console.log("data fetched:",data)
   return (
     <div>
         <h2>Example One Of React Query</h2>
