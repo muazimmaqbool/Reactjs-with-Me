@@ -17,7 +17,7 @@ const D_Caching = () => {
   } = useQuery({
     queryKey: ["users"], //used for re-fetching, caching, and sharing data between components.
     queryFn: fetchUsers, //function typically used to call an API.
-    //staleTime: Infinity, //learn about it from below comments
+    staleTime: Infinity, //learn about it from below comments
   });
   /*
   ->React query uses caching via the queryKey, basically it uses this queryKey to create the cache for queryKey which the cache
