@@ -31,7 +31,7 @@ const E_Caching_2 = () => {
     queryFn: fetchUsers, //function typically used to call an API.
     
     //1-> staleTime (Avoid Unnecessary Refetching - Controls how long data is considered "fresh" before React Query refetches it.)
-   //staleTime: Infinity, //React query will never refetch the data
+   staleTime: Infinity, //React query will never refetch the data
     //staleTime: 5000, // Data stays fresh for 5 seconds, after 5 seconds if component remounts data is fetched in background
     //staleTime: 5 * 60 * 1000 // 5 minutes : now, within 5 minutes, React Query won't refetch if the same query is used.
 
