@@ -6,7 +6,7 @@ import { fetchUsers } from './a_apiCalls';
 /*
 ->TanStack React Query automatically caches API responses to improve performance and reduce unnecessary network requests
 
-Note: Caching is the process of storing copies of files in a cache, or temporary storage location, so that they can be accessed more quickly
+ Note: Caching is the process of storing copies of files in a cache, or temporary storage location, so that they can be accessed more quickly
 */
 
 const D_Caching = () => {
@@ -26,7 +26,7 @@ const D_Caching = () => {
 
   /*
   Here to see caching behavior, i have added in Button in App.jsx which is going to toggle this component basically unmount and remount
-  this component. which is going to recreate every single query
+  this component. which is going to recreate it every single query
   What's going to happen:
   ->When you mount the component the loading is happening and data is fetched and if you refresh the component/page the loading is going to
     happen again.
@@ -38,7 +38,7 @@ const D_Caching = () => {
     cached data, but react query will make the request even though its showing you the cached data, it will make a request in the
     backgound and then update your data without being visually obvious and you can see this when you mount this component you
     can see "fetching users..." in console
-    ->and this behavior react query does by default it will you show you the cached data if it has it and then its going to make a
+    ->And this behavior react query does by default it will you show you the cached data if it has it and then its going to make a
       API request in backgound and then updates your data
       ->And you can remove this behavior by passing this to useQuery : staleTime:Infinity, this will tell react query that it should never
          consider its data stale, which means the data is still valid and if you do it react query is not going to refetch the data even
