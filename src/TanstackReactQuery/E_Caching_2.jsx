@@ -18,10 +18,9 @@ import { fetchUsers } from './a_apiCalls';
     React Query caches data but follows a lifecycle:
     Phase	                               Behavior
     Fresh	                 Data is served instantly from the cache. No API request.
-    Stale (default)	         Data is shown from cache, but a background refetch happens.
+    Stale (default)	       Data is shown from cache, but a background refetch happens.
     Inactive	             Data is removed from memory after some time (garbage collected).
-    Expired	                 Data is fully deleted from the cache.
-
+    Expired	               Data is fully deleted from the cache.
 */
 
 //Note:first see previous code D_Caching.jsx (important)
@@ -32,7 +31,7 @@ const E_Caching_2 = () => {
     queryFn: fetchUsers, //function typically used to call an API.
     
     //1-> staleTime (Avoid Unnecessary Refetching - Controls how long data is considered "fresh" before React Query refetches it.)
-   // staleTime: Infinity, //React query will never refetch the data
+   //staleTime: Infinity, //React query will never refetch the data
     //staleTime: 5000, // Data stays fresh for 5 seconds, after 5 seconds if component remounts data is fetched in background
     //staleTime: 5 * 60 * 1000 // 5 minutes : now, within 5 minutes, React Query won't refetch if the same query is used.
 
@@ -41,7 +40,7 @@ const E_Caching_2 = () => {
     //refetchOnWindowFocus: false, //default is true (no when you change the tab/window it won't fetch again)
 
     //B:On Interval (refetchInterval)
-    //refetchInterval: 10000 // 10 seconds (fetches data in every 10 seconds)
+    //refetchInterval: 5000 // 5 seconds (fetches data in every 5 seconds)
   });
    //C:Manually Triggering Refetch (refetch() forces a fresh API request)
     /*const { refetch } = useQuery({ queryKey: ["todos"], queryFn: fetchTodos });
