@@ -55,6 +55,7 @@ import I_useQueriesHook from "./TanstackReactQuery/I_useQueriesHook";
 import J_useQueriesEx2 from "./TanstackReactQuery/J_useQueriesEx2";
 import K_useInfiniteQuery from "./TanstackReactQuery/K_useInfiniteQuery";
 import DebounceExampleTwo from "./Debounce/DebounceExampleTwo";
+import ComponentReRender from "./Components/ComponentReRender";
 
 
 function App() {
@@ -158,6 +159,9 @@ function App() {
       {/* <Debounce/> */}
       {/* <DebounceExampleTwo/> */}
 
+      {/* React Component Rerendering and optimization */}
+      <ComponentReRender/>
+
       {/* ----------------------------------- Tanstack React Query ----------------------------------------- */}
 
       {/* <A_ReactQuery_Info/> */}
@@ -174,7 +178,7 @@ function App() {
       Note: make sure above button with text "Toggle Caching" is not commented
       {/* {toggle ? <D_Caching/> : <E_Caching_2/>} */}
       
-      <F_MultipleQueries/>
+      {/* <F_MultipleQueries/> */}
       {/* <G_Pass_ID/> */}
       {/* <H_Mutations/> */}
 
