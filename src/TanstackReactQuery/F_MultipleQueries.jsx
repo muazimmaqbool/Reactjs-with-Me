@@ -34,7 +34,7 @@ const F_MultipleQueries = () => {
                 <li key={user.id}>#{user.id} : {user.name}</li>
             ))}
         </ul>
-        <p>********************</p>
+        <p>*************************</p>
         <h4>Todos Fetched:</h4>
         <ul>
             {todos.slice(0,10).map((item)=>(
