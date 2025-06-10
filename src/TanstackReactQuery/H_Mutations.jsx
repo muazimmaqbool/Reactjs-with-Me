@@ -23,7 +23,7 @@ const H_Mutations = () => {
   const mutation = useMutation({
     mutationFn: createUser,
     onSuccess: (res) => {
-      queryClient.invalidateQueries(["users"]);
+      queryClient.invalidateQueries(["users"]);//refetch the users data after mutation
       console.log("New user added successfully:", res);
       setnewUser(res);
     },
