@@ -4,18 +4,19 @@ import { fetchUsersID } from "./a_apiCalls";
 
 //Passing id to api via react-query
 const G_Pass_ID = () => {
-    const [userId, setUserId] = useState(); //For user input
-    const [fetchId, setFetchId] = useState(null); // Store ID when button is clicked
+  const [userId, setUserId] = useState(); //For user input
+  const [fetchId, setFetchId] = useState(null); // Store ID when button is clicked
   const {
     data: userInfo,
     isLoading,
     error,
-    refetch
+    refetch,
   } = useQuery({
     queryKey: ["user", fetchId],
     queryFn: () => fetchUsersID(fetchId),
     enabled: !!fetchId, // Prevent auto-fetch when no ID is provided
   });
+ // console.log("userInfo:", userInfo);
   /*
   ->Note: !! is used to convert a value into boolean(true/false)
   (enabled: !!fetchId  // Converts fetchId into true or false)
@@ -24,30 +25,33 @@ const G_Pass_ID = () => {
   */
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error:{error.message}</p>;
- 
-  const handleFetch=()=>{
+
+  const handleFetch = () => {
     setFetchId(userId); // Trigger fetching only when button is clicked
-    refetch()
-  }
+    refetch();
+  };
 
   /*
   ->Here the problem is if you pass directly userId to query it will run everytime you type any number in input field 
   (i.e:  React Query automatically refetches data when the queryKey changes.)
-   so what we want we want to make the API call when button is clicked so that's why another state variable is added
+   so, we want to make the API call when button is clicked so that's why another state variable is added
   */
   return (
     <div>
       <h4>Fetching data by ID</h4>
+      <p>Enter id from 1 to 10</p>
       <input
         type="number"
         placeholder="Enter User ID"
         value={userId}
         onChange={(e) => setUserId(e.target.value)}
       />
-      <button onClick={handleFetch} disabled={!userId}>Fetch User Info</button>
+      <button onClick={handleFetch} disabled={!userId}>
+        Fetch User Info
+      </button>
       {userInfo && (
         <div>
-         <p>User Info of {fetchId}:</p>
+          <p>User Info of {fetchId}:</p>
           <p>Name: {userInfo.name}</p>
           <p>Email: {userInfo.email}</p>
           <p>Address: {userInfo.address.street}</p>
