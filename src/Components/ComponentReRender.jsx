@@ -1,12 +1,39 @@
-import React from 'react'
+import React, { memo, useState } from 'react'
 
+//Read Documentation Below ⬇️
 const ComponentReRender = () => {
   return (
     <div>
         <h3> When Does a Component Re-render?</h3>
+        <Parent/>
     </div>
   )
 }
+
+const Parent=()=>{
+  const [count, setcount] = useState(0);
+  const [item, setItem] = useState("Laptop");
+  return(
+    <div>
+      <button onClick={()=>setcount(count+1)}>Update Count</button>
+      <p>Count:{count}</p>
+      <Child item={item}/>
+      <button onClick={()=>setItem("Mobile")}>Change Item</button>
+    </div>
+  )
+}
+
+//const Child = ({item})=>{ //this way child will re-render when count in parent component changes
+const Child=memo(({item})=>{ //now it will only re-render when the item prop changes
+  console.log("Child component re-rendered");
+  return(
+    <div>
+      <p>Item in child component: {item}</p>
+    </div>
+  )
+})
+
+
 export default ComponentReRender
 /*
 🔁 When Does a Component Re-render?
