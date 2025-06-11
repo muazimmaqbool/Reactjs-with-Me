@@ -26,4 +26,28 @@ export default ComponentReRender
     Context value changes	       ✅ Yes	                      If used in the component
     Parent re-renders	           ✅ (usually)	              Unless memoized
 
+⚙️ How to Avoid Unnecessary Re-renders
+    1️⃣React.memo (Functional Components):
+      Wrap your component to skip re-rendering if props haven’t changed:
+      const MyComponent = React.memo((props) => {
+        return <div>{props.value}</div>;
+      });
+
+    2️⃣useMemo and useCallback:
+      Memoize expensive calculations or stable functions
+      const computedValue = useMemo(() => computeSomething(a, b), [a, b]);
+      const handleClick = useCallback(() => doSomething(), []); 
+
+    4️⃣Avoid changing object/array references unnecessarily:
+      const obj = { a: 1 }; // new object every render ⇒ causes prop change
+
+    5️⃣Split components:
+      Smaller components that receive only relevant props help reduce the re-render scope.
+
+    6️⃣useSelector optimization (Redux)
+      Avoid returning entire objects from useSelector unless memoized.
+
+    7️⃣PureComponent (Class)
+      Automatically implements shallow comparison for props and state.
+
 */
