@@ -10,12 +10,12 @@ import styles from "./projectStyles.module.css"
   -Now run this command: npx json-server (location of json file)
                  here: npx json-server src\TanstackReactQuery\Mini_Project\API\data.json
                  (Note if any error occur remove the tags array from data.json and when it runs past it back)
-                 - it will create two endpoints like this:  Endpoints:
+                 -it will create two endpoints like this:  Endpoints:
                                                             http://localhost:3000/posts
                                                             http://localhost:3000/tags
                                         - hold and click on these links they will open in browser
 
-  -And this json server not only supports the GET request it also provides us the POST, PUT, PATCH and DELETE requests as well.
+->And this json server not only supports the GET request it also provides us the POST, PUT, PATCH and DELETE requests as well.
 
 ->Now post List component is added which will contain posts
 
