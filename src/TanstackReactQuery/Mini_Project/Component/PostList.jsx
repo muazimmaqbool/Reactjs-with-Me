@@ -33,8 +33,8 @@ const PostList = () => {
       prev: null, //means no previous page, if prev:1 //then there is a previous page
   */
 
-      //?note: see infinite scrolling: https://tanstack.com/query/latest/docs/framework/react/reference/useInfiniteQuery#useinfinitequery
-      //? also explore useQueries, used to fetch multiple queries: https://tanstack.com/query/latest/docs/framework/react/reference/useQueries#usequeries
+  //? see infinite scrolling: https://tanstack.com/query/latest/docs/framework/react/reference/useInfiniteQuery#useinfinitequery
+  //? also explore useQueries, used to fetch multiple queries: https://tanstack.com/query/latest/docs/framework/react/reference/useQueries#usequeries
 
   //see more options from docs and from files of TanstackReactQuery folder
 
