@@ -4,7 +4,7 @@ import { fetchUsersID } from './a_apiCalls'
 /*
 ->useQueries is a powerful hook from TanStack Query that allows you to run multiple queries in parallel
 ->The useQueries hook can also be used to fetch a variable number of queries
-  example: fetching multiple user via id
+  example: fetching multiple users via id
 */
 const I_useQueriesHook = () => {
   const userIds=[1,2,3,4,5]
