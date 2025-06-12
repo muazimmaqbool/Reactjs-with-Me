@@ -2,8 +2,7 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 import React from "react";
 
 /*
-->The useInfiniteQuery hook is used for pagination where data is loaded 
-  incrementally as the user scrolls or clicks "Load More."
+->The useInfiniteQuery hook is used for pagination where data is loaded incrementally as the user scrolls or clicks "Load More" button.
 
 docs:https://tanstack.com/query/latest/docs/framework/react/reference/useInfiniteQuery#useinfinitequery
 */
@@ -15,9 +14,9 @@ const fetchPosts = async ({ page = 1 }) => {
   return res.json();
 };
 const K_useInfiniteQuery = () => {
+  
    //fetchNextPage(): fetches the data of next page
    //hasNextPage: disables the button when no more data is available
-
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
     useInfiniteQuery({
       queryKey: ["posts"],
@@ -37,7 +36,7 @@ const K_useInfiniteQuery = () => {
         data.pages.map((page, i) => (
           <div key={i}>
             {page.map((post) => (
-              <p key={post.id}>{post.title}</p>
+              <p key={post.id}>#{post.id} : {post.title}</p>
             ))}
           </div>
         ))}
