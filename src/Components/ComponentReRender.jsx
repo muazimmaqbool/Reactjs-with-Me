@@ -124,4 +124,13 @@ export default ComponentReRender
             return items.filter(item => item.active);
           }, [items]);
 
+
+      🔄 In Short:
+        Situation	                                              Use
+        ----------------------------------------------------|--------------
+        Memoizing expensive calculations or values	           useMemo
+        Memoizing functions to avoid child re-renders	         useCallback
+        Returning same object/array reference across renders	 useMemo
+        Creating stable event handlers inside component	       useCallback
+
 */
