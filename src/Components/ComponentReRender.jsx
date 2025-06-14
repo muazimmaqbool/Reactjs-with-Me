@@ -139,4 +139,8 @@ export default ComponentReRender
           ------------|---------------------|-----------------------------------
           useCallback	  ✅ Functions	          Prevents function re-creation
           useMemo	      ✅ Values/Results	    Prevents expensive recalculation
+
+      ❗Don't Overuse:
+          Only use useMemo and useCallback when performance issues are real. 
+          Overusing them can make your code harder to read without meaningful benefit.
 */
