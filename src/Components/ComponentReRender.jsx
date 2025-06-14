@@ -126,11 +126,17 @@ export default ComponentReRender
 
 
       🔄 In Short:
-        Situation	                                              Use
-        ----------------------------------------------------|--------------
-        Memoizing expensive calculations or values	           useMemo
-        Memoizing functions to avoid child re-renders	         useCallback
-        Returning same object/array reference across renders	 useMemo
-        Creating stable event handlers inside component	       useCallback
+          Situation	                                              Use
+          ----------------------------------------------------|--------------
+          Memoizing expensive calculations or values	           useMemo
+          Memoizing functions to avoid child re-renders	         useCallback
+          Returning same object/array reference across renders	 useMemo
+          Creating stable event handlers inside component	       useCallback
 
+
+      🧠 The Core Difference:
+          Hook	          What it memoizes	          Used for
+          ------------|---------------------|-----------------------------------
+          useCallback	  ✅ Functions	          Prevents function re-creation
+          useMemo	      ✅ Values/Results	    Prevents expensive recalculation
 */
