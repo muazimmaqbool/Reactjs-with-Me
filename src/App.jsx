@@ -160,7 +160,7 @@ function App() {
       {/* <DebounceExampleTwo/> */}
 
       {/* React Component Rerendering and optimization */}
-      {/* <ComponentReRender/> */}
+      <ComponentReRender/>
 
       {/* ----------------------------------- Tanstack React Query ----------------------------------------- */}
 
@@ -187,7 +187,7 @@ function App() {
 
       {/* <I_useQueriesHook/> */}
       {/* <J_useQueriesEx2/> */}
-      <K_useInfiniteQuery/>
+      {/* <K_useInfiniteQuery/> */}
     </>
   );
 }

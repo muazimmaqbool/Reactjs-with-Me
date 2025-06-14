@@ -77,4 +77,14 @@ export default ComponentReRender
     7️⃣PureComponent (Class)
       Automatically implements shallow comparison for props and state.
 
+    🧠 Summary:
+    --------------------
+      Change Type	           Triggers Render?	       Can Be Optimized?
+      --------------------|---------------------|-----------------------------
+      State in component	     ✅ Yes	              ❌ Only if you avoid setting it
+      Props from parent	       ✅ Yes	              ✅ With React.memo
+      Parent renders	         ✅ Yes	              ✅ With splitting and memo
+      Context changes	         ✅ Yes	              ✅ With React.memo, selective context
+      Redux/global store	     ✅ Yes	              ✅ With selector memoization
+
 */
