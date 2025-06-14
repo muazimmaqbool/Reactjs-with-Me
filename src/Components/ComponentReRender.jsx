@@ -1,11 +1,11 @@
-import React, { memo, useState } from 'react'
+import React, { memo, useCallback, useMemo, useState } from 'react'
 
 //Read Documentation Below ⬇️
 const ComponentReRender = () => {
   return (
     <div>
         <h3> When Does a Component Re-render?</h3>
-        <Parent/>
+        {/* <Parent/> */}
     </div>
   )
 }
@@ -143,4 +143,6 @@ export default ComponentReRender
       ❗Don't Overuse:
           Only use useMemo and useCallback when performance issues are real. 
           Overusing them can make your code harder to read without meaningful benefit.
+
+      🚀 Note: Example of both useMemo and useCallback are studied before
 */
