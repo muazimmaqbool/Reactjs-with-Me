@@ -87,4 +87,41 @@ export default ComponentReRender
       Context changes	         ✅ Yes	              ✅ With React.memo, selective context
       Redux/global store	     ✅ Yes	              ✅ With selector memoization
 
+  ➡️useMemo and useCallback:
+     - these hooks help optimize performance by memoizing values and functions, preventing unnecessary re-renders.
+    
+    1️⃣When to Use useCallback:
+       Use useCallback when you're passing functions as props to child components and want to avoid unnecessary re-renders 
+       due to function re-creation.
+       🔁 Problem Without useCallback:
+          🟢Every render creates a new function reference, causing memoized children to re-render.
+            const Parent = () => {
+              const handleClick = () => console.log("Clicked");
+
+              return <Child onClick={handleClick} />;
+            };
+
+            const Child = React.memo(({ onClick }) => {
+              console.log("Child rendered");
+              return <button onClick={onClick}>Click</button>;
+            });
+          🟢Even with React.memo, Child re-renders because onClick is a new function each time.
+
+        ✅ Solution With useCallback:
+            const handleClick = useCallback(() => {
+              console.log("Clicked");
+            }, []);
+
+
+    2️⃣When to Use useMemo:
+       Use useMemo when you have expensive calculations or object/array creation that doesn't need to be recomputed on every render.
+      🔁 Problem Without useMemo:
+          const filteredItems = items.filter(item => item.active); // runs every render
+          🟢If items is large or the filter is expensive, this is inefficient.
+
+      ✅ Solution With useMemo:
+          const filteredItems = useMemo(() => {
+            return items.filter(item => item.active);
+          }, [items]);
+
 */
