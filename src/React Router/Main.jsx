@@ -16,11 +16,13 @@ import React from 'react'
         Without a routing system, all of these would have to be handled manually with conditional rendering.
         React Router handles this for you, based on the URL.
 
+    ->To install enter this command in terminal: npm install react-router-dom
+
 */
-const Home = () => {
+const Main = () => {
   return (
-    <div>Home</div>
+    <div>Main</div>
   )
 }
 
-export default Home
+export default Main
