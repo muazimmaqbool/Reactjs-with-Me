@@ -1,4 +1,5 @@
 import React from 'react'
+import NavBar from './NavBar'
 
 /*
 ->React Router:
@@ -21,7 +22,9 @@ import React from 'react'
 */
 const Main = () => {
   return (
-    <div>Main</div>
+    <div>
+      <NavBar/>
+    </div>
   )
 }
 

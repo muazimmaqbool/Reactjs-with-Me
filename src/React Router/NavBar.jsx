@@ -1,9 +1,10 @@
 import React from 'react'
+import logo from "../logo.png"
 
 const NavBar = () => {
   return (
     <div>
-      <img src='' alt='navbar image'/>
+      <img style={{width:70, height:70}} src={logo} alt='navbar image'/>
       <ul>
         <li>Home</li>
         <li>Products</li>
