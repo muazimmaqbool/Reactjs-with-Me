@@ -4,9 +4,9 @@ import styles from "./reactRouterStyle.module.css"
 
 const NavBar = () => {
   return (
-    <div>
+    <div className={styles.navbar}>
       <img style={{width:70, height:70}} src={logo} alt='navbar image'/>
-      <ul>
+      <ul className={styles.list}>
         <li>Home</li>
         <li>Products</li>
         <li>About</li>
