@@ -21,3 +21,12 @@
     color: green;
     text-decoration: underline;
 }
+.navbar button{
+    background: black;
+    color: #ffffff;
+    padding: 12px 5px;
+    border-radius: 30px;
+    font-size: 1rem;
+     border: none;
+     outline: 0;
+}
