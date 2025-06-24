@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from "../logo.png"
+import styles from "./reactRouterStyle.module.css"
 
 const NavBar = () => {
   return (
