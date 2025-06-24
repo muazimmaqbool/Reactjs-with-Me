@@ -57,6 +57,7 @@ import K_useInfiniteQuery from "./TanstackReactQuery/K_useInfiniteQuery";
 import DebounceExampleTwo from "./Debounce/DebounceExampleTwo";
 import ComponentReRender from "./Components/ComponentReRender";
 import Main from "./React Router/Main";
+import { BrowserRouter } from "react-router-dom";
 
 
 function App() {
@@ -192,7 +193,9 @@ function App() {
 
 
       {/* React Router In Advance */}
-      <Main/>
+      <BrowserRouter>
+        <Main/>
+      </BrowserRouter>
       
     </>
   );
