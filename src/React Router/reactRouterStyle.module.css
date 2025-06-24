@@ -1,0 +1,23 @@
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 10px;
+    background-color: #00000044;
+}
+.list{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #000000DE;
+}
+.list li{
+ transition: 0.5s ease-in-out;
+}
+.list li:hover{
+    color: green;
+    text-decoration: underline;
+}
