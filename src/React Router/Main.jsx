@@ -41,6 +41,15 @@ const Main = () => {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
+      {/*
+      ➡️New way of implementing react router using Router Provider:
+      ->The above method is the most common way to set up routing in a React application.
+      ->You can also use the newer method of implementing react router using Router Provider
+      ->This method is more advanced and allows for more control over the routing process.
+        Steps:
+          1)create a new folder called "layout"
+          2)inside the layout folder, create a new file called "RootLayout.jsx"
+      */}
     </div>
   );
 };
