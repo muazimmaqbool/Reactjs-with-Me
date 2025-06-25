@@ -193,9 +193,9 @@ function App() {
 
 
       {/* React Router In Advance */}
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
         <Main/>
-      </BrowserRouter>
+      {/* </BrowserRouter> */}
       
     </>
   );
