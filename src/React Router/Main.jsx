@@ -1,10 +1,11 @@
-import React from 'react'
-import NavBar from './NavBar'
-import Home from "../React Router/Pages/Home"
-import Products from "../React Router/Pages/Products"
-import {Routes,Route} from "react-router-dom"
-import About from '../Components/Routng Pages/About'
-import Contact from '../Components/Routng Pages/Contact'
+import React from "react";
+import NavBar from "./NavBar";
+import Home from "../React Router/Pages/Home";
+import Products from "../React Router/Pages/Products";
+import { Routes, Route } from "react-router-dom";
+import About from "../Components/Routng Pages/About";
+import Contact from "../Components/Routng Pages/Contact";
+import styles from "./reactRouterStyle.module.css";
 /*
 ->React Router:
     ->What is React Router?
@@ -31,15 +32,17 @@ import Contact from '../Components/Routng Pages/Contact'
 const Main = () => {
   return (
     <div>
-      <NavBar/>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path="/products" element={<Products/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-      </Routes>
+      <NavBar />
+      <div className={styles.container}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;
