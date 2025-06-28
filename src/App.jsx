@@ -68,7 +68,7 @@ function App() {
   const [toggle, settoggle] = useState(true);
   return (
     <>
-      <h1>Inside App.jsx</h1>
+      {/* <h1>Inside App.jsx</h1> */}
         
       {/*used to explain JSX */}
       {/* <Jsxinfo/> */}
