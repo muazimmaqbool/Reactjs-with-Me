@@ -45,3 +45,8 @@
      outline: 0;
      cursor: pointer;
 }
+.contactBtns{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
