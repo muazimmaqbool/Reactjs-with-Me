@@ -78,11 +78,15 @@ const Main = () => {
           5)Remove BrowserRouter which is wrapping this Main.jsx file in App.jsx
           6)Use this 'router' inside return
 
-      🟢 Note: This new way will only work if your react router package is higher than 6.4
+      🟢 Note: This new way will only work if your react router package is higher than
       */}
       <RouterProvider router={router} />
     </div>
   );
 };
+/*
+➡️ See useNavigateHook in NavBar.jsx file
+
+*/
 
 export default Main;

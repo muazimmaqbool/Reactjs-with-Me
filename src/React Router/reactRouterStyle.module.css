@@ -21,14 +21,20 @@
     font-size: 1.1rem;
     font-weight: 500;
     color: #000000DE;
+    
 }
 .list li{
  transition: 0.5s ease-in-out;
 }
-a.active{
+
+.list li:hover{
+    color: #000000;
+    transform: scale(1.1);
+}
+/* a.active{
     color: green;
     text-decoration: underline;
-}
+} */
 .navbar button{
     background: black;
     color: #ffffff;
