@@ -26,5 +26,15 @@ const NavBar = () => {
     </div>
   )
 }
+/*
+➡️ NavLink vs Link:
+    -> After using NavLink, you will see difference interms of functonality.
+    -> Important:
+        - If you go to inspect > Elements > Inside div with class list you will see anchor 'a' tags
+        - If you using Link or NavLink, they both are getting converted to 'a' tags
+        - Now: if you can if any route is active, you can see that, that 'a' tag have a className=
+
+
+*/
 
 export default NavBar
