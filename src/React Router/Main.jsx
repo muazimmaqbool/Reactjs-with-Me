@@ -7,6 +7,8 @@ import About from "../Components/Routng Pages/About";
 import Contact from "../Components/Routng Pages/Contact";
 import RootLayout from "./Layout/RootLayout";
 import ContactLayout from "./Layout/ContactLayout";
+import Info from "./Pages/Info";
+import Form from "./Pages/Form";
 /*
 ->React Router:
     ->What is React Router?
@@ -45,7 +47,8 @@ const Main = () => {
       <Route path="about" element={<About />} />
       {/* <Route path="contact" element={<Contact />} /> */}
       <Route path="contact" element={<ContactLayout />}>
-
+        <Route path="info" element={<Info/>}/>
+        <Route path="form" element={<Form/>}/>
       </Route>
     </Route>
   ))
