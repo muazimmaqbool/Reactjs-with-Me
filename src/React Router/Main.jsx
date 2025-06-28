@@ -6,6 +6,7 @@ import { Routes, Route, createBrowserRouter, createRoutesFromElements, RouterPro
 import About from "../Components/Routng Pages/About";
 import Contact from "../Components/Routng Pages/Contact";
 import RootLayout from "./Layout/RootLayout";
+import ContactLayout from "./Layout/ContactLayout";
 /*
 ->React Router:
     ->What is React Router?
@@ -42,7 +43,10 @@ const Main = () => {
       <Route index element={<Home />} />
       <Route path="products" element={<Products />} />
       <Route path="about" element={<About />} />
-      <Route path="contact" element={<Contact />} />
+      {/* <Route path="contact" element={<Contact />} /> */}
+      <Route path="contact" element={<ContactLayout />}>
+
+      </Route>
     </Route>
   ))
   return (
@@ -87,6 +91,17 @@ const Main = () => {
 /*
 ➡️ See useNavigateHook in NavBar.jsx file
 
+➡️ Nested Routes:
+    ->React Router allows you to create nested routes, which means you can have routes within routes.
+    ->This is useful for creating complex layouts where certain components are shared across multiple routes.
+    ->For example, you can have a main layout with a sidebar and a header, and then have different content for each route.
+   To understand nested routes, we have adding another files called ContactLayout.jsx in layout folder:
+    ->Inside this file, we have added a Contact component and an Outlet component.
+    ->And Here we will replace contact route with this:
+          <Route path="contact" element={<ContactLayout />}>
+            ...mention differen router here
+          </Route>
+          see above
 */
 
 export default Main;
