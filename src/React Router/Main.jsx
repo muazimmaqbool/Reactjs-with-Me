@@ -9,6 +9,7 @@ import RootLayout from "./Layout/RootLayout";
 import ContactLayout from "./Layout/ContactLayout";
 import Info from "./Pages/Info";
 import Form from "./Pages/Form";
+import NotFound from "./Pages/NotFound";
 /*
 ->React Router:
     ->What is React Router?
@@ -46,10 +47,13 @@ const Main = () => {
       <Route path="products" element={<Products />} />
       <Route path="about" element={<About />} />
       {/* <Route path="contact" element={<Contact />} /> */}
+      {/* Nested Routes: */}
       <Route path="contact" element={<ContactLayout />}>
         <Route path="info" element={<Info/>}/>
         <Route path="form" element={<Form/>}/>
       </Route>
+      {/*This will be shown when no path matches */}
+      <Route path="*" element={<NotFound/>} />
     </Route>
   ))
   return (
