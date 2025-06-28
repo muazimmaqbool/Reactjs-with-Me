@@ -25,8 +25,10 @@ const NavBar = () => {
       </ul>
       {/* when this button is clicked it will redirect us to a about page using useNavigate Hook */}
       {/* <button onClick={()=>navigate("/about")}>Get Started</button> */}
-                       {/* useNavigate with */}
-      <button onClick={()=>navigate("/about")}>Get Started</button>
+                       {/* useNavigate with reaplce:true*/}
+      <button onClick={()=>navigate("/about",{replace:true})}>Get Started</button>
+      {/* replace:true: with this object will do is that it will reset the history, so if you go from about from contact page via
+      useNavigate then if you click on back button it will go to home page instead of about page if replace:true */}
     </div>
   )
 }
