@@ -24,6 +24,8 @@ const NavBar = () => {
 
       </ul>
       {/* when this button is clicked it will redirect us to a about page using useNavigate Hook */}
+      {/* <button onClick={()=>navigate("/about")}>Get Started</button> */}
+                       {/* useNavigate with */}
       <button onClick={()=>navigate("/about")}>Get Started</button>
     </div>
   )
@@ -42,6 +44,11 @@ const NavBar = () => {
     -> useNavigate is a hook that allows you to programmatically navigate to different routes in your
     -> like redirecting users to a different page after a form submission or a button click.
     -> It's also used to pass state or parameters between routes.
+
+➡️ History of Stack:
+    ->When you use useNavigate, it adds a new entry to the browser's history stack.
+    -> This means that when you navigate to a new route, the previous route is still accessible via the back button of the browser.
+    -> This is useful for maintaining a smooth user experience, as users can easily navigate back to the previous page.
  */
 
 export default NavBar
