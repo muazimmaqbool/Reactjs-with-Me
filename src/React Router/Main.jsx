@@ -52,7 +52,7 @@ const Main = () => {
       <Route path="contact" element={<ContactLayout />}>
         <Route path="info" element={<Info/>}/>
         <Route path="form" element={<Form/>}/>
-        {/* passing route parameters */}
+        {/* passing route parameters, this id is basically a paramters, */}
         <Route path=":id" element={<Support />} />
       </Route>
       {/*This will be shown when no path matches */}
@@ -118,6 +118,10 @@ const Main = () => {
     In short these are tha values that are passed to the page url
     They can used to change the content of the page based on the value passed.
     ->You can access these parameters using the useParams hook.
+    Examle: <Route path=":id" element={<Support />} />
+    now in the url if i type: http://localhost:3000/contact/123 or /abc .. it will render Support component.
+   this /123 or /abc is the route parameter, and you can access it in the Support component using useParams hook.
+    ->You can also pass multiple parameters in the same route, like /products/:id/:category
 */
 
 export default Main;
