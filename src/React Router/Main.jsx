@@ -10,6 +10,7 @@ import ContactLayout from "./Layout/ContactLayout";
 import Info from "./Pages/Info";
 import Form from "./Pages/Form";
 import NotFound from "./Pages/NotFound";
+import Support from "./Pages/Support";
 /*
 ->React Router:
     ->What is React Router?
@@ -51,6 +52,8 @@ const Main = () => {
       <Route path="contact" element={<ContactLayout />}>
         <Route path="info" element={<Info/>}/>
         <Route path="form" element={<Form/>}/>
+        {/* passing route parameters */}
+        <Route path=":id" element={<Support />} />
       </Route>
       {/*This will be shown when no path matches */}
       <Route path="*" element={<NotFound/>} />
@@ -109,6 +112,12 @@ const Main = () => {
             ...mention differen router here
           </Route>
           see above
+
+➡️ Route Paramters: These are the values that are dynamically passed to the route.
+    ->For example, if you have a route like /products/:id, the :id
+    In short these are tha values that are passed to the page url
+    They can used to change the content of the page based on the value passed.
+    ->You can access these parameters using the useParams hook.
 */
 
 export default Main;
