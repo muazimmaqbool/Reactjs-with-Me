@@ -48,7 +48,7 @@ const NavBar = () => {
     -> It's also used to pass state or parameters between routes.
 
 ➡️ History of Stack:
-    ->When you use useNavigate, it adds a new entry to the browser's history stack.
+    -> When you use useNavigate, it adds a new entry to the browser's history stack.
     -> This means that when you navigate to a new route, the previous route is still accessible via the back button of the browser.
     -> This is useful for maintaining a smooth user experience, as users can easily navigate back to the previous page.
  */
