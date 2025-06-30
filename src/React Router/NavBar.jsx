@@ -39,7 +39,7 @@ const NavBar = () => {
         - If you go to inspect > Elements > Inside div with class list you will see anchor 'a' tags
         - If you using Link or NavLink, they both are getting converted to 'a' tags
         - Now: if you can if any route is active, you can see that, that 'a' tag have a className of 'active'
-        - Noe let's add something something to this actuve className
+        - Noe let's add something to this active className
         - So, in reactRouterStyle.module.css file, you can see styling of active className, i.e active class inside a tag i.e a.active
 
 ➡️ useNavigate Hook:

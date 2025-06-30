@@ -105,7 +105,7 @@ const Main = () => {
     ->React Router allows you to create nested routes, which means you can have routes within routes.
     ->This is useful for creating complex layouts where certain components are shared across multiple routes.
     ->For example, you can have a main layout with a sidebar and a header, and then have different content for each route.
-   To understand nested routes, we have adding another files called ContactLayout.jsx in layout folder:
+   To understand nested routes, we have added more files inside ContactLayout.jsx in layout folder:
     ->Inside this file, we have added a Contact component and an Outlet component.
     ->And Here we will replace contact route with this:
           <Route path="contact" element={<ContactLayout />}>
@@ -116,7 +116,7 @@ const Main = () => {
 ➡️ Route Paramters: These are the values that are dynamically passed to the route.
     ->For example, if you have a route like /products/:id, the :id
     In short these are tha values that are passed to the page url
-    They can used to change the content of the page based on the value passed.
+    They can be used to change the content of the page based on the value passed.
     ->You can access these parameters using the useParams hook.
     Examle: <Route path=":id" element={<Support />} />
     now in the url if i type: http://localhost:3000/contact/123 or /abc .. it will render Support component.
