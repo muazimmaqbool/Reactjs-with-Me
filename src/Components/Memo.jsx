@@ -81,7 +81,7 @@ const Todo = ({ todos }) => {
 
 //or use this
 const AddTask = memo(({ myTasks }) => {
-  console.log("Rendering AddTask...");
+  console.log("Adding Task...");
   return (
     <>
       <h3>My Tasks</h3>
