@@ -7,10 +7,10 @@ const UseRef = () => {
       {/* <Example1/> */}
 
       {/*Accessing DOM Elements */}
-      <Example2/> 
+      {/* <Example2/>  */}
 
       {/*Tracking State Changes: track of previous state values */}
-      {/* <Example3/>  */}
+      <Example3/> 
     </>
   )
 }
