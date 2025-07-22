@@ -4,10 +4,10 @@ import React, { useEffect, useState,useRef } from 'react'
 const UseRef = () => {
   return (
     <>
-      {/* <Example1/> */}
+      <Example1/>
 
       {/*Accessing DOM Elements */}
-      <Example2/> 
+      {/* <Example2/>  */}
 
       {/*Tracking State Changes: track of previous state values */}
       {/* <Example3/>  */}
@@ -104,7 +104,7 @@ export default UseRef
 ->useRef() only returns one item. 
             It returns an Object called current.
             When we initialize useRef we set the initial value: useRef(0);
-    ->It's like doing this: const count = {current: 0}. We can access the count by using count.current.
+    ->It's like doing this: const count = {current: 0}. We can access the current by using count.current.
     
 
 ->When to use useRef() instead of useState():
@@ -123,7 +123,7 @@ export default UseRef
      ->refName is the refrence object and this refrence object have current property i.e refName.current
      ->you can read and also change this current property
      ->and by changing this current property nothing will re-render 
-     ->main job of reference is to give reference to DOM example <input ref={refName}/> now you will have directly access to the real DOM
+     ->main job of reference is to give reference to DOM example <input ref={refName}/> now you will have direct access to the real DOM
         now with refName.current you can update/change the input element in DOM like scroll, focus etc
         exmaple: refName.current.focus(), refName.current.scroll(),etc...
 
