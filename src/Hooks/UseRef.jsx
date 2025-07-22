@@ -23,7 +23,7 @@ const Example1=()=>{
     To avoid this, we can use the useRef Hook.
     */
     const renderCount=useRef(0);
-    console.log("renderCount:",renderCount) // o/p: {current: 0}
+    console.log("renderCount:",renderCount) // o/p: {current: 0}, 1,2,...
     useEffect(()=>{
         renderCount.current=renderCount.current+1
         //so when i change the value in input, it will never cause our component to re-render because it's completely
