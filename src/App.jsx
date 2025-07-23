@@ -129,14 +129,14 @@ function App() {
       {/* <UseEffect4Example/> */}
 
       {/* <UseMemo /> */}
-      <UseRef/>
+      {/* <UseRef/> */}
 
       {/* <UseContext/> */}
 
       {/* <UseReducer/>  */}
       {/* <UseReducer2/> */}
 
-      {/* <UseCallback/> */}
+      <UseCallback/>
 
 
       {/*these are in REDUX folder */}
