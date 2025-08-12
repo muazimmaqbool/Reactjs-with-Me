@@ -196,6 +196,10 @@ function App() {
       {/* <BrowserRouter> */}
         {/* <Main/> */}
       {/* </BrowserRouter> */}
+
+
+      {/* Higher order component with example */}
+      
       
     </>
   );
