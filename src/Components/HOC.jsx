@@ -2,7 +2,9 @@ import React from 'react'
 //Read about Higher Order Component below
 const HOC = () => {
   return (
-    <div>HOC</div>
+    <div>HOC
+      
+    </div>
   )
 }
 
@@ -19,4 +21,9 @@ export default HOC
     Add common features: authentication, logging, loading states, permissions, styling.
     Keep components pure and focused on UI, while HOC handles the extra logic.
 
+->Basic Example: With Loading Spinner
+    We want to add a loading spinner to any component that fetches data.
+    Step 1 — A simple component: UserList component
+    Step 2 - Create the HOC: withLoading
+    step 3 - use it : const UserListWithLoading = withLoading(UserList);
 */
