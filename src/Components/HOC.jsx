@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import withLoading from './withLoading'
 //Read about Higher Order Component below
+const UserListWithLoading=withLoading(UserList)
 const HOC = () => {
-  return (
-    <div>
-      <h1>Higher Order Component:</h1>
-      <UserList/>
-    </div>
-  )
+  const [loading, setloading] = useState  (true);
+ const [users, setusers] = useState([]);
+ useEffect(() => {
+  setTimeout(() => {
+      setusers(["Muazim", "Ali", "Sara"]);
+      setloading(false);
+    }, 2000);
+ }, []);
+  return <UserListWithLoading isLoading={loading} users={users} />;
 }
 
 //This is a simple component
