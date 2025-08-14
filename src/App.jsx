@@ -58,6 +58,7 @@ import DebounceExampleTwo from "./Debounce/DebounceExampleTwo";
 import ComponentReRender from "./Components/ComponentReRender";
 import Main from "./React Router/Main";
 import { BrowserRouter } from "react-router-dom";
+import HOC from "./Components/HOC";
 
 
 function App() {
@@ -199,7 +200,7 @@ function App() {
 
 
       {/* Higher order component with example */}
-      
+      <HOC/>
       
     </>
   );
