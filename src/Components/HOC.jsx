@@ -66,9 +66,16 @@ export default HOC
     Add common features: authentication, logging, loading states, permissions, styling.
     Keep components pure and focused on UI, while HOC handles the extra logic.
 
-->Basic Example: With Loading Spinner
+->Basic Example: With Loading Spinner:
     We want to add a loading spinner to any component that fetches data.
     Step 1 — A simple component: UserList component
     Step 2 - Create the HOC: withLoading
     step 3 - use it : const UserListWithLoading = withLoading(UserList);
+
+->Things to Remember (Important):
+    HOCs don’t modify the original component — they wrap it.
+    Always pass down props (...props) to keep the wrapped component functional.
+    Name convention: withSomething.
+    With hooks, many cases where you’d use HOCs are now done with custom hooks — 
+            but HOCs are still important to understand (you’ll see them in libraries like react-redux, react-router).
 */
