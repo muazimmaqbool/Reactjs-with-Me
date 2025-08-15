@@ -1,20 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import withLoading from './withLoading'
-//Read about Higher Order Component below
-const UserListWithLoading=withLoading(UserList)
-const HOC = () => {
-  const [loading, setloading] = useState  (true);
- const [users, setusers] = useState([]);
- useEffect(() => {
-  setTimeout(() => {
-      setusers(["Muazim", "Ali", "Sara"]);
-      setloading(false);
-    }, 2000);
- }, []);
-  return <UserListWithLoading isLoading={loading} users={users} />;
-}
 
-//This is a simple component
+//Read about Higher Order Component below
+
+//This is a simple component that just displays a list of users
 const UserList=({users})=>{
     return (
     <ul>
@@ -24,6 +12,41 @@ const UserList=({users})=>{
     </ul>
   );
 }
+
+const withLoading = (wrappedComponent) => {
+    /*
+    What’s happening?
+        withLoading takes any component.
+        Returns a new component that:
+        Shows "Loading..." if isLoading is true.
+        Otherwise, renders the original component with all original props.
+    */
+  return function EnhancedComponent({isLoading,...props}){
+    if(isLoading){
+        return <p>Loading...</p>
+    }
+    return <wrappedComponent {...props}/>
+  }
+}
+const UserListWithLoading=withLoading(UserList)
+
+const HOC = () => {
+  const [loading, setloading] = useState  (true);
+ const [users, setusers] = useState([]);
+ useEffect(() => {
+  setTimeout(() => {
+      setusers(["Muazim", "Ali", "Sara"]);
+      setloading(false);
+    }, 2000);
+ }, []);
+  return(
+     <div style={{ fontFamily: "Arial", padding: "20px" }}>
+      <h2>User List</h2>
+      <UserListWithLoading isLoading={loading} users={users} />
+    </div>
+  )
+}
+
 
 
 export default HOC
