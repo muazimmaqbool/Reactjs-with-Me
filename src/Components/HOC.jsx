@@ -66,6 +66,10 @@ const HOC = () => {
   )
 }
 
+/*
+ A Higher Order Component doesn’t touch your original component — it wraps it in another component that 
+ can add logic before deciding what to render.
+*/
 export default HOC
 /*
 -> What is a Higher Order Component?
