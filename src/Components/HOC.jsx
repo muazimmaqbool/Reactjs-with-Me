@@ -41,7 +41,7 @@ const HOC = () => {
  const [users, setusers] = useState([]);
  useEffect(() => {
   setTimeout(() => {
-      setusers(["Muazim", "Ali", "Sara"]);
+      setusers(["Muazim", "Maqbool", "Rather"]);
       setloading(false);
     }, 2000);
  }, []);
