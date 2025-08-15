@@ -13,7 +13,8 @@ const UserList=({users})=>{
   );
 }
 
-const withLoading = (wrappedComponent) => {
+//Higher Order Component to add loading logic
+const withLoading = (WrappedComponent) => {
     /*
     What’s happening?
         withLoading takes any component.
@@ -25,9 +26,11 @@ const withLoading = (wrappedComponent) => {
     if(isLoading){
         return <p>Loading...</p>
     }
-    return <wrappedComponent {...props}/>
+    return <WrappedComponent {...props}/>
   }
 }
+
+//Wrapping UserList with withLoading HOC
 const UserListWithLoading=withLoading(UserList)
 
 const HOC = () => {
@@ -47,8 +50,6 @@ const HOC = () => {
   )
 }
 
-
-
 export default HOC
 /*
 -> What is a Higher Order Component?
@@ -65,6 +66,6 @@ export default HOC
 ->Basic Example: With Loading Spinner
     We want to add a loading spinner to any component that fetches data.
     Step 1 — A simple component: UserList component
-    Step 2 - Create the HOC: withLoading (inside another file called withLoading.jsx)
+    Step 2 - Create the HOC: withLoading
     step 3 - use it : const UserListWithLoading = withLoading(UserList);
 */
