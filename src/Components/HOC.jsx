@@ -32,6 +32,9 @@ const withLoading = (WrappedComponent) => {
 
 //Wrapping UserList with withLoading HOC
 const UserListWithLoading=withLoading(UserList)
+//try without HOC withLoading(...), you will see the Loading... is not getting displayed
+//const UserListWithLoading=UserList
+
 
 const HOC = () => {
   const [loading, setloading] = useState  (true);
