@@ -15,13 +15,6 @@ const UserList=({users})=>{
 
 //Higher Order Component to add loading logic
 const withLoading = (WrappedComponent) => {
-    /*
-    What’s happening?
-        withLoading takes any component.
-        Returns a new component that:
-        Shows "Loading..." if isLoading is true.
-        Otherwise, renders the original component with all original props.
-    */
   return function EnhancedComponent({isLoading,...props}){
     if(isLoading){
         return <p>Loading...</p>
@@ -29,6 +22,26 @@ const withLoading = (WrappedComponent) => {
     return <WrappedComponent {...props}/>
   }
 }
+/*
+->withLoading HOC code explanation:
+  1)It takes one argument WrappedComponent which is any React component you pass into it (e.g., UserList).
+    Think of it like saying:
+    “Give me a component, and I’ll give you back a new, upgraded one.”
+
+  2)Inner EnchancedComponent is the actual function that will be rendered
+      { isLoading, ...props } → This is destructuring props:
+      Pulls isLoading directly out of the props.
+      ...props means “everything else” (users, title, etc.).
+
+  3)if (isLoading) { return <p>Loading...</p>; }
+      Checks if isLoading is true. If yes → don’t even render the original component — just show "Loading...".
+      This is where we inject the new behavior.
+
+  4)return <WrappedComponent {...props} />
+      If isLoading is false, we render the original component we were given.
+      {...props} passes all other props to it (users, styling, events, etc.).
+      This ensures the wrapped component behaves exactly like before, but now with loading capability added.
+*/
 
 //Wrapping UserList with withLoading HOC
 const UserListWithLoading=withLoading(UserList)
