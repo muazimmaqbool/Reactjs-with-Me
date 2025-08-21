@@ -60,6 +60,7 @@ import Main from "./React Router/Main";
 import { BrowserRouter } from "react-router-dom";
 import HOC from "./Components/HOC";
 import Controlled from "./Components/Controlled";
+import Uncontrolled from "./Components/Uncontrolled";
 
 
 function App() {
@@ -206,7 +207,8 @@ function App() {
       {/* controlled and uncontrolled components */}
       {/* In React, the distinction between controlled and uncontrolled components primarily relates to how form
           input elements manage their state and data. */}
-      <Controlled/>
+      {/* <Controlled/> */}
+      <Uncontrolled/>
       
     </>
   );
