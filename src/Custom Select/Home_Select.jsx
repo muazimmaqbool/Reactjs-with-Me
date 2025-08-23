@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import CustomSelect from './CustomSelect';
 /*
 ->Creating Custom Select component:
     1)Custom Select component is created in CustomSelect.jsx file
@@ -23,7 +24,12 @@ const Home_Select = () => {
             ))
             }
         </select> */}
-
+        <CustomSelect
+        options={programmingLanguages}
+        value={language}
+        onChange={setlanguage}
+        placeholder="Select Language"
+        />
         {language!=="" && <h3>Selected Language is: {language}</h3>}
     </div>
   )

@@ -9,7 +9,7 @@ import React from 'react'
     onChange={setSelectedFramework}
   />
 */
-const CustomSelect = () => {
+const CustomSelect = ({options,value,onChange,placeholder}) => {
   return (
     <div>CustomSelect</div>
   )
