@@ -9,6 +9,9 @@
   border-radius: 10px;
   cursor: pointer;
   background-color: #F4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .listContainer{
     list-style: none;

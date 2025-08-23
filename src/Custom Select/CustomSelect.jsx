@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./select.module.css";
+import { FaChevronDown } from "react-icons/fa";
 
 //called from Home_Select.jsx
 /*
@@ -25,7 +26,8 @@ const CustomSelect = ({
         onClick={() => setopen((prev) => !prev)}
         className={styles.selectedValue}
       >
-        {value || placeholder}
+        <div>{value || placeholder}</div>
+        <div><FaChevronDown color="gray"/></div>
       </div>
       {/*dropdown options */}
       {open && (
