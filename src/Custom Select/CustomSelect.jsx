@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useRef, useEffect } from "react";
+import styles from "./select.module.css";
 
 //called from Home_Select.jsx
 /*
@@ -9,10 +10,25 @@ import React from 'react'
     onChange={setSelectedFramework}
   />
 */
-const CustomSelect = ({options,value,onChange,placeholder}) => {
+const CustomSelect = ({
+  options,
+  value,
+  onChange,
+  placeholder = "Select...",
+}) => {
+  const [open, setopen] = useState(false);
+  const ref = useRef();
   return (
-    <div>CustomSelect</div>
-  )
-}
+    <div ref={ref} className={styles.container}>
+      {/*selected value */}
+      <div
+        onClick={() => setopen((prev) => !prev)}
+        className={styles.selectedValue}
+      >
+        {value || placeholder}
+      </div>
+    </div>
+  );
+};
 
-export default CustomSelect
+export default CustomSelect;
