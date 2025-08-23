@@ -27,6 +27,22 @@ const CustomSelect = ({
       >
         {value || placeholder}
       </div>
+      {/*dropdown options */}
+      {open && (
+        <ul>
+          {options?.map((option, i) => (
+            <li
+              onClick={() => {
+                onChange(option);
+                setopen(false);
+              }}
+              key={i}
+            >
+              {option}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };
