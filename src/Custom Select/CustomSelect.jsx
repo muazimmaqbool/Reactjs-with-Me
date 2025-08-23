@@ -4,7 +4,7 @@ import styles from "./select.module.css";
 //called from Home_Select.jsx
 /*
 ->This will be called like this:
-  <Select // or CustomSelect
+  <CustomSelect
     options={["React", "Vue", "Angular"]}
     value={selectedFramework}
     onChange={setSelectedFramework}
