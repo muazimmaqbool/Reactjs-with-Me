@@ -28,5 +28,9 @@
 .list{
     cursor: pointer;
     padding: 6px;
+    border-radius: 6px;
     
+}
+.list:hover{
+    background-color: #ddd;
 }

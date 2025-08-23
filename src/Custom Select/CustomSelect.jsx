@@ -38,7 +38,7 @@ const CustomSelect = ({
                 setopen(false);
               }}
               key={i}
-              style={{backgroundColor:option===value?"#f0f0f0":"#ffffff"}}
+              style={{backgroundColor:option===value?"rgb(213, 205, 205)":"",}}
             >
               {option}
             </li>
