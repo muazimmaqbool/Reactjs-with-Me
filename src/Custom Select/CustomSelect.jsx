@@ -29,14 +29,16 @@ const CustomSelect = ({
       </div>
       {/*dropdown options */}
       {open && (
-        <ul>
+        <ul className={styles.listContainer}>
           {options?.map((option, i) => (
             <li
+            className={styles.list}
               onClick={() => {
                 onChange(option);
                 setopen(false);
               }}
               key={i}
+              style={{backgroundColor:option===value?"#f0f0f0":"#ffffff"}}
             >
               {option}
             </li>
