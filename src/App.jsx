@@ -208,7 +208,9 @@ function App() {
       {/* In React, the distinction between controlled and uncontrolled components primarily relates to how form
           input elements manage their state and data. */}
       {/* <Controlled/> */}
-      <Uncontrolled/>
+      {/* <Uncontrolled/> */}
+
+      {/*Creating Custom Select component */}
       
     </>
   );
