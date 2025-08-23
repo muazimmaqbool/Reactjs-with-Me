@@ -61,6 +61,7 @@ import { BrowserRouter } from "react-router-dom";
 import HOC from "./Components/HOC";
 import Controlled from "./Components/Controlled";
 import Uncontrolled from "./Components/Uncontrolled";
+import Home_Select from "./Custom Select/Home_Select";
 
 
 function App() {
@@ -211,6 +212,7 @@ function App() {
       {/* <Uncontrolled/> */}
 
       {/*Creating Custom Select component */}
+      <Home_Select/>
       
     </>
   );
