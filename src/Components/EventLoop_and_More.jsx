@@ -1,14 +1,20 @@
-import React from 'react'
+import React from "react";
 
 const EventLoop_and_More = () => {
-  return (
-    <div>
+  //Example explained in point 5 below and also why result is coming in that order
+  console.log("Start");
+  setTimeout(() => {
+    console.log("Macrotask (setTimeout)");
+  }, 0);
+  Promise.resolve().then(() => {
+    console.log("Microtask (Promise.then)");
+  });
+  console.log("End");
+  //Output: Start, End, Microtask (Promise.then), Macrotask (setTimeout)
+  return <div></div>;
+};
 
-    </div>
-  )
-}
-
-export default EventLoop_and_More
+export default EventLoop_and_More;
 /*
 🔹1. The Event Loop:
     JavaScript is single-threaded → it runs one thing at a time.
