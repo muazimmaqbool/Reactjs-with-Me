@@ -63,6 +63,7 @@ import Controlled from "./Components/Controlled";
 import Uncontrolled from "./Components/Uncontrolled";
 import Home_Select from "./Custom Select/Home_Select";
 import EventLoop_and_More from "./Components/EventLoop_and_More";
+import RenderingBehavior from "./Components/RenderingBehavior";
 
 
 function App() {
@@ -216,7 +217,10 @@ function App() {
       {/* <Home_Select/> */}
       
       {/*Important: Event Loop & Async: Microtasks vs macrotasks, Promise chaining, async/await, fetch API. */}
-      <EventLoop_and_More/>
+      {/* <EventLoop_and_More/> */}
+
+      {/*Rendering Behavior – when React re-renders, what causes it, and how to avoid unnecessary renders. */}
+      <RenderingBehavior/>
     </>
   );
 }
