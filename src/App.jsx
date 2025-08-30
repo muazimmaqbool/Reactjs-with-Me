@@ -62,6 +62,7 @@ import HOC from "./Components/HOC";
 import Controlled from "./Components/Controlled";
 import Uncontrolled from "./Components/Uncontrolled";
 import Home_Select from "./Custom Select/Home_Select";
+import EventLoop_and_More from "./Components/EventLoop_and_More";
 
 
 function App() {
@@ -212,8 +213,10 @@ function App() {
       {/* <Uncontrolled/> */}
 
       {/*Creating Custom Select component */}
-      <Home_Select/>
+      {/* <Home_Select/> */}
       
+      {/*Important: Event Loop & Async: Microtasks vs macrotasks, Promise chaining, async/await, fetch API. */}
+      <EventLoop_and_More/>
     </>
   );
 }
