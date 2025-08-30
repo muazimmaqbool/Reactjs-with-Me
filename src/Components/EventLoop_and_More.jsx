@@ -40,15 +40,23 @@ export default EventLoop_and_More
 
     ➡️ Microtasks run immediately after the current function finishes, but before the next Macrotask.
 
-🔹 4. Execution Order
+🔹4. Execution Order:
+    Run all code in the current call stack.
+    Empty the Microtask Queue (all of it).
+    Take one task from Macrotask Queue and run it.
+    Repeat forever.
 
-Run all code in the current call stack.
-
-Empty the Microtask Queue (all of it).
-
-Take one task from Macrotask Queue and run it.
-
-Repeat forever.
+5.Example to Understand:
+    console.log("Start");
+    setTimeout(() => {
+    console.log("Macrotask (setTimeout)");
+    }, 0);
+    Promise.resolve().then(() => {
+    console.log("Microtask (Promise.then)");
+    });
+    console.log("End");
+    Output:
+    Start, End, Microtask (Promise.then), Macrotask (setTimeout)
 
 
 */
