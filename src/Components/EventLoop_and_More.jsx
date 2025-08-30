@@ -58,5 +58,11 @@ export default EventLoop_and_More
     Output:
     Start, End, Microtask (Promise.then), Macrotask (setTimeout)
 
-
+    ➡️ Why?
+        console.log("Start") → runs immediately.
+        setTimeout → goes into Macrotask Queue.
+        Promise.then → goes into Microtask Queue.
+        console.log("End") → runs.
+        Event loop finishes current stack, then runs Microtasks first → "Microtask...".
+        Then it runs Macrotasks → "Macrotask...".
 */
