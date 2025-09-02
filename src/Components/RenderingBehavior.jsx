@@ -28,6 +28,19 @@ const RenderingBehavior = () => {
     4. Parent re-renders – even if props didn’t change, children will re-render by default (Unless wrapped in React.memo.).
         <Parent> <Child /> </Parent> // Child re-renders when Parent re-renders
 
+-> What Does Not Cause Re-render?
+    1. Updating a ref (useRef.current = ...)
+    2. Console logs or variable updates outside React state
+    3. Mutating an object/array without changing its reference (React won’t notice!)
+
+    Example:
+      const [user, setUser] = useState({ name: "Muazim" });
+      ❌ Won't re-render
+      user.name = "Ali";
+      
+      ✅ Will re-render
+      setUser({ ...user, name: "Ali" });
+
 
 */
 
