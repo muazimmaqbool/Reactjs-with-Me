@@ -17,9 +17,17 @@ const RenderingBehavior = () => {
    A component re-renders when its inputs change. 
     The triggers are:
     1. State changes (useState, useReducer)
+        const [count, setCount] = useState(0);  //calling setCount(1) causes a re-render
+
     2. Props change (when parent re-renders and passes new values).
+        <Child value={someState} /> // if someState changes, Child re-renders
+
     3. Context values change (if you consume a useContext value).
-    4. Parent re-renders – even if props didn’t change, children will re-render by default.
+        const theme = useContext(ThemeContext); // re-render when theme updates
+
+    4. Parent re-renders – even if props didn’t change, children will re-render by default (Unless wrapped in React.memo.).
+        <Parent> <Child /> </Parent> // Child re-renders when Parent re-renders
+
 
 */
 
