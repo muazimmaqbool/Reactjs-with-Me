@@ -51,6 +51,13 @@ const RenderingBehavior = () => {
     3) Context updates that are too broad.
     4) Parent renders cascading down.
 
+-> How to Avoid Unnecessary Renders:
+    🔹Using React.memo
+        Stops a child from re-rendering if props are the same (shallow compare).
+        const Child = React.memo(({ value }) => {
+          console.log("Rendered");
+          return <div>{value}</div>;
+        });
 
 */
 
