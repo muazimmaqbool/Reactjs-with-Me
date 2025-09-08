@@ -41,6 +41,16 @@ const RenderingBehavior = () => {
       ✅ Will re-render
       setUser({ ...user, name: "Ali" });
 
+-> Why Do Unnecessary Renders Happen?
+    1) Passing new object/array literals each render:
+        <Child options={[]} /> // new [] every time
+
+    2) Inline functions:
+        <Button onClick={() => doSomething()} /> // new fn every render
+
+    3) Context updates that are too broad.
+    4) Parent renders cascading down.
+
 
 */
 
