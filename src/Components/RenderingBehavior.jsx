@@ -58,7 +58,14 @@ const RenderingBehavior = () => {
           console.log("Rendered");
           return <div>{value}</div>;
         });
+    Note: to study memo check Memo.jsx file inside components foldder
 
+    🔹useCallback
+        Memoizes a function reference, so children don’t see a “new function” every render.
+        const handleClick = useCallback(() => {
+          console.log("Clicked");
+        }, []);
+    Note: to stydy useCallback checkout useCallback.jsx inside Hooks folder
 */
 
 export default RenderingBehavior
