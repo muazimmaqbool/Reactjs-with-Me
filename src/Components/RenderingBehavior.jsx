@@ -71,6 +71,14 @@ const RenderingBehavior = () => {
         Memoizes expensive calculations or objects.
         const options = useMemo(() => [{ id: 1 }], []);
     Note: to study useMemo checkou UseMemo.jsx component inside Hooks folder
+
+    🔹Split State & Components
+        Keep unrelated state in separate components/hooks so one change doesn’t re-render everything.
+
+    🔹Context Optimization
+        Don’t put everything in one context.
+        Split into multiple contexts or use selector hooks.
+    Note: The useSelector hook allows functional React components to extract specific pieces of data from the Redux store's state.
 */
 
 export default RenderingBehavior
