@@ -79,6 +79,15 @@ const RenderingBehavior = () => {
         Don’t put everything in one context.
         Split into multiple contexts or use selector hooks.
     Note: The useSelector hook allows functional React components to extract specific pieces of data from the Redux store's state.
+
+  ->Debugging Re-renders
+      React DevTools Profiler: shows which components re-rendered and why.
+      Add console.log("render") inside components to spot unexpected renders.
+      Libraries like why-did-you-render can highlight wasted renders.
+
+  ->Golden Rule
+      Render as little as possible, update the DOM only when necessary.
+      But don’t prematurely optimize — readability comes first, optimization when you spot issues.
 */
 
 export default RenderingBehavior
