@@ -66,6 +66,11 @@ const RenderingBehavior = () => {
           console.log("Clicked");
         }, []);
     Note: to stydy useCallback checkout useCallback.jsx inside Hooks folder
+    
+    🔹useMemo
+        Memoizes expensive calculations or objects.
+        const options = useMemo(() => [{ id: 1 }], []);
+    Note: to study useMemo checkou UseMemo.jsx component inside Hooks folder
 */
 
 export default RenderingBehavior
