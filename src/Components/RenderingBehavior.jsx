@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo, useCallback, useState } from "react";
 /*
 What is a Render in React?
   A render means React calls your component function to produce the virtual DOM.
@@ -6,11 +6,39 @@ What is a Render in React?
   Important: Rendering ≠ DOM update.
   You can have a render without React touching the DOM (if nothing changed).
 */
+
+
+const Child = memo(({ onClick, label }) => {
+  console.log(`"${label}" rendered`);
+  return <button onClick={onClick}>{label}</button>;
+});
+
 const RenderingBehavior = () => {
+  const [count, setcount] = useState(0);
+  const [text, settext] = useState("");
+  
+  //const handleIncrement = () => setcount((c) => c + 1);//calls everytime count and text is changed
+  // ❌ Problem: Without useCallback, new function is created on every render
+
+  //✅ Fix: useCallback memoizes the function reference
+  const handleIncrement = useCallback(() => {
+    setcount((c) => c + 1);
+  }, []);
   return (
-    <div>RenderingBehavior</div>
-  )
-}
+    <div style={{ padding: "20px" }}>
+      <h2>Rendering Behavior Demo</h2>
+      <p>Count: {count}</p>
+      <Child label="Increment" onClick={handleIncrement} />
+
+      <input
+        type="text"
+        placeholder="Type here..."
+        value={text}
+        onChange={(e) => settext(e.target.value)}
+      />
+    </div>
+  );
+};
 
 /*
 -> What Causes a Component to Re-render?
@@ -88,6 +116,8 @@ const RenderingBehavior = () => {
   ->Golden Rule
       Render as little as possible, update the DOM only when necessary.
       But don’t prematurely optimize — readability comes first, optimization when you spot issues.
+
+   Note Above i have shown small example that shows unnecessary re-renders and fixing them using memo and callback
 */
 
-export default RenderingBehavior
+export default RenderingBehavior;
