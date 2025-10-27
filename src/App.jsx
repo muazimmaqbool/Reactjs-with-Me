@@ -123,7 +123,7 @@ function App() {
 
       {/*used to explain hooks */}
       {/* hooks basic intro here and also data binding */}
-      {/* <Hooks/>  */}
+      <Hooks/> 
     
       {/* <UseState/> */}
       {/* <UseState2/> */}
@@ -220,7 +220,7 @@ function App() {
       {/* <EventLoop_and_More/> */}
 
       {/*Rendering Behavior – when React re-renders, what causes it, and how to avoid unnecessary renders. */}
-      {/* <RenderingBehavior/> */}
+      {/* <RenderingBehavior/>  */}
     </>
   );
 }

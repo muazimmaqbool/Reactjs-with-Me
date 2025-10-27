@@ -5,8 +5,7 @@ const Hooks = () => {
 };
 
 export default Hooks;
-
-/*learn about hooks from notebook and from w3schools */
+                       
 /*
 ->Hooks were added to React in version 16.8.
 
@@ -35,7 +34,7 @@ Note: Hooks will not work in React class components.
 
     IMPORTANT:
     ->One-way Data Binding: ReactJS uses one-way data binding. In one-way data binding one of the 
-      following conditions can be followed:
+      Following conditions can be followed:
         Component to View: Any change in components data would get reflected in the view.
         View to Component: Any change in View would get reflected in the component’s data.
 */
