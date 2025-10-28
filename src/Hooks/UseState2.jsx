@@ -5,8 +5,11 @@ const UseState2 = () => {
   return (
     <>
       <h3>More on useState hook:</h3>
+      <p>**************</p>
       <Car />
+      <p>**************</p>
       <Bike />
+      <p>**************</p>
       <Item />
     </>
   );
@@ -22,13 +25,13 @@ function Car() {
   const [color, setColor] = useState("red");
 
   return (
-    <>
+    <div>
       <h1>My {brand}</h1>
       <p style={styleobj}>
         it is a {color} {model} from {year}
       </p>
       <button onClick={() => setColor("blue")}>Update Color</button>
-    </>
+    </div>
   );
 }
 
@@ -61,9 +64,9 @@ const Item = () => {
     size: "Large screen",
   });
   const updateMemory = () => {
-    setDetails((prev) => {
-      return { ...prev, memory: "16GB and 512GB SSD" };
-    });
+    setDetails((prev)=>{
+      return {...prev,memory:"16GB and 512 SSD"}
+    })
   };
   return (
     <>

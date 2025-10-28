@@ -125,8 +125,8 @@ function App() {
       {/* hooks basic intro here and also data binding */}
       {/* <Hooks/>  */}
     
-      <UseState/>
-      {/* <UseState2/> */}
+      {/* <UseState/> */}
+      <UseState2/>
       {/* <UseState3/> */}
 
       {/* <UseEffect/> */}
