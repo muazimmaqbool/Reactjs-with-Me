@@ -131,10 +131,10 @@ function App() {
 
       {/* <UseEffect/> */}
       {/* <UseEffect2/> */}
-      <UseEffect3/>
+      {/* <UseEffect3/> */}
       {/* <UseEffect4Example/> */}
 
-      {/* <UseMemo /> */}
+      <UseMemo />
       {/* <UseRef/> */}
 
       {/* <UseContext/> */}
