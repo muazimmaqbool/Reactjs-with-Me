@@ -5,7 +5,9 @@ const UseState3 = () => {
   return (
     <>
       <h3>Updating Objects and Arrays in State</h3>
+      <p>**************</p>
       <Bike />
+      <p>**************</p>
       <MyCars />
     </>
   );
