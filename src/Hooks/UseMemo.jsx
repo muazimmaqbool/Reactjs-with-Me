@@ -14,11 +14,11 @@ const UseMemo = () => {
 const ExampleOne=()=>{
     const [count, setCount] = useState(0);
     const [todos, setTodos] = useState([]);
-   // const calculation=expensiveCalculation(count); // using without memo will make it little slow
+   const calculation=expensiveCalculation(count); // using without memo will make it little slow
     
     //we can use the useMemo Hook to memoize the expensiveCalculation function. This will cause the function to only run when needed.
     //We can wrap the expensive function call with useMemo:
-    const calculation=useMemo(()=>expensiveCalculation(count),[count]);
+    //const calculation=useMemo(()=>expensiveCalculation(count),[count]);
     //useMemo also accepts second parameter i.e its dependencies and this means it will only runs when the
     //dependencie changes so here expensiceCalculation function will only run/render when count changes and 
     //not when todo's change, without using useMemo it would have run on both
@@ -95,7 +95,7 @@ function slowFunction(num){
 
 export default UseMemo
 /*
-Intro of useMemo Hook in react:
+useMemo Hook in react:
 
 -> React useMemo Hook:
     The React useMemo Hook returns a memoized value.
