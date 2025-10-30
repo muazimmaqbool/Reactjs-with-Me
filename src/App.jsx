@@ -64,6 +64,8 @@ import Uncontrolled from "./Components/Uncontrolled";
 import Home_Select from "./Custom Select/Home_Select";
 import EventLoop_and_More from "./Components/EventLoop_and_More";
 import RenderingBehavior from "./Components/RenderingBehavior";
+import DataBinding from "./Components/DataBinding";
+import TwoWayDataBinding from "./Components/TwoWayDataBinding";
 
 
 function App() {
@@ -222,7 +224,9 @@ function App() {
       {/*Rendering Behavior – when React re-renders, what causes it, and how to avoid unnecessary renders. */}
       {/* <RenderingBehavior/>  */}
 
-      
+      {/* Data binding in react */}
+      {/* <DataBinding/> */}
+      {/* <TwoWayDataBinding/> */}
     </>
   );
 }

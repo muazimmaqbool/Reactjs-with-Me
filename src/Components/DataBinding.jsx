@@ -61,4 +61,12 @@ In React, we mainly use two types:
         i.e Data flows in both directions → from state to UI and from UI to state. : State  <-->  UI
 
 */
+import React from 'react'
 
+const DataBinding = () => {
+  return (
+    <div>DataBinding</div>
+  )
+}
+
+export default DataBinding
