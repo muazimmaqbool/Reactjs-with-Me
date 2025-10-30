@@ -7,10 +7,10 @@ const UseRef = () => {
       {/* <Example1/> */}
 
       {/*Accessing DOM Elements */}
-      <Example2/> 
+      {/* <Example2/>  */}
 
       {/*Tracking State Changes: track of previous state values */}
-      {/* <Example3/>  */}
+      <Example3/> 
     </>
   )
 }
@@ -82,14 +82,26 @@ function Example2(){
 //example 3
 //Tracking State Changes: track of previous state values
 function Example3(){
-    const [item,setItem]=useState('');
-    const previousItem=useRef()
+    const [item,setItem]=useState(''); //item holds the current input value.
+    const previousItem=useRef(); //previousItem.current will hold the previous input value.
 
     useEffect(()=>{
         console.log("called")
         previousItem.current=item
-        //console.log("previous item:",previousItem)
+        console.log("previous item:",previousItem)
     },[item])
+    /*
+    Whenever item changes, the effect runs.
+    It stores the current value of item into previousItem.current.
+    But this assignment happens after the screen renders, so when the UI shows:
+        item is the new value
+        previousItem.current still has the old value — perfect!
+    
+    Why useRef stores the previous value
+    useRef returns the same object every render
+    It doesn't reset on re-render
+    It does not trigger re-render when updated
+    */
     return(
         <>
             <input type="text" value={item} onChange={(e)=>setItem(e.target.value)} />
@@ -97,6 +109,16 @@ function Example3(){
             <div>Previous Item is {previousItem.current}</div>
         </>
     )
+    /*
+    ->Lifecycle in this example:
+    | Step             | Value of `item` | Value of `previousItem.current` |
+    | ---------------- | --------------- | ------------------------------- |
+    | initial load     | `''`            | `undefined`                     |
+    | user types "A"   | `'A'`           | `''` (previous)                 |
+    | user types "AB"  | `'AB'`          | `'A'`                           |
+    | user types "ABC" | `'ABC'`         | `'AB'`                          |
+
+    */
 }
 
 export default UseRef
