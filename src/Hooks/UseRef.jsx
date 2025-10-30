@@ -4,10 +4,10 @@ import React, { useEffect, useState,useRef } from 'react'
 const UseRef = () => {
   return (
     <>
-      <Example1/>
+      {/* <Example1/> */}
 
       {/*Accessing DOM Elements */}
-      {/* <Example2/>  */}
+      <Example2/> 
 
       {/*Tracking State Changes: track of previous state values */}
       {/* <Example3/>  */}
@@ -59,6 +59,11 @@ function Example2(){
         pTag.current.style.color="black";
         pTag.current.style.fontSize="1rem"
     }
+
+    const bringChangesBack=()=>{
+        pTag.current.style.color="teal";
+        pTag.current.style.fontSize="2rem"
+    }
     return(
         <>
             <input type="text" ref={inputElement} />
@@ -69,6 +74,7 @@ function Example2(){
             <button onClick={updateColor}>Change Color</button>
             <button onClick={()=>pTag.current.style.fontSize="2rem"}>Change Size</button>
             <button onClick={resetP}>Reset P Tag</button>
+            <button onClick={bringChangesBack}>Bring Changes back</button>
         </>
     )
 }
