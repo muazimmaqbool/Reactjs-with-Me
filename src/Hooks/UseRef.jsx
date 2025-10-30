@@ -18,7 +18,7 @@ const UseRef = () => {
 const Example1=()=>{
     const [name,setName]=useState('');
     /*
-    If we tried to count how many times our application renders using the useState Hook, 
+    If we try to count how many times our application renders using the useState Hook, 
     we would be caught in an infinite loop since this Hook itself causes a re-render.
     To avoid this, we can use the useRef Hook.
     */
