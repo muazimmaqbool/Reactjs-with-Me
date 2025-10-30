@@ -137,7 +137,7 @@ function App() {
       {/* <UseMemo /> */}
       {/* <UseRef/> */}
 
-      <UseContext/>
+      {/* <UseContext/> */}
 
       {/* <UseReducer/>  */}
       {/* <UseReducer2/> */}
@@ -221,6 +221,8 @@ function App() {
 
       {/*Rendering Behavior – when React re-renders, what causes it, and how to avoid unnecessary renders. */}
       {/* <RenderingBehavior/>  */}
+
+      
     </>
   );
 }
