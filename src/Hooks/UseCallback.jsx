@@ -10,6 +10,14 @@ const Example1 = () => {
   const [number, setNumber] = useState(1);
   const [dark, setDark] = useState(false);
 
+    //try this function without useCallback:
+    /*
+      const getItems = () => {
+        console.log("function renders")
+        return [number, number + 1, number + 2];
+      }
+    */ 
+   //with useCallBakc
   const getItems = useCallback(() => {
     console.log("function renders")
     return [number, number + 1, number + 2];
@@ -19,19 +27,13 @@ const Example1 = () => {
   //and this is where we use useCallback: useCallback is going to make this callback function only updates when it needs to
   //so it will only render when number changes
   //earlier it was also rendering when we change theme now after using useCallback it only renders when number is changed
-
-  //try this function without useCallback:
-    /*
-      const getItems = () => {
-        console.log("function renders")
-        return [number, number + 1, number + 2];
-      }
-    */                                  
+                                 
   /*
   Note:
   console.log("getItems :", getItems); // o/p: function
   if we use useMemo above it will set array to getItems i.e: o/p [1, 2, 3]
   */
+//  console.log("getItems :", getItems)
 
   const theme = {
     backgroundColor: dark ? "black" : "white",
