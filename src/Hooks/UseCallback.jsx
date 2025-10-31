@@ -57,7 +57,7 @@ const Example1 = () => {
 export default UseCallback;
 
 /*
-  ->React useCallback Hook:
+  ->useCallback Hook:
     The useCallback Hook returns a memoized callback function
     This allows us to isolate resources of intensive functions so that they will not automatically run on every render.
     The useCallback Hook only runs when one of its dependencies update.
@@ -74,6 +74,6 @@ export default UseCallback;
   -> useMemo takes a function and its going to return you the return value of that function,
   -> useCallback also takes a function  and it returns that function which it takes as argument
      if we use useMemo above it will set array to getItems
-  ? while as useCallback sets entire function to the getItems not just return items of the function
+  ? here useCallback sets entire function to the getItems not just return items of the function
   
 */
