@@ -54,8 +54,8 @@ function Comp5() {
 export default UseContext;
 
 /*
-->React Context:
-    React Context is a way to manage state globally.
+->React useContext hook:
+    React useContext hook is a way to manage state/data globally.
     It can be used together with the useState Hook to share state/data between deeply nested 
     components more easily than with useState alone.
 
@@ -115,10 +115,10 @@ export default UseContext;
         export default UseContext
 
 
-    ->The Solution
+    ->The Solution"
         The solution is to create context.
         Create Context
-             To create context, you must Import createContext and initialize it:
+             To create context, you must import createContext and initialize it:
 
         import { useState, createContext } from "react";
         import ReactDOM from "react-dom/client";
