@@ -66,6 +66,8 @@ import EventLoop_and_More from "./Components/EventLoop_and_More";
 import RenderingBehavior from "./Components/RenderingBehavior";
 import DataBinding from "./Components/DataBinding";
 import TwoWayDataBinding from "./Components/TwoWayDataBinding";
+import UserProvider from "./Hooks/UseContextExample/UserProvider";
+import LoginHome from "./Hooks/UseContextExample/LoginHome";
 
 
 function App() {
@@ -139,7 +141,9 @@ function App() {
       {/* <UseMemo /> */}
       {/* <UseRef/> */}
 
-      <UseContext/>
+      {/* <UseContext/> */}
+      {/*useContext example with multiple files */}
+      <LoginHome/> {/* this will be create context and provider */}
 
       {/* <UseReducer/>  */}
       {/* <UseReducer2/> */}
