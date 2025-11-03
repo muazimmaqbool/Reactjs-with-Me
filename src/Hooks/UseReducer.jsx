@@ -93,6 +93,17 @@ function ReducerExampleInput() {
       <button onClick={()=>triggerFun({type:"reset"})}>Reset</button>
       
       <pre>{JSON.stringify(state,null,1)}</pre>
+      {/*
+      ->{JSON.stringify(state,null,1)}:
+        | Part               | Meaning                                                        |
+        | ------------------ | -------------------------------------------------------------- |
+        | `JSON.stringify()` | Converts a JavaScript object into a JSON string                |
+        | `state`            | The object you want to display                                 |
+        | `null`             | Replacer (used to filter keys — here we don’t filter anything) |
+        | `1`                | Number of spaces for indentation (pretty formatting)           |
+
+      
+      */}
     </div>
   );
 }
