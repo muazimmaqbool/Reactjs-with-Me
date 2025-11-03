@@ -22,28 +22,80 @@ import React, { useReducer } from "react";
 */
 const initialState = { count: 0 };
 
-  const reducer = (state, action) => {
-    switch (action.type) {
-      case "increment":
-        return { count: state.count + 1 };
-      case "decrement":
-        return { count: state.count - 1 };
-      case "reset":
-        return { count: 0 };
-      default:
-        return state;
-    }
-  };
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "increment":
+      return { count: state.count + 1 };
+    case "decrement":
+      return { count: state.count - 1 };
+    case "reset":
+      return { count: 0 };
+    default:
+      return state;
+  }
+};
 const UseReducer = () => {
-  const[state,dispatch]=useReducer(reducer,initialState)
-  return <div>
-    <h2>Count: {state.count}</h2>
-    <button onClick={()=>dispatch({type:"increment"})}>+</button>
-    <button onClick={()=>dispatch({type:"decrement"})}>-</button>
-    <button onClick={()=>dispatch({type:"reset"})}>Reset</button>
-  </div>;
+  const [state, dispatch] = useReducer(reducer, initialState);
+  return (
+    <div>
+      <h2>Count: {state.count}</h2>
+      <button onClick={() => dispatch({ type: "increment" })}>+</button>
+      <button onClick={() => dispatch({ type: "decrement" })}>-</button>
+      <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
+
+      <h2>Example two: input</h2>
+      <ReducerExampleInput />
+    </div>
+  );
 };
 
+function reducerInputFun(state, action) {
+  switch (action.type) {
+    case "updateInput":
+      return { ...state, [action.field]: action.value };
+    case "reset": {
+      return {name:"",email:""};
+    }
+    default:
+      return state;
+  }
+}
+function ReducerExampleInput() {
+  const [state, triggerFun] = useReducer(reducerInputFun, {
+    name: "",
+    email: "",
+  });
+  //here tiggerFun is dispacth and {name:"",email:""} is initialState
+  return (
+    <div>
+      <input
+        value={state.name}
+        onChange={(e) =>
+          triggerFun({
+            type: "updateInput",
+            field: "name",
+            value: e.target.value,
+          })
+        }
+        placeholder="name"
+      />
+      <input
+        value={state.email}
+        onChange={(e) =>
+          triggerFun({
+            type: "updateInput",
+            field: "email",
+            value: e.target.value,
+          })
+        }
+        placeholder="Email"
+      />
+      <button onClick={()=>triggerFun({type:"reset"})}>Reset</button>
+      
+      <pre>{JSON.stringify(state,null,1)}</pre>
+    </div>
+  );
+}
 //Note: reducer, state, initialState, and dispatch are not special reserved words in React.
 //      They are just variable names — you can rename them to anything you like.
 
