@@ -67,21 +67,22 @@ function Example1() {
 export default UseReducer;
 
 /*
- ->useReducer() Hook
-  The useReducer Hook is similar to the useState Hook.
-  It allows for custom state logic.
-  useReducer accepts a reducer function, and an initial state. 
-  Syntax
-    The useReducer Hook accepts two arguments.
-    useReducer(<reducer>, <initialState>)
+ ->useReducer() Hook:
+    The useReducer Hook is similar to the useState Hook.
+    It allows for custom state logic.
+    useReducer accepts a reducer function, and an initial state. 
 
-  The reducer function contains your custom state logic and the initial State can be a simple value but generally will contain an object.
-  The useReducer Hook returns the current state and a dispatch method.
+    Syntax
+      The useReducer Hook accepts two arguments.
+      useReducer(<reducer>, <initialState>)
 
-  ->Difference between useState and useReducer:
-      ->useState is a basic Hook for managing simple state transformation, 
-      ->useReducer is an additional Hook for managing more complex state logic. 
-      ->However, it's worth nothing that useState uses useReducer internally, that means that you could
-                 use useReducer for everything you can do with useState
+    The reducer function contains your custom state logic and the initial State can be a simple value but generally will contains an object.
+    The useReducer Hook returns the current state and a dispatch method.
+
+    ->Difference between useState and useReducer:
+        ->useState is a basic Hook for managing simple state transformation, 
+        ->useReducer is an additional Hook for managing more complex state logic. 
+        ->However, it's worth nothing that useState uses useReducer internally, that means that you could
+                  use useReducer for everything you can do with useState
 
  */

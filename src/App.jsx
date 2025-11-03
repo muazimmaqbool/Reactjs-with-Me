@@ -143,9 +143,10 @@ function App() {
 
       {/* <UseContext/> */}
       {/*useContext example with multiple files */}
-      <LoginHome/> {/* this will be create context and provider */}
+     {/* this will be create context and provider */}
+      {/* <LoginHome/>  */}
 
-      {/* <UseReducer/>  */}
+      <UseReducer/> 
       {/* <UseReducer2/> */}
 
       {/* <UseCallback/> */}
