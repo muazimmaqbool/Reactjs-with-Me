@@ -113,7 +113,7 @@ function App() {
       {/* <HomeSASS/>  */}
 
       {/*used to explain memo */}
-      {/* <Memo/> */}
+      <Memo/>
 
       {/* used to explain API calls using fetch and axios */}
       {/* <FetchAPI/> */}
@@ -146,7 +146,7 @@ function App() {
      {/* this will be create context and provider */}
       {/* <LoginHome/>  */}
 
-      <UseReducer/> 
+      {/* <UseReducer/>  */}
       {/* <UseReducer2/> */}
 
       {/* <UseCallback/> */}
