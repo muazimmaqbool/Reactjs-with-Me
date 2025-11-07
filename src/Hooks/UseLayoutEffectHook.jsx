@@ -1,6 +1,6 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 
-const UseLayoutHook = () => {
+const UseLayoutEffectHook = () => {
   const boxRef = useRef();
   const [width, setwidth] = useState();
 
@@ -26,7 +26,7 @@ const UseLayoutHook = () => {
   );
 };
 
-export default UseLayoutHook;
+export default UseLayoutEffectHook;
 /*
 ->What is useLayoutEffect?
    useLayoutEffect is a React Hook that runs synchronously after all DOM mutations (updates to the UI), but before the browser paints the screen.
