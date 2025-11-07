@@ -68,6 +68,7 @@ import DataBinding from "./Components/DataBinding";
 import TwoWayDataBinding from "./Components/TwoWayDataBinding";
 import UserProvider from "./Hooks/UseContextExample/UserProvider";
 import LoginHome from "./Hooks/UseContextExample/LoginHome";
+import UseLayoutHook from "./Hooks/UseLayoutHook";
 
 
 function App() {
@@ -150,7 +151,7 @@ function App() {
       {/* <UseReducer2/> */}
 
       {/* <UseCallback/> */}
-
+      <UseLayoutHook/>
 
       {/*these are in REDUX folder */}
       {/* <h1>inside App.jsx, c= {c}</h1> */}
