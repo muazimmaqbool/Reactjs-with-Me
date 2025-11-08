@@ -151,7 +151,7 @@ function App() {
       {/* <UseReducer2/> */}
 
       {/* <UseCallback/> */}
-      <UseLayoutEffectHook/>
+      {/* <UseLayoutEffectHook/> */}
 
       {/*these are in REDUX folder */}
       {/* <h1>inside App.jsx, c= {c}</h1> */}
