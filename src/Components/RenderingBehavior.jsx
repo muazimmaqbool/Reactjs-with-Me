@@ -2,12 +2,10 @@ import React, { memo, useCallback, useState } from "react";
 /*
 What is a Render in React?
   A render means React calls your component function to produce the virtual DOM.
-  Then React compares (diffs) it with the previous render, and if something changed, it updates the real DOM.
+  Then React compares (difference) it with the previous render, and if something changed, it updates the real DOM.
   Important: Rendering ≠ DOM update.
   You can have a render without React touching the DOM (if nothing changed).
 */
-
-
 const Child = memo(({ onClick, label }) => {
   console.log(`"${label}" rendered`);
   return <button onClick={onClick}>{label}</button>;
@@ -17,13 +15,13 @@ const RenderingBehavior = () => {
   const [count, setcount] = useState(0);
   const [text, settext] = useState("");
   
-  //const handleIncrement = () => setcount((c) => c + 1);//calls everytime count and text is changed
+ // const handleIncrement = () => setcount((c) => c + 1);//calls everytime count and text is changed
   // ❌ Problem: Without useCallback, new function is created on every render
 
   //✅ Fix: useCallback memoizes the function reference
   const handleIncrement = useCallback(() => {
     setcount((c) => c + 1);
-  }, []);
+  }, []); 
   return (
     <div style={{ padding: "20px" }}>
       <h2>Rendering Behavior Demo</h2>
