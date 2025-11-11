@@ -74,13 +74,13 @@ const RenderingBehavior = () => {
         <Child options={[]} /> // new [] every time
 
     2) Inline functions:
-        <Button onClick={() => doSomething()} /> // new fn every render
+        <Button onClick={() => doSomething()} /> // new function every render
 
     3) Context updates that are too broad.
     4) Parent renders cascading down.
 
 -> How to Avoid Unnecessary Renders:
-    🔹Using React.memo
+    🔹Using React.memo (HOC):
         Stops a child from re-rendering if props are the same (shallow compare).
         const Child = React.memo(({ value }) => {
           console.log("Rendered");
@@ -88,17 +88,17 @@ const RenderingBehavior = () => {
         });
     Note: to study memo check Memo.jsx file inside components foldder
 
-    🔹useCallback
+    🔹useCallback hook:
         Memoizes a function reference, so children don’t see a “new function” every render.
         const handleClick = useCallback(() => {
           console.log("Clicked");
         }, []);
-    Note: to stydy useCallback checkout useCallback.jsx inside Hooks folder
+    Note: to study useCallback hook checkout useCallback.jsx inside Hooks folder
     
-    🔹useMemo
+    🔹useMemo hook:
         Memoizes expensive calculations or objects.
         const options = useMemo(() => [{ id: 1 }], []);
-    Note: to study useMemo checkou UseMemo.jsx component inside Hooks folder
+    Note: to study useMemo hook check UseMemo.jsx component inside Hooks folder
 
     🔹Split State & Components
         Keep unrelated state in separate components/hooks so one change doesn’t re-render everything.
