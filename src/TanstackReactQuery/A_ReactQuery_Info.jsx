@@ -19,8 +19,7 @@ export default A_ReactQuery_Info
         This data is not yet processed or manipulated by the client-side code
 
 ->Why Use React Query?
-  -Automatic Caching: Stores fetched data in cache, reducing redundant API calls.
-                      (By default, React Query caches the results of all queries for 5 minutes)
+  -Automatic Caching: Stores fetched data in cache, reducing redundant API calls. (By default, React Query caches the results of all queries for 5 minutes)
   -Background Refetching: Keeps data fresh by refetching it automatically when needed.
   -Automatic Refetch on Focus: Refetches data when the user returns to the app.
   -Error Handling: Provides built-in mechanisms to handle API request errors.
@@ -29,7 +28,7 @@ export default A_ReactQuery_Info
   -No need for useEffect: Replaces useEffect and useState for handling API calls.
 
 ->Installation:
-  -To install React Query, run: npm install @tanstack/react-query
+  -To install React Query run: npm install @tanstack/react-query
   
   -You'll also need react-query-devtools for debugging: npm install @tanstack/react-query-devtools
 
