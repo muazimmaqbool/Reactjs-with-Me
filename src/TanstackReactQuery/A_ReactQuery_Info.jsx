@@ -33,7 +33,7 @@ export default A_ReactQuery_Info
   -You'll also need react-query-devtools for debugging: npm install @tanstack/react-query-devtools
 
 ->Setup:
-  ->Wrap your app with QueryClientProvider in index.js or App.js:
+  ->Wrap your app with QueryClientProvider in index.js or App.js :
 
     import { QueryClient,QueryClientProvider } from "@tanstack/react-query";
     import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
