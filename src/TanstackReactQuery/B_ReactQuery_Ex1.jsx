@@ -9,9 +9,9 @@ const fetchUsers=async()=>{
     console.log("Fetching users...")
     const response=await fetch("https://jsonplaceholder.typicode.com/users")
     if(!response.ok){
-        throw new Error("failed to fetch users")
+        throw new Error("Failed to fetch users data.")
     }else{
-        return response.json()
+        return response.json();
     }
 }
 
@@ -25,7 +25,7 @@ const B_ReactQuery_Ex1 = () => {
     })
     if(isLoading) return <p>Loading...</p>;
     if(error) return <p>Error:{error.message}</p>
-    //console.log("data fetched:",data)
+    // console.log("data fetched:",data)
   return (
     <div>
         <h2>Example One Of React Query</h2>
