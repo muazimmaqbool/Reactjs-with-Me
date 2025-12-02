@@ -182,11 +182,11 @@ function App() {
 
       {/* <A_ReactQuery_Info/> */}
       {/* <B_ReactQuery_Ex1/> */}
-      <C_ReactQuery_Ex2/>
+      {/* <C_ReactQuery_Ex2/> */}
 
       {/* caching in react query */}
-      {/* <button onClick={()=>settoggle((prev)=>!prev)}>Toggle Caching</button> */}
-      {/* {toggle && <D_Caching/>} */}
+      <button onClick={()=>settoggle((prev)=>!prev)}>Toggle Caching</button>
+      {toggle && <D_Caching/>}
       {/* {toggle && <E_Caching_2/>} */}
 
       {/* used to explain that:it will not refetch the data if you use React Query properly in another file
