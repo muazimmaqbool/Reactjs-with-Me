@@ -35,7 +35,7 @@ const C_ReactQuery_Ex2 = () => {
         {error && <p>Eror: {error.message}</p>}
         {todos && todos.length>0 && <ul>
             {todos.map((todo)=>(
-            <li key={todo.id}>#{todo.userId}{todo.title}</li>
+            <li key={todo.id}>#{todo.userId} {todo.title}</li>
         ))}
             </ul>}
     </div>
