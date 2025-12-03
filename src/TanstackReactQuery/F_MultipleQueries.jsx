@@ -12,17 +12,19 @@ import {fetchUsers,fetchTodos} from "./a_apiCalls"
 */
 
 const F_MultipleQueries = () => {
-    const{data:users,isLoading:loadingUsers}=useQuery({
+    const{data:users,isLoading:loadingUsers,error:errorUsers}=useQuery({
         queryKey:["users"],
         queryFn:fetchUsers,
         refetchOnWindowFocus:false, //will not refetch the data when window/tab is changed
     })
-    const{data:todos}=useQuery({
+    const{data:todos,error:errorTodos}=useQuery({
         queryKey:["todos"],
         queryFn:fetchTodos,
         refetchOnWindowFocus:false, //will not refetch the data when window/tab is changed
     })
     if(loadingUsers) return <p>Loading Users...</p>;
+    if (errorUsers) return <p>Error Users:{errorUsers.message}</p>;
+    if (errorTodos) return <p>Error Todos:{errorTodos.message}</p>;
 
     //["todos"] and ["users"] store separate data. (React Query will not mix their responses.)
   return (
