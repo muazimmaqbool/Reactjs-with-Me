@@ -54,9 +54,9 @@ const D_Caching = () => {
         ?check more from docs: https://tanstack.com/query/latest/docs/framework/react/reference/useQuery#usequery
   */
  useEffect(() => {
-    console.log("mounted")
+    console.log("mounted d_caching")
     return ()=>{
-      console.log("unmounted")
+      console.log("unmounted d_caching")
     }
   }, []);
 

@@ -187,12 +187,12 @@ function App() {
       {/* caching in react query */}
       <button onClick={()=>settoggle((prev)=>!prev)}>Toggle Caching</button>
       {/* {toggle && <D_Caching/>} */}
-      {toggle && <E_Caching_2/>}
+      {/* {toggle && <E_Caching_2/>} */}
 
       {/* used to explain that:it will not refetch the data if you use React Query properly in another file
       make sure staleTime is infinity in both files
-      Note: make sure above button with text "Toggle Caching" is not commented
-      {/* {toggle ? <D_Caching/> : <E_Caching_2/>} */}
+      Note: make sure above button with text "Toggle Caching" is not commented*/}
+      {toggle ? <D_Caching/> : <E_Caching_2/>}
       
       {/* <F_MultipleQueries/> */}
       {/* <G_Pass_ID/> */}
