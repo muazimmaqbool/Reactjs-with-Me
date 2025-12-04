@@ -26,8 +26,9 @@ const G_Pass_ID = () => {
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error:{error.message}</p>;
 
+  // Trigger fetching only when button is clicked
   const handleFetch = () => {
-    setFetchId(userId); // Trigger fetching only when button is clicked
+    setFetchId(userId); 
     refetch();
   };
 
