@@ -17,6 +17,7 @@ const H_Mutations = () => {
   const { data } = useQuery({
     queryKey: ["users"],
     queryFn: fetchUsers,
+    refetchOnWindowFocus:false,
   });
 
   const [newUser, setnewUser] = useState();//used to save api response
