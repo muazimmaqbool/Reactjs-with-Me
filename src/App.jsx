@@ -202,8 +202,8 @@ function App() {
       {/* <MainPage/> */}
 
       {/* <I_useQueriesHook/> */}
-      <J_useQueriesEx2/>
-      {/* <K_useInfiniteQuery/> */}
+      {/* <J_useQueriesEx2/> */}
+      <K_useInfiniteQuery/>
 
 
       {/* ---------------------------------------- React Router In Advance -------------------------------------- */}

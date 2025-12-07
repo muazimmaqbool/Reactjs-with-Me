@@ -2,7 +2,7 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 import React from "react";
 
 /*
-->The useInfiniteQuery hook is used for pagination where data is loaded incrementally as the user scrolls or clicks "Load More" button.
+->The useInfiniteQuery hook is used for pagination where data is loaded incrementally as the user scrolls or when user clicks on "Load More" button.
 
 docs:https://tanstack.com/query/latest/docs/framework/react/reference/useInfiniteQuery#useinfinitequery
 */
