@@ -7,7 +7,7 @@ import { fetchUsersID } from './a_apiCalls'
   example: fetching multiple users via id
 */
 const I_useQueriesHook = () => {
-  const userIds=[1,2,3,4,5]
+  const userIds=[1,2,3,4,5,6]
   const result=useQueries({
     queries:userIds.map((id)=>({
       queryKey:['user',id],

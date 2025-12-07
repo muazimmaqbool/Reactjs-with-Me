@@ -199,9 +199,9 @@ function App() {
       {/* <H_Mutations/> */}
 
       {/*Mini project using tanstack react query */}
-      <MainPage/>
+      {/* <MainPage/> */}
 
-      {/* <I_useQueriesHook/> */}
+      <I_useQueriesHook/>
       {/* <J_useQueriesEx2/> */}
       {/* <K_useInfiniteQuery/> */}
 
