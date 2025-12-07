@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import PostList from './Component/PostList'
-import styles from "./projectStyles.module.css"
+import React, { useState } from "react";
+import PostList from "./Component/PostList";
+import styles from "./projectStyles.module.css";
 
 /*
 ->We are going to need some APIs for this project for that we will download a package called "json server" (npm i json-server)
@@ -44,10 +44,12 @@ const MainPage = () => {
   return (
     <div>
       <h2 className={styles.title}>My Posts</h2>
-      <button className={styles.btn} onClick={()=>setisShowPost(!isShowPost)}>{isShowPost?"Hide Posts":"Show Posts"}</button>
-      {isShowPost && <PostList/>}
+      <button className={styles.btn} onClick={() => setisShowPost(!isShowPost)}>
+        {isShowPost ? "Hide Posts" : "Show Posts"}
+      </button>
+      {isShowPost && <PostList />}
     </div>
-  )
-}
+  );
+};
 
-export default MainPage
+export default MainPage;

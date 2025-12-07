@@ -196,10 +196,10 @@ function App() {
       
       {/* <F_MultipleQueries/> */}
       {/* <G_Pass_ID/> */}
-      <H_Mutations/>
+      {/* <H_Mutations/> */}
 
       {/*Mini project using tanstack react query */}
-      {/* <MainPage/> */}
+      <MainPage/>
 
       {/* <I_useQueriesHook/> */}
       {/* <J_useQueriesEx2/> */}
