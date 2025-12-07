@@ -12,7 +12,6 @@ const I_useQueriesHook = () => {
     queries:userIds.map((id)=>({
       queryKey:['user',id],
       queryFn:()=>fetchUsersID(id),
-      
     })),
     //if you want to combine data (or other Query information) from the results into a single value, you can use the combine option
     combine: (results) => {
