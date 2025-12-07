@@ -201,8 +201,8 @@ function App() {
       {/*Mini project using tanstack react query */}
       {/* <MainPage/> */}
 
-      <I_useQueriesHook/>
-      {/* <J_useQueriesEx2/> */}
+      {/* <I_useQueriesHook/> */}
+      <J_useQueriesEx2/>
       {/* <K_useInfiniteQuery/> */}
 
 

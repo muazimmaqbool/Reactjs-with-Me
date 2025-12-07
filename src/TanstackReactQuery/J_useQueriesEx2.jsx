@@ -11,7 +11,7 @@ const J_useQueriesEx2 = () => {
     ],
   });
   console.log("result of useQueries:", result);
-  const [ usersQuery, todosQuery ] = result;
+  const [usersQuery, todosQuery] = result;
   if (usersQuery?.isLoading || todosQuery?.isLoading) return <p>Loading...</p>;
   if (usersQuery?.isError) return <p>Error: {usersQuery.error.message}</p>;
   if (todosQuery?.isError) return <p>Error: {todosQuery.error.message}</p>;
@@ -29,8 +29,8 @@ const J_useQueriesEx2 = () => {
 
       {todosQuery && (
         <>
-          <h2>Posts</h2>
-          {todosQuery?.data?.slice(0,10)?.map((todo) => (
+          <h2>Todos</h2>
+          {todosQuery?.data?.slice(0, 10)?.map((todo) => (
             <p key={todo.id}>{todo.title}</p>
           ))}
         </>
