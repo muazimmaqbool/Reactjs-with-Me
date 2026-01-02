@@ -203,7 +203,7 @@ function App() {
 
       {/* <I_useQueriesHook/> */}
       {/* <J_useQueriesEx2/> */}
-      <K_useInfiniteQuery/>
+      {/* <K_useInfiniteQuery/> */}
 
 
       {/* ---------------------------------------- React Router In Advance -------------------------------------- */}
@@ -233,6 +233,10 @@ function App() {
       {/* Data binding in react */}
       {/* <DataBinding/> */}
       {/* <TwoWayDataBinding/> */}
+
+
+      {/* Optimizing react app */}
+      
     </>
   );
 }
