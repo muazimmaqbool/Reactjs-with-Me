@@ -69,6 +69,7 @@ import TwoWayDataBinding from "./Components/TwoWayDataBinding";
 import UserProvider from "./Hooks/UseContextExample/UserProvider";
 import LoginHome from "./Hooks/UseContextExample/LoginHome";
 import UseLayoutEffectHook from "./Hooks/UseLayoutEffectHook";
+import ReactOptimizationIntro from "./React Optimization/ReactOptimizationIntro";
 
 
 function App() {
@@ -235,7 +236,8 @@ function App() {
       {/* <TwoWayDataBinding/> */}
 
 
-      {/* Optimizing react app */}
+      {/* React Optimization */}
+      <ReactOptimizationIntro/>
       
     </>
   );
