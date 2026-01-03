@@ -18,6 +18,7 @@ const Child=memo(({count})=>{
     console.log("Child component renders...")
     return <p>Count: {count}</p>
 })
+//if Child component would have been in different like then: export default memo(MemoTodo); 
 const WithMemo = () => {
     const [value, setvalue] = useState(0);
   return (
