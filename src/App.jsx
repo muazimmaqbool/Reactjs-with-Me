@@ -70,6 +70,7 @@ import UserProvider from "./Hooks/UseContextExample/UserProvider";
 import LoginHome from "./Hooks/UseContextExample/LoginHome";
 import UseLayoutEffectHook from "./Hooks/UseLayoutEffectHook";
 import ReactOptimizationIntro from "./React Optimization/ReactOptimizationIntro";
+import WithMemo from "./React Optimization/1_Memo/WithMemo";
 
 
 function App() {
@@ -236,8 +237,9 @@ function App() {
       {/* <TwoWayDataBinding/> */}
 
 
-      {/* React Optimization */}
-      <ReactOptimizationIntro/>
+      {/* ---------- React Optimization -------------- */}
+      {/* <ReactOptimizationIntro/> */}
+      <WithMemo/>
       
     </>
   );
