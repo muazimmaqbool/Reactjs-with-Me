@@ -29,6 +29,8 @@ const WithMemo = () => {
         {/* here when React.memo is not used on Child component and '+' button is clicked then Child component renders even when its prop is not changed */}
         {/* when React.memo is used on Child component the Child component will not render when '+' button is clicked as prop to Child didn't change*/}
         <Child count={10}/>
+
+        {/*If you pass 'value' to 'Child' component like this:  <Child count={10}/>, then it will render on whenever value changes via '+' button */}
     </div>
   )
 }
