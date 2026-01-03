@@ -13,13 +13,13 @@ React Optimization – Introduction
     - Then make it fast
  */
 const ReactOptimizationIntro = () => {
+  console.log("you rendered me"); //logged withn count changes and when component mounts
   const [count, setcount] = useState(0);
   return (
     <div style={{ padding: 20 }}>
       <h1>React Optimization – Introduction</h1>
 
       <p>React is already fast. Most performance problems happen because of:</p>
-
       <ul>
         <li>Unnecessary re-renders</li>
         <li>Poor state design</li>
