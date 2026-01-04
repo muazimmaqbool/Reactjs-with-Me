@@ -41,12 +41,28 @@ const WithUseCallback = () => {
       >
         Toggle Theme
       </button>
-      {/* Here in this code when 'Toggle Thenme' button is clicked both 'Parent and Child' component rendered because when 'Parent' is rendered by 'Toggle Theme' button
-      which creates new 'increment' function every time it renders which leds to 'Child' component render even though it as 'memo' because its prop is getting created everytime
+      {/* 
+      Here in this code when 'Toggle Thenme' button is clicked both 'Parent and Child' component rendered because when 'Parent' is rendered by 'Toggle Theme' button
+      which recreates the 'increment' function every time it renders which leds to 'Child' component render even though it as 'memo' because its prop is getting created everytime
       so to fix this issue we use 'useCallback' hook on 'increment' function
+      What happens?
+      Clicking Toggle Theme > Parent re-renders > handleIncrement is recreated > Child re-renders ❌ (even though logic didn’t change)
       
       ->After using 'useCallback' hook on 'increment' function the 'Child' Component gets rendered only with '+' button is clicked and on initial component mount
-      and 'Parent' component now only gets rendered when 'Toggle Theme' button is clicked*/}
+      and 'Parent' component now only gets rendered when 'Toggle Theme' button is clicked
+      */}
+
+      {/*
+      ➡️Interview-Level Explanation
+            useCallback memoizes a function so that its reference doesn’t change unless dependencies change.
+            It is useful when passing callbacks to memoized child components.
+
+      ➡️When NOT to use useCallback
+            ❌ Don’t use it:
+            For simple components
+            If function isn’t passed to children
+            Everywhere blindly (overhead exists)
+      */}
     </div>
   );
 };
