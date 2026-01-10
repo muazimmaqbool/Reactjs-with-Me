@@ -240,8 +240,8 @@ function App() {
 
       {/* ---------- React Optimization -------------- */}
       {/* <ReactOptimizationIntro/> */}
-      {/* <WithMemo/> */}
-      <WithUseCallback/>
+      <WithMemo/>
+      {/* <WithUseCallback/> */}
       
     </>
   );
