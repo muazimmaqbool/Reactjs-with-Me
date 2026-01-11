@@ -72,6 +72,7 @@ import UseLayoutEffectHook from "./Hooks/UseLayoutEffectHook";
 import ReactOptimizationIntro from "./React Optimization/ReactOptimizationIntro";
 import WithMemo from "./React Optimization/1_Memo/WithMemo";
 import WithUseCallback from "./React Optimization/2_UseCallback/WithUseCallback";
+import WithUseMemo from "./React Optimization/3_useMemo/WithUseMemo";
 
 
 function App() {
@@ -241,7 +242,8 @@ function App() {
       {/* ---------- React Optimization -------------- */}
       {/* <ReactOptimizationIntro/> */}
       {/* <WithMemo/> */}
-      <WithUseCallback/>
+      {/* <WithUseCallback/> */}
+      <WithUseMemo/>
       
     </>
   );
