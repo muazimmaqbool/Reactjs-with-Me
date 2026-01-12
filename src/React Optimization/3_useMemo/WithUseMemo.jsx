@@ -12,11 +12,23 @@ React useMemo Hook:
 function slowCalculation(num) {
   console.log("Running slow calculation...");
   let result = 0;
-  for (let i = 0; i < 100_0000_000; i++) {
+  for (let i = 0; i < 1_00_0000_000; i++) {
     result += num;
   }
   return result;
 }
+ /* Important
+    -> It’s called Numeric Separators (ES2021 feature)
+    -> Underscores (_) in numbers are only for readability.
+    -> Example:
+        1000000000      // hard to read
+        1_000_000_000   // instantly readable
+    ->How js treats it:
+      console.log(1_000_000 === 1000000);
+      JS ignores _ at runtime
+      No performance impact
+      No change in value
+    */
 
 const WithUseMemo = () => {
   console.log("component rendered...")
