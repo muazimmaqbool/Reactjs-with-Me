@@ -57,3 +57,38 @@ const WithUseMemo = () => {
 };
 
 export default WithUseMemo;
+//Extra and important:
+/*
+VERY IMPORTANT RULE (Interview Favorite):
+
+  ->useMemo does NOT stop re-renders
+  ->It only caches the result of a calculation
+
+  ->Component still re-renders —
+  ->but expensive logic doesn’t re-run.
+
+⚠️ When NOT to use useMemo:
+
+    ❌ Simple calculations
+    ❌ Primitive operations
+    ❌ Just to “look optimized”
+
+const sum = useMemo(() => a + b, [a, b]); // ❌ useless
+
+✅ When to use useMemo (Real Projects):
+
+    ✔ Heavy filters
+    ✔ Sorting large lists
+    ✔ Chart data processing
+    ✔ Derived state from API data
+    ✔ Expensive computations
+
+Example from your clinic / gym dashboard:
+
+const filteredAppointments = useMemo(() => {
+  return appointments.filter(a => a.status === "pending");
+}, [appointments]);
+
+🎯 One-Line Summary (Save this):
+    useMemo caches expensive calculations so they don’t re-run on every render.
+*/
