@@ -73,6 +73,7 @@ import ReactOptimizationIntro from "./React Optimization/ReactOptimizationIntro"
 import WithMemo from "./React Optimization/1_Memo/WithMemo";
 import WithUseCallback from "./React Optimization/2_UseCallback/WithUseCallback";
 import WithUseMemo from "./React Optimization/3_useMemo/WithUseMemo";
+import React_Lazy_Suspence from "./React Optimization/4_ReactLazy/React_Lazy_Suspence";
 
 
 function App() {
@@ -244,7 +245,7 @@ function App() {
       {/* <WithMemo/> */}
       {/* <WithUseCallback/> */}
       {/* <WithUseMemo/> */}
-      
+      <React_Lazy_Suspence/>
       
     </>
   );
