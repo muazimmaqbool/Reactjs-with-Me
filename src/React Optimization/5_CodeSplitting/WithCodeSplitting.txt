@@ -1,0 +1,8 @@
+I have already studied 'CodeSplitting' in detail checkout file:
+                                    'CodeSplitting.jsx' which is inside 'Debounce' folder
+
+
+->Code Splitting:
+    Code splitting is a performance optimization technique used in React to break a large JavaScript bundle into smaller "chunks" that are loaded on demand, 
+    only when needed by the user. This reduces the initial amount of code the browser needs to download and parse, 
+    significantly improving initial page load times and overall performance. 
