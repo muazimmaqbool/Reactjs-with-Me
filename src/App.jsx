@@ -246,7 +246,7 @@ function App() {
       {/* <WithUseCallback/> */}
       {/* <WithUseMemo/> */}
       {/* <React_Lazy_Suspence/> */}
-      <CodeSplitting/>
+      {/* <CodeSplitting/> */}
     </>
   );
 }
