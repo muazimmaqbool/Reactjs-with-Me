@@ -30,5 +30,33 @@ const React_Lazy_Suspence = () => {
     </div>
   )
 }
+/*
+->What’s REALLY happening (important for interviews):
+    App loads ➜ HeavyComponent NOT loaded
+    User clicks button ➜ React starts loading chunk
+    While loading ➜ fallback UI shows
+    Chunk loaded ➜ HeavyComponent rendered
+
+->Why this improves performance:
+
+  ❌Without React.lazy:
+      HeavyComponent bundled in main JS
+      Slower initial page load
+
+  ✅With React.lazy:
+      Code split into separate chunk
+      Loaded only when needed
+      Faster First Contentful Paint (FCP)
+
+->How to verify it works (must do):
+    Open Chrome DevTools → Network
+    Reload page
+    You’ll NOT see HeavyComponent.js
+    Click Load Heavy Component
+    New JS chunk appears 🎯
+
+->Interview-ready one-liner:
+    React.lazy enables code-splitting by dynamically importing components, and Suspense provides a fallback UI while the component is being loaded.
+*/
 
 export default React_Lazy_Suspence
