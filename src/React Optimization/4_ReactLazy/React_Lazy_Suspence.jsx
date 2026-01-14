@@ -1,5 +1,8 @@
-import React, { Suspense, useState } from 'react'
+import React, { lazy, Suspense, useState } from 'react'
 import LazyFile from './LazyFile';
+
+//or we can import HeavyFile via Lazy (see line number: )
+// const HeavyComponent=lazy(()=>import("./HeavyFile"))
 
 //Benefits: Loads code only when needed → faster initial load.
 
@@ -20,7 +23,8 @@ const React_Lazy_Suspence = () => {
 
         <Suspense fallback={<p>Loading...</p>}>
           {show && <LazyFile/>}
-          {/*  */}
+          {/* here 'HeavyFile' is loaded via 'LazyFile', but we can directly use it here and use 'lazy' instead via 'LazyFile' */}
+          {/* {show && <HeavyComponent/>} */}
         </Suspense>
 
     </div>
