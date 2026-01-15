@@ -1,4 +1,5 @@
 import React from 'react'
+import{List} from "react-window"
 
 //Its not used frequently only used when list to display is large and heavy
 /*
@@ -8,6 +9,7 @@ List Virtualization:
     This significantly improves performance and memory usage when dealing with large lists or tables (hundreds or thousands of items) by drastically reducing the number of DOM nodes. 
 
 ->install this dependency: npm install react-window
+    then import it like this: import {List} from "react-window"
 
 ->We will create a file called 'tempData.js' which contains dummpy data that we are going to display first via 'Normal List' and then via 'Virtualization'
 */
@@ -25,22 +27,51 @@ const Item = ({ item }) => {
 
  function NormalList() {
   console.log("Normal List Rendered");
-
   return (
     <div style={styles.container}>
-      
       {products.map((item) => (
         <Item key={item.id} item={item} />
       ))}
     </div>
   );
 }
+
+/******************************* */
+
+const Row = ({ index, style,data }) => {
+  const item = data[index];
+
+  return (
+    <div style={{ ...style, ...styles.virtualizedItem }}>
+      <p><strong>{item.productName}</strong></p>
+      <p>{item.isAvailable}</p>
+      <p>{item.price}</p>
+    </div>
+  );
+};
+function VirtualizedList(){
+  console.log("Virtualized list rendered")
+  return(
+      <List
+        height={400}        // Visible height
+        itemCount={products?.length}
+        itemSize={90}       // Height of each row (px)
+        width="100%"
+        itemData={products} 
+      >
+        {Row}
+      </List>
+  )
+}
 const ListVirtualization = () => {
   return (
     <div>
-      <h2>Normal List (1000 items)</h2>
-      <NormalList/>
-      <h2>Virtualized list</h2>
+
+      {/* <h2>Normal List (1000 items)</h2>
+      <NormalList/> */}
+
+      <h2>Virtualized List (Only visible items render)</h2>
+      <VirtualizedList/>
     </div>
   )
 }
@@ -66,5 +97,10 @@ const styles = {
     border: "1px solid #ddd",
     borderRadius: "4px",
   },
+  virtualizedItem:{
+    padding: "10px",
+    borderBottom: "1px solid #eee",
+    background: "#fff",
+  }
 };
 export default ListVirtualization
