@@ -1,0 +1,226 @@
+# Debugging Re-renders in React
+
+This document explains **how and why React components re-render**, and how to use **why-did-you-render** to *see exactly what caused a re-render*.
+
+---
+
+## Why Debug Re-renders?
+
+Unnecessary re-renders lead to:
+
+* Slower UI
+* Wasted CPU work
+* Lag in large dashboards (tables, charts, lists)
+
+React **re-renders by design**, but many re-renders are accidental.
+
+Common causes:
+
+* New object / array references
+* New function references
+* Poor state design
+* Missing memoization
+
+---
+
+## Tool: why-did-you-render
+
+`why-did-you-render` patches React and **logs to console** when a component re-renders and *why* it happened.
+
+It answers questions like:
+
+* ❓ Which prop changed?
+* ❓ Was it a reference change or value change?
+* ❓ Did a function get recreated?
+
+---
+
+## Installation
+
+```bash
+npm i @welldone-software/why-did-you-render
+```
+
+---
+
+## Setup (IMPORTANT)
+
+### 1️⃣ Create a config file
+
+Create a file called:
+
+```txt
+src/wdyr.js
+```
+
+Add:
+
+```js
+import React from "react";
+
+if (process.env.NODE_ENV === "development") {
+  const whyDidYouRender = require("@welldone-software/why-did-you-render");
+
+  whyDidYouRender(React, {
+    trackAllPureComponents: true,
+  });
+}
+```
+
+---
+
+### 2️⃣ Import it before React renders
+
+In `main.jsx` or `index.js` **before rendering App**:
+
+```js
+import "./wdyr";
+```
+
+⚠️ This must run **before any component renders**.
+
+---
+
+## Mark Components to Track
+
+You must explicitly tell which components to track.
+
+### Example Component
+
+```jsx
+const Child = React.memo(({ user }) => {
+  return <p>{user.name}</p>;
+});
+
+Child.whyDidYouRender = true;
+```
+
+---
+
+## Example: Unnecessary Re-render
+
+### ❌ Problem Code
+
+```jsx
+export default function Parent() {
+  const [count, setCount] = React.useState(0);
+
+  const user = { name: "Muazim" }; // new object every render
+
+  return (
+    <>
+      <button onClick={() => setCount(count + 1)}>+</button>
+      <Child user={user} />
+    </>
+  );
+}
+```
+
+---
+
+### 🔍 Console Output
+
+```txt
+why-did-you-render
+Child
+  props.user changed because:
+  previous value !== next value
+```
+
+📌 **Meaning:**
+Even though `user.name` is same, the **object reference changed**.
+
+---
+
+## Fix: Memoize the Object
+
+### ✅ Optimized Code
+
+```jsx
+const user = React.useMemo(() => ({ name: "Muazim" }), []);
+```
+
+Now the console will stay **silent** ✅
+
+---
+
+## Example: Function Re-render Issue
+
+### ❌ Problem
+
+```jsx
+const handleClick = () => {
+  console.log("clicked");
+};
+
+<Child onClick={handleClick} />
+```
+
+### 🔍 Output
+
+```txt
+props.onClick changed
+```
+
+---
+
+### ✅ Fix with useCallback
+
+```jsx
+const handleClick = React.useCallback(() => {
+  console.log("clicked");
+}, []);
+```
+
+---
+
+## What It Can Detect
+
+✅ Changed props
+✅ Changed object references
+✅ Changed function references
+✅ Memoized component still re-rendering
+
+❌ Does NOT optimize automatically
+
+---
+
+## Best Practices
+
+* Use **only in development**
+* Track **important components only**
+* Combine with:
+
+  * React.memo
+  * useCallback
+  * useMemo
+
+---
+
+## When You SHOULD Use It
+
+✔ Large lists
+✔ Dashboards
+✔ Reusable UI components
+✔ Performance debugging
+
+❌ Do NOT use in production
+
+---
+
+## Mental Model
+
+> "If React re-rendered, something changed.
+> why-did-you-render tells you **what** and **why**."
+
+---
+
+## Summary
+
+* Re-renders are normal
+* Unnecessary re-renders are bugs
+* This tool makes invisible problems **visible**
+
+---
+
+End of document.
