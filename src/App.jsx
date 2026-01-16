@@ -248,7 +248,7 @@ function App() {
       {/* <WithUseMemo/> */}
       {/* <React_Lazy_Suspence/> */}
       {/* <CodeSplitting/> */}
-      <ListVirtualization/>
+      {/* <ListVirtualization/> */}
     </>
   );
 }
