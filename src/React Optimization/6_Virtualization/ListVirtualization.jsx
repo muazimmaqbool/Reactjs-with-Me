@@ -68,10 +68,11 @@ const ListVirtualization = () => {
     <div>
 
       {/* <h2>Normal List (1000 items)</h2>
-      <NormalList/> */}
+      // <NormalList/> */}
 
       <h2>Virtualized List (Only visible items render)</h2>
-      <VirtualizedList/>
+      {/* Their is an issue with react-window library need to fix the List element */}
+      {/* <VirtualizedList/> */}
     </div>
   )
 }
