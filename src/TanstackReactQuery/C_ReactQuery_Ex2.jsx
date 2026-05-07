@@ -9,7 +9,7 @@ const C_ReactQuery_Ex2 = () => {
     const {data:todos,isLoading,error,refetch,isError,status}=useQuery({
         queryKey:["todos"],
         queryFn:fetchTodos,
-        enabled:isClicked, //prevents automatic fetching
+        enabled:isClicked, //prevents automatic fetching (queryFn will only be called when isClicked is true, which happens when the button is clicked)
     })
     //console.log("todos fetched:",todos)
     const hanldeClick=()=>{
@@ -21,6 +21,7 @@ const C_ReactQuery_Ex2 = () => {
     console.log("isError:",isError)
     console.log("status:",status)
     //make some changes in API calls url like /todos to /todoos , then see the console
+
     /*
     ->refetch():
         -It re-runs the query function (queryFn) to fetch the latest data from the server.
