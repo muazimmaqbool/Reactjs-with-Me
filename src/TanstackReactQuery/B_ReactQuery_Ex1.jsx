@@ -2,8 +2,8 @@ import React from 'react'
 import { useQuery } from '@tanstack/react-query'
 
 //Checkout previous component first
-//Example One Tanstack React Query
 
+//Example 1 of Tanstack React Query
 //Api call
 const fetchUsers=async()=>{
     console.log("Fetching users...")
@@ -23,12 +23,10 @@ const B_ReactQuery_Ex1 = () => {
         queryKey:["users"], //used for re-fetching, caching, and sharing data between components.
         queryFn:fetchUsers,//async function typically used to call an API.
     })
-    if(isLoading) return <p>Loading...</p>;
-    if(error) return <p>Error:{error.message}</p>
-    // console.log("data fetched:",data)
+    if(isLoading) return <p>Loading...</p>; // you will see this only when the data is being fetched for the first time.
   return (
     <div>
-        <h2>Example One Of React Query</h2>
+        <h2>Example 1 Of React Query</h2>
         <h4>Users Fetched:</h4>
         <ul>
             {data.map((user)=>(
