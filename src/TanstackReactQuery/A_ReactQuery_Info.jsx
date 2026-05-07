@@ -17,9 +17,12 @@ export default A_ReactQuery_Info
 
   Note: Server state refers to the data fetched from an API or a backend server. 
         This data is not yet processed or manipulated by the client-side code
+                                       or 
+        Server state is data fetched from an external source (like a database or API) that resides on a server and is utilized by a frontend application
 
 ->Why Use React Query?
-  -Automatic Caching: Stores fetched data in cache, reducing redundant API calls. (By default, React Query caches the results of all queries for 5 minutes)
+  -Automatic Caching: Stores fetched data in cache, reducing redundant API calls. 
+                      (By default, React Query caches the results of all queries for 5 minutes)
   -Background Refetching: Keeps data fresh by refetching it automatically when needed.
   -Automatic Refetch on Focus: Refetches data when the user returns to the app.
   -Error Handling: Provides built-in mechanisms to handle API request errors.
