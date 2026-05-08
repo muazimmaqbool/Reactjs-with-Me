@@ -190,9 +190,9 @@ function App() {
       {/* <C_ReactQuery_Ex2/> */}
 
       {/* caching in react query */}
-      <button onClick={()=>settoggle((prev)=>!prev)}>Toggle Caching</button>
+      {/* <button onClick={()=>settoggle((prev)=>!prev)}>Toggle Caching</button> */}
       {/* {toggle && <D_Caching/>} */}
-      {toggle && <E_Caching_2/>}
+      {/* {toggle && <E_Caching_2/>} */}
 
       {/* used to explain that:it will not refetch the data if you use React Query properly in another file
       make sure staleTime is infinity in both files
@@ -200,7 +200,7 @@ function App() {
       {/* {toggle ? <D_Caching/> : <E_Caching_2/>} */}
       
       {/* <F_MultipleQueries/> */}
-      {/* <G_Pass_ID/> */}
+      <G_Pass_ID/>
       {/* <H_Mutations/> */}
 
       {/*Mini project using tanstack react query */}

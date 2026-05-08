@@ -6,7 +6,7 @@ import {fetchUsers,fetchTodos} from "./a_apiCalls"
   Each unique queryKey represents a separate piece of cached data.
 
 ->How Multiple queryKeys Work:
-    Each queryKey stores its own cached data separately.
+    Each queryKey stores it's own cached data separately.
     Different keys prevent data from overlapping.
     If the same queryKey is used in multiple places, React Query shares the cached data.
 */
