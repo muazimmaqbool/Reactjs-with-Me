@@ -4,7 +4,7 @@ import { fetchUsersID } from "./a_apiCalls";
 
 //Passing id to api via react-query
 const G_Pass_ID = () => {
-  const [userId, setUserId] = useState(); //For user input
+  const [userId, setUserId] = useState(""); //For user input
   const [fetchId, setFetchId] = useState(null); // Store ID when button is clicked
   const {
     data: userInfo,
