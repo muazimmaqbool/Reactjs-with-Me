@@ -24,7 +24,7 @@ const H_Mutations = () => {
   const mutation = useMutation({
     mutationFn: createUser,
     onSuccess: (res) => {
-      queryClient.invalidateQueries(["users"]);//refetch the users data after mutation
+      queryClient.invalidateQueries(["users"]);//refetch the users data after mutation i.e after creating a new user/after POST request
       console.log("New user added successfully:", res);
       setnewUser(res);
     },
@@ -39,7 +39,7 @@ const H_Mutations = () => {
     <div>
       <h2>Mutation in React Query</h2>
       <h3>Mutations with useMutation (POST, PUT, DELETE requests)</h3>
-      <h4>POST Rquest:</h4>
+      <h4>POST Request:</h4>
       <form onSubmit={handleAddUser}>
         <input
           type="text"
@@ -47,7 +47,7 @@ const H_Mutations = () => {
           value={name}
           onChange={(e) => setname(e.target.value)}
         />
-        <button type="submit">Add User</button>
+        <button type="submit" disabled={name===""}>Add User</button>
       </form>
 
       <h4>Users Fetched:</h4>
