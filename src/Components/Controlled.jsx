@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 /*
 ->Controlled Components:
-    The form value is stored in React state.
+    The form values are stored in React state.
     React updates the DOM whenever state changes.
     You can fully control the input (validation, transformations, resets).
 */
@@ -16,6 +16,7 @@ const Controlled = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(`Name submitted: ${name}`);
+    setName(""); // Clear the input after submission
   };
 /*
 Here:
