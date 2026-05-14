@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 /*
--> Uncontrolled Components:
+->Uncontrolled Components:
     The input value is not stored in React state.
     Instead, you use a ref to directly access the DOM’s value only when needed.
     React doesn’t “control” the typing behavior.
@@ -11,6 +11,7 @@ const Uncontrolled = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(`Name submitted: ${nameRef.current.value}`);
+    nameRef.current.value = ''; // Clear the input after submission
   };
 /*
 Here:
@@ -27,13 +28,13 @@ Here:
 
 export default Uncontrolled
 /*
--> Key Differences
+-> Key Differences:
     Feature	               Controlled	                   Uncontrolled
-    Value stored in	     React state	                 DOM (input element itself)
+    Value stored in	   React state	                   DOM (input element itself)
     Access value	     Through state	                 Using ref
     React in control?	 Yes (single source of truth)    No (React just reads when needed)
     Use cases	         Validation, live updates,       Quick forms, file inputs, minimal overhead
-                          conditional rendering	
+                       conditional rendering	
 
 -> Real-World Usage:
     Controlled → Best for most forms (validation, live error messages, conditional UI).
