@@ -51,7 +51,7 @@ const RenderingBehavior = () => {
     3. Context values change (if you consume a useContext value).
         const theme = useContext(ThemeContext); // re-render when theme updates
 
-    4. Parent re-renders – even if props didn’t change, children will re-render by default (Unless wrapped in React.memo.).
+    4. Parent re-renders – even if the props didn’t change, children will re-render by default (Unless wrapped in React.memo.).
         <Parent> <Child /> </Parent> // Child re-renders when Parent re-renders
 
 -> What Does Not Cause Re-render?

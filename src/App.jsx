@@ -224,7 +224,7 @@ function App() {
       {/* In React, the distinction between controlled and uncontrolled components primarily relates to how form
           input elements manage their state and data. */}
       {/* <Controlled/> */}
-      <Uncontrolled/>
+      {/* <Uncontrolled/> */}
 
       {/*Creating Custom Select component */}
       {/* <Home_Select/> */}
@@ -233,7 +233,7 @@ function App() {
       {/* <EventLoop_and_More/> */}
 
       {/*Rendering Behavior – when React re-renders, what causes it, and how to avoid unnecessary renders. */}
-      {/* <RenderingBehavior/>  */}
+      <RenderingBehavior/> 
 
       {/* Data binding in react */}
       {/* <DataBinding/> */}
