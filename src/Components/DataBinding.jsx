@@ -20,7 +20,7 @@ In React, we mainly use two types:
         Direction: State ➝ UI
         React prefers this approach because it's predictable and easy to debug.
 
-2->Two-Way Data Binding (User Input <-> State)
+2->Two-Way Data Binding (User Input <=> State)
     Input value changes → state updates.
     State updates → input value updates.
 

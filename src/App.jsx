@@ -233,11 +233,11 @@ function App() {
       {/* <EventLoop_and_More/> */}
 
       {/*Rendering Behavior – when React re-renders, what causes it, and how to avoid unnecessary renders. */}
-      <RenderingBehavior/> 
+      {/* <RenderingBehavior/>  */}
 
       {/* Data binding in react */}
       {/* <DataBinding/> */}
-      {/* <TwoWayDataBinding/> */}
+      <TwoWayDataBinding/>
 
 
       {/* ---------- React Optimization -------------- */}
