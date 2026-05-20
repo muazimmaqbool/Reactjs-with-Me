@@ -1,8 +1,8 @@
 import React from 'react'
 
 /*
-First: React’s default is one-way data binding:
-    React’s data flow goes from parent → child (downward).
+First: React’s default data flow is one-way data binding:
+    React’s data flow goes from parent → child (downw-ard).
     State is passed as props, and when something changes in the UI, you update the state with an event handler.
 
     So, React does not have automatic two-way binding like Angular —
@@ -11,8 +11,8 @@ First: React’s default is one-way data binding:
 /*
 Two-way Data Binding Pattern (Controlled Component)
     Here’s the core idea:
-    The UI displays data from state.
-    The user input updates that same state.
+        The UI displays data from state.
+        The user input updates that same state.
 
     Example — Controlled Input:
         import React, { useState } from "react";
