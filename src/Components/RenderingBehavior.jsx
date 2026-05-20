@@ -78,30 +78,30 @@ const RenderingBehavior = () => {
     4) Parent renders cascading down.
 
 -> How to Avoid Unnecessary Renders:
-    🔹Using React.memo (HOC):
+    1🔹Using React.memo (HOC):
         Stops a child from re-rendering if props are the same (shallow compare).
         const Child = React.memo(({ value }) => {
           console.log("Rendered");
           return <div>{value}</div>;
         });
-    Note: to study memo check Memo.jsx file inside components foldder
+    Note: to study memo check Memo.jsx file inside Components folder
 
-    🔹useCallback hook:
+    2🔹useCallback hook:
         Memoizes a function reference, so children don’t see a “new function” every render.
         const handleClick = useCallback(() => {
           console.log("Clicked");
         }, []);
     Note: to study useCallback hook checkout useCallback.jsx inside Hooks folder
     
-    🔹useMemo hook:
+    3🔹useMemo hook:
         Memoizes expensive calculations or objects.
         const options = useMemo(() => [{ id: 1 }], []);
-    Note: to study useMemo hook check UseMemo.jsx component inside Hooks folder
+    Note: to study useMemo hook check UseMemo.jsx inside Hooks folder
 
-    🔹Split State & Components
+    4🔹Split State & Components:
         Keep unrelated state in separate components/hooks so one change doesn’t re-render everything.
 
-    🔹Context Optimization
+    5🔹Context Optimization:
         Don’t put everything in one context.
         Split into multiple contexts or use selector hooks.
     Note: The useSelector hook allows functional React components to extract specific pieces of data from the Redux store's state.
