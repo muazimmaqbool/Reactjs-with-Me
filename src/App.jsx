@@ -156,7 +156,7 @@ function App() {
       {/* <UseReducer/>  */}
       {/* <UseReducer2/> */}
 
-      <UseCallback/>
+      {/* <UseCallback/> */}
       {/* <UseLayoutEffectHook/> */}
 
       {/*these are in REDUX folder */}

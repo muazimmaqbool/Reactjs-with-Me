@@ -3,28 +3,28 @@ import USEcallbackCOMP from "../Hooks/USEcallbackCOMP";
 
 //Read Documentaion Below:
 const UseCallback = () => {
-  return <Example1 />;
+  return <Example />;
 };
 
-const Example1 = () => {
+const Example = () => {
   const [number, setNumber] = useState(1);
   const [dark, setDark] = useState(false);
 
-    //try this function without useCallback:
-    /*
-      const getItems = () => {
-        console.log("function renders")
-        return [number, number + 1, number + 2];
-      }
-    */ 
-   //with useCallBakc
+    //without useCallback: runs even when we change theme because getItems function is re-created every time we render our component
+      // const getItems = () => {
+      //   console.log("function renders")
+      //   return [number, number + 1, number + 2];
+      // }
+    
+   //with useCallBack:
   const getItems = useCallback(() => {
     console.log("function renders")
     return [number, number + 1, number + 2];
   }, [number]);
+
   //this getItems function gets re-created every single time we render our component so every single time we change our
   //number this function is being re-created over and over again, even if the actual number inside it didn't change
-  //and this is where we use useCallback: useCallback is going to make this callback function only updates when it needs to
+  //and this is where we use useCallback: useCallback is going to make this callback function only update when it needs to
   //so it will only render when number changes
   //earlier it was also rendering when we change theme now after using useCallback it only renders when number is changed
                                  
