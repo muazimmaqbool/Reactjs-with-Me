@@ -145,7 +145,7 @@ function App() {
       {/* <UseEffect3/> */}
       {/* <UseEffect4Example/> */}
 
-      {/* <UseMemo /> */}
+      <UseMemo />
       {/* <UseRef/> */}
 
       {/* <UseContext/> */}
@@ -237,7 +237,7 @@ function App() {
 
       {/* Data binding in react */}
       {/* <DataBinding/> */}
-      <TwoWayDataBinding/>
+      {/* <TwoWayDataBinding/> */}
 
 
       {/* ---------- React Optimization -------------- */}
