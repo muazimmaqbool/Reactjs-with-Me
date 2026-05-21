@@ -145,7 +145,7 @@ function App() {
       {/* <UseEffect3/> */}
       {/* <UseEffect4Example/> */}
 
-      <UseMemo />
+      {/* <UseMemo /> */}
       {/* <UseRef/> */}
 
       {/* <UseContext/> */}
@@ -156,7 +156,7 @@ function App() {
       {/* <UseReducer/>  */}
       {/* <UseReducer2/> */}
 
-      {/* <UseCallback/> */}
+      <UseCallback/>
       {/* <UseLayoutEffectHook/> */}
 
       {/*these are in REDUX folder */}
