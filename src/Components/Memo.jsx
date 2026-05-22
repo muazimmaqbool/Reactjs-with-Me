@@ -4,7 +4,7 @@ import MemoTodo from "./MemoTodo";
 //Read Documentation Below:
 const Memo = () => {
   const [count, setCount] = useState(0);
-  const [todos, setTodos] = useState(["Todo 1", "Todo 2"]);
+  const [todos, setTodos] = useState(["Todo 1"]);
   const [myTasks, setmyTasks] = useState([]);
 
   const increment = () => {
@@ -27,11 +27,11 @@ const Memo = () => {
       <h1>MEMO</h1>
 
       {/* without using memo */}
-      {/* <Todo todos={todos} />  */}
+      <Todo todos={todos} /> 
 
       {/* using memo */}
-      <MemoTodo todos={todos} />
-      <AddTask myTasks={myTasks} />
+      {/* <MemoTodo todos={todos} />
+      <AddTask myTasks={myTasks} /> */}
 
       <hr />
 
