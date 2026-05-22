@@ -122,16 +122,17 @@ export default Memo;
     -memo:
       Purpose: Wraps a React component to prevent unnecessary re-renders when props haven’t changed.
       Use useMemo to: Prevent re-rendering of child components if their props are the same
-       Think of it as: "Only re-render this component if it's props change
+      Think of it as: "Only re-render this component if it's props change
       Syntax:
           const MyComponent = React.memo((props) => {
             return <div>{props.name}</div>;
           });
 
     ->Summary:
-      Feature        	          useMemo	                                   React.memo
-      Type	                     Hook       	                     Higher-order component (HOC)
+      Feature        	          useMemo	                                     React.memo
+      ---------------------------------------------------------------------------------------------
+      Type	                Hook       	                                Higher-order component (HOC)
       What it memoizes  	  Computation result	                        Component rendering
-      Prevents	        Re-calculating values unnecessarily	       Re-rendering component unnecessarily
-      Use inside	            Components	                              Outside component definition
+      Prevents	            Re-calculating values unnecessarily	        Re-rendering component unnecessarily
+      Use inside	          Components	                                Outside component definition
 */
