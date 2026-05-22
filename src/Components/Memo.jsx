@@ -27,11 +27,11 @@ const Memo = () => {
       <h1>MEMO</h1>
 
       {/* without using memo */}
-      <Todo todos={todos} /> 
+      {/* <Todo todos={todos} />  */}
 
       {/* using memo */}
-      {/* <MemoTodo todos={todos} />
-      <AddTask myTasks={myTasks} /> */}
+       <MemoTodo todos={todos} />
+      <AddTask myTasks={myTasks} /> 
 
       <hr />
 
@@ -71,7 +71,7 @@ const Todo = ({ todos }) => {
 /* Solution:
   To fix this, we can use memo.
   Use memo to keep the Todos component from needlessly re-rendering.
-  Wrap the Todos component export in memo:
+  Wrap the Todos components export in memo:
   like this : export default memo(Todos);
 */
 
