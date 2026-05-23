@@ -146,9 +146,9 @@ function App() {
       {/* <UseEffect4Example/> */}
 
       {/* <UseMemo /> */}
-      {/* <UseRef/> */}
+      <UseRef/>
 
-      <UseContext/> 
+      {/* <UseContext/>  */}
       {/*useContext example with multiple files */}
      {/* this will be create context and provider */}
       {/* <LoginHome/>  */}

@@ -136,8 +136,8 @@ export default UseRef
     
 
 ->When to use useRef() instead of useState():
-    A rule of thumb is to use useState when you need to re-render the component when the 
-    state changes and useRef when you don't need to re-render the component when the state changes.
+    A rule of thumb is to use useState when you need to re-render the component when the state changes
+    use useRef when you don't need to re-render the component when the state changes.
 
 ->Accessing DOM Elements (important): 
     In general, we want to let React handle all DOM manipulation.
@@ -145,8 +145,7 @@ export default UseRef
     In React, we can add a ref attribute to an element to access it directly in the DOM
     code in : Example 2
 
-->Basically we use useRef hook to store those things which are not related to the render and for things which are related to the
-    render use useState hook.
+->Basically we use useRef hook to store those things which are not related to the render and for things which are related to the render use useState hook.
     ->const refName=useRef(initial value)
     ->refName is the refrence object and this refrence object have 'current' property i.e refName.current
     ->you can read and also change this current property
