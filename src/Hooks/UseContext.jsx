@@ -27,8 +27,7 @@ function Comp3() {
   const product = useContext(context);
   return (
     <>
-      <h5>component 3</h5>
-      <h5>product: {product}</h5>
+      <h5>component 3 : product: {product}</h5>
       <Comp4 />
     </>
   );
@@ -45,8 +44,7 @@ function Comp5() {
   const data = useContext(context);
   return (
     <>
-      <h5>component 5</h5>
-      <h4>Diplay {data} again</h4>
+      <h4>component 5: Diplay {data} again</h4>
     </>
   );
 }
