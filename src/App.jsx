@@ -148,7 +148,7 @@ function App() {
       {/* <UseMemo /> */}
       {/* <UseRef/> */}
 
-      {/* <UseContext/> */}
+      <UseContext/> 
       {/*useContext example with multiple files */}
      {/* this will be create context and provider */}
       {/* <LoginHome/>  */}

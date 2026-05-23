@@ -56,8 +56,7 @@ export default UseContext;
 /*
 ->React useContext hook:
     React useContext hook is a way to manage state/data globally.
-    It can be used together with the useState Hook to share state/data between deeply nested 
-    components more easily than with useState alone.
+    It can be used together with the useState Hook to share state/data between deeply nested components more easily than with useState alone.
 
     ->The Problem:
         State should be held by the highest parent component in the stack that requires access to the state.
@@ -117,7 +116,7 @@ export default UseContext;
 
     ->The Solution"
         The solution is to create context.
-        Create Context
+        Create Context:
              To create context, you must import createContext and initialize it:
 
         import { useState, createContext } from "react";
@@ -141,7 +140,7 @@ export default UseContext;
         }
         Now, all components in this tree will have access to the user Context.
 
-        Use the useContext Hook
+        Use the useContext Hook:
         In order to use the Context in a child component, we need to access it using the useContext Hook.
 
         First, include the useContext in the import statement:
