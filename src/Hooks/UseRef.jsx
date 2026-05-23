@@ -2,15 +2,16 @@ import React, { useEffect, useState,useRef } from 'react'
 
 //Read Documentation Below
 const UseRef = () => {
+    // console.log("UseRef component rendered")
   return (
     <>
       {/* <Example1/> */}
 
       {/*Accessing DOM Elements */}
-      {/* <Example2/>  */}
+      <Example2/> 
 
       {/*Tracking State Changes: track of previous state values */}
-      <Example3/> 
+      {/* <Example3/>  */}
     </>
   )
 }
