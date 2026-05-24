@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-//Read about Higher Order Component below
+//Read about Higher Order Component below:
 
 //This is a simple component that just displays a list of users
 const UserList=({users})=>{
@@ -54,7 +54,7 @@ const HOC = () => {
  const [users, setusers] = useState([]);
  useEffect(() => {
   setTimeout(() => {
-      setusers(["Muazim", "Maqbool", "Rather"]);
+      setusers(["Muazim Maqbool", "Basit Mushtaq", "Kaiser Sakhi"]);
       setloading(false);
     }, 2000);
  }, []);
