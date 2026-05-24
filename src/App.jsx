@@ -146,7 +146,7 @@ function App() {
       {/* <UseEffect4Example/> */}
 
       {/* <UseMemo /> */}
-      <UseRef/>
+      {/* <UseRef/> */}
 
       {/* <UseContext/>  */}
       {/*useContext example with multiple files */}
@@ -218,7 +218,7 @@ function App() {
 
 
       {/* Higher order component with example */}
-      {/* <HOC/> */}
+      <HOC/>
 
       {/* controlled and uncontrolled components */}
       {/* In React, the distinction between controlled and uncontrolled components primarily relates to how form
