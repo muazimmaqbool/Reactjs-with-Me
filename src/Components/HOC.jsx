@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 //Read about Higher Order Component below:
 
-//This is a simple component that just displays a list of users
+//This is a simple component that just displays a list of users:
 const UserList=({users})=>{
     return (
     <ul>
@@ -13,7 +13,7 @@ const UserList=({users})=>{
   );
 }
 
-//Higher Order Component to add loading logic
+//Higher Order Component to add loading logic:
 const withLoading = (WrappedComponent) => {
   return function EnhancedComponent({isLoading,...props}){
     if(isLoading){
@@ -56,20 +56,17 @@ const HOC = () => {
   setTimeout(() => {
       setusers(["Muazim Maqbool", "Basit Mushtaq", "Kaiser Sakhi"]);
       setloading(false);
-    }, 2000);
+    }, 3000);
  }, []);
   return(
      <div style={{ fontFamily: "Arial", padding: "20px" }}>
-      <h2>User List</h2>
+      <h2>User List:</h2>
       <UserListWithLoading isLoading={loading} users={users} />
     </div>
   )
 }
 
-/*
- A Higher Order Component doesn’t touch your original component — it wraps it in another component that 
- can add logic before deciding what to render.
-*/
+//A Higher Order Component doesn’t touch your original component — it wraps it in another component that can add logic before deciding what to render.
 export default HOC
 /*
 -> What is a Higher Order Component?
@@ -78,7 +75,7 @@ export default HOC
 
     Formula: const EnhancedComponent = higherOrderComponent(OriginalComponent);
 
--> Why use HOCs?
+-> Why to use HOCs?
     Reuse logic between multiple components (before hooks existed, this was the main way).
     Add common features: authentication, logging, loading states, permissions, styling.
     Keep components pure and focused on UI, while HOC handles the extra logic.
