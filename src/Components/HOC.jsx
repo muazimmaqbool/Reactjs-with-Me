@@ -77,8 +77,8 @@ export default HOC
 
 -> Why to use HOCs?
     Reuse logic between multiple components (before hooks existed, this was the main way).
-    Add common features: authentication, logging, loading states, permissions, styling.
-    Keep components pure and focused on UI, while HOC handles the extra logic.
+    Used to add common features like: authentication, logging, loading states, permissions, styling.
+    Keeping components pure and focused on UI, while HOC handles the extra logic.
 
 ->Basic Example: With Loading Spinner:
     We want to add a loading spinner to any component that fetches data.
@@ -91,5 +91,5 @@ export default HOC
     Always pass down props (...props) to keep the wrapped component functional.
     Name convention: withSomething.
     With hooks, many cases where you’d use HOCs are now done with custom hooks — 
-            but HOCs are still important to understand (you’ll see them in libraries like react-redux, react-router).
+                but HOCs are still important to understand (you’ll see them in libraries like react-redux, react-router).
 */
