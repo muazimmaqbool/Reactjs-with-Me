@@ -69,10 +69,10 @@ const Todo = ({ todos }) => {
 //If this component was complex, it could cause performance issues.
 
 /* Solution:
-  To fix this, we can use memo.
-  Use memo to keep the Todos component from needlessly re-rendering.
-  Wrap the Todos components export in memo:
-  like this : export default memo(Todos);
+    To fix this, we can use React.memo.
+    Use React.memo to keep the Todos component from needlessly re-rendering.
+    Wrap the Todos components export in React.memo:
+    like this : export default React.memo(Todos);
 */
 
 //but here we have make this component in the different file so, to see how it works we create another
@@ -99,7 +99,7 @@ const AddTask = memo(({ myTasks }) => {
 export default Memo;
 
 /*
-  ->React Memo is a higher-order component that wraps around a component to memorize the rendered output and avoid unnecessary renderings.
+  ->React Memo is a higher-order component that wraps around a component to memorize the rendered output to avoid unnecessary renderings.
   ->This improves performance because it memorizes the result and skips rendering to reuse the last rendered result.
   ->There are two ways you can wrap your component with React.memo() : shown above via example
 
@@ -121,7 +121,7 @@ export default Memo;
 
     -memo:
       Purpose: Wraps a React component to prevent unnecessary re-renders when props haven’t changed.
-      Use memo to: Prevent re-rendering of child components if their props are the same
+      Use React.memo to: Prevent re-rendering of child components if their props are the same
       Think of it as: "Only re-render this component if it's props change
       Syntax:
           const MyComponent = React.memo((props) => {

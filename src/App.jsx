@@ -119,8 +119,8 @@ function App() {
       {/*this component is inside SASS Styling*/}
       {/* <HomeSASS/>  */}
 
-      {/*used to explain memo */}
-       {/* <Memo/>  */}
+      {/*used to explain React.memo */}
+       <Memo/> 
 
       {/* used to explain API calls using fetch and axios */}
       {/* <FetchAPI/> */}
@@ -218,7 +218,7 @@ function App() {
 
 
       {/* Higher order component with example */}
-      <HOC/>
+      {/* <HOC/> */}
 
       {/* controlled and uncontrolled components */}
       {/* In React, the distinction between controlled and uncontrolled components primarily relates to how form
