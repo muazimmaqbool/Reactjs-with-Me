@@ -30,8 +30,8 @@ const Example = () => {
                                  
   /*
   Note:
-  console.log("getItems :", getItems); // o/p: function
-  if we use useMemo above it will set array to getItems i.e: o/p [1, 2, 3]
+    console.log("getItems :", getItems); // o/p: function
+    if we use useMemo above it will set array to getItems i.e: o/p [1, 2, 3]
   */
 //  console.log("getItems :", getItems)
 
@@ -68,14 +68,13 @@ export default UseCallback;
   ->The useCallback and useMemo Hooks are similar.
       The main difference is that useMemo returns a memoized value and useCallback returns a memoized function. 
 
-  ->Problem: One reason to use useCallback is to prevent a component from re-rendering unless its
-             props have changed.
+  ->Problem: One reason to use useCallback is to prevent a component from re-rendering unless its props have changed.
 
   Important:
-  Big difference between useMemo and useCallback is that:
-  -> useMemo takes a function and its going to return you the return value of that function,
-  -> useCallback also takes a function  and it returns that function which it takes as argument
-     if we use useMemo above it will set array to getItems
-  ? here useCallback sets entire function to the getItems not just return items of the function
+    Big difference between useMemo and useCallback is that:
+    -> useMemo takes a function and its going to return you the return value of that function,
+    -> useCallback also takes a function  and it returns that function which it takes as argument
+      if we use useMemo above it will set array to getItems
+    ->here useCallback sets entire function to the getItems not just return items of the function
   
 */
