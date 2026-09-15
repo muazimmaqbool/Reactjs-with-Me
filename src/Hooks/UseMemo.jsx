@@ -15,11 +15,11 @@ const ExampleOne=()=>{
     const [count, setCount] = useState(0);
     const [todos, setTodos] = useState([]);
     //Called even when todo is added, which is not required as expensiveCalculation function is only related to count state
-    //const calculation=expensiveCalculation(count); 
+    // const calculation=expensiveCalculation(count); 
    // using without useMemo will make it little slow
 
     
-    //we can use the useMemo Hook to memoize the expensiveCalculation function. This will cause the function to only run when needed.
+    //we can use the useMemo Hook to memoize the result ofexpensiveCalculation function. This will cause the function to only run when needed.
     //We can wrap the expensive function call with useMemo:
    const calculation=useMemo(()=>expensiveCalculation(count),[count])
     //useMemo also accepts second parameter i.e its dependencies and this means it will only runs when the
@@ -60,8 +60,7 @@ const expensiveCalculation=(num)=>{
     return num;
 };
 
-//Note: use useMemo only when you actually need the performance benefits and when you are calling
-//a slow function or fetching some data using API
+//Note: use useMemo only when you actually need the performance benefits and when you are calling a slow function or fetching some data using API
 
 //Example Two
 const ExampleTwo =()=>{
