@@ -11,7 +11,7 @@ const UseRef = () => {
       {/* <Example2 /> */}
 
       {/*Tracking State Changes: track of previous state values */}
-      {/* <Example3/>  */}
+      <Example3/> 
     </>
   );
 };
@@ -86,17 +86,16 @@ function Example2() {
   );
 }
 
-//example 3
 //Tracking State Changes: track of previous state values
 function Example3() {
   const [item, setItem] = useState(""); //item holds the current input value.
   const previousItem = useRef(); //previousItem.current will hold the previous input value.
-
+   // o/p: {current:undefined} initially when component is mounted, after that it will be {current: item} where item is the previous value of input
   useEffect(() => {
     console.log("called");
     previousItem.current = item;
-    console.log("previous item:", previousItem);
   }, [item]);
+  console.log("previousItem:", previousItem);
   /*
     Whenever item changes, the effect runs.
     It stores the current value of item into previousItem.current.
