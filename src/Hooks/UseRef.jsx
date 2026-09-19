@@ -2,13 +2,13 @@ import React, { useEffect, useState, useRef } from "react";
 
 //Read Documentation Below
 const UseRef = () => {
-//   console.log("Component rendered")
+  //   console.log("Component rendered")
   return (
     <>
-      <Example1 />
+      {/* <Example1 /> */}
 
       {/*Accessing DOM Elements */}
-      {/* <Example2/>  */}
+      {/* <Example2 /> */}
 
       {/*Tracking State Changes: track of previous state values */}
       {/* <Example3/>  */}
@@ -55,7 +55,7 @@ function Example2() {
   };
 
   const pTag = useRef();
-  console.log("pTag:", pTag); // o/p: {current:undefined}
+  console.log("pTag:", pTag); // o/p: {current:undefined} initially when component is mounted, after that it will be {current: p} where p is the p tag in DOM
   const updateColor = () => {
     pTag.current.style.color = "teal";
   };
