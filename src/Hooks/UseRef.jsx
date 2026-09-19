@@ -1,97 +1,103 @@
-import React, { useEffect, useState,useRef } from 'react'
+import React, { useEffect, useState, useRef } from "react";
 
 //Read Documentation Below
 const UseRef = () => {
-    // console.log("UseRef component rendered")
+//   console.log("Component rendered")
   return (
     <>
-      {/* <Example1/> */}
+      <Example1 />
 
       {/*Accessing DOM Elements */}
       {/* <Example2/>  */}
 
       {/*Tracking State Changes: track of previous state values */}
-      <Example3/> 
+      {/* <Example3/>  */}
     </>
-  )
-}
+  );
+};
 
-const Example1=()=>{
-    const [name,setName]=useState('');
-    /*
+const Example1 = () => {
+  const [name, setName] = useState("");
+  /*
     If we try to count how many times our application renders using the useState Hook, 
     we would be caught in an infinite loop since this Hook itself causes a re-render.
     To avoid this, we can use the useRef Hook.
     */
-    const renderCount=useRef(0);
-    console.log("renderCount:",renderCount) // o/p: {current: 0}, 1,2,...
-    useEffect(()=>{
-        renderCount.current=renderCount.current+1
-        //so when i change the value in input, it will never cause our component to re-render because it's completely
-        //seperate from our components render cycle
-    },)
-    return(
-        <>
-        <input type="text" value={name} onChange={(e)=>setName(e.target.value)} />
-        <div>My name is {name}</div>
+  const renderCount = useRef(0);
+  console.log("renderCount:", renderCount); // o/p: {current: 0}, 1,2,...
+  useEffect(() => {
+    renderCount.current = renderCount.current + 1;
+    //so when i change the value in input, it will never cause our component to re-render because it's completely
+    //seperate from our components render cycle
+  });
+  return (
+    <>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <div>My name is {name}</div>
 
-        {/*showing number of times component rendered */}
-        <div>I render {renderCount.current} times</div>
-        </>
-    )
-}
+      {/*showing number of times component rendered */}
+      <div>I render {renderCount.current} times</div>
+    </>
+  );
+};
 
 //Accessing DOM Elements: using useRef to focus the input:
 //In React, we can add a ref attribute to an element to access it directly in the DOM.
-function Example2(){
-    const inputElement=useRef();
-    
-    const getFocus=()=>{
-        inputElement.current.focus();
-    }
+function Example2() {
+  const inputElement = useRef();
 
-    const pTag=useRef();
-    console.log("pTag:",pTag) // o/p: {current:undefined}
-    const updateColor=()=>{
-        pTag.current.style.color="teal";
-    }
-    
-    const resetP=()=>{
-        pTag.current.style.color="black";
-        pTag.current.style.fontSize="1rem"
-    }
+  const getFocus = () => {
+    inputElement.current.focus();
+  };
 
-    const bringChangesBack=()=>{
-        pTag.current.style.color="teal";
-        pTag.current.style.fontSize="2rem"
-    }
-    return(
-        <>
-            <input type="text" ref={inputElement} />
-            <button onClick={getFocus}>Focus Input</button>
+  const pTag = useRef();
+  console.log("pTag:", pTag); // o/p: {current:undefined}
+  const updateColor = () => {
+    pTag.current.style.color = "teal";
+  };
 
-            {/* changing color of p tag */}
-            <p ref={pTag}>Hey change my color</p>
-            <button onClick={updateColor}>Change Color</button>
-            <button onClick={()=>pTag.current.style.fontSize="2rem"}>Change Size</button>
-            <button onClick={resetP}>Reset P Tag</button>
-            <button onClick={bringChangesBack}>Bring Changes back</button>
-        </>
-    )
+  const resetP = () => {
+    pTag.current.style.color = "black";
+    pTag.current.style.fontSize = "1rem";
+  };
+
+  const bringChangesBack = () => {
+    pTag.current.style.color = "teal";
+    pTag.current.style.fontSize = "2rem";
+  };
+  return (
+    <>
+      <input type="text" ref={inputElement} />
+      <button onClick={getFocus}>Focus Input</button>
+
+      {/* changing color of p tag */}
+      <p ref={pTag}>Hey change my color</p>
+      <button onClick={updateColor}>Change Color</button>
+      <button onClick={() => (pTag.current.style.fontSize = "2rem")}>
+        Change Size
+      </button>
+      <button onClick={resetP}>Reset P Tag</button>
+      <button onClick={bringChangesBack}>Bring Changes back</button>
+    </>
+  );
 }
 
 //example 3
 //Tracking State Changes: track of previous state values
-function Example3(){
-    const [item,setItem]=useState(''); //item holds the current input value.
-    const previousItem=useRef(); //previousItem.current will hold the previous input value.
+function Example3() {
+  const [item, setItem] = useState(""); //item holds the current input value.
+  const previousItem = useRef(); //previousItem.current will hold the previous input value.
 
-    useEffect(()=>{
-        console.log("called")
-        previousItem.current=item
-        console.log("previous item:",previousItem)
-    },[item])
-    /*
+  useEffect(() => {
+    console.log("called");
+    previousItem.current = item;
+    console.log("previous item:", previousItem);
+  }, [item]);
+  /*
     Whenever item changes, the effect runs.
     It stores the current value of item into previousItem.current.
     But this assignment happens after the screen renders, so when the UI shows:
@@ -103,14 +109,18 @@ function Example3(){
     It doesn't reset on re-render
     It does not trigger re-render when updated
     */
-    return(
-        <>
-            <input type="text" value={item} onChange={(e)=>setItem(e.target.value)} />
-            <div>current item {item}</div>
-            <div>Previous Item is {previousItem.current}</div>
-        </>
-    )
-    /*
+  return (
+    <>
+      <input
+        type="text"
+        value={item}
+        onChange={(e) => setItem(e.target.value)}
+      />
+      <div>current item {item}</div>
+      <div>Previous Item is {previousItem.current}</div>
+    </>
+  );
+  /*
     ->Lifecycle in this example:
     | Step             | Value of `item` | Value of `previousItem.current` |
     | ---------------- | --------------- | ------------------------------- |
@@ -122,18 +132,18 @@ function Example3(){
     */
 }
 
-export default UseRef
+export default UseRef;
 
 /*
 ->React useRef Hook:
-    Used when you don't want to re-render the component when state changes
-    It can be used to access a DOM elements directly.
-    Refs doesn't cause your component to re-render when it gets changed
+    - Used when you don't want to re-render the component when state changes
+    - It can be used to access a DOM elements directly.
+    - Refs doesn't cause your component to re-render when it gets changed
 
 ->useRef() only returns one item. 
         It returns an Object called current.
         When we initialize useRef we set the initial value: useRef(0);
-        ->It's like doing this: const count = {current: 0}. We can access the current by using count.current.
+        It's like doing this: const count = {current: 0}. We can access the current by using count.current.
     
 
 ->When to use useRef() instead of useState():

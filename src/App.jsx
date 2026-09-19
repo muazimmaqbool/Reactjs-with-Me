@@ -146,7 +146,7 @@ function App() {
       {/* <UseEffect4Example/> */}
 
       {/* <UseMemo /> */}
-      {/* <UseRef/> */}
+      <UseRef/>
 
       {/* <UseContext/>  */}
       {/*useContext example with multiple files */}
