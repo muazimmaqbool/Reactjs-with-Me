@@ -3,7 +3,7 @@ import { UserContext } from "./UserProvider";
 
 const Profile = () => {
   const { loginUser, logout } = useContext(UserContext);
-  console.log("loginUser:", loginUser);
+  // console.log("loginUser:", loginUser);
   if (!loginUser) return <p>No user logged in.</p>;
   return (
     <div>
