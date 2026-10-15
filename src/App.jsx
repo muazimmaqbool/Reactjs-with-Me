@@ -153,7 +153,7 @@ function App() {
      {/* this will be create context and provider */}
       {/* <LoginHome/>  */}
 
-      {/* <UseReducer/>  */}
+      <UseReducer/> 
       {/* <UseReducer2/> */}
 
       {/* <UseCallback/> */}
