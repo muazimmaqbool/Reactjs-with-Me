@@ -18,7 +18,7 @@ import React, { useReducer } from "react";
           state → current value
           dispatch(action) → triggers updates
           reducer(state, action) → function that returns the new state
-          
+
 ->Example below in code: counter example
 */
 const initialState = { count: 0 };
@@ -44,8 +44,8 @@ const UseReducer = () => {
       <button onClick={() => dispatch({ type: "decrement" })}>-</button>
       <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
 
-      <h2>Example two: input</h2>
-      <ReducerExampleInput />
+      {/* Input example with useReducer */}
+      {/* <ReducerExampleInput /> */}
     </div>
   );
 };
@@ -69,6 +69,7 @@ function ReducerExampleInput() {
   //here tiggerFun is dispacth and {name:"",email:""} is initialState
   return (
     <div>
+      <h2>Example two: input</h2>
       <input
         value={state.name}
         onChange={(e) =>
