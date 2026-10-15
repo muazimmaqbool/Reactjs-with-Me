@@ -45,7 +45,7 @@ const UseReducer = () => {
       <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
 
       {/* Input example with useReducer */}
-      {/* <ReducerExampleInput /> */}
+      <ReducerExampleInput />
     </div>
   );
 };
@@ -55,7 +55,7 @@ function reducerInputFun(state, action) {
     case "updateInput":
       return { ...state, [action.field]: action.value };
     case "reset": {
-      return {name:"",email:""};
+      return { name: "", email: "" };
     }
     default:
       return state;
@@ -67,6 +67,7 @@ function ReducerExampleInput() {
     email: "",
   });
   //here tiggerFun is dispacth and {name:"",email:""} is initialState
+  console.log("state:", state);
   return (
     <div>
       <h2>Example two: input</h2>
@@ -92,9 +93,21 @@ function ReducerExampleInput() {
         }
         placeholder="Email"
       />
-      <button onClick={()=>triggerFun({type:"reset"})}>Reset</button>
-      
-      <pre>{JSON.stringify(state,null,1)}</pre>
+      <input
+        value={state.password}
+        onChange={(e) =>
+          triggerFun({
+            type: "updateInput",
+            field: "password",
+            value: e.target.value,
+          })
+        }
+        placeholder="Password"
+        type="password"
+      />
+      <button onClick={() => triggerFun({ type: "reset" })}>Reset</button>
+
+      <pre>{JSON.stringify(state, null, 1)}</pre>
       {/*
       ->{JSON.stringify(state,null,1)}:
         | Part               | Meaning                                                        |
