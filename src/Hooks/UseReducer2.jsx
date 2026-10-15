@@ -1,10 +1,11 @@
-import React, { useState, useReducer } from "react";
+import React, { useReducer } from "react";
 
 //First check previous code i.e UseReducer.jsx
 const UseReducer2 = () => {
   return (
     <>
       <Example1 />
+      <p>------------------------------------</p>
       <Example2 />
     </>
   );
@@ -44,26 +45,19 @@ const Example1 = () => {
 
 //example two of useReducer
 function manageItems(state, action) {
-    switch (action.type) {
-        case "add-item":
-            return { items: state.items + 1 };
-            break;
-        case "remove-item":
-            return { items: state.items - 1 };
-            break;
-        default:
-            return {item:10}
-            break;
-
-    }
+  switch (action.type) {
+    case "add-item":
+      return { items: state.items + 1 };
+    case "remove-item":
+      return { items: state.items - 1 };
+    default:
+      return { item: 10 };
+  }
 }
 const Example2 = () => {
   const [state, dispatch] = useReducer(manageItems, { items: 10 });
   return (
     <>
-      <br />
-      <br />
-      <br />
       <button
         onClick={() => {
           dispatch({ type: "add-item" });
@@ -71,7 +65,7 @@ const Example2 = () => {
       >
         Add Item
       </button>
-      <p>Total Item: {state.items}</p>
+      <p>Total Items in Cart: {state.items}</p>
       <button
         onClick={() => {
           dispatch({ type: "remove-item" });

@@ -153,8 +153,8 @@ function App() {
      {/* this will be create context and provider */}
       {/* <LoginHome/>  */}
 
-      <UseReducer/> 
-      {/* <UseReducer2/> */}
+      {/* <UseReducer/>  */}
+      <UseReducer2/>
 
       {/* <UseCallback/> */}
       {/* <UseLayoutEffectHook/> */}
